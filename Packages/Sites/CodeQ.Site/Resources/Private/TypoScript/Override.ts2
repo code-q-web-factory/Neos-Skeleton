@@ -1,0 +1,3 @@
+prototype(TYPO3.TypoScript:Collection) {
+	itemName = 'node'
+}

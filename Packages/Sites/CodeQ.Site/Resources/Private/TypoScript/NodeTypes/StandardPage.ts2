@@ -1,0 +1,14 @@
+prototype(CodeQ.Site:StandardPage)>
+prototype(CodeQ.Site:StandardPage) < prototype(T:Array) {
+	title = T:Tag {
+		tagName = 'h1'
+		content = ${q(node).property('title')}
+		@process.editable = ContentElementEditable {
+			property = 'title'
+		}
+	}
+	main = TYPO3.Neos:ContentCollection {
+		nodePath = 'main'
+	}
+	@process.editable = ContentElementWrapping
+}

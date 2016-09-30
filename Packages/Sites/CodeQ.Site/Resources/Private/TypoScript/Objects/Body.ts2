@@ -1,0 +1,11 @@
+prototype(CodeQ.Site:Body) < prototype(T:Template) {
+	templatePath = 'resource://CodeQ.Site/Private/TypoScript/Objects/Body.html'
+	header = CodeQ.Site:Header
+	main = PrimaryContent {
+		renderByType {
+			condition = TRUE
+			type = ${q(node).property('_nodeType.name')}
+		}
+	}
+	footer = CodeQ.Site:Footer
+}

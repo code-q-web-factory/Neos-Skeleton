@@ -1,0 +1,25 @@
+/Build/
+/Configuration/*
+!/Configuration/Routes.yaml
+/Data/
+/Packages/Application/
+/Packages/Framework/
+/Packages/Neos/
+/Packages/Plugins/
+/Packages/Libraries/
+/Web/_Resources/
+/Web/index.php
+/bin/
+/Readme.txt
+/Upgrading.txt
+/Upgrading.rst
+/Readme.rst
+/flow
+/flow.bat
+
+# Various temporary files
+.fuse_hidden
+.sass-cache
+bower_components
+node_modules
+*.DS_Store

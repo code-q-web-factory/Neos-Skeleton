@@ -1,0 +1,23 @@
+machine:
+  python:
+    version: 2.7.5
+  php:
+    version: 7.0.4
+dependencies:
+  override:
+    - if [ -d ~/ansible-deploy ]; then (cd ~/ansible-deploy && git pull); else git clone https://github.com/psmb/ansible-deploy ~/ansible-deploy;fi
+    - pip install 'ansible>=1.9.0,<2.0.0'
+    - pip install httplib2
+  cache_directories:
+    - "~/ansible-deploy"
+test:
+  override:
+    - echo "No tests to run"
+deployment:
+  prod:
+    branch: master
+    commands:
+      - cd ~/ansible-deploy
+      - touch 'i'
+      - ansible-playbook ~/ansible-deploy/deploy.yml --extra-vars "REPOSITORY_URL=https://github.com/rolandschuetz/REPOSITORY_URL DOMAIN=DOMAIN.at PROTOCOL=https HOST=139.59.138.199 PORT=THEPORTNUMBER" -i 'i':
+          timeout: 1800

@@ -1,0 +1,19 @@
+{
+    "description": "Neos Website, build by Code Q",
+    "type": "typo3-flow-site",
+    "require": {
+        "typo3/neos": "*",
+        "typo3/neos-seo": "*"
+    },
+    "name": "codeq/site",
+    "autoload": {
+        "psr-0": {
+            "CodeQ\\Site": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "CodeQ.Site"
+        }
+    }
+}

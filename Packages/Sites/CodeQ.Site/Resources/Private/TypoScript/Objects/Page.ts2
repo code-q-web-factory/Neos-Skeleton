@@ -1,0 +1,46 @@
+prototype(CodeQ.Site:Page) < prototype(Page) {
+	head {
+		metaTags = ${'
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		'}
+		stylesheets {
+			app = T:Tag {
+				tagName = 'link'
+				attributes {
+					href = T:ResourceUri {
+						path = 'resource://CodeQ.Site/Public/Styles/App.css'
+					}
+					type = 'text/css'
+					rel = 'stylesheet'
+					media = 'all'
+				}
+			}
+			backend = T:Tag {
+				tagName = 'link'
+				attributes {
+					href = T:ResourceUri {
+						path = 'resource://CodeQ.Site/Public/Styles/Backend.css'
+					}
+					type = 'text/css'
+					rel = 'stylesheet'
+					media = 'all'
+				}
+				@if.onlyInBackend = ${node.context.inBackend}
+			}
+		}
+	}
+	htmlTag.attributes.lang = ${Array.first(node.context.dimensions.language)}
+	bodyTag.attributes.class = 'Page'
+	bodyTag.attributes.id = ${'Page-' + q(node).property('_name')}
+
+	body = T:Value {
+		value = CodeQ.Site:Body
+		# Don't be surprised, this is appended in @process in Page prototype
+		javascripts.index = T:Tag {
+			tagName = 'script'
+			attributes.src = T:ResourceUri {
+				path = 'resource://CodeQ.Site/Public/Scripts/App.js'
+			}
+		}
+	}
+}

@@ -1,0 +1,7 @@
+prototype(CodeQ.Site:Header) < prototype(T:Template) {
+	templatePath = 'resource://CodeQ.Site/Private/TypoScript/Objects/Header.html'
+	mainMenu = CodeQ.Site:MainMenu
+	homeUri = NodeUri {
+		node = ${site}
+	}
+}

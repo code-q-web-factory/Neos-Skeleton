@@ -1,0 +1,20 @@
+prototype(CodeQ.Site:ImageUri) < prototype(T:Case) {
+	image {
+		condition = ${asset}
+		renderer = ImageUri {
+			asset = ${asset}
+			width = ${width}
+			height = ${height}
+			maximumWidth = ${maximumWidth}
+			maximumHeight = ${maximumHeight}
+			allowCropping = ${allowCropping}
+			allowUpscaling = ${allowUpscaling}
+		}
+	}
+	dummyImage {
+		condition = ${site.context.inBackend}
+		renderer = TYPO3.TypoScript:ResourceUri {
+			path = 'resource://TYPO3.Neos/Public/Images/dummy-image.svg'
+		}
+	}
+}

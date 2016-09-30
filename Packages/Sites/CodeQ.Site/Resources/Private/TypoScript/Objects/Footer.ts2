@@ -1,0 +1,3 @@
+prototype(CodeQ.Site:Footer) < prototype(T:Template) {
+	templatePath = 'resource://CodeQ.Site/Private/TypoScript/Objects/Footer.html'
+}

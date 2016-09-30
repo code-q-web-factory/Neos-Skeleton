@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <site name="Site" state="1" siteResourcesPackageKey="CodeQ.Site" siteNodeName="site">
+  <nodes formatVersion="2.0">
+   <node nodeName="site">
+    <variant workspace="live" nodeType="CodeQ.Site:StandardPage" sortingIndex="100" version="1" removed="" hidden="" hiddenInIndex="">
+     <dimensions>
+
+     </dimensions>
+     <accessRoles __type="array"/>
+     <properties>
+      <title __type="string">Home</title>
+      <uriPathSegment __type="string">home</uriPathSegment>
+     </properties>
+    </variant>
+    <node nodeName="main">
+     <variant workspace="live" nodeType="TYPO3.Neos:ContentCollection" sortingIndex="100" version="1" removed="" hidden="" hiddenInIndex="">
+      <dimensions>
+
+      </dimensions>
+      <accessRoles __type="array"/>
+     </variant>
+    </node>
+   </node>
+  </nodes>
+ </site>
+</root>
