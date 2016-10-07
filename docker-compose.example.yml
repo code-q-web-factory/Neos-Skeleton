@@ -1,0 +1,47 @@
+dbdata:
+  image: busybox:latest
+  command: echo dbdata
+  volumes:
+    - /var/lib/mysql
+
+db:
+  image: million12/mariadb:latest
+  expose:
+    - '3306'
+  volumes_from:
+    - dbdata
+  environment:
+    MARIADB_PASS: pass
+
+webdata:
+  image: busybox:latest
+  command: echo webdata
+  volumes:
+    - /data
+    - ./Persistent:/data/www/shared/Data/Persistent
+
+web:
+  image: dimaip/neos-bare:latest
+  ports:
+    - '80'
+  links:
+    - db:db
+  volumes_from:
+    - webdata
+  environment:
+    REPOSITORY_URL: 'https://<PRIVATE_GITHUB_TOKEN>@github.com/rolandschuetz/<REPOSITORY_NAME>'
+    VIRTUAL_HOST: '<DOMAIN>, www.<DOMAIN>, dev.<DOMAIN>, next.<DOMAIN>'
+    LETSENCRYPT_HOST: '<DOMAIN>, www.<DOMAIN>'
+    LETSENCRYPT_EMAIL: 'rs@codeq.at'
+
+ssh:
+  image: million12/php-app-ssh:php-70
+  ports:
+    - '1123:22'
+  links:
+    - db:db
+    - web:web
+  volumes_from:
+    - webdata
+  environment:
+    IMPORT_GITHUB_PUB_KEYS: rolandschuetz
