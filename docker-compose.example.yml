@@ -6,6 +6,7 @@ dbdata:
 
 db:
   image: million12/mariadb:latest
+  restart: unless-stopped
   expose:
     - '3306'
   volumes_from:
@@ -22,6 +23,7 @@ webdata:
 
 web:
   image: dimaip/neos-bare:latest
+  restart: unless-stopped
   ports:
     - '80'
   links:
@@ -36,6 +38,7 @@ web:
 
 ssh:
   image: million12/php-app-ssh:php-70
+  restart: unless-stopped
   ports:
     - '1123:22'
   links:
