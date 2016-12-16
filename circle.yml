@@ -2,11 +2,11 @@ machine:
   python:
     version: 2.7.5
   php:
-    version: 7.0.4
+    version: 7.0.11
 dependencies:
   override:
     - if [ -d ~/ansible-deploy ]; then (cd ~/ansible-deploy && git pull); else git clone https://github.com/psmb/ansible-deploy ~/ansible-deploy;fi
-    - pip install 'ansible>=1.9.0,<2.0.0'
+    - pip install 'ansible>=2.0.0,<2.2.0'
     - pip install httplib2
   cache_directories:
     - "~/ansible-deploy"
