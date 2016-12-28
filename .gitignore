@@ -1,3 +1,4 @@
+# Neos CMS
 /Build/
 /Configuration/*
 !/Configuration/Routes.yaml
@@ -17,9 +18,18 @@
 /flow
 /flow.bat
 
+# Frontend template
+/Packages/Sites/CodeQ.Site/Resources/Public/Frontend/node_modules/
+/Packages/Sites/CodeQ.Site/Resources/Public/Frontend/bower_components/
+/Packages/Sites/CodeQ.Site/Resources/Public/Frontend/dist/
+
+# Server, we use nginx
+.htaccess
+
 # Various temporary files
 .fuse_hidden
 .sass-cache
 bower_components
 node_modules
 *.DS_Store
+/.idea
