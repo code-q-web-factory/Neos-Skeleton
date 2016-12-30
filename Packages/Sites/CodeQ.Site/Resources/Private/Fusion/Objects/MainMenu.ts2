@@ -1,6 +1,6 @@
 prototype(CodeQ.Site:MainMenu) < prototype(T:Collection) {
 	@process.tmpl = ${'<ul>' + value + '</ul>'}
-	collection = ${q(site).children('[instanceof TYPO3.Neos:Document][_hiddenInIndex != true]').get()}
+	collection = ${q(site).children('[instanceof Neos.Neos:Document][_hiddenInIndex != true]').get()}
 	itemRenderer = T:Tag {
 		tagName = 'li'
 		attributes.class.@process.menuClass = ${value + (node == documentNode && ' active')}
@@ -18,7 +18,7 @@ prototype(CodeQ.Site:MainMenu) < prototype(T:Collection) {
 			node = ${node}
 		}
 		entryTags {
-			nodeType = 'NodeType_TYPO3.Neos:Document'
+			nodeType = 'NodeType_Neos.Neos:Document'
 		}
 	}
 }

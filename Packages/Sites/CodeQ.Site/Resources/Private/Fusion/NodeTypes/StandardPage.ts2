@@ -7,7 +7,7 @@ prototype(CodeQ.Site:StandardPage) < prototype(T:Array) {
 			property = 'title'
 		}
 	}
-	main = TYPO3.Neos:ContentCollection {
+	main = Neos.Neos:ContentCollection {
 		nodePath = 'main'
 	}
 	@process.editable = ContentElementWrapping

@@ -14,7 +14,7 @@ prototype(CodeQ.Site:ImageUri) < prototype(T:Case) {
 	dummyImage {
 		condition = ${site.context.inBackend}
 		renderer = Neos.Fusion:ResourceUri {
-			path = 'resource://TYPO3.Neos/Public/Images/dummy-image.svg'
+			path = 'resource://Neos.Neos/Public/Images/dummy-image.svg'
 		}
 	}
 }
