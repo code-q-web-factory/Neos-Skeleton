@@ -68,7 +68,8 @@
             "Neos.Fusion-20161219092345",
             "Neos.ContentRepository-20161219093512",
             "Neos.Media-20161219094126",
-            "Neos.Fusion-20161219130100"
+            "Neos.Fusion-20161219130100",
+            "TYPO3.Neos-201407061038"
         ]
     }
 }
