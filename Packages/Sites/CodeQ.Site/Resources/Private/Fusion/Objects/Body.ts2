@@ -1,5 +1,5 @@
 prototype(CodeQ.Site:Body) < prototype(T:Template) {
-	templatePath = 'resource://CodeQ.Site/Private/TypoScript/Objects/Body.html'
+	templatePath = 'resource://CodeQ.Site/Private/Fusion/Objects/Body.html'
 	header = CodeQ.Site:Header
 	main = PrimaryContent {
 		renderByType {

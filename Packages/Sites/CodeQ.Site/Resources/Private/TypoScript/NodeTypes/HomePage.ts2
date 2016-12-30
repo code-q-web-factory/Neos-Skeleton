@@ -1,3 +1,0 @@
-prototype(CodeQ.Site:HomePage) {
-	templatePath = 'resource://CodeQ.Site/Private/TypoScript/NodeTypes/HomePage.html'
-}
