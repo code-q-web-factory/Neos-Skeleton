@@ -1,17 +1,17 @@
 
 'CodeQ.Site:StandardPage':
   superTypes:
-    'TYPO3.Neos:Document': true
+    'Neos.Neos:Document': true
   childNodes:
     main:
-      type: 'TYPO3.Neos:ContentCollection'
+      type: 'Neos.Neos:ContentCollection'
   ui:
     label: 'Standard Page'
 'CodeQ.Site:HomePage':
   superTypes:
-    'TYPO3.Neos:Document': true
+    'Neos.Neos:Document': true
   childNodes:
     main:
-      type: 'TYPO3.Neos:ContentCollection'
+      type: 'Neos.Neos:ContentCollection'
   ui:
     label: 'Standard Page'
