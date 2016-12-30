@@ -1,4 +1,4 @@
-namespace: T=TYPO3.TypoScript
+namespace: T=Neos.Fusion
 include: Objects/**/*.ts2
 include: NodeTypes/**/*.ts2
 include: Override.ts2

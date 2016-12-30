@@ -1,3 +1,3 @@
-prototype(TYPO3.TypoScript:Collection) {
+prototype(Neos.Fusion:Collection) {
 	itemName = 'node'
 }
