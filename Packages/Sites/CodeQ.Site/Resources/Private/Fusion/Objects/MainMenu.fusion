@@ -1,10 +1,10 @@
-prototype(CodeQ.Site:MainMenu) < prototype(T:Collection) {
+prototype(CodeQ.Site:MainMenu) < prototype(Neos.Fusion:Collection) {
 	@process.tmpl = ${'<ul>' + value + '</ul>'}
 	collection = ${q(site).children('[instanceof Neos.Neos:Document][_hiddenInIndex != true]').get()}
-	itemRenderer = T:Tag {
+	itemRenderer = Neos.Fusion:Tag {
 		tagName = 'li'
 		attributes.class.@process.menuClass = ${value + (node == documentNode && ' active')}
-		content = T:Tag {
+		content = Neos.Fusion:Tag {
 			tagName = 'a'
 			attributes.href = NodeUri {
 				node = ${node}

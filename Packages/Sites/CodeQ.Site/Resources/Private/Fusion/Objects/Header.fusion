@@ -1,4 +1,4 @@
-prototype(CodeQ.Site:Header) < prototype(T:Template) {
+prototype(CodeQ.Site:Header) < prototype(Neos.Fusion:Template) {
 	templatePath = 'resource://CodeQ.Site/Private/Fusion/Objects/Header.html'
 	mainMenu = CodeQ.Site:MainMenu
 	homeUri = NodeUri {

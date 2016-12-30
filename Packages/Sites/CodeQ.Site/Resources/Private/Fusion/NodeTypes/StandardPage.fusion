@@ -1,6 +1,6 @@
 prototype(CodeQ.Site:StandardPage)>
-prototype(CodeQ.Site:StandardPage) < prototype(T:Array) {
-	title = T:Tag {
+prototype(CodeQ.Site:StandardPage) < prototype(Neos.Fusion:Array) {
+	title = Neos.Fusion:Tag {
 		tagName = 'h1'
 		content = ${q(node).property('title')}
 		@process.editable = ContentElementEditable {

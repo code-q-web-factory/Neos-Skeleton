@@ -4,10 +4,10 @@ prototype(CodeQ.Site:Page) < prototype(Page) {
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		'}
 		stylesheets {
-			app = T:Tag {
+			app = Neos.Fusion:Tag {
 				tagName = 'link'
 				attributes {
-					href = T:ResourceUri {
+					href = Neos.Fusion:ResourceUri {
 						path = 'resource://CodeQ.Site/Public/Styles/App.css'
 					}
 					type = 'text/css'
@@ -15,10 +15,10 @@ prototype(CodeQ.Site:Page) < prototype(Page) {
 					media = 'all'
 				}
 			}
-			backend = T:Tag {
+			backend = Neos.Fusion:Tag {
 				tagName = 'link'
 				attributes {
-					href = T:ResourceUri {
+					href = Neos.Fusion:ResourceUri {
 						path = 'resource://CodeQ.Site/Public/Styles/Backend.css'
 					}
 					type = 'text/css'
@@ -33,12 +33,12 @@ prototype(CodeQ.Site:Page) < prototype(Page) {
 	bodyTag.attributes.class = 'Page'
 	bodyTag.attributes.id = ${'Page-' + q(node).property('_name')}
 
-	body = T:Value {
+	body = Neos.Fusion:Value {
 		value = CodeQ.Site:Body
 		# Don't be surprised, this is appended in @process in Page prototype
-		javascripts.index = T:Tag {
+		javascripts.index = Neos.Fusion:Tag {
 			tagName = 'script'
-			attributes.src = T:ResourceUri {
+			attributes.src = Neos.Fusion:ResourceUri {
 				path = 'resource://CodeQ.Site/Public/Scripts/App.js'
 			}
 		}

@@ -1,4 +1,4 @@
-prototype(CodeQ.Site:Body) < prototype(T:Template) {
+prototype(CodeQ.Site:Body) < prototype(Neos.Fusion:Template) {
 	templatePath = 'resource://CodeQ.Site/Private/Fusion/Objects/Body.html'
 	header = CodeQ.Site:Header
 	main = PrimaryContent {

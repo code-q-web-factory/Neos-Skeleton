@@ -1,4 +1,4 @@
-prototype(CodeQ.Site:ImageUri) < prototype(T:Case) {
+prototype(CodeQ.Site:ImageUri) < prototype(Neos.Fusion:Case) {
 	image {
 		condition = ${asset}
 		renderer = ImageUri {

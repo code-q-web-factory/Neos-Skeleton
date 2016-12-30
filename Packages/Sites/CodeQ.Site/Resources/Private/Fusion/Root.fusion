@@ -1,7 +1,7 @@
-namespace: T=Neos.Fusion
-include: Objects/**/*.ts2
-include: NodeTypes/**/*.ts2
-include: Override.ts2
+namespace: F=Neos.Fusion
+include: Objects/**/*.fusion
+include: NodeTypes/**/*.fusion
+include: Override.fusion
 
 root.thePage {
 	@position = 'before default'
