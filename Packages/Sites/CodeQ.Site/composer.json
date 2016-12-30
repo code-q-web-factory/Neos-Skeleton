@@ -30,7 +30,8 @@
             "TYPO3.Neos.NodeTypes-201309111655",
             "TYPO3.Flow-201310031523",
             "TYPO3.Flow-201405111147",
-            "TYPO3.TYPO3CR-140911160326"
+            "TYPO3.TYPO3CR-140911160326",
+            "TYPO3.TYPO3CR-141101082142"
         ]
     }
 }
