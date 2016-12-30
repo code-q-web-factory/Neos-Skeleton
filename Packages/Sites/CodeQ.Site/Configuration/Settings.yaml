@@ -7,6 +7,6 @@ Neos:
     userInterface:
       backendLoginForm:
         backgroundImage: 'resource://CodeQ.Site/Public/Images/LoginScreen.jpg'
-    typoScript:
+    fusion:
       autoInclude:
         CodeQ.Site: true
