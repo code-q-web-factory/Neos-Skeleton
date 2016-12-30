@@ -6,19 +6,45 @@
         "bin-dir": "bin"
     },
     "require": {
-        "typo3/neos": "~2.3.0",
+        "neos/neos": "3.0.x-dev",
 
-        "typo3/neos-seo": "~1.0",
-        "ttree/googleanalytics": "^1.0",
-        "flownative/neos-compressor": "^1.0"
-    },
-    "suggest": {
-        "ext-pdo_sqlite": "For running functional tests out-of-the-box this is required"
+        "neos/seo": "2.0.x-dev",
+        "neos/setup": "4.0.x-dev",
+        "neos/redirecthandler-neosadapter": "2.0.x-dev",
+        "neos/redirecthandler-databasestorage": "2.0.x-dev",
+        "neos/nodetypes": "3.0.x-dev",
+        "neos/site-kickstarter": "3.0.x-dev",
+        "neos/content-repository": "3.0.x-dev",
+        "neos/fusion": "3.0.x-dev",
+        "neos/media": "3.0.x-dev",
+        "neos/diff": "3.0.x-dev",
+
+        "neos/flow": "4.0.x-dev",
+        "neos/fluid-adaptor": "4.0.x-dev",
+        "neos/eel": "4.0.x-dev",
+        "neos/cache": "4.0.x-dev",
+        "neos/twitter-bootstrap": "3.0.x-dev",
+        "neos/party": "4.0.x-dev",
+        "neos/form": "3.0.x-dev",
+        "neos/kickstarter": "4.0.x-dev",
+        "neos/media-browser": "3.0.x-dev",
+        "neos/imagine": "3.0.x-dev",
+        "neos/redirecthandler": "@dev",
+        "neos/error-messages": "4.0.x-dev",
+        "neos/utility-arrays": "4.0.x-dev",
+        "neos/utility-files": "4.0.x-dev",
+        "neos/utility-lock": "4.0.x-dev",
+        "neos/utility-mediatypes": "4.0.x-dev",
+        "neos/utility-objecthandling": "4.0.x-dev",
+        "neos/utility-opcodecache": "4.0.x-dev",
+        "neos/utility-pdo": "4.0.x-dev",
+        "neos/utility-schema": "4.0.x-dev",
+        "neos/utility-unicode": "4.0.x-dev"
     },
     "scripts": {
-        "post-update-cmd": "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
-        "post-install-cmd": "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
-        "post-package-update": "TYPO3\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
-        "post-package-install": "TYPO3\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall"
+        "post-update-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+        "post-install-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+        "post-package-update": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
+        "post-package-install": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall"
     }
 }
