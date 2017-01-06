@@ -8,24 +8,13 @@ prototype(CodeQ.Site:Page) < prototype(Page) {
 				tagName = 'link'
 				attributes {
 					href = Neos.Fusion:ResourceUri {
-						path = 'resource://CodeQ.Site/Public/Styles/App.css'
+						path = 'resource://CodeQ.Site/Public/Frontend/dist/assets/css/app.css'
 					}
 					type = 'text/css'
 					rel = 'stylesheet'
 					media = 'all'
+					class = 'neos-ui-asset'
 				}
-			}
-			backend = Neos.Fusion:Tag {
-				tagName = 'link'
-				attributes {
-					href = Neos.Fusion:ResourceUri {
-						path = 'resource://CodeQ.Site/Public/Styles/Backend.css'
-					}
-					type = 'text/css'
-					rel = 'stylesheet'
-					media = 'all'
-				}
-				@if.onlyInBackend = ${node.context.inBackend}
 			}
 		}
 	}
@@ -39,7 +28,7 @@ prototype(CodeQ.Site:Page) < prototype(Page) {
 		javascripts.index = Neos.Fusion:Tag {
 			tagName = 'script'
 			attributes.src = Neos.Fusion:ResourceUri {
-				path = 'resource://CodeQ.Site/Public/Scripts/App.js'
+						path = 'resource://CodeQ.Site/Public/Frontend/dist/assets/js/app.js'
 			}
 		}
 	}
