@@ -7,6 +7,7 @@
       type: 'Neos.Neos:ContentCollection'
   ui:
     label: 'Standard Page'
+
 'CodeQ.Site:HomePage':
   superTypes:
     'Neos.Neos:Document': true
@@ -14,4 +15,4 @@
     main:
       type: 'Neos.Neos:ContentCollection'
   ui:
-    label: 'Standard Page'
+    label: 'Home Page'
