@@ -20,4 +20,4 @@ deployment:
       - cd ~/ansible-deploy
       - touch 'i'
       - ansible-playbook ~/ansible-deploy/deploy.yml --extra-vars "REPOSITORY_URL=https://github.com/rolandschuetz/REPOSITORY_URL DOMAIN=DOMAIN.at PROTOCOL=https HOST=139.59.138.199 PORT=THEPORTNUMBER" -i 'i':
-          timeout: 1800
+          timeout: 2400
