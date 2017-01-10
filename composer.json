@@ -39,7 +39,9 @@
         "neos/utility-opcodecache": "4.0.x-dev",
         "neos/utility-pdo": "4.0.x-dev",
         "neos/utility-schema": "4.0.x-dev",
-        "neos/utility-unicode": "4.0.x-dev"
+        "neos/utility-unicode": "4.0.x-dev",
+
+        "codeq/logintheme": "dev-master"
     },
     "scripts": {
         "post-update-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",

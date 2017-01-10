@@ -4,9 +4,6 @@ Neos:
     http:
       baseUri: 'https://DOMAIN.at/'
   Neos:
-    userInterface:
-      backendLoginForm:
-        backgroundImage: 'resource://CodeQ.Site/Public/Images/LoginScreen.jpg'
     fusion:
       autoInclude:
         CodeQ.Site: true
