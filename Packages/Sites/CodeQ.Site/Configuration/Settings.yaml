@@ -1,9 +1,19 @@
 
 Neos:
   Flow:
-    http:
-      baseUri: 'https://DOMAIN.at/'
+    i18n:
+      defaultLocale: de
+    mvc:
+      routes:
+        'Neos.Neos':
+          variables:
+            # We prefer URLs without the ".html" suffix
+            defaultUriSuffix: ''
+    # http:
+    #   baseUri: 'https://DOMAIN.at/'
   Neos:
+    userInterface:
+      defaultLanguage: de
     fusion:
       autoInclude:
         CodeQ.Site: true
