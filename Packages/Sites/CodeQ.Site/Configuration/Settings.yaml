@@ -9,6 +9,13 @@ Neos:
           variables:
             # We prefer URLs without the ".html" suffix
             defaultUriSuffix: ''
+    error:
+      exceptionHandler:
+        renderingGroups:
+          notFoundExceptions:
+            options:
+              variables:
+                path: '404' # skip suffix in notfound as well
     # http:
     #   baseUri: 'https://DOMAIN.at/'
   Neos:
