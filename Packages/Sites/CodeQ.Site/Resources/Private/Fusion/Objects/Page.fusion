@@ -31,5 +31,6 @@ prototype(CodeQ.Site:Page) < prototype(Page) {
 						path = 'resource://CodeQ.Site/Public/Frontend/dist/assets/js/app.js'
 			}
 		}
+		@process.normalize = CodeQ.UnicodeNormalizer:Normalizer
 	}
 }
