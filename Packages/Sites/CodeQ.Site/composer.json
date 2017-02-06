@@ -3,7 +3,6 @@
     "type": "typo3-flow-site",
     "require": {
         "neos/neos": "*",
-
         "codeq/logintheme": "*",
         "codeq/unicodenormalizer": "*",
         "moc/notfound": "*"
@@ -84,7 +83,12 @@
             "Neos.Neos-20161201222211",
             "Neos.Neos-20161219094403",
             "Neos.Neos-20161219122512",
-            "Neos.Neos-20161220163741"
+            "Neos.Neos-20161220163741",
+            "Neos.Neos-20170115114620",
+            "Neos.Fusion-20170120013047",
+            "Neos.Flow-20170125103800",
+            "Neos.Seo-20170127154600",
+            "Neos.Flow-20170127183102"
         ]
     }
 }
