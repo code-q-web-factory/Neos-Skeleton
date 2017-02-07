@@ -2,7 +2,13 @@
     "description": "Neos Website, build by Code Q",
     "type": "typo3-flow-site",
     "require": {
-        "neos/neos": "*",
+		"neos/neos": "*",
+        "neos/nodetypes": "*",
+        "neos/seo": "*",
+        "neos/setup": "*",
+        "neos/redirecthandler-neosadapter": "*",
+        "neos/redirecthandler-databasestorage": "*",
+
         "codeq/logintheme": "*",
         "codeq/unicodenormalizer": "*",
         "moc/notfound": "*"
