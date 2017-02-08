@@ -3,7 +3,7 @@
  <site name="Site" state="1" siteResourcesPackageKey="CodeQ.Site" siteNodeName="site">
   <nodes formatVersion="2.0">
    <node nodeName="site">
-    <variant workspace="live" nodeType="CodeQ.Site:StandardPage" sortingIndex="100" version="1" removed="" hidden="" hiddenInIndex="">
+    <variant workspace="live" nodeType="CodeQ.Site:HomePage" sortingIndex="100" version="1" removed="" hidden="" hiddenInIndex="">
      <dimensions>
 
      </dimensions>

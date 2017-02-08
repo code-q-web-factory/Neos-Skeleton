@@ -1,0 +1,11 @@
+'CodeQ.Site:HomePage':
+  superTypes:
+    'Neos.Neos:Document': TRUE
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+  constraints:
+    nodeTypes:
+      'CodeQ.Site:HomePage': FALSE
+  ui:
+    label: 'Homepage'

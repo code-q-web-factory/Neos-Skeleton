@@ -1,0 +1,8 @@
+prototype(CodeQ.Site:Page) {
+	templatePath = 'resource://CodeQ.Site/Private/Fusion/NodeTypes/Page.html'
+
+	main = Neos.Neos:ContentCollection {
+		nodePath = 'main'
+	}
+	@process.editable = ContentElementWrapping
+}

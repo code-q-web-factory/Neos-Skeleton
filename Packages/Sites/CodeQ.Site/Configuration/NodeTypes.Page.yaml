@@ -1,0 +1,14 @@
+'Neos.NodeTypes:Page':
+  abstract: TRUE
+
+'CodeQ.Site:Page':
+  superTypes:
+    'Neos.Neos:Document': TRUE
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+  constraints:
+    nodeTypes:
+      'CodeQ.Site:HomePage': FALSE
+  ui:
+    label: 'Seite'
