@@ -1,24 +1,4 @@
-prototype(CodeQ.Site:MainMenu) < prototype(Neos.Fusion:Collection) {
-	@process.tmpl = ${'<ul>' + value + '</ul>'}
-	collection = ${q(site).children('[instanceof Neos.Neos:Document][_hiddenInIndex != true]').get()}
-	itemRenderer = Neos.Fusion:Tag {
-		tagName = 'li'
-		attributes.class.@process.menuClass = ${value + (node == documentNode && ' active')}
-		content = Neos.Fusion:Tag {
-			tagName = 'a'
-			attributes.href = NodeUri {
-				node = ${node}
-			}
-			content = ${node.properties.title}
-		}
-	}
-	@cache {
-		mode = 'cached'
-		entryIdentifier {
-			node = ${node}
-		}
-		entryTags {
-			nodeType = 'NodeType_Neos.Neos:Document'
-		}
-	}
+prototype(CodeQ.Site:MainMenu) < prototype(Neos.Neos:Menu) {
+  maximumLevels = 2
+  templatePath = 'resource://CodeQ.Site/Private/Templates/Objects/MainMenu.html'
 }
