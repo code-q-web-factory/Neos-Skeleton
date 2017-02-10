@@ -1,3 +1,8 @@
+###
+## Add your overrides to 3rd party fusion code here
+###
+
+# A good default, you will almost all the time have a itemName of node
 prototype(Neos.Fusion:Collection) {
 	itemName = 'node'
 }
