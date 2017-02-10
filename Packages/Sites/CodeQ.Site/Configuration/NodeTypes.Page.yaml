@@ -1,6 +1,3 @@
-'Neos.NodeTypes:Page':
-  abstract: TRUE
-
 'CodeQ.Site:Page':
   superTypes:
     'Neos.Neos:Document': TRUE

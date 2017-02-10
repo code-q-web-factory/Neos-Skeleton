@@ -1,5 +1,8 @@
 prototype(CodeQ.Site:Page) < prototype(Page) {
 	head {
+		titleTag {
+			# content.@process.addBrand = ${'Rexel Austria | ' + value}
+		}
 		metaTags = ${'
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		'}
