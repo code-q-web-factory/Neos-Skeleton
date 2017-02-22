@@ -14,7 +14,8 @@
         "neos/redirecthandler-databasestorage": "~2.0",
 
         "codeq/logintheme": "dev-master",
-        "codeq/unicodenormalizer": "~2.0"
+        "codeq/unicodenormalizer": "~2.0",
+        "opsdev/cache-breaker": "^2.0"
     },
     "scripts": {
         "post-update-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",

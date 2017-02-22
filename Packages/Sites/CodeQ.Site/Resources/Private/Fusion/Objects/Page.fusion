@@ -1,25 +1,9 @@
-prototype(CodeQ.Site:Page) < prototype(Page) {
+prototype(CodeQ.Site:PageObject) < prototype(Page) {
 	head {
 		titleTag {
 			# content.@process.addBrand = ${'Rexel Austria | ' + value}
 		}
-		metaTags = ${'
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		'}
-		stylesheets {
-			app = Neos.Fusion:Tag {
-				tagName = 'link'
-				attributes {
-					href = Neos.Fusion:ResourceUri {
-						path = 'resource://CodeQ.Site/Public/Frontend/dist/assets/css/app.css'
-					}
-					type = 'text/css'
-					rel = 'stylesheet'
-					media = 'all'
-					class = 'neos-ui-asset'
-				}
-			}
-		}
+		headTags = CodeQ.Site:HeadTags
 	}
 	htmlTag.attributes.lang = ${Array.first(node.context.dimensions.language)}
 	bodyTag.attributes.class = 'Page'
@@ -28,11 +12,8 @@ prototype(CodeQ.Site:Page) < prototype(Page) {
 	body = Neos.Fusion:Value {
 		value = CodeQ.Site:Body
 		# Don't be surprised, this is appended in @process in Page prototype
-		javascripts.index = Neos.Fusion:Tag {
-			tagName = 'script'
-			attributes.src = Neos.Fusion:ResourceUri {
-						path = 'resource://CodeQ.Site/Public/Frontend/dist/assets/js/app.js'
-			}
+		javascripts {
+			footerTags = CodeQ.Site:FooterTags
 		}
 		@process.normalize = CodeQ.UnicodeNormalizer:Normalizer
 	}
