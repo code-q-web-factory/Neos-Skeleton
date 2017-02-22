@@ -1,0 +1,3 @@
+prototype(CodeQ.Site:HeadTags) < prototype(Neos.Fusion:Template) {
+	templatePath = 'resource://CodeQ.Site/Private/Fusion/Objects/HeadTags.html'
+}
