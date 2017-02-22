@@ -3,25 +3,7 @@ prototype(CodeQ.Site:PageObject) < prototype(Page) {
 		titleTag {
 			# content.@process.addBrand = ${'Rexel Austria | ' + value}
 		}
-		metaTags = ${'
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		'}
 		headTags = CodeQ.Site:HeadTags
-		stylesheets {
-		
-			app = Neos.Fusion:Tag {
-				tagName = 'link'
-				attributes {
-					href = Neos.Fusion:ResourceUri {
-						path = 'resource://CodeQ.Site/Public/Frontend/dist/assets/css/app.css'
-					}
-					type = 'text/css'
-					rel = 'stylesheet'
-					media = 'all'
-					class = 'neos-ui-asset'
-				}
-			}
-		}
 	}
 	htmlTag.attributes.lang = ${Array.first(node.context.dimensions.language)}
 	bodyTag.attributes.class = 'Page'
