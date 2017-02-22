@@ -17,5 +17,5 @@ include: Override.fusion
 root.thePage {
 	@position = 'before default'
 	condition = TRUE
-	type = 'CodeQ.Site:Page'
+	type = 'CodeQ.Site:PageObject'
 }
