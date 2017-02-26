@@ -4,8 +4,13 @@ dbdata:
   volumes:
     - /var/lib/mysql
 
+redis:
+  image: redis:3.2
+  ports:
+    - 6379
+
 db:
-  image: million12/mariadb:latest
+  image: million12/mariadb:10.2
   restart: unless-stopped
   expose:
     - '3306'
@@ -22,7 +27,7 @@ webdata:
     - ./Persistent:/data/www/shared/Data/Persistent
 
 web:
-  image: dimaip/neos-bare:latest
+  image: dimaip/neos-bare:2.0
   restart: unless-stopped
   ports:
     - '80'
