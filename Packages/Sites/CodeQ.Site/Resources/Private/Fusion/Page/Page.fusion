@@ -1,0 +1,6 @@
+prototype(CodeQ.Site:Page.Document) < prototype(CodeQ.Site:AbstractPage.Document)
+prototype(CodeQ.Site:Page) < prototype(CodeQ.Site:AbstractPage) {
+	main = Neos.Neos:ContentCollection {
+		nodePath = 'main'
+	}
+}

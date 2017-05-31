@@ -1,0 +1,33 @@
+
+Neos:
+  Flow:
+    i18n:
+      defaultLocale: de
+    mvc:
+      routes:
+        'Neos.Neos':
+          variables:
+            # We prefer URLs without the ".html" suffix
+            defaultUriSuffix: ''
+    error:
+      exceptionHandler:
+        renderingGroups:
+          notFoundExceptions:
+            options:
+              variables:
+                path: '404' # skip suffix in notfound as well
+    # http:
+    #   baseUri: 'https://DOMAIN.at/'
+  Neos:
+    eventLog:
+      enabled: TRUE
+    userInterface:
+      defaultLanguage: de
+    fusion:
+      autoInclude:
+        CodeQ.Site: true
+    nodeTypes:
+      groups:
+        contentBlocks:
+          position: 110
+          label: 'Content Blocks'

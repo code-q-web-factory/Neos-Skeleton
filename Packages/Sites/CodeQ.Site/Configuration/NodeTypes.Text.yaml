@@ -1,0 +1,30 @@
+'CodeQ.Site:Text':
+  superTypes:
+    'CodeQ.Site:Content': true
+  ui:
+    label: Text
+    icon: icon-file-text
+    position: 1
+  properties:
+    text:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: <p>Text</p>
+          format:
+            paragraph: true
+            h1: true
+            h2: true
+            h3: true
+            h4: true
+            h5: true
+            strong: true
+            em: true
+            sub: true
+            sup: true
+          link:
+            a: true
+          list:
+            ul: true
+          alignment: {  }

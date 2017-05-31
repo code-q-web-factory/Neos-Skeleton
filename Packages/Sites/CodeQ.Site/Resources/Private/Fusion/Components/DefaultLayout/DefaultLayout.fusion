@@ -1,0 +1,5 @@
+prototype(CodeQ.Site:Components.DefaultLayout) < prototype(CodeQ.Site:SimpleTemplate) {
+	header = CodeQ.Site:Components.Header
+	content = ${value}
+	footer = CodeQ.Site:Components.Footer
+}

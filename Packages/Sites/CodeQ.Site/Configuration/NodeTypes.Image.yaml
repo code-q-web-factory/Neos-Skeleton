@@ -1,0 +1,26 @@
+'CodeQ.Site:Image':
+  superTypes:
+    'CodeQ.Site:Content': true
+  ui:
+    label: Image
+    icon: icon-picture
+    inlineEditable: true
+    position: 3
+    inspector:
+      groups:
+        image:
+          label: Image
+  properties:
+    image:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: Image
+        reloadIfChanged: true
+        inspector:
+          group: image
+    alt:
+      type: string
+      ui:
+        label: 'Alternative text'
+        inspector:
+          group: image

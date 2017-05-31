@@ -1,0 +1,15 @@
+'CodeQ.Site:HomePage':
+  superTypes:
+    'CodeQ.Site:Document': TRUE
+    'CodeQ.Site:Page': TRUE
+  ui:
+    label: 'Homepage'
+  properties:
+    info:
+      type: string
+      inlineEditable: true
+      ui:
+        aloha:
+          placeholder: 'Contact info'
+          link:
+            a: true

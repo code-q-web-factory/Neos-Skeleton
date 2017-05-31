@@ -1,0 +1,35 @@
+# Neos CMS
+/Build/
+/Configuration/*
+!/Configuration/Routes.yaml
+/Data/
+/Packages/Application/
+/Packages/Framework/
+/Packages/Neos/
+/Packages/Plugins/
+/Packages/Libraries/
+/Web/_Resources
+/Web/index.php
+/bin/
+/Readme.txt
+/Upgrading.txt
+/Upgrading.rst
+/Readme.rst
+/flow
+/flow.bat
+
+# Frontend template
+/Packages/Sites/CodeQ.Site/Resources/Public/Frontend/node_modules/
+/Packages/Sites/CodeQ.Site/Resources/Public/Frontend/bower_components/
+
+# Server, we use nginx
+.htaccess
+
+# Various temporary and editor files
+.fuse_hidden
+.sass-cache
+bower_components
+node_modules
+*.DS_Store
+/.idea
+.remote-sync.json

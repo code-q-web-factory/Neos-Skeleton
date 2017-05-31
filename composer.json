@@ -1,0 +1,25 @@
+{
+    "name": "codeq/skeleton",
+    "description": "Skeleton Distribution",
+    "config": {
+        "vendor-dir": "Packages/Libraries",
+        "bin-dir": "bin"
+    },
+    "require": {
+        "neos/neos": "~3.1.0",
+        "neos/seo": "*",
+        "neos/redirecthandler-neosadapter": "*",
+        "neos/redirecthandler-databasestorage": "*",
+
+        "codeq/logintheme": "dev-master",
+        "codeq/unicodenormalizer": "~2.0",
+        "opsdev/cache-breaker": "^3.0",
+        "moc/notfound": "^3.0"
+    },
+    "scripts": {
+        "post-update-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+        "post-install-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+        "post-package-update": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
+        "post-package-install": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall"
+    }
+}

@@ -1,0 +1,7 @@
+prototype(CodeQ.Site:Components.Header) < prototype(CodeQ.Site:SimpleTemplate) {
+	mainMenu = CodeQ.Site:Components.Navigation
+	homeLink = NodeUri {
+		node = ${site}
+	}
+	websiteTitle = ${Translation.translate('global.title', null, [], null, 'CodeQ.Site')}
+}

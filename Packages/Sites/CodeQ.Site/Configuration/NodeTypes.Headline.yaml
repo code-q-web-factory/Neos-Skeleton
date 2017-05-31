@@ -1,0 +1,22 @@
+'CodeQ.Site:Headline':
+  superTypes:
+    'CodeQ.Site:Content': true
+  ui:
+    label: Headline
+    icon: icon-header
+    position: 2
+  properties:
+    text:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Headline'
+          format:
+            h1: true
+            h2: true
+            h3: true
+            h4: true
+            h5: true
+          link:
+            a: true

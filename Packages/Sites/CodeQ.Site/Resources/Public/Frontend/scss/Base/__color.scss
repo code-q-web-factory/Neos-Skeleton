@@ -1,0 +1,37 @@
+$gray: gray;
+$gray-line: #ccc;
+
+$orange: orange;
+$blue: blue;
+
+$color-primary: $orange;
+$color-primaryAlt: $blue;
+
+
+.color-white {
+	color: white !important;
+}
+
+.color-primary {
+	color: $color-primary !important;
+}
+
+.color-primaryAlt {
+	color: $color-primaryAlt !important;
+}
+
+.color-gray {
+	color: $gray !important;
+}
+
+.backgroundColor-primary {
+	background-color: $color-primary !important;
+}
+
+.backgroundColor-primaryAlt {
+	background-color: $color-primaryAlt !important;
+}
+
+.backgroundColor-white {
+	background-color: white !important;
+}

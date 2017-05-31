@@ -1,0 +1,21 @@
+$lineHeight-single: 1;
+$lineHeight-tight: 1.2;
+$lineHeight-normal: 1.5;
+$lineHeight-loose: 1.8;
+
+
+.lineHeight-single {
+	line-height: $lineHeight-single !important;
+}
+
+.lineHeight-tight {
+	line-height: $lineHeight-tight !important;
+}
+
+.lineHeight-normal {
+	line-height: $lineHeight-normal !important;
+}
+
+.lineHeight-loose {
+	line-height: $lineHeight-loose !important;
+}
