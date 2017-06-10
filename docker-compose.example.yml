@@ -33,6 +33,7 @@ web:
     - '80'
   links:
     - db:db
+    - redis:redis
   volumes_from:
     - webdata
   environment:
@@ -51,6 +52,7 @@ ssh:
   links:
     - db:db
     - web:web
+    - redis:redis
   volumes_from:
     - webdata
   environment:
