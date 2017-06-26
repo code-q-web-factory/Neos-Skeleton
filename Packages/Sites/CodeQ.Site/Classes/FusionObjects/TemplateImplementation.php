@@ -39,8 +39,13 @@ class TemplateImplementation extends OriginalTemplateImplementation
         $prototypeName = $this->getOverridePrototypeName() ?: $this->fusionObjectName;
         list($packageKey, $relativeName) = explode(':', $prototypeName, 2);
         if (strpos($relativeName, '.') !== false) {
-            list($namespace, $namespacedName) = explode('.', $relativeName, 2);
-            $templatePath = 'resource://' . $packageKey . '/Private/Fusion/' . $namespace . '/' . $namespacedName . '/' . $namespacedName . '.html';
+            $nameParts = explode('.', $relativeName);
+			$path = '';
+			foreach ($nameParts as $namePart) {
+				$path .= '/' . $namePart;
+			}
+			$lastPart = end($nameParts);
+            $templatePath = 'resource://' . $packageKey . '/Private/Fusion/' . $path . '/' . $lastPart . '.html';
         } else {
             $templatePath = 'resource://' . $packageKey . '/Private/Fusion/' . $relativeName . '/' . $relativeName . '.html';
         }
