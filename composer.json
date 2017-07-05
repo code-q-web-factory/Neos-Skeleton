@@ -13,9 +13,10 @@
 
         "codeq/logintheme": "dev-master",
         "codeq/unicodenormalizer": "~2.0",
-		"codeq/contentreferences": "dev-master",
         "opsdev/cache-breaker": "^3.0",
-        "moc/notfound": "^3.0"
+        "moc/notfound": "^3.0",
+		
+		"codeq/contentreferences": "~1.0"
     },
     "scripts": {
         "post-update-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
