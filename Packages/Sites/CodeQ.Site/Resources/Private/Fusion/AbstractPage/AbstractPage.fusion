@@ -1,6 +1,6 @@
 prototype(CodeQ.Site:AbstractPage.Document) < prototype(Page) {
 	head {
-		titleTag.content.@process.addBrand = ${value + ' | Brand'}
+		# titleTag.content.@process.addBrand = ${value + ' | Brand'}
 		headTags = CodeQ.Site:Components.HeadTags
 		stylesheets {
 			css = Neos.Fusion:Tag {
