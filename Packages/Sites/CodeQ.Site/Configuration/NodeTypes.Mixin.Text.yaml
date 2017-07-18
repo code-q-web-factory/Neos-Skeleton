@@ -1,0 +1,37 @@
+'CodeQ.Site:TextMixin':
+  abstract: true
+  ui:
+    inlineEditable: true
+  properties:
+    text:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: '<p>Text hier eingeben...</p>'
+          format:
+            paragraph: true
+            h1: true
+            h2: true
+            h3: true
+            h4: true
+            h5: true
+            strong: true
+            em: true
+            sub: true
+            sup: true
+            removeFormat: true
+          table:
+            table: false
+          link:
+            a: true
+          list:
+            ul: true
+            ol: true
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption': true
+            # By defualt remove weird stuff
+            strippedElements: ['b', 'bdi', 'bdo', 'cite', 'code', 'del', 'dfn', 'em', 'i', 'ins', 'kbd', 'mark', 'q', 'rp', 'rt', 'ruby', 's', 'samp', 'small', 'u']
+          autoparagraph: true

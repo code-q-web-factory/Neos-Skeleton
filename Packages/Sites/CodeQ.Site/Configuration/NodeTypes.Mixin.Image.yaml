@@ -1,0 +1,26 @@
+'CodeQ.Site:ImageMixin':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        image:
+          label: 'Bild'
+          position: 5
+          icon: 'icon-image'
+  properties:
+    image:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Bild'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'image'
+          position: 50
+    alternativeText:
+      type: string
+      ui:
+        label: 'Alternativer Text'
+        reloadIfChanged: FALSE
+        inspector:
+          group: 'image'
+          position: 100

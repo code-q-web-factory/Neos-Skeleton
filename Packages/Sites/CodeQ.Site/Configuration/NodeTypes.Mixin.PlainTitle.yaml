@@ -1,0 +1,21 @@
+# to correctly work with Aloha you also need to make the editable tag of type p/span
+'CodeQ.Site:PlainTitleMixin':
+  abstract: true
+  ui:
+    inlineEditable: true
+  properties:
+    title:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Text hier eingeben...'
+          format: { }
+          table: { }
+          link: { }
+          list: { }
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption': true
+          autoparagraph: false

@@ -1,0 +1,19 @@
+'CodeQ.Site:TitleMixin':
+  abstract: true
+  ui:
+    inlineEditable: true
+  properties:
+    title:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Überschrift hier eingeben...'
+          format:
+            h1: true
+            h2: true
+            h3: true
+            h4: true
+            h5: true
+          link:
+            a: true

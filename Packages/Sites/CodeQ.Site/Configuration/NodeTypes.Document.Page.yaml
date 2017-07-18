@@ -1,11 +1,11 @@
 'CodeQ.Site:Page':
   superTypes:
     'CodeQ.Site:Document': TRUE
+  ui:
+    label: 'Generic page'
   childNodes:
     main:
       type: 'Neos.Neos:ContentCollection'
   constraints:
     nodeTypes:
       'CodeQ.Site:HomePage': FALSE
-  ui:
-    label: 'Generic page'
