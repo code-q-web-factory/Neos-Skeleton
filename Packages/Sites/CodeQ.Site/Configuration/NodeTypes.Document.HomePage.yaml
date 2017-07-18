@@ -5,11 +5,11 @@
   ui:
     label: 'Homepage'
   properties:
-    info:
+    footerInfo:
       type: string
       inlineEditable: true
       ui:
         aloha:
-          placeholder: 'Contact info'
+          placeholder: 'Footer Contact info'
           link:
             a: true
