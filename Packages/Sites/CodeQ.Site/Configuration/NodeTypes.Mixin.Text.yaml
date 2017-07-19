@@ -31,7 +31,7 @@
           alignment: {  }
           formatlesspaste:
             button: false
-            formatlessPasteOption': true
+            formatlessPasteOption: true
             # By defualt remove weird stuff
             strippedElements: ['b', 'bdi', 'bdo', 'cite', 'code', 'del', 'dfn', 'em', 'i', 'ins', 'kbd', 'mark', 'q', 'rp', 'rt', 'ruby', 's', 'samp', 'small', 'u']
           autoparagraph: true

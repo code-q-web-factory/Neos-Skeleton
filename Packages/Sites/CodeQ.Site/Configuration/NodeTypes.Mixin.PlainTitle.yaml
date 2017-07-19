@@ -17,5 +17,5 @@
           alignment: {  }
           formatlesspaste:
             button: false
-            formatlessPasteOption': true
+            formatlessPasteOption: true
           autoparagraph: false
