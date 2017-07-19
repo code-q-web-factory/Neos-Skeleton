@@ -7,7 +7,7 @@
     inspector:
       groups:
         general:
-          title: General
+          label: General
   options:
     fusion:
       prototypeGenerator: CodeQ\Site\Generators\DefaultContentPrototypeGenerator
@@ -20,7 +20,7 @@
     inspector:
       groups:
         general:
-          title: General
+          label: General
   options:
     fusion:
       prototypeGenerator: CodeQ\Site\Generators\DefaultDocumentPrototypeGenerator

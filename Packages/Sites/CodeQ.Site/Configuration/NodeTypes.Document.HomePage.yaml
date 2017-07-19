@@ -7,8 +7,8 @@
   properties:
     footerInfo:
       type: string
-      inlineEditable: true
       ui:
+        inlineEditable: true
         aloha:
           placeholder: 'Footer Contact info'
           link:

@@ -10,7 +10,7 @@
         aloha:
           placeholder: '<p>Text hier eingeben...</p>'
           format:
-            paragraph: true
+            p: true
             h1: true
             h2: true
             h3: true
