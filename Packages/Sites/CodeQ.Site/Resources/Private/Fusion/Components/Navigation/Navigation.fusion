@@ -20,7 +20,7 @@ prototype(CodeQ.Site:Components.Navigation.LevelRenderer) < prototype(Neos.Fusio
 	title = CodeQ.Site:Components.Navigation.Item
 	nextLevel = Neos.Fusion:Collection {
 		@if.notEmpty = ${this.collection.count() > 0}
-		collection = ${q(node).children('[instanceof Neos.Neos:Document][_hiddenInIndex != TRUE]')}
+		collection = ${q(node).children('[instanceof Neos.Neos:Document][_hiddenInIndex != TRUE][hideFromMainMenu != TRUE]')}
 		itemName = 'node'
 		itemRenderer = CodeQ.Site:Components.Navigation.LevelRenderer
 	}
