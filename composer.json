@@ -16,7 +16,8 @@
         "opsdev/cache-breaker": "^3.0",
         "moc/notfound": "^3.0",
 		
-		"codeq/contentreferences": "~1.0"
+		"codeq/contentreferences": "~1.0",
+		"carbon/link": "^0.2.0"
     },
     "scripts": {
         "post-update-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
