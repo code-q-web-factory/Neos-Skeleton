@@ -6,3 +6,12 @@
 prototype(Neos.Fusion:Collection) {
 	itemName = 'node'
 }
+
+
+# Configure Google Analytics
+prototype(Neos.GoogleAnalytics:TrackingCode) {
+	# See https://github.com/neos/neos-googleanalytics/pull/29
+	@if.inProductionContext = ${Configuration.setting('Neos.Flow.core.context') == 'Production'}
+	# See https://github.com/neos/neos-googleanalytics/issues/25
+	code.@process.anonymizeIp = ${"ga('set', 'anonymizeIp', true);" + value}
+}

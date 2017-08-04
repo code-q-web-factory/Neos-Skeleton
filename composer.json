@@ -10,6 +10,7 @@
         "neos/seo": "*",
         "neos/redirecthandler-neosadapter": "*",
         "neos/redirecthandler-databasestorage": "*",
+        "neos/googleanalytics": "^2.0",
 
         "codeq/logintheme": "dev-master",
         "codeq/unicodenormalizer": "~2.0",
