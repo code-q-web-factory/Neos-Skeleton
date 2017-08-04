@@ -9,3 +9,10 @@
   constraints:
     nodeTypes:
       'CodeQ.Site:HomePage': FALSE
+  properties:
+    hideFromMainMenu:
+      type: boolean
+      ui:
+        label: 'Im Hauptmenü verbergen'
+        inspector:
+          group: visibility
