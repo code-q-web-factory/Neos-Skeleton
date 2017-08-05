@@ -1,4 +1,5 @@
 prototype(CodeQ.Site:AbstractPage.Document) < prototype(Page) {
+	headerComment.templatePath = 'resource://CodeQ.Site/Private/Fusion/AbstractPage/NeosLicenseHeaderAndCodeQInfo.html'
 	head {
 		# titleTag.content.@process.addBrand = ${value + ' | Brand'}
 		headTags = CodeQ.Site:Components.HeadTags
