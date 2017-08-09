@@ -22,13 +22,14 @@ webdata:
   command: echo webdata
   volumes:
     - /data
-    - ./Persistent:/data/www/shared/Data/Persistent
+    - ./Persistent:/data/shared/Data/Persistent
 
 web:
-  image: dimaip/neos-bare:2.2
+  image: dimaip/docker-neos-alpine:latest
   restart: unless-stopped
   ports:
     - '80'
+    - '1123:22'
   links:
     - db:db
     - redis:redis
@@ -41,17 +42,4 @@ web:
     VIRTUAL_HOST: '<DOMAIN>.com, www.<DOMAIN>.com, dev.<DOMAIN>.com, next.<DOMAIN>.com'
     LETSENCRYPT_HOST: '<DOMAIN>.com, www.<DOMAIN>.com'
     LETSENCRYPT_EMAIL: '<YOUR@EMAIL>'
-
-ssh:
-  image: million12/php-app-ssh:php-70
-  restart: unless-stopped
-  ports:
-    - '1123:22'
-  links:
-    - db:db
-    - web:web
-    - redis:redis
-  volumes_from:
-    - webdata
-  environment:
     IMPORT_GITHUB_PUB_KEYS: YOUR_GITHUB_NAME
