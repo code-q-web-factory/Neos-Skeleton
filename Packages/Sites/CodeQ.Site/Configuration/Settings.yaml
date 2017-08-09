@@ -31,3 +31,12 @@ Neos:
         contentBlocks:
           position: 110
           label: 'Content Blocks'
+MOC:
+  ImageOptimizer:
+    formats:
+      'image/jpeg':
+        binaryPath: '/usr/bin/jpegtran'
+      'image/png':
+        binaryPath: '/usr/bin/optipng'
+      'image/gif':
+        enabled: false
