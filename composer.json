@@ -16,6 +16,7 @@
         "codeq/unicodenormalizer": "~2.0",
         "opsdev/cache-breaker": "^3.0",
         "moc/notfound": "^3.0",
+		"moc/imageoptimizer": "^3.0"
 		
 		"codeq/contentreferences": "~1.0",
 		"carbon/link": "^0.2.0"
