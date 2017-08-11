@@ -6,7 +6,7 @@ machine:
 dependencies:
   override:
     - if [ -d ~/ansible-deploy ]; then (cd ~/ansible-deploy && git pull); else git clone https://github.com/psmb/ansible-deploy ~/ansible-deploy;fi
-    - pip install 'ansible>=2.0.0,<2.2.0'
+    - pip install 'ansible>=2.2.0,<2.3.0'
     - pip install httplib2
   cache_directories:
     - "~/ansible-deploy"
@@ -17,7 +17,5 @@ deployment:
   prod:
     branch: master
     commands:
-      - cd ~/ansible-deploy
-      - touch 'i'
-      - ansible-playbook ~/ansible-deploy/deploy.yml --extra-vars "REPOSITORY_URL=https://github.com/rolandschuetz/REPOSITORY_URL DOMAIN=DOMAIN.at PROTOCOL=https HOST=THEHOST PORT=THEPORTNUMBER" -i 'i':
+      - cd ~/ansible-deploy && ansible-playbook ~/ansible-deploy/deploy-alpine.yml --extra-vars "REPOSITORY_URL=https://github.com/rolandschuetz/REPOSITORY_URL DOMAIN=DOMAIN.at PROTOCOL=https HOST=THEHOST PORT=THEPORTNUMBER":
           timeout: 2400
