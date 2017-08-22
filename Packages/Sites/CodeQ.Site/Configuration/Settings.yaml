@@ -11,6 +11,7 @@ Neos:
             defaultUriSuffix: ''
     error:
       exceptionHandler:
+        className: 'Yeebase\Graylog\Error\GraylogExceptionHandler'
         renderingGroups:
           notFoundExceptions:
             options:
