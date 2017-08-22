@@ -19,7 +19,8 @@
 		"moc/imageoptimizer": "^3.0",
 		
 		"codeq/contentreferences": "~1.0",
-		"carbon/link": "^0.2.0"
+		"carbon/link": "^0.2.0",
+		"yeebase/graylog": "@dev"
     },
     "scripts": {
         "post-update-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
