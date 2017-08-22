@@ -40,3 +40,8 @@ MOC:
         binaryPath: '/usr/bin/optipng'
       'image/gif':
         enabled: false
+Yeebase:
+  Graylog:
+    host: '172.17.0.1'
+    port: 12201
+    chunksize: 'wan'
