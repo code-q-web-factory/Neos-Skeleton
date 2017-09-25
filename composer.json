@@ -1,31 +1,23 @@
 {
-    "name": "codeq/skeleton",
-    "description": "Skeleton Distribution",
-    "config": {
-        "vendor-dir": "Packages/Libraries",
-        "bin-dir": "bin"
-    },
-    "require": {
-        "neos/neos": "~3.1.0",
-        "neos/seo": "*",
-        "neos/redirecthandler-neosadapter": "*",
-        "neos/redirecthandler-databasestorage": "*",
-        "neos/googleanalytics": "^2.0",
-
-        "codeq/logintheme": "dev-master",
-        "codeq/unicodenormalizer": "~2.0",
-        "opsdev/cache-breaker": "^3.0",
-        "moc/notfound": "^3.0",
-		"moc/imageoptimizer": "^3.0",
-		
-		"codeq/contentreferences": "~1.0",
-		"carbon/link": "^0.2.0",
-		"yeebase/graylog": "@dev"
-    },
-    "scripts": {
-        "post-update-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
-        "post-install-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
-        "post-package-update": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
-        "post-package-install": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall"
-    }
+	"name": "codeq/skeleton",
+	"description": "Best practice skeleton for Neos",
+	"config": {
+		"vendor-dir": "Packages/Libraries",
+		"bin-dir": "bin"
+	},
+	"require": {
+		"codeq/site": "1.0.x-dev"
+	},
+	"scripts": {
+		"post-update-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+		"post-install-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+		"post-package-update": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
+		"post-package-install": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall"
+	},
+	"repositories": [
+		{
+			"type": "path",
+			"url": "Source/CodeQ.Site"
+		}
+	]
 }

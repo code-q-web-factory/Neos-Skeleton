@@ -1,6 +1,6 @@
 redis:
   image: redis:3.2
-  ports:
+  expose:
     - 6379
 
 dbdata:
@@ -23,11 +23,12 @@ webdata:
   image: busybox:latest
   command: echo webdata
   volumes:
-    - /data
+    - ./data:/data
     - ./Persistent:/data/shared/Data/Persistent
-    # - ./data:/data
-    # - ./Persistent:/data/shared/Data/Persistent
-    # - ./Shared:/data/shared
+    - ./Shared:/data/shared
+    # On the server
+    # - /data
+    # - ./Persistent:/data/www/shared/Data/Persistent
 
 web:
   image: dimaip/docker-neos-alpine:latest
@@ -43,8 +44,8 @@ web:
   environment:
     REPOSITORY_URL: 'https://github.com/rolandschuetz/Neos-Skeleton'
     SITE_PACKAGE: 'CodeQ.Site'
-    ADMIN_PASSWORD: 'admin'
-    VIRTUAL_HOST: '<DOMAIN>.com, www.<DOMAIN>.com, dev.<DOMAIN>.com, next.<DOMAIN>.com'
+    # ADMIN_PASSWORD: 'admin'
+    # VIRTUAL_HOST: '<DOMAIN>.com, www.<DOMAIN>.com, dev.<DOMAIN>.com, next.<DOMAIN>.com'
     # LETSENCRYPT_HOST: '<DOMAIN>.com, www.<DOMAIN>.com'
     # LETSENCRYPT_EMAIL: '<YOUR@EMAIL>'
     # IMPORT_GITHUB_PUB_KEYS: YOUR_GITHUB_NAME

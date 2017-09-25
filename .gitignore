@@ -3,11 +3,7 @@
 /Configuration/*
 !/Configuration/Routes.yaml
 /Data/
-/Packages/Application/
-/Packages/Framework/
-/Packages/Neos/
-/Packages/Plugins/
-/Packages/Libraries/
+/Packages/*
 /Web/_Resources
 /Web/index.php
 /bin/
@@ -19,8 +15,8 @@
 /flow.bat
 
 # Frontend template
-/Packages/Sites/CodeQ.Site/Resources/Public/Frontend/node_modules/
-/Packages/Sites/CodeQ.Site/Resources/Public/Frontend/bower_components/
+/Source/CodeQ.Site/Resources/Public/Frontend/node_modules/
+/Source/CodeQ.Site/Resources/Public/Frontend/bower_components/
 
 # Server, we use nginx
 .htaccess

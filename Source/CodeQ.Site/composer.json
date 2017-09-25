@@ -1,0 +1,35 @@
+{
+	"name": "codeq/site",
+	"description": "Neos Website, build by Code Q",
+	"type": "neos-site",
+	"require": {
+		"neos/neos": "~3.1.0",
+		"neos/seo": "*",
+		"neos/redirecthandler-neosadapter": "*",
+		"neos/redirecthandler-databasestorage": "*",
+		"neos/googleanalytics": "^2.0",
+
+		"codeq/logintheme": "~1.0",
+		"codeq/unicodenormalizer": "~2.0",
+		"opsdev/cache-breaker": "^3.0",
+		"moc/notfound": "^3.0",
+		"moc/imageoptimizer": "^3.0",
+
+		"codeq/contentreferences": "~1.0",
+		"carbon/link": "^0.2.0",
+		"yeebase/graylog": "@dev"
+	},
+	"autoload": {
+		"psr-4": {
+			"CodeQ\\Site\\": "Classes/"
+		}
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "1.0.x-dev"
+		},
+		"neos": {
+			"package-key": "CodeQ.Site"
+		}
+	}
+}
