@@ -1,11 +1,13 @@
+redis:
+  image: redis:3.2
+  ports:
+    - 6379
+
 dbdata:
   image: busybox:latest
   command: echo dbdata
   volumes:
     - /var/lib/mysql
-
-redis:
-  image: redis:3.2
 
 db:
   image: million12/mariadb:10.2
@@ -23,13 +25,16 @@ webdata:
   volumes:
     - /data
     - ./Persistent:/data/shared/Data/Persistent
+    # - ./data:/data
+    # - ./Persistent:/data/shared/Data/Persistent
+    # - ./Shared:/data/shared
 
 web:
   image: dimaip/docker-neos-alpine:latest
   restart: unless-stopped
   ports:
     - '80'
-    - '1123:22'
+    # - '1123:22'
   links:
     - db:db
     - redis:redis
@@ -40,6 +45,6 @@ web:
     SITE_PACKAGE: 'CodeQ.Site'
     ADMIN_PASSWORD: 'admin'
     VIRTUAL_HOST: '<DOMAIN>.com, www.<DOMAIN>.com, dev.<DOMAIN>.com, next.<DOMAIN>.com'
-    LETSENCRYPT_HOST: '<DOMAIN>.com, www.<DOMAIN>.com'
-    LETSENCRYPT_EMAIL: '<YOUR@EMAIL>'
-    IMPORT_GITHUB_PUB_KEYS: YOUR_GITHUB_NAME
+    # LETSENCRYPT_HOST: '<DOMAIN>.com, www.<DOMAIN>.com'
+    # LETSENCRYPT_EMAIL: '<YOUR@EMAIL>'
+    # IMPORT_GITHUB_PUB_KEYS: YOUR_GITHUB_NAME
