@@ -17,7 +17,8 @@
 
 		"codeq/contentreferences": "~1.0",
 		"carbon/link": "^0.2.0",
-		"yeebase/graylog": "@dev"
+		"yeebase/graylog": "@dev",
+		"ttree/eelshell": "@dev"
 	},
 	"autoload": {
 		"psr-4": {
