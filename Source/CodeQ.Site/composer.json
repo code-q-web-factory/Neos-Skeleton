@@ -10,6 +10,7 @@
 		"neos/googleanalytics": "^2.0",
 
 		"codeq/logintheme": "~1.0",
+		"codeq/manualpage": "~1.2",
 		"codeq/unicodenormalizer": "~2.0",
 		"opsdev/cache-breaker": "^3.0",
 		"moc/notfound": "^3.0",
