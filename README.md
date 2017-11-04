@@ -8,6 +8,10 @@ The setup is based on docker [dimaip/docker-neos-alpine by dimaip](https://githu
 
 [![Introduction Video about the Neos Skeleton and Best Practises](https://new.codeq.at/_Resources/Persistent/84695da39bf7ca5059b6357b55169d24bd5450fe/Best-Practise-Neos-Setup-Talk.jpg)](https://youtu.be/-fPvw8GalXo)
 
+You need help? 
+
+We might consult your company on Neos setups and build processes. Get in contact: rs@codeq.at
+
 ## Structure
 
  - Optimized for usage with Docker
