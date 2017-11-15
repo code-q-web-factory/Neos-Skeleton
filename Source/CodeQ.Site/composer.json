@@ -11,10 +11,10 @@
 		"neos/neos-ui": "1.0.*@beta",
 		"neos/neos-ui-compiled": "1.0.*@beta",
 
+		"carbon/includeassets": "^1.1",
 		"codeq/logintheme": "~1.0",
 		"codeq/manualpage": "~1.2",
 		"codeq/unicodenormalizer": "~2.0",
-		"opsdev/cache-breaker": "^3.0",
 		"moc/notfound": "^3.0",
 		"moc/imageoptimizer": "^3.0",
 

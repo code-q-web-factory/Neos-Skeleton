@@ -64,3 +64,16 @@ Yeebase:
     host: '172.17.0.1'
     port: 12201
     chunksize: 'wan'
+
+Carbon:
+  IncludeAssets:
+    Path:
+      File:
+        CSS: 'Public/Frontend/built'
+        JS: 'Public/Frontend/built'
+    # Asset files who get's loaded in live and backend view
+    General:
+      Head:
+        - index.css
+      Body:
+        - index.js

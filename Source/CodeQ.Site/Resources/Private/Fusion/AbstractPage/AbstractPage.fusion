@@ -3,30 +3,6 @@ prototype(CodeQ.Site:AbstractPage.Document) < prototype(Page) {
 	head {
 		# titleTag.content.@process.addBrand = ${value + ' | Brand'}
 		headTags = CodeQ.Site:Components.HeadTags
-		stylesheets {
-			css = Neos.Fusion:Tag {
-				tagName = 'link'
-				attributes {
-					href = OpsDev.CacheBreaker:ResourceUri {
-						package = 'CodeQ.Site'
-						path = 'resource://CodeQ.Site/Public/Frontend/built/index.css'
-					}
-					type = 'text/css'
-					rel = 'stylesheet'
-				}
-			}
-		}
-	}
-	body {
-		javascripts {
-			index = Neos.Fusion:Tag {
-				tagName = 'script'
-				attributes.src = OpsDev.CacheBreaker:ResourceUri {
-					package = 'CodeQ.Site'
-					path = 'resource://CodeQ.Site/Public/Frontend/built/index.js'
-				}
-			}
-		}
 	}
 }
 
