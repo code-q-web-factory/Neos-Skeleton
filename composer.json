@@ -5,6 +5,7 @@
 		"vendor-dir": "Packages/Libraries",
 		"bin-dir": "bin"
 	},
+	"minimum-stability": "beta",
 	"require": {
 		"codeq/site": "1.0.x-dev"
 	},
