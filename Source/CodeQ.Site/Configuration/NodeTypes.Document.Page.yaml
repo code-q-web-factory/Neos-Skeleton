@@ -2,7 +2,8 @@
   superTypes:
     'CodeQ.Site:Document': TRUE
   ui:
-    label: 'Generic page'
+    label: 'Standard page'
+    icon: icon-file-o
   childNodes:
     main:
       type: 'Neos.Neos:ContentCollection'

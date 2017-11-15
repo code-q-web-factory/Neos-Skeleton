@@ -4,6 +4,7 @@
     'CodeQ.Site:Page': TRUE
   ui:
     label: 'Homepage'
+    icon: icon-globe
   properties:
     footerInfo:
       type: string
