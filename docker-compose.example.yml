@@ -42,7 +42,7 @@ web:
   volumes_from:
     - webdata
   environment:
-    REPOSITORY_URL: 'https://github.com/rolandschuetz/Neos-Skeleton'
+    REPOSITORY_URL: 'https://<YOUR_GITHUB_TOKEN>@github.com/rolandschuetz/Neos-Skeleton'
     SITE_PACKAGE: 'CodeQ.Site'
     # ADMIN_PASSWORD: 'admin'
     # VIRTUAL_HOST: '<DOMAIN>.com, www.<DOMAIN>.com, dev.<DOMAIN>.com, next.<DOMAIN>.com'
