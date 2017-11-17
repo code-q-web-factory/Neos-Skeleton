@@ -6,7 +6,7 @@ from Code Q. It is heavily inspired by the [Flowpack Neos best practise examples
 The setup is based on docker [dimaip/docker-neos-alpine by dimaip](https://github.com/psmb/docker-neos-alpine), a [example file](docker-compose.example.yml) is included.
 
 
-[![Introduction Video about the Neos Skeleton and Best Practises](https://new.codeq.at/_Resources/Persistent/84695da39bf7ca5059b6357b55169d24bd5450fe/Best-Practise-Neos-Setup-Talk.jpg)](https://youtu.be/-fPvw8GalXo)
+[![Introduction Video about the Neos Skeleton and Best Practises](https://cms.codeq.at/_Resources/Persistent/59b27b14d5341e8098702436965f768f369d7e39/Best-Practise-Neos-Setup-Talk.jpg)](https://pusher.com/sessions/meetup/neos-cms-and-flow/best-practise-neos-setup)
 
 You need help? 
 
