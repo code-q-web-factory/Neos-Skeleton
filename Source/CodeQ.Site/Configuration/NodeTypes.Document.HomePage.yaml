@@ -6,6 +6,9 @@
   ui:
     label: 'Homepage'
     icon: icon-globe
+  constraints:
+    nodeTypes:
+      'CodeQ.ManualPage:ManualPage': true
   properties:
     footerInfo:
       type: string
