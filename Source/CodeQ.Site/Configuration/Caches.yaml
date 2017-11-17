@@ -14,11 +14,11 @@ Flow_Mvc_Routing_Route:
 # Persistent caches to avoid being kicked from BE and cache flush
 Flow_Session_MetaData:
   backend: Neos\Cache\Backend\RedisBackend
-  persistent: TRUE
+  persistent: true
   backendOptions:
     hostname: redis
 Flow_Session_Storage:
   backend: Neos\Cache\Backend\RedisBackend
-  persistent: TRUE
+  persistent: true
   backendOptions:
     hostname: redis

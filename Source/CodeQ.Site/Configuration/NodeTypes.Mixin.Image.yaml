@@ -12,7 +12,7 @@
       type: Neos\Media\Domain\Model\ImageInterface
       ui:
         label: 'Bild'
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
           group: 'image'
           position: 50
@@ -20,7 +20,7 @@
       type: string
       ui:
         label: 'Alternativer Text'
-        reloadIfChanged: FALSE
+        reloadIfChanged: false
         inspector:
           group: 'image'
           position: 100

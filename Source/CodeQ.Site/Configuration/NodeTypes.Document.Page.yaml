@@ -1,6 +1,6 @@
 'CodeQ.Site:Page':
   superTypes:
-    'CodeQ.Site:Document': TRUE
+    'CodeQ.Site:Document': true
   ui:
     label: 'Standard page'
     icon: icon-file-o
@@ -9,7 +9,7 @@
       type: 'Neos.Neos:ContentCollection'
   constraints:
     nodeTypes:
-      'CodeQ.Site:HomePage': FALSE
+      'CodeQ.Site:HomePage': false
   properties:
     hideFromMainMenu:
       type: boolean

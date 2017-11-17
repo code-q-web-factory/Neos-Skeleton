@@ -39,7 +39,7 @@ Neos:
   #           uriSegment: de
   Neos:
     eventLog:
-      enabled: TRUE
+      enabled: true
     userInterface:
       defaultLanguage: de
     fusion:
