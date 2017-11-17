@@ -3,7 +3,7 @@
 	"description": "Neos Website, build by Code Q",
 	"type": "neos-site",
 	"require": {
-		"neos/neos": "~3.2.0",
+		"neos/neos": "^3.2",
 		"neos/seo": "*",
 		"neos/redirecthandler-neosadapter": "*",
 		"neos/redirecthandler-databasestorage": "*",
