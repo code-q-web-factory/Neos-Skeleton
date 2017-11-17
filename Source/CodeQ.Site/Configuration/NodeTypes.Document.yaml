@@ -1,0 +1,13 @@
+# All nodetypes that want to use new generators should inherit from these ones instead of "Neos.Neos:Document"
+'CodeQ.Site:Document':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    inspector:
+      groups:
+        general:
+          label: General
+  options:
+    fusion:
+      prototypeGenerator: CodeQ\Site\Generators\DefaultDocumentPrototypeGenerator

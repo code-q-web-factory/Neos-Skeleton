@@ -1,4 +1,4 @@
-'CodeQ.Site:ImageMixin':
+'CodeQ.Site:Mixin.Image':
   abstract: true
   ui:
     inspector:

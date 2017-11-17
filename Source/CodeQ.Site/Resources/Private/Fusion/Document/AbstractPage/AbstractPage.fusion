@@ -1,0 +1,4 @@
+prototype(CodeQ.Site:Document.AbstractPage) < prototype(CodeQ.Site:SimpleTemplate) {
+	@process.layout = CodeQ.Site:Component.DefaultLayout
+	@process.normalize = CodeQ.UnicodeNormalizer:Normalizer
+}

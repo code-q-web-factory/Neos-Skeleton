@@ -1,0 +1,13 @@
+# All nodetypes that want to use new generators should inherit from these ones instead of "Neos.Neos:Content"
+'CodeQ.Site:Content':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    inspector:
+      groups:
+        general:
+          label: General
+  options:
+    fusion:
+      prototypeGenerator: CodeQ\Site\Generators\DefaultContentPrototypeGenerator

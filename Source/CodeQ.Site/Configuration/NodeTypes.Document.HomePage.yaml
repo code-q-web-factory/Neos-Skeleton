@@ -1,7 +1,7 @@
-'CodeQ.Site:HomePage':
+'CodeQ.Site:Document.HomePage':
   superTypes:
     'CodeQ.Site:Document': true
-    'CodeQ.Site:Page': true
+    'CodeQ.Site:Document.Page': true
   ui:
     label: 'Homepage'
     icon: icon-globe

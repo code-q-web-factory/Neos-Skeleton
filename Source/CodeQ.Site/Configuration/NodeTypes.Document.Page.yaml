@@ -1,4 +1,4 @@
-'CodeQ.Site:Page':
+'CodeQ.Site:Document.Page':
   superTypes:
     'CodeQ.Site:Document': true
   ui:
@@ -9,7 +9,7 @@
       type: 'Neos.Neos:ContentCollection'
   constraints:
     nodeTypes:
-      'CodeQ.Site:HomePage': false
+      'CodeQ.Site:Document.HomePage': false
   properties:
     hideFromMainMenu:
       type: boolean

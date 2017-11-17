@@ -1,5 +1,5 @@
-prototype(CodeQ.Site:Components.Header) < prototype(CodeQ.Site:SimpleTemplate) {
-	mainMenu = CodeQ.Site:Components.Navigation
+prototype(CodeQ.Site:Component.Header) < prototype(CodeQ.Site:SimpleTemplate) {
+	mainMenu = CodeQ.Site:Component.Navigation
 	homeLink = NodeUri {
 		node = ${site}
 	}

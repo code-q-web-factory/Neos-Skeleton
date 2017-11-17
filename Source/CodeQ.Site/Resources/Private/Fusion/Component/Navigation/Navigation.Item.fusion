@@ -1,0 +1,17 @@
+prototype(CodeQ.Site:Component.Navigation.Item) < prototype(Neos.Fusion:Tag) {
+	tagName = 'a'
+	attributes {
+		href = NodeUri {
+			node = ${node}
+		}
+		class = Neos.Fusion:RawArray {
+			base = 'Navigation-item'
+			level = ${'Navigation-itemLevel' + (node.depth - 2)}
+			current = 'isCurrent'
+			current.@if.isCurrent = ${node == documentNode}
+			active = 'isActive'
+			active.@if.isActive = ${(documentNode == site && node == documentNode) || node == documentNode || (node.depth != 2 && (q(documentNode).parents('[_identifier = "' + node.identifier + '"]').count() > 0))}
+		}
+	}
+	content = ${node.properties.title}
+}

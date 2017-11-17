@@ -1,5 +1,5 @@
 # to correctly work with Aloha you also need to make the editable tag of type p/span
-'CodeQ.Site:PlainTitleMixin':
+'CodeQ.Site:Mixin.PlainTitle':
   abstract: true
   ui:
     inlineEditable: true

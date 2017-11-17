@@ -1,0 +1,11 @@
+prototype(CodeQ.Site:Component.Navigation) < prototype(Neos.Fusion:Value) {
+	@context.node = ${site}
+	value = CodeQ.Site:Component.Navigation.LevelRenderer
+	@cache {
+		mode = 'cached'
+		entryIdentifier.node = ${documentNode}
+		entryTags {
+			1 = 'NodeType_Neos.Neos:Document'
+		}
+	}
+}

@@ -1,7 +1,7 @@
-'CodeQ.Site:Text':
+'CodeQ.Site:Content.Text':
   superTypes:
     'CodeQ.Site:Content': true
-    'CodeQ.Site:TextMixin': true
+    'CodeQ.Site:Mixin.Text': true
   ui:
     label: Text
     icon: icon-file-text

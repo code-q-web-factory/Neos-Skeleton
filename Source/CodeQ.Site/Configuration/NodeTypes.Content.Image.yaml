@@ -1,7 +1,7 @@
-'CodeQ.Site:Image':
+'CodeQ.Site:Content.Image':
   superTypes:
     'CodeQ.Site:Content': true
-    'CodeQ.Site:ImageMixin': true
+    'CodeQ.Site:Mixin.Image': true
   ui:
     label: Image
     icon: icon-picture

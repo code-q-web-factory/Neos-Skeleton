@@ -1,4 +1,4 @@
-'CodeQ.Site:TitleMixin':
+'CodeQ.Site:Mixin.Title':
   abstract: true
   ui:
     inlineEditable: true

@@ -1,4 +1,4 @@
-'CodeQ.Site:TextMixin':
+'CodeQ.Site:Mixin.Text':
   abstract: true
   ui:
     inlineEditable: true
