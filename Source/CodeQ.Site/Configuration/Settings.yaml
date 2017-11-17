@@ -50,6 +50,7 @@ Neos:
         contentBlocks:
           position: 110
           label: 'Content Blocks'
+
 MOC:
   ImageOptimizer:
     formats:
@@ -59,11 +60,39 @@ MOC:
         binaryPath: '/usr/bin/optipng'
       'image/gif':
         enabled: false
+
 Yeebase:
   Graylog:
     host: '172.17.0.1'
     port: 12201
     chunksize: 'wan'
+
+# Enforces our Coding Conventions
+# because of our current docker images this can't easily be a dev-dependency
+Sitegeist:
+  NeosGuidelines:
+    distribution:
+      validators:
+        ReadmeSections:
+          options:
+            requiredSections:
+              - 'Server'
+              - false
+              - false
+              - false
+        Composer:
+            options:
+                requiredSettings: {}
+    packages:
+      # the list of the packages that should be validated
+      packageKeys: ['CodeQ.Site']
+      validators:
+        MandatoryFiles:
+          options:
+            files: ['composer.json', 'Resources/Public/Frontend/Readme.md']
+        Fusion:
+          options:
+            excludedFileNames: ['Root.fusion', 'Shame.fusion', 'Override.fusion']
 
 Carbon:
   IncludeAssets:
