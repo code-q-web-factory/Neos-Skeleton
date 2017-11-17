@@ -7,9 +7,12 @@
   childNodes:
     main:
       type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'CodeQ.Site:Constraint.Content.Restricted': false
   constraints:
     nodeTypes:
-      'CodeQ.Site:Document.HomePage': false
+      'CodeQ.Site:Constraint.Document.Restricted': false
   properties:
     hideFromMainMenu:
       type: boolean

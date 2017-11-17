@@ -2,6 +2,7 @@
   superTypes:
     'CodeQ.Site:Document': true
     'CodeQ.Site:Document.Page': true
+    'CodeQ.Site:Constraint.Document.Restricted': true
   ui:
     label: 'Homepage'
     icon: icon-globe

@@ -1,0 +1,23 @@
+##
+# Adding this as superType will prevent inserting pages below normal pages
+#
+# Example:
+# Let's say you have a have a news overview of news pages below. To force
+# news pages to be created only directly below:
+#
+# 'CodeQ.Site:Document.NewsOverview':
+#   superTypes:
+#     'CodeQ.Site:Document': true
+#   constraints:
+#     nodeTypes:
+#       '*': false
+#       'CodeQ.Site:Document.News': true
+#
+# 'CodeQ.Site:Content.News':
+#   superTypes:
+#     'CodeQ.Site:Document': true
+#     'CodeQ.Site:Constraint.Document.Restricted': true
+#
+##
+'CodeQ.Site:Constraint.Document.Restricted':
+  abstract: true
