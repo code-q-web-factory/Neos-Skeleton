@@ -28,7 +28,7 @@ webdata:
     - ./Shared:/data/shared
     # On the server
     # - /data
-    # - ./Persistent:/data/www/shared/Data/Persistent
+    # - ./Persistent:/data/shared/Data/Persistent
 
 web:
   image: dimaip/docker-neos-alpine:latest
