@@ -2,7 +2,7 @@ machine:
   python:
     version: 2.7.5
   php:
-    version: 7.0.11
+    version: 7.1.9
 dependencies:
   override:
     - if [ -d ~/ansible-deploy ]; then (cd ~/ansible-deploy && git pull); else git clone https://github.com/psmb/ansible-deploy ~/ansible-deploy;fi
