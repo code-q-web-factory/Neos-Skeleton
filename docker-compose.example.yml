@@ -30,7 +30,7 @@ web:
     REPOSITORY_URL: 'https://<YOUR_GITHUB_TOKEN>@github.com/rolandschuetz/Neos-Skeleton'
     SITE_PACKAGE: 'CodeQ.Site'
     # ADMIN_PASSWORD: 'admin'
-    # VIRTUAL_HOST: 'domain.name,another.domain.name'
-    # LETSENCRYPT_HOST: 'domain.name,another.domain.name'
+    # VIRTUAL_HOST: '<DOMAIN>.at, www.<DOMAIN>.at, dev.<DOMAIN>.at, next.<DOMAIN>.at'
+    # LETSENCRYPT_HOST: '<DOMAIN>.at, www.<DOMAIN>.at'
     # LETSENCRYPT_EMAIL: 'rs@codeq.at'
-    # IMPORT_GITHUB_PUB_KEYS: CodeQCircleCI, otherGithubUserNames
+    # IMPORT_GITHUB_PUB_KEYS: dimaip,rolandschuetz,krsriq,CodeQCircleCI
