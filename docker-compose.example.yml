@@ -22,6 +22,10 @@ web:
   volumes:
     - /data
     - ./Persistent:/data/shared/Data/Persistent
+    # for development
+    # - ./data:/data
+    # - ./Persistent:/data/shared/Data/Persistent
+    # - ./Shared:/data/shared
   environment:
     REPOSITORY_URL: 'https://<YOUR_GITHUB_TOKEN>@github.com/rolandschuetz/Neos-Skeleton'
     SITE_PACKAGE: 'CodeQ.Site'
