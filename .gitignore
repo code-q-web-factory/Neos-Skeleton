@@ -13,6 +13,7 @@
 /Readme.rst
 /flow
 /flow.bat
+.eel_history
 
 # Frontend template
 /Source/CodeQ.Site/Resources/Public/Frontend/node_modules/
