@@ -19,3 +19,8 @@ deployment:
     commands:
       - cd ~/ansible-deploy && ansible-playbook ~/ansible-deploy/deploy-alpine.yml --extra-vars "REPOSITORY_URL=https://github.com/rolandschuetz/REPOSITORY_URL DOMAIN=DOMAIN.at PROTOCOL=https HOST=THEHOST PORT=THEPORTNUMBER":
           timeout: 2400
+#  preview:
+#    branch: dev
+#    commands:
+#      - cd ~/ansible-deploy && ansible-playbook ~/ansible-deploy/deploy-alpine.yml --extra-vars "REPOSITORY_URL=https://github.com/rolandschuetz/REPOSITORY_URL VERSION=dev DOMAIN=DOMAIN.at PROTOCOL=https HOST=THEHOST PORT=THEPORTNUMBER":
+#          timeout: 2400
