@@ -28,7 +28,7 @@ class DefaultContentPrototypeGenerator implements DefaultPrototypeGeneratorInter
         foreach ($nodeType->getProperties() as $propertyName => $propertyConfiguration) {
             if (isset($propertyName[0]) && $propertyName[0] !== '_') {
                 if (isset($propertyConfiguration['type']) && isset($propertyConfiguration['ui']['inlineEditable']) && $propertyConfiguration['type'] === 'string' && $propertyConfiguration['ui']['inlineEditable'] === true) {
-                    $output .= "\t" . $propertyName . ' = Neos.Fusion:Tag {' . chr(10);
+                    $output .= "\t" . $propertyName . 'Editable = Neos.Fusion:Tag {' . chr(10);
                     $output .= "\t" . 'content = ${q(node).property("' . $propertyName . '")}' . chr(10);
                     $output .= "\t" . 'content.@process.convertUris = ConvertUris' . chr(10);
                     $output .= "\t" . '@process.contentElementEditable = ContentElementEditable {' . chr(10);
