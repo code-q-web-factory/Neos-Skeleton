@@ -35,9 +35,8 @@ class DefaultDocumentPrototypeGenerator implements DefaultPrototypeGeneratorInte
                     $output .= "\t" . 'property = "' . $propertyName . '"' . chr(10);
                     $output .= "\t" . '}' . chr(10);
                     $output .= "\t" . '}' . chr(10);
-                } else {
-                    $output .= "\t" . $propertyName . ' = ${q(node).property("' . $propertyName . '")}' . chr(10);
                 }
+				$output .= "\t" . $propertyName . ' = ${q(node).property("' . $propertyName . '")}' . chr(10);
             }
         }
         $output .= '@process.contentElementWrapping = ContentElementWrapping' . chr(10);
