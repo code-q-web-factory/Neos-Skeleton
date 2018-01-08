@@ -14,7 +14,7 @@ web:
   image: dimaip/docker-neos-alpine:latest
   restart: always
   ports:
-    - '80'
+    - '80:80'
     - 'SSH_PORT_NUMBER:22'
   links:
     - db:db

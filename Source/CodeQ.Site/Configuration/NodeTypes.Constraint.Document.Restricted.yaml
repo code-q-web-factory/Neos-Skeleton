@@ -10,8 +10,7 @@
 #     'CodeQ.Site:Document': true
 #   constraints:
 #     nodeTypes:
-#       '*': false
-#       'CodeQ.Site:Document.News': true
+#       'CodeQ.Site:Document.Restricted': false
 #
 # 'CodeQ.Site:Content.News':
 #   superTypes:

@@ -73,6 +73,9 @@ Sitegeist:
   NeosGuidelines:
     distribution:
       validators:
+        MandatoryFiles:
+          options:
+            files: ['README.md', 'composer.json', '.editorconfig']
         ReadmeSections:
           options:
             requiredSections:
