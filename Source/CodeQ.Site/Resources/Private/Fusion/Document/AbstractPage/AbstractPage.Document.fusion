@@ -3,5 +3,11 @@ prototype(CodeQ.Site:Document.AbstractPage.Document) < prototype(Page) {
 	head {
 		# titleTag.content.@process.addBrand = ${value + ' | Brand'}
 		headTags = CodeQ.Site:Component.HeadTags
+
+		# prevent google & co from indexing dev and preview domains
+		metaRobotsTag.attributes.content {
+			@process.hideDevContext = ${Configuration.setting('Neos.Flow.core.context') == 'Production' ? value : 'noindex,nofollow'}
+			@process.hidePreviewDomains = ${String.indexOf(request.parentRequest.uri.host, 'preview.') == -1 ? value : 'noindex,nofollow'}
+		}
 	}
 }
