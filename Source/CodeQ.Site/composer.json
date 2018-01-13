@@ -19,9 +19,11 @@
 		"moc/notfound": "^3.0",
 		"moc/imageoptimizer": "^3.0",
 		"jonnitto/sitemap": "^3.1",
-		"yeebase/graylog": "@dev",
+		"yeebase/graylog": "*",
 		"ttree/eelshell": "@dev",
 		"sitegeist/neosguidelines": "^1.1",
+		"codeq/fusionprototypegenerator": "*",
+		"codeq/simpletemplate": "*",
 
 		"codeq/contentreferences": "~1.0",
 		"carbon/link": "^0.4.8"

@@ -1,4 +1,4 @@
-prototype(CodeQ.Site:Component.Header) < prototype(CodeQ.Site:SimpleTemplate) {
+prototype(CodeQ.Site:Component.Header) < prototype(CodeQ.SimpleTemplate:Template) {
 	mainMenu = CodeQ.Site:Component.Navigation
 	homeLink = NodeUri {
 		node = ${site}

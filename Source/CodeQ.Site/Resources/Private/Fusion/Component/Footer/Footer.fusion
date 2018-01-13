@@ -1,4 +1,4 @@
-prototype(CodeQ.Site:Component.Footer) < prototype(CodeQ.Site:SimpleTemplate) {
+prototype(CodeQ.Site:Component.Footer) < prototype(CodeQ.SimpleTemplate:Template) {
 	@context.node = ${site}
 	year = ${Date.format(Date.now(), 'Y')}
 	footerInfo = Neos.Fusion:Tag {

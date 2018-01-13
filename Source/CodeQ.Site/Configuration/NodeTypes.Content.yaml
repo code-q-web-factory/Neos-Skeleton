@@ -3,11 +3,9 @@
   abstract: true
   superTypes:
     'Neos.Neos:Content': true
+    'CodeQ.FusionPrototypeGenerator:ContentPrototypeGeneratorMixin': true
   ui:
     inspector:
       groups:
         general:
           label: General
-  options:
-    fusion:
-      prototypeGenerator: CodeQ\Site\Generators\DefaultContentPrototypeGenerator
