@@ -3,11 +3,9 @@
   abstract: true
   superTypes:
     'Neos.Neos:Document': true
+    'CodeQ.FusionPrototypeGenerator:DocumentPrototypeGeneratorMixin': true
   ui:
     inspector:
       groups:
         general:
           label: General
-  options:
-    fusion:
-      prototypeGenerator: CodeQ\Site\Generators\DefaultDocumentPrototypeGenerator

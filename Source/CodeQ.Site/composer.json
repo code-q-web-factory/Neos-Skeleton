@@ -3,13 +3,13 @@
 	"description": "Neos Website, build by Code Q",
 	"type": "neos-site",
 	"require": {
-		"neos/neos": "^3.2",
+		"neos/neos": "^3.3",
 		"neos/seo": "*",
 		"neos/redirecthandler-neosadapter": "*",
 		"neos/redirecthandler-databasestorage": "*",
 		"neos/googleanalytics": "^2.0",
-		"neos/neos-ui": "1.0.*@beta",
-		"neos/neos-ui-compiled": "1.0.*@beta",
+		"neos/neos-ui": "^1.0",
+		"neos/neos-ui-compiled": "^1.0",
 
 		"carbon/compression": "^1.0",
 		"carbon/includeassets": "^1.1",
@@ -19,9 +19,11 @@
 		"moc/notfound": "^3.0",
 		"moc/imageoptimizer": "^3.0",
 		"jonnitto/sitemap": "^3.1",
-		"yeebase/graylog": "@dev",
+		"yeebase/graylog": "*",
 		"ttree/eelshell": "@dev",
 		"sitegeist/neosguidelines": "^1.1",
+		"codeq/fusionprototypegenerator": "*",
+		"codeq/simpletemplate": "*",
 
 		"codeq/contentreferences": "~1.0",
 		"carbon/link": "^0.4.8"

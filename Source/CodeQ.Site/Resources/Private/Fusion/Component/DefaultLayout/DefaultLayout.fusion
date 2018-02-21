@@ -1,4 +1,4 @@
-prototype(CodeQ.Site:Component.DefaultLayout) < prototype(CodeQ.Site:SimpleTemplate) {
+prototype(CodeQ.Site:Component.DefaultLayout) < prototype(CodeQ.SimpleTemplate:Template) {
 	header = CodeQ.Site:Component.Header
 	content = ${value}
 	footer = CodeQ.Site:Component.Footer

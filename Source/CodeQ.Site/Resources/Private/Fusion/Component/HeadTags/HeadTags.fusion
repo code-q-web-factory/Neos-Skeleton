@@ -1,1 +1,1 @@
-prototype(CodeQ.Site:Component.HeadTags) < prototype(CodeQ.Site:SimpleTemplate)
+prototype(CodeQ.Site:Component.HeadTags) < prototype(CodeQ.SimpleTemplate:Template)

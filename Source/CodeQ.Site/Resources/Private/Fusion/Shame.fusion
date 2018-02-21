@@ -2,9 +2,3 @@
 # All all hold all hacky or otherwise shamefull code here.
 # This makes later debugging and refactoring easier.
 ##
-
-# This should have been extracted into a dedicate package (or merged into the core)
-# so for now we put it into here, so we don't feel so ashamed :-)
-prototype(CodeQ.Site:SimpleTemplate) {
-	@class = 'CodeQ\\Site\\FusionObjects\\TemplateImplementation'
-}
