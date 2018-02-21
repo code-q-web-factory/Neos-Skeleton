@@ -42,6 +42,23 @@ Neos:
       enabled: true
     userInterface:
       defaultLanguage: de
+      editPreviewModes:
+        tablet:
+          # based on most used device 2017 - Samsung Galaxy S5
+          isEditingMode: false
+          isPreviewMode: true
+          fusionRenderingPath: ''
+          title: 'Tablet'
+          width: 768px
+          height: 1024px
+        mobile:
+          # based on most used 2017 virtual screensize - https://deviceatlas.com/blog/mobile-viewport-size-statistics-2017
+          isEditingMode: false
+          isPreviewMode: true
+          fusionRenderingPath: ''
+          title: 'Handy'
+          width: 360px
+          height: 640px
     fusion:
       autoInclude:
         CodeQ.Site: true
