@@ -87,20 +87,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-
-# README Template for new projects:
-
-This Neos 3.x website is based on the [Code Q Neos-Skeleton](https://github.com/rolandschuetz/Neos-Skeleton) and the [Code Q Code Conventions](https://docs.google.com/document/d/13ykoM0Ta2qJvO_6BYa-DIsx7_MxFsInOSbJqJHuINBw/edit). 
-
-## Deployment Server
-
-Access the web container: `[TO BE ADDED HERE]`
-
-Access the server: `[TO BE ADDED HERE]`
-
-## Contacts
-
-Frontend developed by: XXXX
-
-Backend developed by: XXXX

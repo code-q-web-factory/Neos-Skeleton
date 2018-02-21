@@ -2,7 +2,6 @@ redis:
   image: redis:3.2
 db:
   image: mariadb:10.3
-  restart: always
   volumes:
     - /var/lib/mysql
   environment:
@@ -12,25 +11,26 @@ db:
     MYSQL_PASSWORD: pass
 web:
   image: dimaip/docker-neos-alpine:latest
-  restart: always
   ports:
     - '80:80'
-    - 'SSH_PORT_NUMBER:22'
+    #- 'SSH_PORT_NUMBER:22'
   links:
     - db:db
     - redis:redis
   volumes:
+    # for server
     - /data
-    - ./Persistent:/data/shared/Data/Persistent
     # for development
     # - ./data:/data
-    # - ./Persistent:/data/shared/Data/Persistent
     # - ./Shared:/data/shared
+    # general
+    - ./Persistent:/data/shared/Data/Persistent
   environment:
-    REPOSITORY_URL: 'https://<YOUR_GITHUB_TOKEN>@github.com/rolandschuetz/Neos-Skeleton'
+    REPOSITORY_URL: 'https://<YOUR_GITHUB_TOKEN>@github.com/rolandschuetz/<YOUR_REPOSITORY_NAME>'
     SITE_PACKAGE: 'CodeQ.Site'
     # ADMIN_PASSWORD: 'admin'
     # VIRTUAL_HOST: '<DOMAIN>.at, www.<DOMAIN>.at, dev.<DOMAIN>.at, next.<DOMAIN>.at'
     # LETSENCRYPT_HOST: '<DOMAIN>.at, www.<DOMAIN>.at'
     # LETSENCRYPT_EMAIL: 'rs@codeq.at'
     # IMPORT_GITHUB_PUB_KEYS: dimaip,rolandschuetz,krsriq,CodeQCircleCI
+
