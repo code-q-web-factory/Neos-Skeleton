@@ -1,7 +1,6 @@
 # Neos CMS
 /Build/
-/Configuration/*
-!/Configuration/Routes.yaml
+/Configuration/
 /Data/
 /Packages/*
 /Web/_Resources
@@ -31,4 +30,3 @@ node_modules
 *.DS_Store
 /.idea
 .remote-sync.json
-.eel_history
