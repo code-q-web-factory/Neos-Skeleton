@@ -5,6 +5,7 @@ prototype(CodeQ.Site:Component.ImageUri) < prototype(Neos.Fusion:Case) {
 			asset = ${asset}
 			width = ${width}
 			height = ${height}
+			quality = ${quality}
 			maximumWidth = ${maximumWidth}
 			maximumHeight = ${maximumHeight}
 			allowCropping = ${allowCropping}
