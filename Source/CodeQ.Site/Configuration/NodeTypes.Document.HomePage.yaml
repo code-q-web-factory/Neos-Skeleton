@@ -18,3 +18,12 @@
           placeholder: 'Footer Contact info'
           link:
             a: true
+    footerItems:
+      type: references
+      ui:
+        label: 'Fußzeilen Menü-Einträge'
+        reloadIfChanged: true
+        inspector:
+          group: general
+          editorOptions:
+            nodeTypes: ['CodeQ.Site:Document.Page']

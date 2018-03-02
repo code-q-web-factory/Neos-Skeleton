@@ -8,5 +8,13 @@ prototype(CodeQ.Site:Component.Footer) < prototype(CodeQ.SimpleTemplate:Template
 			property = 'footerInfo'
 		}
 	}
+	footerItems = Neos.Fusion:Collection {
+		collection = ${site.properties.footerItems}
+		itemName = 'node'
+		itemRenderer = Carbon.Link:Link {
+			node = ${node}
+		}
+	}
+
 	@process.contentElementWrapping = ContentElementWrapping
 }
