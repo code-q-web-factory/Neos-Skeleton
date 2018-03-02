@@ -4,6 +4,7 @@
   ui:
     label: 'Standard page'
     icon: icon-file-o
+    position: 100
   childNodes:
     main:
       type: 'Neos.Neos:ContentCollection'

@@ -2,21 +2,30 @@
 # this file, please see the EditorConfig documentation:
 # http://editorconfig.org/
 
+# top-most EditorConfig file
 root = true
+
+
+# Default
 
 [*]
 charset = utf-8
 end_of_line = lf
-indent_size = 4
-indent_style = tab
 insert_final_newline = true
-trim_trailing_whitespace = true
+trim_trailing-whitespace = true
+indent_style = tab
+indent_size = 4
 
-[*.md]
-trim_trailing_whitespace = false
-
-[{.travis.yml,package.json,*.yaml,*.yml}]
-# The indent size used in the `package.json` file cannot be changed
-# https://github.com/npm/npm/pull/3180#issuecomment-16336516
-indent_size = 2
+# Exceptions
+[{*.{yaml,yml,sh,jscsrc,scss},package.json,.*rc}]
 indent_style = space
+indent_size = 2
+
+[*.{json,scss}]
+max_line_length = 1000
+
+[Sites.xml]
+indent_size = 1
+
+[*.{note,md,edit,read}]
+trim_trailing-whitespace = false
