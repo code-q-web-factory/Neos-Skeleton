@@ -5,7 +5,9 @@
 # Configure Google Analytics
 prototype(Neos.GoogleAnalytics:TrackingCode) {
 	# See https://github.com/neos/neos-googleanalytics/pull/29
-	@if.inProductionContext = ${Configuration.setting('Neos.Flow.core.context') == 'Production'}
+	# Flownative Beach uses a Subcontext like "Production/Beach/Instance", therefore we need to check a substr,
+	# See https://www.flownative.com/en/documentation/questions-answers/beach.html
+	@if.inProductionContext = ${String.substr(Configuration.setting('Neos.Flow.core.context'), 0, 10) == 'Production'}
 	# See https://github.com/neos/neos-googleanalytics/issues/25
 	code.@process.anonymizeIp = ${"ga('set', 'anonymizeIp', true);" + value}
 }
