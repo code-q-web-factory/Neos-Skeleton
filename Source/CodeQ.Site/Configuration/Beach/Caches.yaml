@@ -1,0 +1,64 @@
+Flow_Mvc_Routing_Route:
+  backend: 'Neos\Cache\Backend\RedisBackend'
+  backendOptions:
+    hostname: '%env:BEACH_REDIS_HOST%'
+    password: '%env:BEACH_REDIS_PASSWORD%'
+    port: '6379'
+    # starting with database 2 here, since 0 and 1 are used and flushed by
+    # the core unit tests and should not be used if possible.
+    database: 2
+    defaultLifetime: 0
+
+Flow_Mvc_Routing_Resolve:
+  backend: 'Neos\Cache\Backend\RedisBackend'
+  backendOptions:
+    hostname: '%env:BEACH_REDIS_HOST%'
+    password: '%env:BEACH_REDIS_PASSWORD%'
+    port: '6379'
+    database: 3
+    defaultLifetime: 0
+
+Neos_Fusion_Content:
+  backend: 'Neos\Cache\Backend\RedisBackend'
+  backendOptions:
+    hostname: '%env:BEACH_REDIS_HOST%'
+    password: '%env:BEACH_REDIS_PASSWORD%'
+    port: '6379'
+    database: 4
+    defaultLifetime: 0
+
+Flow_Session_MetaData:
+  backend: 'Neos\Cache\Backend\RedisBackend'
+  backendOptions:
+    hostname: '%env:BEACH_REDIS_HOST%'
+    password: '%env:BEACH_REDIS_PASSWORD%'
+    port: '6379'
+    database: 5
+    defaultLifetime: 0
+
+Flow_Session_Storage:
+  backend: 'Neos\Cache\Backend\RedisBackend'
+  backendOptions:
+    hostname: '%env:BEACH_REDIS_HOST%'
+    password: '%env:BEACH_REDIS_PASSWORD%'
+    port: '6379'
+    database: 6
+    defaultLifetime: 0
+
+Neos_Media_ImageSize:
+  backend: 'Neos\Cache\Backend\RedisBackend'
+  backendOptions:
+    hostname: '%env:BEACH_REDIS_HOST%'
+    password: '%env:BEACH_REDIS_PASSWORD%'
+    port: '6379'
+    database: 7
+    defaultLifetime: 0
+
+Flow_Security_Cryptography_HashService:
+  backend: 'Neos\Cache\Backend\RedisBackend'
+  backendOptions:
+    hostname: '%env:BEACH_REDIS_HOST%'
+    password: '%env:BEACH_REDIS_PASSWORD%'
+    port: '6379'
+    database: 8
+    defaultLifetime: 0
