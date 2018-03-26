@@ -1,4 +1,4 @@
 
 # We do not need this, since we have no custom controllers
-Neos.Neos:PluginView:
+'Neos.Neos:PluginView':
   abstract: true
