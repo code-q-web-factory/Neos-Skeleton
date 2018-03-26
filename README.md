@@ -3,7 +3,7 @@
 The Neos-Skeleton aims to provide a consistent start for new projects. It combines contributions of some of the best Neos developers with experience 
 from Code Q. It is heavily inspired by the [Flowpack Neos best practise examples (Dmitri Pisarev and Dominique Feyer)](https://github.com/Flowpack/fusion-bp) and the [single repro setup by Christian Müller](https://github.com/kitsunet/composer-install-testing).
 
-The setup is based on docker [dimaip/docker-neos-alpine by dimaip](https://github.com/psmb/docker-neos-alpine), a [example file](docker-compose.example.yml) is included.
+The setup is based on docker [dimaip/docker-neos-alpine by dimaip](https://github.com/psmb/docker-neos-alpine), a [example file](docker-compose.example.yml) is included. Hosting is also optimized to run on [Flownative Beach](https://www.flownative.com/en/products/beach/help.html).
 
 
 [![Introduction Video about the Neos Skeleton and Best Practises](https://cms.codeq.at/_Resources/Persistent/59b27b14d5341e8098702436965f768f369d7e39/Best-Practise-Neos-Setup-Talk.jpg)](https://pusher.com/sessions/meetup/neos-cms-and-flow/best-practise-neos-setup)
