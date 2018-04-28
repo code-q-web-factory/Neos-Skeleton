@@ -23,6 +23,7 @@
 		"ttree/eelshell": "@dev",
 		"sitegeist/neosguidelines": "^1.1",
 		"codeq/fusionprototypegenerator": "*",
+		"codeq/replacewithshy": "^1.0",
 		"codeq/simpletemplate": "*",
 
 		"codeq/contentreferences": "~1.0",
