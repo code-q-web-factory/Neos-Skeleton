@@ -13,7 +13,6 @@
 /flow
 /flow.bat
 .eel_history
-composer.lock
 
 # Frontend template
 /Source/CodeQ.Site/Resources/Public/Frontend/node_modules/
