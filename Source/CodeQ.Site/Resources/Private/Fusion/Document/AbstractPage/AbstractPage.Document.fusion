@@ -1,7 +1,16 @@
 prototype(CodeQ.Site:Document.AbstractPage.Document) < prototype(Page) {
-	headerComment.templatePath = 'resource://CodeQ.Site/Private/Fusion/Document/AbstractPage/NeosLicenseHeaderAndCodeQInfo.html'
+	# move our comments after the charset definition
+	headerComment = null
+
 	head {
+		headerComment = Neos.Fusion:Template {
+			@position = 'after characterSetMetaTag'
+			templatePath = 'resource://CodeQ.Site/Private/Fusion/Document/AbstractPage/NeosLicenseHeaderAndCodeQInfo.html'
+		}
+
 		# titleTag.content.@process.addBrand = ${value + ' | Brand'}
+		titleTag.content.@process.shy = CodeQ.ReplaceWithShy:ReplaceWithShy
+
 		headTags = CodeQ.Site:Component.HeadTags
 
 		# prevent google & co from indexing dev and preview domains
@@ -11,5 +20,8 @@ prototype(CodeQ.Site:Document.AbstractPage.Document) < prototype(Page) {
 			@process.hideDevContext = ${String.substr(Configuration.setting('Neos.Flow.core.context'), 0, 10) == 'Production' ? value : 'noindex,nofollow'}
 			@process.hidePreviewDomains = ${String.indexOf(request.parentRequest.uri.host, 'preview.') == -1 ? value : 'noindex,nofollow'}
 		}
+
+		# don't compress the header with license infos
+		@process.minify >
 	}
 }

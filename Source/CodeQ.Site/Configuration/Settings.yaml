@@ -42,6 +42,11 @@ Neos:
       enabled: true
     userInterface:
       defaultLanguage: de
+      translation:
+        autoInclude:
+          CodeQ.Site:
+            - Main
+            - 'NodeTypes/*'
       editPreviewModes:
         tablet:
           # based on most used device 2017 - Samsung Galaxy S5
@@ -59,6 +64,11 @@ Neos:
           title: 'Handy'
           width: 360px
           height: 640px
+      navigateComponent:
+        nodeTree:
+          loadingDepth: 1
+        structureTree:
+          loadingDepth: 2
     fusion:
       autoInclude:
         CodeQ.Site: true
@@ -96,7 +106,7 @@ Sitegeist:
         ReadmeSections:
           options:
             requiredSections:
-              - 'Server'
+              - 'Hosting'
               - false
               - false
               - false
