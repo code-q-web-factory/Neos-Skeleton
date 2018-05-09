@@ -13,7 +13,7 @@
 		"flownative/beach-flow-companion": "1.*",
 
 		"carbon/compression": "^1.0",
-		"carbon/includeassets": "^1.1",
+		"carbon/includeassets": "^2.2",
 		"codeq/logintheme": "~1.0",
 		"codeq/manualpage": "~1.2",
 		"codeq/unicodenormalizer": "~2.0",
@@ -27,7 +27,7 @@
 		"codeq/simpletemplate": "*",
 
 		"codeq/contentreferences": "~1.0",
-		"carbon/link": "^0.4.8"
+		"carbon/link": "^1.0"
 	},
 	"autoload": {
 		"psr-4": {
