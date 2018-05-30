@@ -9,7 +9,6 @@ prototype(CodeQ.Site:Document.AbstractPage.Document) < prototype(Page) {
 		}
 
 		# titleTag.content.@process.addBrand = ${value + ' | Brand'}
-		titleTag.content.@process.shy = CodeQ.ReplaceWithShy:ReplaceWithShy
 
 		headTags = CodeQ.Site:Component.HeadTags
 
@@ -18,7 +17,6 @@ prototype(CodeQ.Site:Document.AbstractPage.Document) < prototype(Page) {
 			# Flownative Beach uses a Subcontext like "Production/Beach/Instance", therefore we need to check a substr,
 			# See https://www.flownative.com/en/documentation/questions-answers/beach.html
 			@process.hideDevContext = ${String.substr(Configuration.setting('Neos.Flow.core.context'), 0, 10) == 'Production' ? value : 'noindex,nofollow'}
-			@process.hidePreviewDomains = ${String.indexOf(request.parentRequest.uri.host, 'preview.') == -1 ? value : 'noindex,nofollow'}
 		}
 
 		# don't compress the header with license infos

@@ -13,6 +13,7 @@
 		"flownative/beach-flow-companion": "1.*",
 
 		"carbon/compression": "^1.0",
+		"carbon/hyphen": "^1.0",
 		"carbon/includeassets": "^2.2",
 		"codeq/logintheme": "~1.0",
 		"codeq/manualpage": "~1.2",
@@ -23,7 +24,6 @@
 		"ttree/eelshell": "@dev",
 		"sitegeist/neosguidelines": "^1.1",
 		"codeq/fusionprototypegenerator": "*",
-		"codeq/replacewithshy": "^1.0",
 		"codeq/simpletemplate": "*",
 
 		"codeq/contentreferences": "~1.0",

@@ -127,6 +127,9 @@ Sitegeist:
 Carbon:
   IncludeAssets:
     Path:
+      Inline:
+        CSS: 'Public/Frontend/built'
+        JS: 'Public/Frontend/built'
       File:
         CSS: 'Public/Frontend/built'
         JS: 'Public/Frontend/built'
