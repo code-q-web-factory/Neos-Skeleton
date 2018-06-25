@@ -79,7 +79,8 @@
             "Neos.Setup-20161124230842",
             "Neos.Imagine-20161124231742",
             "Neos.Media-20161124233100",
-            "Neos.Neos-20161125002322"
+            "Neos.Neos-20161125002322",
+            "Neos.ContentRepository-20161125012000"
         ]
     }
 }
