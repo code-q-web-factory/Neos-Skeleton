@@ -73,9 +73,9 @@ Neos:
         CodeQ.Site: true
     nodeTypes:
       groups:
-        contentBlocks:
-          position: 110
-          label: 'Content Blocks'
+        # contentBlocks:
+        #   position: 110
+        #   label: 'Content Blocks'
 
 MOC:
   ImageOptimizer:

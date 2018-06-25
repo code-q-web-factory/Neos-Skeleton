@@ -8,8 +8,6 @@ prototype(CodeQ.Site:Document.AbstractPage.Document) < prototype(Page) {
 			templatePath = 'resource://CodeQ.Site/Private/Fusion/Document/AbstractPage/NeosLicenseHeaderAndCodeQInfo.html'
 		}
 
-		# titleTag.content.@process.addBrand = ${value + ' | Brand'}
-
 		headTags = CodeQ.Site:Component.HeadTags
 
 		# prevent google & co from indexing dev and preview domains
