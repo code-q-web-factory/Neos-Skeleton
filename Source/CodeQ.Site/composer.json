@@ -6,10 +6,11 @@
 		"neos/neos": "^3.3",
 		"neos/neos-ui": "^1.0",
 		"neos/neos-ui-compiled": "^1.0",
+        "neos/fusion-afx": "~1.0",
+		"neos/googleanalytics": "^2.0",
 		"neos/redirecthandler-neosadapter": "*",
 		"neos/redirecthandler-databasestorage": "*",
 		"neos/seo": "*",
-		"neos/googleanalytics": "^2.0",
 
 		"carbon/compression": "^1.0",
 		"carbon/hyphen": "^1.0",

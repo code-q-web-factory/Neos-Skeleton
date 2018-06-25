@@ -2,4 +2,9 @@ prototype(CodeQ.Site:Document.HomePage) < prototype(CodeQ.Site:Document.Abstract
 	main = Neos.Neos:ContentCollection {
 		nodePath = 'main'
 	}
+	
+	renderer = afx`
+		Homepage
+		{props.main}
+	`
 }

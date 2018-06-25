@@ -1,4 +1,4 @@
-prototype(CodeQ.Site:Document.AbstractPage) < prototype(CodeQ.SimpleTemplate:Template) {
+prototype(CodeQ.Site:Document.AbstractPage) < prototype(Neos.Fusion:Component) {
 	@process.layout = CodeQ.Site:Component.DefaultLayout
 	@process.normalize = CodeQ.UnicodeNormalizer:Normalizer
 }

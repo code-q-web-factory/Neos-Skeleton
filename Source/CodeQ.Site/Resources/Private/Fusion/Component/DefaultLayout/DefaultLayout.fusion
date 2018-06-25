@@ -1,5 +1,9 @@
-prototype(CodeQ.Site:Component.DefaultLayout) < prototype(CodeQ.SimpleTemplate:Template) {
-	header = CodeQ.Site:Component.Header
+prototype(CodeQ.Site:Component.DefaultLayout) < prototype(Neos.Fusion:Component) {
 	content = ${value}
-	footer = CodeQ.Site:Component.Footer
+
+	renderer = afx`
+		<CodeQ.Site:Component.Header />
+		{props.content}
+		<CodeQ.Site:Component.Footer />
+	`
 }

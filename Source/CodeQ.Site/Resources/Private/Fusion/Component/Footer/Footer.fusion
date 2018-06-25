@@ -1,4 +1,4 @@
-prototype(CodeQ.Site:Component.Footer) < prototype(CodeQ.SimpleTemplate:Template) {
+prototype(CodeQ.Site:Component.Footer) < prototype(Neos.Fusion:Component) {
 	@context.node = ${site}
 	year = ${Date.format(Date.now(), 'Y')}
 	footerInfo = Neos.Fusion:Tag {
@@ -15,6 +15,14 @@ prototype(CodeQ.Site:Component.Footer) < prototype(CodeQ.SimpleTemplate:Template
 			node = ${node}
 		}
 	}
+
+	renderer = afx`
+		<footer class="codeq-site-footer">
+			<div>{props.footerInfo}</div>
+			<div>&copy; {props.year}</div>
+			{props.footerItems}
+		</footer>
+	`
 
 	@process.contentElementWrapping = ContentElementWrapping
 }
