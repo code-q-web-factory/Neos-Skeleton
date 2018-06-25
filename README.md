@@ -42,7 +42,8 @@ titleEditable = Neos.Fusion:Tag {
 
 ## Other usefull things
 
- - A [content reference NodeType]
+ - A [content reference NodeType](https://github.com/neos/nodetypes-contentreferences)
+ - This template sets the default language to German, to change that adopt [Settings.yaml](Source/CodeQ.Site/Configuration/Settings.yaml)
  - Some great fusion helpers for link editor are provided by [carbon/link](https://github.com/jonnitto/Carbon.Link)
  - Try our Eel in the terminal with [ttree/eelshell](https://github.com/ttreeagency/EelShell)
 
