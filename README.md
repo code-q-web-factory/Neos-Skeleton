@@ -1,7 +1,6 @@
 # Code Q Neos-Skeleton
 
-The Neos-Skeleton aims to provide a consistent start for new projects. It combines contributions of some of the best Neos developers with experience 
-from Code Q. It is heavily inspired by the [Flowpack Neos best practise examples (Dmitri Pisarev and Dominique Feyer)](https://github.com/Flowpack/fusion-bp) and the [single repro setup by Christian Müller](https://github.com/kitsunet/composer-install-testing).
+The Neos-Skeleton aims to provide a easy and powerful start for new projects. It combines contributions of some of the best Neos developers with experience from Code Q. It is heavily inspired by the [Flowpack Neos best practise examples (Dmitri Pisarev and Dominique Feyer)](https://github.com/Flowpack/fusion-bp) and the [single repro setup by Christian Müller](https://github.com/kitsunet/composer-install-testing).
 
 The setup is based on docker [dimaip/docker-neos-alpine by dimaip](https://github.com/psmb/docker-neos-alpine), a [example file](docker-compose.example.yml) is included. Hosting is also optimized to run on [Flownative Beach](https://www.flownative.com/en/products/beach/help.html).
 

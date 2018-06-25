@@ -6,9 +6,6 @@
   ui:
     label: i18n
     icon: icon-globe
-  constraints:
-    nodeTypes:
-      'CodeQ.ManualPage:ManualPage': true
   properties:
     footerInfo:
       type: string

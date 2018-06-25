@@ -11,10 +11,8 @@
       constraints:
         nodeTypes:
           'CodeQ.Site:Constraint.Content.Restricted': false
-          'Jonnitto.Plyr:Content': false
   constraints:
     nodeTypes:
-      'CodeQ.ManualPage:ManualPage': false
       'CodeQ.Site:Document.HomePage': false
       'CodeQ.Site:Constraint.Document.Restricted': false
   properties:

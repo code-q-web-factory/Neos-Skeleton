@@ -1,11 +1,3 @@
 ###
 ## Add your overrides to 3rd party fusion code here
 ###
-
-# Configure Google Analytics
-prototype(Neos.GoogleAnalytics:TrackingCode) {
-	# See https://github.com/neos/neos-googleanalytics/pull/29
-	# Flownative Beach uses a Subcontext like "Production/Beach/Instance", therefore we need to check a substr,
-	# See https://www.flownative.com/en/documentation/questions-answers/beach.html
-	@if.inProductionContext = ${String.substr(Configuration.setting('Neos.Flow.core.context'), 0, 10) == 'Production'}
-}

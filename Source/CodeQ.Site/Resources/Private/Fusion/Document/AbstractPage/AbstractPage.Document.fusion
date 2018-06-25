@@ -1,13 +1,5 @@
 prototype(CodeQ.Site:Document.AbstractPage.Document) < prototype(Page) {
-	# move our comments after the charset definition
-	headerComment = null
-
 	head {
-		headerComment = Neos.Fusion:Template {
-			@position = 'after characterSetMetaTag'
-			templatePath = 'resource://CodeQ.Site/Private/Fusion/Document/AbstractPage/NeosLicenseHeaderAndCodeQInfo.html'
-		}
-
 		headTags = CodeQ.Site:Component.HeadTags
 
 		# prevent google & co from indexing dev and preview domains
@@ -16,8 +8,5 @@ prototype(CodeQ.Site:Document.AbstractPage.Document) < prototype(Page) {
 			# See https://www.flownative.com/en/documentation/questions-answers/beach.html
 			@process.hideDevContext = ${String.substr(Configuration.setting('Neos.Flow.core.context'), 0, 10) == 'Production' ? value : 'noindex,nofollow'}
 		}
-
-		# don't compress the header with license infos
-		@process.minify >
 	}
 }
