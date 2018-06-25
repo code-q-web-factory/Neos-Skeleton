@@ -1,45 +1,45 @@
 {
-	"name": "codeq/site",
-	"description": "A Neos website",
-	"type": "neos-site",
-	"require": {
-		"neos/neos": "^4.0",
-		"neos/neos-ui": "^1.0",
-		"neos/neos-ui-compiled": "^1.0",
+    "name": "codeq/site",
+    "description": "A Neos website",
+    "type": "neos-site",
+    "require": {
+        "neos/neos": "^4.0",
+        "neos/neos-ui": "^1.0",
+        "neos/neos-ui-compiled": "^1.0",
         "neos/fusion-afx": "~1.0",
-		"neos/googleanalytics": "^2.0",
-		"neos/redirecthandler-neosadapter": "*",
-		"neos/redirecthandler-databasestorage": "*",
-		"neos/seo": "*",
-
-		"carbon/compression": "^1.0",
-		"carbon/hyphen": "^1.0",
-		"carbon/link": "^1.0",
-		"carbon/includeassets": "^2.2",
-		"codeq/unicodenormalizer": "~2.1",
-		"moc/notfound": "^3.0",
-		"jonnitto/sitemap": "^3.1",
-
-		"codeq/fusionprototypegenerator": "*",
-		"codeq/simpletemplate": "*",
-
-		"neos/nodetypes-contentreferences": "*"
-	},
-	"require-dev": {
-		"ttree/eelshell": "@dev",
-		"sitegeist/neosguidelines": "^1.1"
-	},
-	"autoload": {
-		"psr-4": {
-			"CodeQ\\Site\\": "Classes/"
-		}
-	},
-	"extra": {
-		"branch-alias": {
-			"dev-master": "1.0.x-dev"
-		},
-		"neos": {
-			"package-key": "CodeQ.Site"
-		}
-	}
+        "neos/googleanalytics": "^2.0",
+        "neos/redirecthandler-neosadapter": "*",
+        "neos/redirecthandler-databasestorage": "*",
+        "neos/seo": "*",
+        "carbon/compression": "^1.0",
+        "carbon/hyphen": "^1.0",
+        "carbon/link": "^1.0",
+        "carbon/includeassets": "^2.2",
+        "codeq/unicodenormalizer": "~2.1",
+        "moc/notfound": "^3.0",
+        "jonnitto/sitemap": "^3.1",
+        "codeq/fusionprototypegenerator": "*",
+        "codeq/simpletemplate": "*",
+        "neos/nodetypes-contentreferences": "*"
+    },
+    "require-dev": {
+        "ttree/eelshell": "@dev",
+        "sitegeist/neosguidelines": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "CodeQ\\Site\\": "Classes/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        },
+        "neos": {
+            "package-key": "CodeQ.Site"
+        },
+        "applied-flow-migrations": [
+            "TYPO3.FLOW3-201201261636"
+        ]
+    }
 }
