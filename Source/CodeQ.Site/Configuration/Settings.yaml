@@ -11,7 +11,6 @@ Neos:
             defaultUriSuffix: ''
     error:
       exceptionHandler:
-        className: 'Yeebase\Graylog\Error\GraylogExceptionHandler'
         renderingGroups:
           notFoundExceptions:
             options:
@@ -87,12 +86,6 @@ MOC:
         binaryPath: '/usr/bin/optipng'
       'image/gif':
         enabled: false
-
-Yeebase:
-  Graylog:
-    host: '172.17.0.1'
-    port: 12201
-    chunksize: 'wan'
 
 # Enforces our Coding Conventions
 # because of our current docker images this can't easily be a dev-dependency
