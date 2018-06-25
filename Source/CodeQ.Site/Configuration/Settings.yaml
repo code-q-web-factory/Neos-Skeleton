@@ -121,11 +121,11 @@ Carbon:
   IncludeAssets:
     Path:
       Inline:
-        CSS: 'Public/Frontend/built'
-        JS: 'Public/Frontend/built'
+        CSS: 'Public/Frontend'
+        JS: 'Public/Frontend'
       File:
-        CSS: 'Public/Frontend/built'
-        JS: 'Public/Frontend/built'
+        CSS: 'Public/Frontend'
+        JS: 'Public/Frontend'
     # Asset files who get's loaded in live and backend view
     General:
       Head:
