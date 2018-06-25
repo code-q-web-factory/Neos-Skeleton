@@ -77,15 +77,6 @@ Neos:
     #       position: 110
     #       label: 'Content Blocks'
 
-MOC:
-  ImageOptimizer:
-    formats:
-      'image/jpeg':
-        binaryPath: '/usr/bin/jpegtran'
-      'image/png':
-        binaryPath: '/usr/bin/optipng'
-      'image/gif':
-        enabled: false
 
 # Enforces our Coding Conventions
 # because of our current docker images this can't easily be a dev-dependency
