@@ -1,4 +1,3 @@
-# to correctly work with Aloha you also need to make the editable tag of type p/span
 'CodeQ.Site:Mixin.PlainTitle':
   abstract: true
   ui:
