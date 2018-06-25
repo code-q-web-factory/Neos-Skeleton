@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" source-language="en" datatype="plaintext" target-language="de">
+        <body>
+            <trans-unit id="ui.label">
+                <source>Homepage</source>
+                <target xml:lang="de" state="translated">Homepage</target>
+            </trans-unit>
+            <trans-unit id="properties.footerInfo.aloha.placeholder">
+                <source>Footer Contact info</source>
+                <target xml:lang="de" state="translated">Kontaktinfos in Fußzeile</target>
+            </trans-unit>
+            <trans-unit id="properties.footerItems">
+                <source>Footer Menu Items</source>
+                <target xml:lang="de" state="translated">Fußzeilen Menü-Einträge</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -4,14 +4,14 @@
     inspector:
       groups:
         image:
-          label: 'Bild'
+          label: 'Image'
           position: 5
           icon: 'icon-image'
   properties:
     image:
       type: Neos\Media\Domain\Model\ImageInterface
       ui:
-        label: 'Bild'
+        label: 'Image'
         reloadIfChanged: true
         inspector:
           group: 'image'
@@ -19,7 +19,7 @@
     alternativeText:
       type: string
       ui:
-        label: 'Alternativer Text'
+        label: 'Alternative Text'
         reloadIfChanged: false
         inspector:
           group: 'image'

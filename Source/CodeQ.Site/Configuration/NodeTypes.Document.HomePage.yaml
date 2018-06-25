@@ -4,7 +4,7 @@
     'CodeQ.Site:Document.Page': true
     'CodeQ.Site:Constraint.Document.Restricted': true
   ui:
-    label: 'Homepage'
+    label: i18n
     icon: icon-globe
   constraints:
     nodeTypes:
@@ -15,13 +15,13 @@
       ui:
         inlineEditable: true
         aloha:
-          placeholder: 'Footer Contact info'
+          placeholder: i18n
           link:
             a: true
     footerItems:
       type: references
       ui:
-        label: 'Fußzeilen Menü-Einträge'
+        label: i18n
         reloadIfChanged: true
         inspector:
           group: general

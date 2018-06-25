@@ -2,7 +2,7 @@
   superTypes:
     'CodeQ.Site:Document': true
   ui:
-    label: 'Standard page'
+    label: i18n
     icon: icon-file-o
     position: 100
   childNodes:
@@ -21,7 +21,7 @@
     hideFromMainMenu:
       type: boolean
       ui:
-        label: 'Im Hauptmenü verbergen'
+        label: i18n
         reloadPageIfChanged: true
         inspector:
           group: visibility

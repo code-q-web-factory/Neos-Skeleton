@@ -8,7 +8,7 @@
       ui:
         inlineEditable: true
         aloha:
-          placeholder: '<p>Text hier eingeben...</p>'
+          placeholder: '<p>Enter text here...</p>'
           format:
             p: true
             h1: true

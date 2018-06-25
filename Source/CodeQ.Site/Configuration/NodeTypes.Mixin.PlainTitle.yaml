@@ -8,7 +8,7 @@
       ui:
         inlineEditable: true
         aloha:
-          placeholder: 'Text hier eingeben...'
+          placeholder: 'Enter text here...'
           format: { }
           table: { }
           link: { }
