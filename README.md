@@ -30,7 +30,7 @@ titleEditable = Neos.Fusion:Tag {
 
  - Provides a solid layout structure
  - Implemented the Fusion Best Practices
- - Based on Components instead of Fluid partials for reusability
+ - Based on AFX rendering
  - Separates the frontend code into Resources/Public/Frontend
 
 ## Includes these awesome packages

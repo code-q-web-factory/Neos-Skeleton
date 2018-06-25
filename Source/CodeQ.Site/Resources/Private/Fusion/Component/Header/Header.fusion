@@ -1,6 +1,12 @@
-prototype(CodeQ.Site:Component.Header) < prototype(CodeQ.SimpleTemplate:Template) {
-	mainMenu = CodeQ.Site:Component.Navigation
+prototype(CodeQ.Site:Component.Header) < prototype(Neos.Fusion:Component) {
 	homeLink = NodeUri {
 		node = ${site}
 	}
+
+	renderer = afx`
+		<header class="codeq-site-header">
+			<a href={props.homeLink}>BRAND NAME</a>
+			<CodeQ.Site:Component.Navigation />
+		</header>
+	`
 }
