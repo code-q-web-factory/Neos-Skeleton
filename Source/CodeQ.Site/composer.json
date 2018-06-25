@@ -3,7 +3,7 @@
 	"description": "A Neos website",
 	"type": "neos-site",
 	"require": {
-		"neos/neos": "^3.3",
+		"neos/neos": "^4.0",
 		"neos/neos-ui": "^1.0",
 		"neos/neos-ui-compiled": "^1.0",
         "neos/fusion-afx": "~1.0",
@@ -16,7 +16,7 @@
 		"carbon/hyphen": "^1.0",
 		"carbon/link": "^1.0",
 		"carbon/includeassets": "^2.2",
-		"codeq/unicodenormalizer": "~2.0",
+		"codeq/unicodenormalizer": "~2.1",
 		"moc/notfound": "^3.0",
 		"jonnitto/sitemap": "^3.1",
 
