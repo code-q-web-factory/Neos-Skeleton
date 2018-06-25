@@ -7,8 +7,8 @@
                 <target xml:lang="de" state="translated">Homepage</target>
             </trans-unit>
             <trans-unit id="properties.footerInfo.aloha.placeholder">
-                <source>Footer Contact info</source>
-                <target xml:lang="de" state="translated">Kontaktinfos in Fußzeile</target>
+                <source>Enter contact info here...</source>
+                <target xml:lang="de" state="translated">Kontaktinfos hier eingeben...</target>
             </trans-unit>
             <trans-unit id="properties.footerItems">
                 <source>Footer Menu Items</source>

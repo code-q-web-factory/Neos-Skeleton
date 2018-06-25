@@ -6,7 +6,7 @@
                 <source>Homepage</source>
             </trans-unit>
             <trans-unit id="properties.footerInfo.aloha.placeholder">
-                <source>Footer Contact info</source>
+                <source>Enter contact info here...</source>
             </trans-unit>
             <trans-unit id="properties.footerItems">
                 <source>Footer Menu Items</source>
