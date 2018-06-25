@@ -5,5 +5,5 @@ prototype(CodeQ.Site:Content.Image) < prototype(Neos.Fusion:Tag) {
 		@context.asset = ${q(node).property('image')}
 		@context.maximumWidth = 900
 	}
-	@process.contentElementWrapping = ContentElementWrapping
+	@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
 }

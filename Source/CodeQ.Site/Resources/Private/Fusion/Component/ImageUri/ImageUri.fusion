@@ -23,7 +23,7 @@ prototype(CodeQ.Site:Component.ImageUri) < prototype(Neos.Fusion:Value) {
 	value = Neos.Fusion:Case {
 		image {
 			condition = ${asset ? true : false}
-			renderer = ImageUri {
+			renderer = Neos.Neos:ImageUri {
 				asset = ${asset}
 				width = ${width}
 				height = ${height}

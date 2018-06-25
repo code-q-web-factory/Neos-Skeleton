@@ -1,5 +1,5 @@
 prototype(CodeQ.Site:Component.Header) < prototype(Neos.Fusion:Component) {
-	homeLink = NodeUri {
+	homeLink = Neos.Neos:NodeUri {
 		node = ${site}
 	}
 

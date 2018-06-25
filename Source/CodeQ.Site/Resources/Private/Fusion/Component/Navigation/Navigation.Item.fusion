@@ -1,7 +1,7 @@
 prototype(CodeQ.Site:Component.Navigation.Item) < prototype(Neos.Fusion:Tag) {
 	tagName = 'a'
 	attributes {
-		href = NodeUri {
+		href = Neos.Neos:NodeUri {
 			node = ${node}
 		}
 		class = Neos.Fusion:RawArray {
