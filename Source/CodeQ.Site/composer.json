@@ -51,7 +51,8 @@
             "TYPO3.TypoScript-130516235550",
             "TYPO3.TYPO3CR-130523180140",
             "TYPO3.Flow-201310031523",
-            "TYPO3.Flow-201405111147"
+            "TYPO3.Flow-201405111147",
+            "TYPO3.Neos-201407061038"
         ]
     }
 }
