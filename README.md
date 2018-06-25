@@ -6,7 +6,7 @@ The Neos-Skeleton aims to provide a easy and powerful start for new projects. It
 
 You need help? 
 
-We might consult your company on Neos setups and build processes. Get in contact: rs@codeq.at
+We can consult your company on Neos setups and build processes. Get in contact: rs@codeq.at
 
 ## Generator Features
 
@@ -42,7 +42,7 @@ titleEditable = Neos.Fusion:Tag {
 
 ## Other usefull things
 
- - A simple content reference NodeType without the Neos.NodeTypes bloat is provided through [codeq/contentreferences](https://packagist.org/packages/codeq/contentreferences)
+ - A [content reference NodeType]
  - Some great fusion helpers for link editor are provided by [carbon/link](https://github.com/jonnitto/Carbon.Link)
  - Try our Eel in the terminal with [ttree/eelshell](https://github.com/ttreeagency/EelShell)
 
@@ -50,13 +50,6 @@ titleEditable = Neos.Fusion:Tag {
 
  - Supports MOC.ImageOptimizer with dimaip/docker-neos-alpine
  - German Umlaute are handled well because of codeq/unicodenormalizer
- - Resource caching is automatically done with opsdev/cache-breaker
-
-## Code Q Specific
-
- - Augments the legal notice
- - Configured Graylog exception monitoring
- - Includes a CircleCI integration script
 
 
 ## License

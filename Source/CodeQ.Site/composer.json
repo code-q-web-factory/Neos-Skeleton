@@ -13,17 +13,20 @@
 
 		"carbon/compression": "^1.0",
 		"carbon/hyphen": "^1.0",
+		"carbon/link": "^1.0",
 		"carbon/includeassets": "^2.2",
 		"codeq/unicodenormalizer": "~2.0",
 		"moc/notfound": "^3.0",
 		"jonnitto/sitemap": "^3.1",
-		"ttree/eelshell": "@dev",
-		"sitegeist/neosguidelines": "^1.1",
+
 		"codeq/fusionprototypegenerator": "*",
 		"codeq/simpletemplate": "*",
 
-		"codeq/contentreferences": "~1.0",
-		"carbon/link": "^1.0"
+		"neos/nodetypes-contentreferences": "*"
+	},
+	"require-dev": {
+		"ttree/eelshell": "@dev",
+		"sitegeist/neosguidelines": "^1.1"
 	},
 	"autoload": {
 		"psr-4": {

@@ -1,7 +1,7 @@
 ##
 # Adding this as superType will prevent inserting this page type below normal pages
 #
-# [Youtube Tutorial](https://www.youtube.com/watch?v=ZCRYsYvxXFI&t=247s)
+# [Youtube Tutorial explaining constraints](https://www.youtube.com/watch?v=ZCRYsYvxXFI&t=247s)
 #
 # Example:
 # Let's say you have a have a news overview of news pages below. To force

@@ -1,7 +1,7 @@
 ##
 # Adding this as superType will prevent inserting it into default content collections
 #
-# [Youtube Tutorial](https://www.youtube.com/watch?v=ZCRYsYvxXFI&t=247s)
+# [Youtube Tutorial explaining constraints](https://www.youtube.com/watch?v=ZCRYsYvxXFI&t=247s)
 #
 # Example:
 # Let's say you have a have a list of list items. List items should only be
