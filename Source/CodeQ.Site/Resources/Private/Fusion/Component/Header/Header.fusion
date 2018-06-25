@@ -3,5 +3,4 @@ prototype(CodeQ.Site:Component.Header) < prototype(CodeQ.SimpleTemplate:Template
 	homeLink = NodeUri {
 		node = ${site}
 	}
-	websiteTitle = ${Translation.translate('global.title', null, [], null, 'CodeQ.Site')}
 }
