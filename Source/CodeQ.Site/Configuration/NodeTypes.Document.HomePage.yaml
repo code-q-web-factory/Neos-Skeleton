@@ -1,7 +1,6 @@
 'CodeQ.Site:Document.HomePage':
   superTypes:
-    'CodeQ.Site:Document': true
-    'CodeQ.Site:Document.Page': true
+    'CodeQ.Site:Document.AbstractPage': true
     'CodeQ.Site:Constraint.Document.Restricted': true
   ui:
     label: i18n
@@ -23,4 +22,4 @@
         inspector:
           group: general
           editorOptions:
-            nodeTypes: ['CodeQ.Site:Document.Page']
+            nodeTypes: ['CodeQ.Site:Document.AbstractPage']

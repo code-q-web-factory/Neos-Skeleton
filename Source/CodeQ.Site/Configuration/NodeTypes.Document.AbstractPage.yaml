@@ -1,0 +1,28 @@
+'CodeQ.Site:Document.AbstractPage':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Document': true
+    'CodeQ.FusionPrototypeGenerator:DocumentPrototypeGeneratorMixin': true
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'CodeQ.Site:Constraint.Content.Restricted': false
+  constraints:
+    nodeTypes:
+      'CodeQ.Site:Document.HomePage': false
+      'CodeQ.Site:Constraint.Document.Restricted': false
+  ui:
+    inspector:
+      groups:
+        general:
+          label: General
+  properties:
+    hideFromMainMenu:
+      type: boolean
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: visibility

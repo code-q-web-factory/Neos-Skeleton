@@ -9,14 +9,14 @@
 #
 # 'CodeQ.Site:Document.NewsOverview':
 #   superTypes:
-#     'CodeQ.Site:Document': true
+#     'CodeQ.Site:Document.AbstractPage': true
 #   constraints:
 #     nodeTypes:
 #       'CodeQ.Site:Document.Restricted': false
 #
 # 'CodeQ.Site:Content.News':
 #   superTypes:
-#     'CodeQ.Site:Document': true
+#     'CodeQ.Site:Document.AbstractPage': true
 #     'CodeQ.Site:Constraint.Document.Restricted': true
 #
 ##

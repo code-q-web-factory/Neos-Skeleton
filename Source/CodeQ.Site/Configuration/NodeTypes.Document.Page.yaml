@@ -1,25 +1,7 @@
 'CodeQ.Site:Document.Page':
   superTypes:
-    'CodeQ.Site:Document': true
+    'CodeQ.Site:Document.AbstractPage': true
   ui:
     label: i18n
     icon: icon-file-o
     position: 100
-  childNodes:
-    main:
-      type: 'Neos.Neos:ContentCollection'
-      constraints:
-        nodeTypes:
-          'CodeQ.Site:Constraint.Content.Restricted': false
-  constraints:
-    nodeTypes:
-      'CodeQ.Site:Document.HomePage': false
-      'CodeQ.Site:Constraint.Document.Restricted': false
-  properties:
-    hideFromMainMenu:
-      type: boolean
-      ui:
-        label: i18n
-        reloadPageIfChanged: true
-        inspector:
-          group: visibility
