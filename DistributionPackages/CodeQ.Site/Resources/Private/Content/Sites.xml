@@ -1,27 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
  <site name="Site" state="1" siteResourcesPackageKey="CodeQ.Site" siteNodeName="site">
-	<nodes formatVersion="2.0">
-	 <node nodeName="site">
-		<variant workspace="live" nodeType="CodeQ.Site:Document.HomePage" sortingIndex="100" version="1" removed="" hidden="" hiddenInIndex="">
-		 <dimensions>
-
-		 </dimensions>
-		 <accessRoles __type="array"/>
-		 <properties>
-			<title __type="string">Home</title>
-			<uriPathSegment __type="string">home</uriPathSegment>
-		 </properties>
-		</variant>
-		<node nodeName="main">
-		 <variant workspace="live" nodeType="Neos.Neos:ContentCollection" sortingIndex="100" version="1" removed="" hidden="" hiddenInIndex="">
-			<dimensions>
-
-			</dimensions>
-			<accessRoles __type="array"/>
-		 </variant>
-		</node>
-	 </node>
-	</nodes>
+  <nodes formatVersion="2.0">
+   <node identifier="f676459d-ca77-44bc-aeea-44114814c279" nodeName="site">
+    <variant sortingIndex="100" workspace="live" nodeType="CodeQ.Site:Document.HomePage" version="1" removed="" hidden="" hiddenInIndex="">
+     <dimensions/>
+     <accessRoles __type="array"/>
+     <creationDateTime __type="object" __classname="DateTime">2018-06-26T23:20:17+02:00</creationDateTime>
+     <lastModificationDateTime __type="object" __classname="DateTime">2018-06-26T23:20:17+02:00</lastModificationDateTime>
+     <properties>
+      <title __type="string">Home</title>
+      <uriPathSegment __type="string">home</uriPathSegment>
+     </properties>
+    </variant>
+    <node identifier="6c302e0e-1d54-4697-a7ec-88d4e0d010cf" nodeName="main">
+     <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="1" removed="" hidden="" hiddenInIndex="">
+      <dimensions/>
+      <accessRoles __type="array"/>
+      <creationDateTime __type="object" __classname="DateTime">2018-06-26T23:20:17+02:00</creationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2018-06-26T23:20:17+02:00</lastModificationDateTime>
+      <properties/>
+     </variant>
+    </node>
+    <node identifier="b90b9ac8-4919-41ce-8ac8-1f1bb0464c90" nodeName="node-st848k789igwk">
+     <variant sortingIndex="200" workspace="live" nodeType="CodeQ.Site:Document.Page" version="3" removed="" hidden="" hiddenInIndex="1">
+      <dimensions/>
+      <accessRoles __type="array"/>
+      <creationDateTime __type="object" __classname="DateTime">2018-06-26T23:21:39+02:00</creationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2018-06-26T23:23:05+02:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2018-06-26T23:23:05+02:00</lastPublicationDateTime>
+      <properties>
+       <uriPathSegment __type="string">404</uriPathSegment>
+       <canonicalLink __type="string"></canonicalLink>
+       <title __type="string">Page not found</title>
+       <hideFromMainMenu __type="boolean">1</hideFromMainMenu>
+       <metaRobotsNoindex __type="boolean">1</metaRobotsNoindex>
+      </properties>
+     </variant>
+     <node identifier="c78a1120-2f5f-325f-23b8-670263d72d0d" nodeName="main">
+      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+       <dimensions/>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2018-06-26T23:21:39+02:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2018-06-26T23:23:05+02:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2018-06-26T23:23:05+02:00</lastPublicationDateTime>
+       <properties/>
+      </variant>
+     </node>
+    </node>
+   </node>
+  </nodes>
  </site>
 </root>
