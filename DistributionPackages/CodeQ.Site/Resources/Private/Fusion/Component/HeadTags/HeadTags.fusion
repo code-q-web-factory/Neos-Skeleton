@@ -1,6 +1,0 @@
-prototype(CodeQ.Site:Component.HeadTags) < prototype(Neos.Fusion:Component) {
-	renderer = afx`
-		<meta http-equiv="x-ua-compatible" content="ie=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	`
-}
