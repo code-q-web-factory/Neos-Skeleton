@@ -28,11 +28,6 @@
         "ttree/eelshell": "@dev",
         "sitegeist/neosguidelines": "^1.1"
     },
-    "autoload": {
-        "psr-4": {
-            "CodeQ\\Site\\": "Classes/"
-        }
-    },
     "extra": {
         "branch-alias": {
             "dev-master": "1.0.x-dev"
