@@ -1,6 +1,6 @@
 'CodeQ.Site:Content.Headline':
   superTypes:
-    'CodeQ.Site:Content': true
+    'Neos.Neos:Content': true
     'CodeQ.Site:Mixin.Title': true
   ui:
     label: Headline

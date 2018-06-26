@@ -1,0 +1,7 @@
+'CodeQ.Site:Mixin.InspectorGeneral':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        general:
+          label: i18n

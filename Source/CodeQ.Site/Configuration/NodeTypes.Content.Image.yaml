@@ -1,6 +1,6 @@
 'CodeQ.Site:Content.Image':
   superTypes:
-    'CodeQ.Site:Content': true
+    'Neos.Neos:Content': true
     'CodeQ.Site:Mixin.Image': true
   ui:
     label: Image

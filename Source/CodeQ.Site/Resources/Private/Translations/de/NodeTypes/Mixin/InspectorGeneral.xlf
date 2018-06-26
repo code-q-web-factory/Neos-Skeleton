@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" source-language="en" datatype="plaintext" target-language="de">
+        <body>
+            <trans-unit id="groups.general">
+                <source>General</source>
+                <target xml:lang="de" state="translated">Allgemein</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

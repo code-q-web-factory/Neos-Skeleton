@@ -9,7 +9,7 @@
 #
 # 'CodeQ.Site:Content.List':
 #   superTypes:
-#     'CodeQ.Site:Content': true
+#     'Neos.Neos:Content': true
 #     'Neos.Neos:ContentCollection': true
 #   constraints:
 #     nodeTypes:
@@ -18,7 +18,7 @@
 #
 # 'CodeQ.Site:Content.List.Item':
 #   superTypes:
-#     'CodeQ.Site:Content': true
+#     'Neos.Neos:Content': true
 #     'CodeQ.Site:Constraint.Content.Restricted': true
 #   properties:
 #     ...

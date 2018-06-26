@@ -12,11 +12,6 @@
     nodeTypes:
       'CodeQ.Site:Document.HomePage': false
       'CodeQ.Site:Constraint.Document.Restricted': false
-  ui:
-    inspector:
-      groups:
-        general:
-          label: General
   properties:
     hideFromMainMenu:
       type: boolean

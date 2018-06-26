@@ -1,6 +1,6 @@
 'CodeQ.Site:Content.Text':
   superTypes:
-    'CodeQ.Site:Content': true
+    'Neos.Neos:Content': true
     'CodeQ.Site:Mixin.Text': true
   ui:
     label: Text
