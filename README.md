@@ -8,24 +8,6 @@ You need help?
 
 We can consult your company on Neos setups and build processes. Get in contact: rs@codeq.at
 
-## Generator Features
-
-The generators automatically match the node types to file names, so you do not need to manually define templatePath. Also the generator allows you to easily add editable fields in your template files, so for a property title just use:
-
-`{titleEditable -> f:format.raw()}`
-
-The `DefaultContentPrototypeGenerator`will create the Fusion:
-
-```
-titleEditable = Neos.Fusion:Tag {
-	content = ${q(node).property("title")}
-	content.@process.convertUris = ConvertUris
-	@process.contentElementEditable = ContentElementEditable {
-		property = "title"
-	}
-}
-```
-
 ## Structure
 
  - Provides a solid layout structure
