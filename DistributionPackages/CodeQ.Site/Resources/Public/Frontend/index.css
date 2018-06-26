@@ -64,7 +64,7 @@ body {
 	color: black;
 }
 
-.codeq-site-footer .neos-inline-editable {
+.codeq-site-footer .neos-inline-editable.placeholder {
 	color: black;
 	font-style: italic;
 }
