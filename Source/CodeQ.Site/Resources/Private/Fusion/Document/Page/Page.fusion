@@ -1,9 +1,11 @@
 prototype(CodeQ.Site:Document.Page) < prototype(CodeQ.Site:Document.AbstractPage) {
-	main = Neos.Neos:ContentCollection {
-		nodePath = 'main'
-	}
+	body {
+		main = Neos.Neos:ContentCollection {
+			nodePath = 'main'
+		}
 
-	renderer = afx`
-		{props.main}
-	`
+		renderer = afx`
+			{props.main}
+		`
+	}
 }

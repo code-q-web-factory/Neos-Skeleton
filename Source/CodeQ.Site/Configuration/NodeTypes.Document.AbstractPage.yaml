@@ -2,7 +2,6 @@
   abstract: true
   superTypes:
     'Neos.Neos:Document': true
-    'CodeQ.FusionPrototypeGenerator:DocumentPrototypeGeneratorMixin': true
   childNodes:
     main:
       type: 'Neos.Neos:ContentCollection'

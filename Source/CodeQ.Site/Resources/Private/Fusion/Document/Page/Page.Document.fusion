@@ -1,1 +1,0 @@
-prototype(CodeQ.Site:Document.Page.Document) < prototype(CodeQ.Site:Document.AbstractPage.Document)

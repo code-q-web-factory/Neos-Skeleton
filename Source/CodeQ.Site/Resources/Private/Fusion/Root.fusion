@@ -12,10 +12,3 @@
 include: **/*.fusion
 include: Override.fusion
 include: Shame.fusion
-
-root {
-	default {
-		type = ${q(node).property('_nodeType') + '.Document'}
-		renderPath >
-	}
-}
