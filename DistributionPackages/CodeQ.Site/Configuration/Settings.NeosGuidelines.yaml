@@ -1,0 +1,30 @@
+
+# Enforces our Coding Conventions
+# because of our current docker images this can't easily be a dev-dependency
+Sitegeist:
+  NeosGuidelines:
+    distribution:
+      validators:
+        MandatoryFiles:
+          options:
+            files: ['README.md', 'composer.json', '.editorconfig']
+        ReadmeSections:
+          options:
+            requiredSections:
+              - 'Hosting'
+              - false
+              - false
+              - false
+        Composer:
+            options:
+                requiredSettings: {}
+    packages:
+      # the list of the packages that should be validated
+      packageKeys: ['CodeQ.Site']
+      validators:
+        MandatoryFiles:
+          options:
+            files: ['composer.json', 'Resources/Public/Frontend/Readme.md']
+        Fusion:
+          options:
+            excludedFileNames: ['Root.fusion', 'Shame.fusion', 'Override.fusion']

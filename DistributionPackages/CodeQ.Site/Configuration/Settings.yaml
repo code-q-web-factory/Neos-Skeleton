@@ -1,8 +1,6 @@
 
 Neos:
   Flow:
-    i18n:
-      defaultLocale: de
     mvc:
       routes:
         'Neos.Neos':
@@ -16,53 +14,9 @@ Neos:
             options:
               variables:
                 path: '404' # skip suffix in notfound as well
-  # ContentRepository:
-  #   contentDimensions:
-  #     language:
-  #       label: Sprache
-  #       icon: icon-language
-  #       # The default dimension that is applied when creating nodes without specifying a dimension
-  #       default: de
-  #       # The default preset to use if no URI segment was given when resolving languages in the router
-  #       defaultPreset: de
-  #       presets:
-  #         en:
-  #           label: English
-  #           values:
-  #             - en
-  #           uriSegment: en
-  #         de:
-  #           label: Deutsch
-  #           values:
-  #             - de
-  #           uriSegment: de
   Neos:
     eventLog:
       enabled: true
-    userInterface:
-      defaultLanguage: de
-      translation:
-        autoInclude:
-          CodeQ.Site:
-            - Main
-            - 'NodeTypes/*'
-      editPreviewModes:
-        tablet:
-          # based on most used device 2017 - Samsung Galaxy S5
-          isEditingMode: false
-          isPreviewMode: true
-          fusionRenderingPath: ''
-          title: 'Tablet'
-          width: 768px
-          height: 1024px
-        mobile:
-          # based on most used 2017 virtual screensize - https://deviceatlas.com/blog/mobile-viewport-size-statistics-2017
-          isEditingMode: false
-          isPreviewMode: true
-          fusionRenderingPath: ''
-          title: 'Handy'
-          width: 360px
-          height: 640px
       navigateComponent:
         nodeTree:
           loadingDepth: 1
@@ -76,50 +30,3 @@ Neos:
     #     contentBlocks:
     #       position: 110
     #       label: 'Content Blocks'
-
-
-# Enforces our Coding Conventions
-# because of our current docker images this can't easily be a dev-dependency
-Sitegeist:
-  NeosGuidelines:
-    distribution:
-      validators:
-        MandatoryFiles:
-          options:
-            files: ['README.md', 'composer.json', '.editorconfig']
-        ReadmeSections:
-          options:
-            requiredSections:
-              - 'Hosting'
-              - false
-              - false
-              - false
-        Composer:
-            options:
-                requiredSettings: {}
-    packages:
-      # the list of the packages that should be validated
-      packageKeys: ['CodeQ.Site']
-      validators:
-        MandatoryFiles:
-          options:
-            files: ['composer.json', 'Resources/Public/Frontend/Readme.md']
-        Fusion:
-          options:
-            excludedFileNames: ['Root.fusion', 'Shame.fusion', 'Override.fusion']
-
-Carbon:
-  IncludeAssets:
-    Path:
-      Inline:
-        CSS: 'Public/Frontend'
-        JS: 'Public/Frontend'
-      File:
-        CSS: 'Public/Frontend'
-        JS: 'Public/Frontend'
-    # Asset files who get's loaded in live and backend view
-    General:
-      Head:
-        - index.css
-      Body:
-        - index.js
