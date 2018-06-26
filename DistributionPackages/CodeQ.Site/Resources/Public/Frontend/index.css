@@ -52,9 +52,19 @@ body {
 	padding: 1rem 1.2rem;
 	background: #00ADEE;
 	display: flex;
-	justify-content: space-between;
+	align-content: stretch;
+}
+
+.codeq-site-footer > * {
+	min-width: 3rem;
+	flex-grow: 1;
 }
 
 .codeq-site-footer a {
 	color: black;
+}
+
+.codeq-site-footer .neos-inline-editable {
+	color: black;
+	font-style: italic;
 }
