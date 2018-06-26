@@ -52,12 +52,11 @@ body {
 	padding: 1rem 1.2rem;
 	background: #00ADEE;
 	display: flex;
-	align-content: stretch;
+	justify-content: space-between;
 }
 
 .codeq-site-footer > * {
 	min-width: 3rem;
-	flex-grow: 1;
 }
 
 .codeq-site-footer a {
