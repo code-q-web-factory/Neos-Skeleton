@@ -1,0 +1,60 @@
+/**
+ * This styles provide a very basic layout.
+ * It's recommended to replace this with your own frontend tooling.
+ */
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/**
+ * Header Layout
+ */
+.codeq-site-header {
+	padding: 1rem 1.2rem;
+	background: #00ADEE;
+	display: flex;
+	justify-content: space-between;
+}
+
+.codeq-site-logo {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.codeq-site-navigation a {
+	color: white;
+	padding-left: 0.5rem;
+}
+
+
+/**
+ * Main Content Layout
+ */
+.codeq-site-main {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0.5rem;
+}
+.codeq-site-main img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+
+/**
+ * Footer Layout
+ */
+.codeq-site-footer {
+	padding: 1rem 1.2rem;
+	background: #00ADEE;
+	display: flex;
+	justify-content: space-between;
+}
+
+.codeq-site-footer a {
+	color: black;
+}

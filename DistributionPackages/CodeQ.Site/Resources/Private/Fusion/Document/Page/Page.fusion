@@ -5,7 +5,9 @@ prototype(CodeQ.Site:Document.Page) < prototype(CodeQ.Site:Document.AbstractPage
 		}
 
 		renderer = afx`
-			{props.main}
+			<main class="codeq-site-main">
+				{props.main}
+			</main>
 		`
 	}
 }
