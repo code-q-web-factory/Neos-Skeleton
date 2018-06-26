@@ -17,6 +17,7 @@
         "carbon/link": "^1.0",
         "carbon/includeassets": "^2.2",
         "codeq/unicodenormalizer": "~2.1",
+        "flowpack/cachebuster": "^1.0",
         "moc/notfound": "^3.0",
         "jonnitto/sitemap": "^3.1",
 
