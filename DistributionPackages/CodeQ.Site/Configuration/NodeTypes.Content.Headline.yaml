@@ -1,8 +1,12 @@
 'CodeQ.Site:Content.Headline':
   superTypes:
     'Neos.Neos:Content': true
-    'CodeQ.Site:Mixin.Title': true
   ui:
     label: Headline
     icon: icon-header
     position: 200
+    inlineEditable: true
+  properties:
+    title:
+      options:
+        silhouette: 'codeq.text.title'
