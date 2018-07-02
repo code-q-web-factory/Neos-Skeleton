@@ -4,7 +4,7 @@ The Neos-Skeleton provides a easy and powerful start for new projects - beginner
 
 It combines contributions of some of the best Neos developers with experience from Code Q. It is inspired by [Flowpack Neos best practise examples (Dmitri Pisarev and Dominique Feyer)](https://github.com/Flowpack/fusion-bp) and the [single repro setup (Christian Müller)](https://github.com/kitsunet/composer-install-testing) and [AFX (Martin Ficzel)](https://github.com/PackageFactory/atomic-fusion-afx).
 
-On top if adds well-tested community packages to provide everything you need for a amazing website.
+On top it adds well-tested community packages to provide everything you need for a amazing website.
 
 ## Feature overview
 
@@ -107,11 +107,21 @@ All documents should inherit from [AbstractPage.fusion](DistributionPackages/Cod
 ## FAQ
 
 __Can you provide more documentation?__
+
 Yes, I am currently working on more documentation. In the meanwhile feel free to ping me in the Slack channel #general and tag me with @rolandschuetz
 
+__Why aren't you using XYZ__
+
+If you have ideas how to improve the skeleton, please write me on slack or add a Github issue/pull request!
+
 __Why didn't you include Sitegeist.Monocle?__
+
 [Sitegeist.Monocle](https://github.com/sitegeist/Sitegeist.Monocle) is a great package and I recommend it for every bigger project, which is looking for a living style guide. For smaller projects and especially for beginners it's quite a big overhead and so this skeleton comes without Monocle.
 
+__Why are you using AFX and not Fluid/Fusion?__
+
+Neos gives you three possible rendering options: Fusion, Fluid, AFX. So now everyone can choose what they like the most.
+Most core developers prefer AFX, same as Sitegeist, gesagt.getan and Code Q. This is an opinionated boilerplate. Of course iIf you don’t like it, feel free to change it to what you prefer. You can also see our [Neos 3 legacy branch for a Fluid-base rendering](https://github.com/code-q-web-factory/Neos-Skeleton/tree/neos-3-fluid).
 
 ## You need help?
 
