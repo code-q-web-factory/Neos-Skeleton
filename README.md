@@ -2,8 +2,9 @@
 
 The Neos-Skeleton provides a easy and powerful start for new projects - beginner-friendly and highly scalable. It implements all current best practises for Neos 4 and is frontend tooling agnostic.
 
-It combines contributions of some of the best Neos developers with experience from Code Q. It is inspired by [Flowpack Neos best practise examples (Dmitri Pisarev and Dominique Feyer)](https://github.com/Flowpack/fusion-bp) and the [single repro setup (Christian Müller)](https://github.com/kitsunet/composer-install-testing).
+It combines contributions of some of the best Neos developers with experience from Code Q. It is inspired by [Flowpack Neos best practise examples (Dmitri Pisarev and Dominique Feyer)](https://github.com/Flowpack/fusion-bp) and the [single repro setup (Christian Müller)](https://github.com/kitsunet/composer-install-testing) and [AFX (Martin Ficzel)](https://github.com/PackageFactory/atomic-fusion-afx).
 
+On top if adds well-tested community packages to provide everything you need for a amazing website.
 
 ## Feature overview
 
@@ -102,6 +103,14 @@ Folow the [Code Q Code Conventions](https://docs.google.com/document/d/13ykoM0Ta
 For rendering documents we use the [Neos 4 document rendering](http://neos.readthedocs.io/en/stable/CreatingASite/RenderingCustomMarkup/PageRendering.html), just create a Fusion object similar to [Page.fusion](DistributionPackages/CodeQ.Site/Resources/Private/Fusion/Document/Page/Page.fusion) with the same name as your node type.
 
 All documents should inherit from [AbstractPage.fusion](DistributionPackages/CodeQ.Site/Resources/Private/Fusion/Document/AbstractPage/AbstractPage.fusion) and then by default use the [DefaultLayout.fusion](DistributionPackages/CodeQ.Site/Resources/Private/Fusion/Component/DefaultLayout/DefaultLayout.fusion). The default layout allows you to customize the layout in a central place.
+
+## FAQ
+
+__Can you provide more documentation?__
+Yes, I am currently working on more documentation. In the meanwhile feel free to ping me in the Slack channel #general and tag me with @rolandschuetz
+
+__Why didn't you include Sitegeist.Monocle?__
+[Sitegeist.Monocle](https://github.com/sitegeist/Sitegeist.Monocle) is a great package and I recommend it for every bigger project, which is looking for a living style guide. For smaller projects and especially for beginners it's quite a big overhead and so this skeleton comes without Monocle.
 
 
 ## You need help?
