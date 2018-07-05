@@ -1,16 +1,16 @@
 # Code Q Neos-Skeleton
 
-The Neos-Skeleton provides a easy and powerful start for new projects - beginner-friendly and highly scalable. It implements all current best practises for Neos 4 and is frontend tooling agnostic.
+The Neos-Skeleton provides an easy and powerful start for new projects - beginner-friendly and highly scalable. It implements all current best practices for Neos 4 and is frontend tooling agnostic.
 
-It combines contributions of some of the best Neos developers with experience from Code Q. It is inspired by [Flowpack Neos best practise examples (Dmitri Pisarev and Dominique Feyer)](https://github.com/Flowpack/fusion-bp) and the [single repro setup (Christian Müller)](https://github.com/kitsunet/composer-install-testing) and [AFX (Martin Ficzel)](https://github.com/PackageFactory/atomic-fusion-afx).
+It combines contributions of some of the best Neos developers with experience from Code Q. It is inspired by [Flowpack Neos best practice examples (Dmitri Pisarev and Dominique Feyer)](https://github.com/Flowpack/fusion-bp), the [single repro setup (Christian Müller)](https://github.com/kitsunet/composer-install-testing) and [AFX (Martin Ficzel)](https://github.com/PackageFactory/atomic-fusion-afx).
 
-On top it adds well-tested community packages to provide everything you need for a amazing website.
+On top, it adds well-tested community packages to provide everything you need for an amazing website.
 
 ## Feature overview
 
- - A powerfull best practise layout rendering machanism
- - Best practise folder and naming structure
- - A well rounded set of packages to build typical websites
+ - A powerful best practice layout rendering mechanism
+ - Best practice folder and naming structure
+ - A well-rounded set of packages to build typical websites
 
 ## Further boilerplate features
 
@@ -48,7 +48,7 @@ Your local development environment must provide [a webserver like Apache or ngin
 __Start a new git project__
 
 1. Clone this repository `git clone git@github.com:code-q-web-factory/Neos-Skeleton.git PROJECT_NAME`
-2. Replace the Package name "CodeQ.Site" with your own company name. We recommend to keep ".Site" for all projects to easily copy code from one project to another.
+2. Replace the Package name "CodeQ.Site" with your own company name. We recommend keeping ".Site" for all projects to easily copy the code from one project to another.
     ```
     export REPO_NAME="MyFirstWebsite"
     export NEOS_PACKAGE_NAME="YourCompany.Site"
@@ -82,12 +82,12 @@ __Run the project locallly__
 __Configure your project__
 
 8. Configure the Google Analytics tracking code in [Production/Settings.yaml](DistributionPackages/CodeQ.Site/Configuration/Production/Settings.yaml) in the format `UA-XXXXXXXX-X`
-9. German is the default language, you can adopt it in [Settings.Language.yaml](DistributionPackages/CodeQ.Site/Configuration/Settings.Language.yaml)
-10. In the Neos administration your can find a page "Page not found", which is shown every time a page couldn't be found. Feel free to add content here.
+9. German is the default language, you can adapt it in [Settings.Language.yaml](DistributionPackages/CodeQ.Site/Configuration/Settings.Language.yaml)
+10. In the Neos administration, you can find a page "Page not found", which is shown every time a page couldn't be found. Feel free to add content here.
 
 __Start developing__
 
-11. Copy your preferred frontend tooling into Resources/Public/Frontend and adopt the include assets pathes in [Settings.IncludeAssets.yaml](DistributionPackages/CodeQ.Site/Configuration/Settings.IncludeAssets.yaml)
+11. Copy your preferred frontend tooling into Resources/Public/Frontend and adopt the include assets paths in [Settings.IncludeAssets.yaml](DistributionPackages/CodeQ.Site/Configuration/Settings.IncludeAssets.yaml)
 12. Create your own document and content node types and add the styles to your CSS.
 
 __Tip:__
@@ -127,7 +127,7 @@ Most core developers prefer AFX, same as Sitegeist, gesagt.getan and Code Q. Thi
 
 For questions about the boilerplate feel free to write in the Slack channel #general and tag me with @rolandschuetz
 
-The development of this boilerpalte is sponsored by [Code Q](https://codeq.at/de/kontakt). We can consult your company on Neos setups and build processes. Get in contact: rs@codeq.at
+The development of this boilerplate is sponsored by [Code Q](https://codeq.at/de/kontakt). We can consult your company on Neos setups and build processes. Get in contact: rs@codeq.at
 
 
 ## License
