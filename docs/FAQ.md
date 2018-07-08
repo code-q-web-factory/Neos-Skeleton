@@ -17,7 +17,7 @@ If you have ideas how to improve the skeleton, please write me on slack or add a
 Neos gives you three possible rendering options: Fusion, Fluid, AFX. So now everyone can choose what they like the most.
 Most core developers prefer AFX, same as Sitegeist, gesagt.getan and Code Q. This is an opinionated boilerplate. Of course iIf you don’t like it, feel free to change it to what you prefer. You can also see our [Neos 3 legacy branch for a Fluid-base rendering](https://github.com/code-q-web-factory/Neos-Skeleton/tree/neos-3-fluid).
 
-## You need help?
+## Do you need help?
 
 For questions about the boilerplate feel free to write in the Slack channel #general and tag me with @rolandschuetz
 

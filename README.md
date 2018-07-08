@@ -15,31 +15,28 @@ On top, it adds well-tested community packages to provide everything you need fo
 
 #### Learn more
 
- - [Feature List](docs/FEATURES.md)
+ - [Full Feature List](docs/FEATURES.md)
  - [Getting Started Guide](docs/GETTING_STARTED.md)
- - [The Layout mechanism](docs/LAYOUT_MECHANISM.md)
+ - [The Layout Mechanism](docs/LAYOUT_MECHANISM.md)
  - [FAQ](docs/FAQ.md)
 
 
 #### Skeleton Variations
 
-[Neos 4 with AFX rendering (recommended)](https://github.com/code-q-web-factory/Neos-Skeleton) 
-[Neos 4 with AFX rendering and Flownative Beach deployment](https://github.com/code-q-web-factory/Neos-Skeleton)
-[Neos 3 with Fluid-based rendering (legacy)](https://github.com/code-q-web-factory/Neos-Skeleton/tree/neos-3-fluid)
+- [Neos 4 with AFX rendering (recommended)](https://github.com/code-q-web-factory/Neos-Skeleton) 
+- [Neos 3 with Fluid-based rendering (legacy)](https://github.com/code-q-web-factory/Neos-Skeleton/tree/neos-3-fluid)
 
 
-## Neos-Skelton needs your help
+### WE NEED HELP
 
 We aim to stay up with best practises and innovating concepts. 
-
-**WE NEED HELP.**
 
 - Did you find a concept or pattern which works great? Please share it with us by opening a issue or pull request
 - Improving the documentation
 - Great questions! If you are a beginner, please share your beginner questions so we can make the start easier! __Beginner questions are highly welcome!__
 
 
-### You need help?
+### Do you need help?
 
 For questions about the boilerplate feel free to write in the Slack channel #general and tag me with @rolandschuetz
 
