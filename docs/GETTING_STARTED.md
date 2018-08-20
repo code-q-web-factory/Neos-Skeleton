@@ -28,9 +28,9 @@ Your local development environment must provide [a webserver like Apache or ngin
     git push -u origin master
     ```
 
-#### Run the project locallly
+#### Run the project locally
 
-5. Start your database server and create a new database with the charset 'utf8'.
+5. Start your database server and create a new database with the encoding **utf8mb4** and the collation **utf8mb4_unicode_ci** (Be careful: Don't confuse it with *utf8mb4_general_ci*, which is the default for some database management tools. This can lead to hard-to-debug issues later on.)
 6. Start the local server in the terminal:
     ```
     ./flow server:run
