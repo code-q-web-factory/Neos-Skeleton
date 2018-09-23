@@ -1,7 +1,7 @@
 # Steps to get started
 
 Requirements:
-Your local development environment must provide [a webserver like Apache or nginx, PHP 7.1+, composer and MySQL 5.7.x or MariaDB 10.2.x](https://www.neos.io/download-and-extend.html).
+Your local development environment must provide [PHP 7.1+, composer and MySQL 5.7.x or MariaDB 10.2.x](https://www.neos.io/download-and-extend.html).
 
 #### Start a new git project
 
@@ -15,8 +15,9 @@ Your local development environment must provide [a webserver like Apache or ngin
     find . -type f -name 'composer.json' | xargs sed -i '' "s/codeq\/site/${COMPOSER_PACKAGE_NAME}/g"
     ```
 3. Remove the Neos-Skeleton docs `rm -Rf docs`
-3. Create a new git project on the server of your choice, in our example Github
-4. Start the new git project locally and push the initial state
+5. Create a new git project on the server of your choice, in our example Github
+6. Adoped the `README.md`
+7. Start the new git project locally and push the initial state
     ```
     rm -rf .git && git init
     git remote add origin git@github.com:USERNAME/REPOSITORY.git
@@ -29,23 +30,30 @@ Your local development environment must provide [a webserver like Apache or ngin
 
 #### Run the project locally
 
-5. Start your database server and create a new database with the encoding **utf8mb4** and the collation **utf8mb4_unicode_ci** (Be careful: Don't confuse it with *utf8mb4_general_ci*, which is the default for some database management tools. This can lead to hard-to-debug issues later on.)
-6. Start the local server in the terminal:
+8. Start your database server and create a new database with the encoding **utf8mb4** and the collation **utf8mb4_unicode_ci** (Be careful: Don't confuse it with *utf8mb4_general_ci*, which is the default for some database management tools. This can lead to hard-to-debug issues later on.)
+9. Start the local server in the terminal:
     ```
     ./flow server:run
     ```
-7. Setup the database configuration at [http://127.0.0.1:8081/setup](http://127.0.0.1:8081/setup) and import the initial content from your package.
+10. Setup the database configuration at [http://127.0.0.1:8081/setup](http://127.0.0.1:8081/setup) and import the initial content from your package.
+11. To improve performance in a development context you can freeze packages. Any modification of files in those packages won't be tracked.
+    ```
+    ./flow package:freeze
+    ./flow package:unfreeze --package-key=${NEOS_PACKAGE_NAME}
+    ./flow flow:cache:flush --force
+    ```
+
 
 #### Configure your project
 
-8. Configure the Google Analytics tracking code in [Production/Settings.yaml](DistributionPackages/CodeQ.Site/Configuration/Production/Settings.yaml) in the format `UA-XXXXXXXX-X`
 9. German is the default language, you can adapt it in [Settings.Language.yaml](DistributionPackages/CodeQ.Site/Configuration/Settings.Language.yaml)
-10. In the Neos administration, you can find a page "Page not found", which is shown every time a page couldn't be found. Feel free to add content here.
+12. Configure the Google Analytics tracking code in [Production/Settings.yaml](DistributionPackages/CodeQ.Site/Configuration/Production/Settings.yaml) in the format `UA-XXXXXXXX-X`
+13. In the Neos administration, you can find a page "Page not found", which is shown every time a page couldn't be found. Feel free to add content here.
 
 #### Start developing
 
-11. Copy your preferred frontend tooling into Resources/Public/Frontend and adopt the include assets paths in [Settings.IncludeAssets.yaml](DistributionPackages/CodeQ.Site/Configuration/Settings.IncludeAssets.yaml)
-12. Create your own document and content node types and add the styles to your CSS.
+14. Copy your preferred frontend tooling into Resources/Public/Frontend and adopt the include assets paths in [Settings.IncludeAssets.yaml](DistributionPackages/CodeQ.Site/Configuration/Settings.IncludeAssets.yaml)
+15. Create your own document and content node types and add the styles to your CSS.
 
 #### Tip:
 Folow the [Code Q Code Conventions](https://docs.google.com/document/d/13ykoM0Ta2qJvO_6BYa-DIsx7_MxFsInOSbJqJHuINBw/edit?usp=sharing) and validate your code with
