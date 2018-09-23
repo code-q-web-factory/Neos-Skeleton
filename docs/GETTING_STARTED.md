@@ -8,19 +8,20 @@ Your local development environment must provide [a webserver like Apache or ngin
 1. Clone this repository `git clone git@github.com:code-q-web-factory/Neos-Skeleton.git PROJECT_NAME`
 2. Replace the Package name "CodeQ.Site" with your own company name. We recommend keeping ".Site" for all projects to easily copy the code from one project to another.
     ```
-    export REPO_NAME="MyFirstWebsite"
+    export PROJECT_NAME="MyFirstWebsite"
     export NEOS_PACKAGE_NAME="YourCompany.Site"
     export COMPOSER_PACKAGE_NAME="yourcompany\/site"
-    cd ${REPO_NAME}
+    cd ${PROJECT_NAME}
     mv DistributionPackages/CodeQ.Site DistributionPackages/${NEOS_PACKAGE_NAME}
     find ./DistributionPackages/${NEOS_PACKAGE_NAME} -type f | xargs sed -i '' "s/CodeQ\.Site/${NEOS_PACKAGE_NAME}/g"
     find . -type f -name 'composer.json' | xargs sed -i '' "s/codeq\/site/${COMPOSER_PACKAGE_NAME}/g"
     ```
+3. Remove the Neos-Skeleton docs `rm -Rf docs
 3. Create a new git project on the server of your choice, in our example Github
 4. Start the new git project locally and push the initial state
     ```
     rm -rf .git && git init
-    git remote add origin git@github.com:${REPO_NAME}.git
+    git remote add origin git@github.com:${PROJECT_NAME}.git
     git fetch
     composer install
     git add .
