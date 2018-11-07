@@ -4,8 +4,8 @@ prototype(CodeQ.Site:Component.Header) < prototype(Neos.Fusion:Component) {
 	}
 
 	renderer = afx`
-		<header class="codeq-site-header">
-			<a class="codeq-site-logo" href={props.homeLink}>BRAND NAME</a>
+		<header class="main-header">
+			<a class="logo" href={props.homeLink}>BRAND NAME</a>
 			<CodeQ.Site:Component.Navigation />
 		</header>
 	`

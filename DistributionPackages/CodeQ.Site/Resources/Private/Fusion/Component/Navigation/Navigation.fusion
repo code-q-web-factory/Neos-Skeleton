@@ -1,7 +1,7 @@
 prototype(CodeQ.Site:Component.Navigation) < prototype(Neos.Fusion:Value) {
 	@context.node = ${site}
 	value = Neos.Fusion:Tag {
-		attributes.class = 'codeq-site-navigation'
+		attributes.class = 'navigation'
 		content = CodeQ.Site:Component.Navigation.LevelRenderer
 	}
 	@cache {

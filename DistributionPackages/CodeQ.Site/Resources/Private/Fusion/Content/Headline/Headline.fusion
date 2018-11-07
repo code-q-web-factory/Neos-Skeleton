@@ -4,6 +4,6 @@ prototype(CodeQ.Site:Content.Headline) < prototype(Neos.Neos:ContentComponent) {
 	}
 
 	renderer = afx`
-		<div class="codeq-site-headline">{props.title}</div>
+		<div class="headline">{props.title}</div>
 	`
 }

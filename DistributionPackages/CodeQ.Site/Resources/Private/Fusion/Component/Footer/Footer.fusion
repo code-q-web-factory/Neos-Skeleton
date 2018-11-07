@@ -17,7 +17,7 @@ prototype(CodeQ.Site:Component.Footer) < prototype(Neos.Fusion:Component) {
 	}
 
 	renderer = afx`
-		<footer class="codeq-site-footer">
+		<footer class="main-footer">
 			<div>{props.footerInfo}</div>
 			<div>&copy; {props.year}</div>
 			{props.footerItems}

@@ -11,20 +11,20 @@ body {
 /**
  * Header Layout
  */
-.codeq-site-header {
+.main-header {
 	padding: 1rem 1.2rem;
 	background: #00ADEE;
 	display: flex;
 	justify-content: space-between;
 }
 
-.codeq-site-logo {
+.logo {
 	color: white;
 	font-weight: bold;
 	text-decoration: none;
 }
 
-.codeq-site-navigation a {
+.navigation a {
 	color: white;
 	padding-left: 0.5rem;
 }
@@ -33,12 +33,12 @@ body {
 /**
  * Main Content Layout
  */
-.codeq-site-main {
+.main {
 	max-width: 800px;
 	margin: 0 auto;
 	padding: 0.5rem;
 }
-.codeq-site-main img {
+.main img {
 	max-width: 100%;
 	height: auto;
 }
@@ -48,22 +48,22 @@ body {
 /**
  * Footer Layout
  */
-.codeq-site-footer {
+.main-footer {
 	padding: 1rem 1.2rem;
 	background: #00ADEE;
 	display: flex;
 	justify-content: space-between;
 }
 
-.codeq-site-footer > * {
+.main-footer > * {
 	min-width: 3rem;
 }
 
-.codeq-site-footer a {
+.main-footer a {
 	color: black;
 }
 
-.codeq-site-footer .neos-inline-editable.placeholder {
+.main-footer .neos-inline-editable.placeholder {
 	color: black;
 	font-style: italic;
 }
