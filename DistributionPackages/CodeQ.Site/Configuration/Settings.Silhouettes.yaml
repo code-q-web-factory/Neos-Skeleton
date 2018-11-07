@@ -7,13 +7,13 @@ Sitegeist:
                     type: string
                     ui:
                       inlineEditable: true
-                      aloha:
-                        placeholder: '<h2>Enter headline here...</h2>'
-                        format:
-                          h1: true
-                          h2: true
-                          h3: true
-                          h4: true
-                          h5: true
-                        link:
-                          a: true
+                      inline:
+                        editorOptions:
+                          placeholder: '<h2>Enter headline here...</h2>'
+                          formatting:
+                            h1: true
+                            h2: true
+                            h3: true
+                            h4: true
+                            h5: true
+                            a: true
