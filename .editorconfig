@@ -17,9 +17,14 @@ indent_style = tab
 indent_size = 4
 
 # Exceptions
-[{*.{yaml,yml,sh,jscsrc,scss},package.json,.*rc}]
+[{*.{yaml,yml,sh,jscsrc},package.json,.*rc}]
 indent_style = space
 indent_size = 2
+
+# PHP should follow the PSR-2 standard
+[*.php]
+indent_style = space
+indent_size = 4
 
 [*.{json,scss}]
 max_line_length = 1000
