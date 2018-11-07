@@ -37,23 +37,16 @@ Your local development environment must provide [PHP 7.1+, composer and MySQL 5.
     ./flow server:run
     ```
 10. Setup the database configuration at [http://127.0.0.1:8081/setup](http://127.0.0.1:8081/setup) and import the initial content from your package.
-11. To improve performance in a development context you can freeze packages. Any modification of files in those packages won't be tracked.
-    ```
-    ./flow package:freeze
-    ./flow package:unfreeze --package-key=${NEOS_PACKAGE_NAME}
-    ./flow flow:cache:flush --force
-    ```
-
 
 #### Configure your project
 
-12. Configure the Google Analytics tracking code in [Production/Settings.yaml](DistributionPackages/CodeQ.Site/Configuration/Production/Settings.yaml) in the format `UA-XXXXXXXX-X`
-13. In the Neos administration, you can find a page "Page not found", which is shown every time a page couldn't be found. Feel free to add content here.
+11. Configure the Google Analytics tracking code in [Production/Settings.yaml](DistributionPackages/CodeQ.Site/Configuration/Production/Settings.yaml) in the format `UA-XXXXXXXX-X`
+12. In the Neos administration, you can find a page "Page not found", which is shown every time a page couldn't be found. Feel free to add content here.
 
 #### Start developing
 
-14. Copy your preferred frontend tooling into Resources/Public/Frontend and adopt the include assets paths in [Settings.IncludeAssets.yaml](DistributionPackages/CodeQ.Site/Configuration/Settings.IncludeAssets.yaml)
-15. Create your own document and content node types and add the styles to your CSS.
+13. Copy your preferred frontend tooling into Resources/Public/Frontend and adopt the include assets paths in [Settings.IncludeAssets.yaml](DistributionPackages/CodeQ.Site/Configuration/Settings.IncludeAssets.yaml)
+14. Create your own document and content node types and add the styles to your CSS.
 
 #### Tip:
 Folow the [Code Q Code Conventions](https://docs.google.com/document/d/13ykoM0Ta2qJvO_6BYa-DIsx7_MxFsInOSbJqJHuINBw/edit?usp=sharing) and validate your code with
