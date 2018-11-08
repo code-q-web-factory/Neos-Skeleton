@@ -1,6 +1,11 @@
-
-# Enforces our Coding Conventions
-# because of our current docker images this can't easily be a dev-dependency
+##
+# Enforces our best practise Coding Conventions
+# 
+# Composer require - backgground info:
+# We want this configuration inside the site package. So the 
+# single-repo setup requires that the package is a normal
+# dependency.
+##
 Sitegeist:
   NeosGuidelines:
     distribution:
