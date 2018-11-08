@@ -8,6 +8,9 @@
 	"require": {
 		"codeq/site": "1.0.x-dev"
 	},
+    "require-dev": {
+        "ttree/eelshell": "@dev"
+    },
 	"scripts": {
 		"post-update-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
 		"post-install-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
