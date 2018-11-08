@@ -7,8 +7,8 @@ prototype(CodeQ.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
 			`
 		}
 	}
-	body = Neos.Fusion:Component {
-		@process.layout = CodeQ.Site:Component.DefaultLayout
+	body = CodeQ.Site:Component.DefaultLayout {
+		content = ''
 		@process.normalize = CodeQ.UnicodeNormalizer:Normalizer
 	}
 }

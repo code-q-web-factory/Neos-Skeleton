@@ -1,5 +1,5 @@
 prototype(CodeQ.Site:Document.Page) < prototype(CodeQ.Site:Document.AbstractPage) {
-	body {
+	body.content = Neos.Fusion:Component {
 		main = Neos.Neos:ContentCollection {
 			nodePath = 'main'
 		}
