@@ -22,7 +22,7 @@ indent_style = space
 indent_size = 2
 
 # PHP should follow the PSR-2 standard
-[*.php]
+[*.{json,php}]
 indent_style = space
 indent_size = 4
 
