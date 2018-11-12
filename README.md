@@ -24,6 +24,7 @@ On top, it adds well-tested community packages to provide everything you need fo
 #### Skeleton Variations
 
 - [Neos 4 with AFX rendering (recommended)](https://github.com/code-q-web-factory/Neos-Skeleton) 
+- [Neos 4 with AFX rendering + Flownative Beach deployment setup](https://github.com/code-q-web-factory/Neos-Skeleton/tree/flownative-beach)
 - [Neos 3 with Fluid-based rendering (legacy)](https://github.com/code-q-web-factory/Neos-Skeleton/tree/neos-3-fluid)
 
 

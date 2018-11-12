@@ -12,6 +12,9 @@
         "neos/redirecthandler-databasestorage": "^3.0",
         "neos/seo": "^2.0",
 
+		"flownative/google-cloudstorage": "4.*",
+		"flownative/beach-flow-companion": "1.*",
+
         "carbon/compression": "^1.1",
         "carbon/hyphen": "^1.0",
         "carbon/link": "^1.0",
