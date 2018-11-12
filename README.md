@@ -2,7 +2,7 @@
 
 The Neos-Skeleton provides an easy and powerful start for new projects - beginner-friendly and highly scalable. It implements all current best practices for Neos 4 and is frontend tooling agnostic.
 
-It combines contributions of some of the best Neos developers with experience from Code Q. It is inspired by [Flowpack Neos best practice examples (Dmitri Pisarev and Dominique Feyer)](https://github.com/Flowpack/fusion-bp), the [single repro setup (Christian Müller)](https://github.com/kitsunet/composer-install-testing) and [AFX (Martin Ficzel)](https://github.com/PackageFactory/atomic-fusion-afx).
+It combines contributions of some of the best Neos developers with experience from Code Q. It is inspired by [Flowpack Neos best practice examples (Dmitri Pisarev and Dominique Feyer)](https://github.com/Flowpack/fusion-bp), the [path repository setup (Christian Müller)](https://www.neos.io/blog/project-repository-best-practice.html) and [AFX (Martin Ficzel)](https://github.com/PackageFactory/atomic-fusion-afx).
 
 On top, it adds well-tested community packages to provide everything you need for an amazing website.
 
