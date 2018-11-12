@@ -1,6 +1,18 @@
 
   GoogleAnalytics:
+    # https://console.developers.google.com/apis/credentials?project=codeq-neos-analytics&hl=en
+    # http://neos-google-analytics-integration.readthedocs.io/en/stable/#configuration
+    authentication:
+      # Application name for the consent screen
+      applicationName: 'Code Q - Neos Google Analytics'
+      # "Client ID" of the OAuth 2.0 "Client ID for web application"
+      clientId: '%env:ANALYTICS_AUTHENTICATION_CLIENT_ID%'
+      # "Client Secret" of the OAuth 2.0 "Client ID for web application"
+      clientSecret: '%env:ANALYTICS_AUTHENTICATION_CLIENT_SECRET%'
+      # "API Key" of the Public API access credential "Key for server applications"
+      developerKey: '%env:ANALYTICS_AUTHENTICATION_DEVELOPER_KEY%'
     sites:
       ## All site specific settings are indexed by site node name
       site:
         trackingId: ''
+        profileId: ''

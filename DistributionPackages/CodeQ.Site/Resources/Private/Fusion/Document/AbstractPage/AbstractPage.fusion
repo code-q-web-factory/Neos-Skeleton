@@ -1,5 +1,11 @@
 prototype(CodeQ.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
 	head {
+		# prevent google & co from indexing dev and preview domains
+		metaRobotsTag.attributes.content {
+			# Flownative Beach uses a Subcontext like "Production/Beach/Instance"
+			@process.hideDevContext = ${String.substr(Configuration.setting('Neos.Flow.core.context'), 0, 10) == 'Production' ? value : 'noindex,nofollow'}
+		}
+
 		headTags = Neos.Fusion:Component {
 			renderer = afx`
 				<meta http-equiv="x-ua-compatible" content="ie=edge" />

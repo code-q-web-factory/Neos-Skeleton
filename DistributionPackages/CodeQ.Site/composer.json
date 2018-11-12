@@ -15,6 +15,10 @@
         "flownative/google-cloudstorage": "4.*",
         "flownative/beach-flow-companion": "1.*",
 
+        "codeq/logintheme": "~1.1",
+        "codeq/manualpage": "~1.3",
+        "webexcess/redirecthandler-backend": "^1.1",
+
         "carbon/compression": "^1.1",
         "carbon/hyphen": "^1.0",
         "carbon/link": "^1.0",
