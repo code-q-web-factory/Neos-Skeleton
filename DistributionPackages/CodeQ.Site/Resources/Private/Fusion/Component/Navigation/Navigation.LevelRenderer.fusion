@@ -1,11 +1,29 @@
-prototype(CodeQ.Site:Component.Navigation.LevelRenderer) < prototype(Neos.Fusion:Array) {
-	title = CodeQ.Site:Component.Navigation.Item {
-		@if.notRoot = ${node != site}
+prototype(CodeQ.Site:Component.Navigation.LevelRenderer) < prototype(Neos.Fusion:Component) {
+	@context.nodeDepth = ${this.node.depth - startingPoint.depth}
+	node = ${node}
+	itemTitle = ${q(node).property('title')}
+	itemClass = Neos.Fusion:RawArray {
+		base = 'navigation-item'
+		level = ${'navigation-item--level-' + nodeDepth}
+		current = 'navigation-item--state-current'
+		current.@if.isCurrent = ${node == documentNode}
+		active = 'navigation-item--state-active'
+		active.@if.isActive = ${node == documentNode || (nodeDepth != 1 && (q(documentNode).parents('[_identifier = "' + node.identifier + '"]').count() > 0))}
 	}
-	nextLevel = Neos.Fusion:Collection {
+	navigationClass = ${'navigation-level navigation-level--level-' + (nodeDepth + 1)}
+	navigationItems = Neos.Fusion:Collection {
 		@if.notEmpty = ${this.collection.count() > 0}
 		collection = ${q(node).children('[instanceof Neos.Neos:Document][_hiddenInIndex != TRUE][hideFromMainMenu != TRUE]')}
 		itemName = 'node'
 		itemRenderer = CodeQ.Site:Component.Navigation.LevelRenderer
 	}
+
+	renderer = afx`
+		<li class={props.itemClass}>
+			<Carbon.Link:Link title={props.itemTitle} node={node} additionalClass="navigation-link" />
+			<ul @if.hasItems={props.navigationItems} class={props.navigationClass}>
+				{props.navigationItems}
+			</ul>
+		</li>
+	`
 }

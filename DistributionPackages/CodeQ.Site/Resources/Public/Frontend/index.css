@@ -24,13 +24,41 @@ body {
 	text-decoration: none;
 }
 
-.navigation a {
-	color: white;
-	padding-left: 0.5rem;
+.navigation {
+	display: flex;
+	margin: 0;
+	padding-left: 0;
+	list-style: none;
 }
 
+.navigation-item {
+	position: relative;
+	display: inline-block;
+}
 
-/**
+.navigation-link {
+	color: white;
+	padding-left: 0.5rem;
+	text-decoration: none;
+}
+
+.navigation-item--level-1 .navigation-level {
+	/* show level 2 on hover, don't got past level 2 */
+	display: none;
+}
+
+.navigation-item--level-1:active .navigation-level--level-2,
+.navigation-item--level-1:hover .navigation-level--level-2,
+.navigation-item--level-1:focus .navigation-level--level-2 {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	display: block;
+	padding: 0.5rem;
+	background: #00ADEE;
+}
+
+/*
  * Main Content Layout
  */
 .main {
