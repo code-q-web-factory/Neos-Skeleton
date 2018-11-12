@@ -1,4 +1,5 @@
 
+Neos:
   GoogleAnalytics:
     # https://console.developers.google.com/apis/credentials?project=codeq-neos-analytics&hl=en
     # http://neos-google-analytics-integration.readthedocs.io/en/stable/#configuration
