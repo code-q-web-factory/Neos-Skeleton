@@ -1,4 +1,5 @@
 
+Neos:
   GoogleAnalytics:
     sites:
       ## All site specific settings are indexed by site node name
