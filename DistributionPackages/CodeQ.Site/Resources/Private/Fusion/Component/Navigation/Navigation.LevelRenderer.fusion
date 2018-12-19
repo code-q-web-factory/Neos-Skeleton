@@ -2,6 +2,7 @@ prototype(CodeQ.Site:Component.Navigation.LevelRenderer) < prototype(Neos.Fusion
 	@context.nodeDepth = ${this.node.depth - startingPoint.depth}
 	node = ${node}
 	itemTitle = ${q(node).property('title')}
+	itemTitle.@process.replaceShy = Carbon.Hyphen:Shy.AlwaysReplace
 	itemClass = Neos.Fusion:RawArray {
 		base = 'navigation-item'
 		level = ${'navigation-item--level-' + nodeDepth}
@@ -13,7 +14,7 @@ prototype(CodeQ.Site:Component.Navigation.LevelRenderer) < prototype(Neos.Fusion
 	navigationClass = ${'navigation-level navigation-level--level-' + (nodeDepth + 1)}
 	navigationItems = Neos.Fusion:Collection {
 		@if.notEmpty = ${this.collection.count() > 0}
-		collection = ${q(node).children('[instanceof Neos.Neos:Document][_hiddenInIndex != TRUE][hideFromMainMenu != TRUE]')}
+		collection = ${q(node).children('[instanceof Neos.Neos:Document][_hidden != TRUE][_hiddenInIndex != TRUE][hideFromMainMenu != TRUE]')}
 		itemName = 'node'
 		itemRenderer = CodeQ.Site:Component.Navigation.LevelRenderer
 	}
