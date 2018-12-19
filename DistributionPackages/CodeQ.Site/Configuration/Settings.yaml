@@ -30,3 +30,7 @@ Neos:
     #     contentBlocks:
     #       position: 110
     #       label: 'Content Blocks'
+    Ui:
+      frontendConfiguration:
+        defaultInlineEditor: 'ckeditor5'
+        hotkeys: ~
