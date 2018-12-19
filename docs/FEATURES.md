@@ -22,7 +22,6 @@
  - [codeq/unicodenormalizer](https://github.com/code-q-web-factory/neos-unicodenormalizer) handles broken German Umlaute
  - [flowpack/cachebuster](https://github.com/Flowpack/Flowpack.CacheBuster) adds automatic cache busting for assets in the frontend
  - [moc/notfound](https://github.com/mocdk/MOC.NotFound) loads a normal editable page for displaying a 404 error
- - [jonnitto/sitemap](https://github.com/jonnitto/Jonnitto.Sitemap) improves the XML sitemap
  - [neos/nodetypes-contentreferences](https://github.com/neos/nodetypes-contentreferences) provides a reference content node type
  
 #### Development features via required packages
