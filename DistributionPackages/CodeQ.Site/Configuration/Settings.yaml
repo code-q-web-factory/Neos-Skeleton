@@ -30,3 +30,7 @@ Neos:
     #     contentBlocks:
     #       position: 110
     #       label: 'Content Blocks'
+
+Carbon:
+  Link:
+    defaultPhoneCountryCode: '0043'
