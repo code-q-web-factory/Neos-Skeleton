@@ -1,0 +1,7 @@
+
+Neos:
+  Neos:
+    userInterface:
+      backendLoginForm:
+        stylesheets:
+          'CodeQ.LoginTheme:Styles': 'resource://CodeQ.LoginTheme/Public/css/neos-login-codeq-q.css'
