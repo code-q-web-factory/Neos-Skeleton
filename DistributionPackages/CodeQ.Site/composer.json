@@ -33,6 +33,11 @@
 
         "neos/nodetypes-contentreferences": "*"
     },
+    "autoload": {
+        "psr-4": {
+            "CodeQ\\Site\\": "Classes"
+        }
+    },
     "extra": {
         "neos": {
             "package-key": "CodeQ.Site"
