@@ -1,19 +1,19 @@
 Sitegeist:
-   Silhouettes:
-       properties:
-          codeq:
-              text:
-                  title:
-                    type: string
-                    ui:
-                      inlineEditable: true
-                      inline:
-                        editorOptions:
-                          placeholder: '<h2>Enter headline here...</h2>'
-                          formatting:
-                            h1: true
-                            h2: true
-                            h3: true
-                            h4: true
-                            h5: true
-                            a: true
+  Silhouettes:
+    properties:
+      codeq:
+        text:
+          title:
+            type: string
+            ui:
+              inlineEditable: true
+              inline:
+                editorOptions:
+                  placeholder: '<h2>Enter headline here...</h2>'
+                  formatting:
+                    h1: true
+                    h2: true
+                    h3: true
+                    h4: true
+                    h5: true
+                    a: true

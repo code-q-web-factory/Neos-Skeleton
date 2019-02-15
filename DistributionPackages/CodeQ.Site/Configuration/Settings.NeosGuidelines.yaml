@@ -21,8 +21,8 @@ Sitegeist:
               - false
               - false
         Composer:
-            options:
-                requiredSettings: {}
+          options:
+            requiredSettings: {}
     packages:
       # the list of the packages that should be validated
       packageKeys: ['CodeQ.Site']

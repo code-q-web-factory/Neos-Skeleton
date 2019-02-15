@@ -1,14 +1,14 @@
 prototype(CodeQ.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
-	head {
-		headTags = Neos.Fusion:Component {
-			renderer = afx`
-				<meta http-equiv="x-ua-compatible" content="ie=edge" />
-				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-			`
-		}
-	}
-	body = CodeQ.Site:Component.DefaultLayout {
-		content = ''
-		@process.normalize = CodeQ.UnicodeNormalizer:Normalizer
-	}
+    head {
+        headTags = Neos.Fusion:Component {
+            renderer = afx`
+                <meta http-equiv="x-ua-compatible" content="ie=edge" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            `
+        }
+    }
+    body = CodeQ.Site:Component.DefaultLayout {
+        content = ''
+        @process.normalize = CodeQ.UnicodeNormalizer:Normalizer
+    }
 }

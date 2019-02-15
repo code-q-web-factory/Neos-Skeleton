@@ -4,8 +4,8 @@
     "type": "neos-site",
     "require": {
         "neos/neos": "^4.2",
-        "neos/neos-ui": "^1.4",
-        "neos/neos-ui-compiled": "^1.4",
+        "neos/neos-ui": "3^",
+        "neos/neos-ui-compiled": "3^",
         "neos/fusion-afx": "^1.0",
         "neos/googleanalytics": "^2.0",
         "neos/redirecthandler-neosadapter": "^2.0",
@@ -21,6 +21,7 @@
         "carbon/includeassets": "~3.5",
         "codeq/unicodenormalizer": "~2.1",
         "flowpack/cachebuster": "~1.0",
+        "flowpack/nodetemplates": "~1.0",
         "moc/notfound": "~3.1",
         "sitegeist/neosguidelines": "~1.2",
         "sitegeist/silhouettes": "~1.0",
