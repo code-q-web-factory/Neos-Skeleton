@@ -1,19 +1,19 @@
 prototype(CodeQ.Site:Component.Navigation) < prototype(CodeQ.Site:Component.Navigation.LevelRenderer) {
-	@context.startingPoint = ${this.startingPoint}
-	@context.node = ${this.startingPoint}
+    @context.startingPoint = ${this.startingPoint}
+    @context.node = ${this.startingPoint}
 
-	// overrides the 
-	renderer = afx`
-		<ul class="navigation">
-			{props.navigationItems}
-		</ul>
-	`
+    // overrides the
+    renderer = afx`
+        <ul class="navigation">
+            {props.navigationItems}
+        </ul>
+    `
 
-	@cache {
-		mode = 'cached'
-		entryIdentifier.node = ${documentNode}
-		entryTags {
-			1 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', documentNode)}
-		}
-	}
+    @cache {
+        mode = 'cached'
+        entryIdentifier.node = ${documentNode}
+        entryTags {
+            1 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', documentNode)}
+        }
+    }
 }

@@ -4,72 +4,72 @@
  */
 
 body {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 /**
  * Header Layout
  */
 .main-header {
-	padding: 1rem 1.2rem;
-	background: #00ADEE;
-	display: flex;
-	justify-content: space-between;
+    padding: 1rem 1.2rem;
+    background: #00ADEE;
+    display: flex;
+    justify-content: space-between;
 }
 
 .logo {
-	color: white;
-	font-weight: bold;
-	text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .navigation {
-	display: flex;
-	margin: 0;
-	padding-left: 0;
-	list-style: none;
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
 }
 
 .navigation-item {
-	position: relative;
-	display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .navigation-link {
-	color: white;
-	padding-left: 0.5rem;
-	text-decoration: none;
+    color: white;
+    padding-left: 0.5rem;
+    text-decoration: none;
 }
 
 .navigation-item--level-1 .navigation-level {
-	/* show level 2 on hover, don't got past level 2 */
-	display: none;
+    /* show level 2 on hover, don't got past level 2 */
+    display: none;
 }
 
 .navigation-item--level-1:active .navigation-level--level-2,
 .navigation-item--level-1:hover .navigation-level--level-2,
 .navigation-item--level-1:focus .navigation-level--level-2 {
-	position: absolute;
-	top: 100%;
-	right: 0;
-	display: block;
-	padding: 0.5rem;
-	background: #00ADEE;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: block;
+    padding: 0.5rem;
+    background: #00ADEE;
 }
 
 /*
  * Main Content Layout
  */
 .main {
-	max-width: 800px;
-	margin: 0 auto;
-	padding: 0.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0.5rem;
 }
 
 .main img {
-	max-width: 100%;
-	height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -77,21 +77,21 @@ body {
  * Footer Layout
  */
 .main-footer {
-	padding: 1rem 1.2rem;
-	background: #00ADEE;
-	display: flex;
-	justify-content: space-between;
+    padding: 1rem 1.2rem;
+    background: #00ADEE;
+    display: flex;
+    justify-content: space-between;
 }
 
 .main-footer > * {
-	min-width: 3rem;
+    min-width: 3rem;
 }
 
 .main-footer a {
-	color: black;
+    color: black;
 }
 
 .main-footer .neos-inline-editable.placeholder {
-	color: black;
-	font-style: italic;
+    color: black;
+    font-style: italic;
 }
