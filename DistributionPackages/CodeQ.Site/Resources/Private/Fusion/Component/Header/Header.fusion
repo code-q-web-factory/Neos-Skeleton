@@ -1,12 +1,12 @@
 prototype(CodeQ.Site:Component.Header) < prototype(Neos.Fusion:Component) {
-	homeLink = Neos.Neos:NodeUri {
-		node = ${site}
-	}
+    homeLink = Neos.Neos:NodeUri {
+        node = ${site}
+    }
 
-	renderer = afx`
-		<header class="main-header">
-			<a class="logo" href={props.homeLink}>BRAND NAME</a>
-			<CodeQ.Site:Component.Navigation startingPoint={site} />
-		</header>
-	`
+    renderer = afx`
+        <header class="main-header">
+            <a class="logo" href={props.homeLink}>BRAND NAME</a>
+            <CodeQ.Site:Component.Navigation startingPoint={site} />
+        </header>
+    `
 }

@@ -1,11 +1,11 @@
 prototype(CodeQ.Site:Content.Image) < prototype(Neos.Neos:ContentComponent) {
-	alternativeText = ${node.properties.alternativeText}
-	src = CodeQ.Site:Component.ImageUri {
-		@context.asset = ${q(node).property('image')}
-		@context.maximumWidth = 900
-	}
+    alternativeText = ${node.properties.alternativeText}
+    src = CodeQ.Site:Component.ImageUri {
+        @context.asset = ${q(node).property('image')}
+        @context.maximumWidth = 900
+    }
 
-	renderer = afx`
-		<img src={props.src} alt={props.alternativeText} />
-	`
+    renderer = afx`
+        <img src={props.src} alt={props.alternativeText} />
+    `
 }
