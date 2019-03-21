@@ -21,7 +21,7 @@ prototype(CodeQ.Site:Component.Navigation.LevelRenderer) < prototype(Neos.Fusion
 
     renderer = afx`
         <li class={props.itemClass}>
-            <Carbon.Link:Link title={props.itemTitle} node={node} additionalClass="navigation-link" />
+            <Carbon.Link:Link title={props.itemTitle} node={node} additionalClass="navigation-link" backendLink={true} />
             <ul @if.hasItems={props.navigationItems} class={props.navigationClass}>
                 {props.navigationItems}
             </ul>
