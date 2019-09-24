@@ -18,7 +18,7 @@
  - [neos/redirecthandler-neosadapter](https://github.com/neos/redirecthandler-neosadapter) automatically creates a redirect when you change/move a page
  - [neos/neos-googleanalytics](https://github.com/neos/neos-googleanalytics) adds your Google Analtics tracking code
  - [carbon/compression](https://github.com/CarbonPackages/Carbon.Compression) compresses the HTML output
- - [carbon/hyphen](https://github.com/CarbonPackages/Carbon.Hyphen) allows editors to add shy characters
+ - [shel/neos-hyphens](https://github.com/Sebobo/Shel.Neos.Hyphens) allows editors to add shy characters
  - [codeq/unicodenormalizer](https://github.com/code-q-web-factory/neos-unicodenormalizer) handles broken German Umlaute
  - [flowpack/cachebuster](https://github.com/Flowpack/Flowpack.CacheBuster) adds automatic cache busting for assets in the frontend
  - [moc/notfound](https://github.com/mocdk/MOC.NotFound) loads a normal editable page for displaying a 404 error
