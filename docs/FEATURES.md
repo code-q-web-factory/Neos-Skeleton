@@ -28,5 +28,4 @@
 
  - [carbon/link](https://github.com/jonnitto/Carbon.Link) provides powerfull link helpers
  - [sitegeist/silhouettes](https://github.com/sitegeist/Sitegeist.Silhouettes) let's you preconfigure property-silhouettes that can be applied to various properties of multiple NodeTypes in a better way then mixins.
- - [ttree/eelshell](https://github.com/ttreeagency/EelShell) let's you try your eel expressions in the terminal
  - [carbon/includeassets](https://github.com/CarbonPackages/Carbon.IncludeAssets) provides an easy way to include your assets (css, js)
