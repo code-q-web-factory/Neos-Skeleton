@@ -1,0 +1,5 @@
+'CodeQ.Site:Constraint.Document.NoSubDocuments':
+  abstract: true
+  constraints:
+    nodeTypes:
+      'Neos.Neos:Document': false
