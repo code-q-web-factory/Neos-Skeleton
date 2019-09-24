@@ -20,7 +20,6 @@
         "flowpack/nodetemplates": "~1.0",
         "moc/notfound": "~3.1",
         "shel/neos-hyphens": "~1.0",
-        "sitegeist/neosguidelines": "~1.2",
         "sitegeist/silhouettes": "~1.0",
 
         "neos/nodetypes-contentreferences": "*"

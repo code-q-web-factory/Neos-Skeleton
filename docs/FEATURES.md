@@ -29,5 +29,4 @@
  - [carbon/link](https://github.com/jonnitto/Carbon.Link) provides powerfull link helpers
  - [sitegeist/silhouettes](https://github.com/sitegeist/Sitegeist.Silhouettes) let's you preconfigure property-silhouettes that can be applied to various properties of multiple NodeTypes in a better way then mixins.
  - [ttree/eelshell](https://github.com/ttreeagency/EelShell) let's you try your eel expressions in the terminal
- - [sitegeist/neosguidelines](https://github.com/sitegeist/Sitegeist.NeosGuidelines) validates that you follow the in [Settings.NeosGuidelines.yaml](DistributionPackages/CodeQ.Site/Configuration/Settings.NeosGuidelines.yaml) defined code conventions
  - [carbon/includeassets](https://github.com/CarbonPackages/Carbon.IncludeAssets) provides an easy way to include your assets (css, js)

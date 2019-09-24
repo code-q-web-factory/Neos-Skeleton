@@ -48,10 +48,3 @@ Your local development environment must provide [PHP 7.1+, composer and MySQL 5.
 13. Copy your preferred frontend tooling into Resources/Public/Frontend and adopt the include assets paths in [Settings.IncludeAssets.yaml](DistributionPackages/CodeQ.Site/Configuration/Settings.IncludeAssets.yaml)
 14. Create your own document and content node types and add the styles to your CSS.
 
-#### Tip:
-Folow the [Code Q Code Conventions](https://docs.google.com/document/d/13ykoM0Ta2qJvO_6BYa-DIsx7_MxFsInOSbJqJHuINBw/edit?usp=sharing) and validate your code with
-```
-./flow configuration:validate
-./flow guidelines:validateDistribution
-./flow guidelines:validatePackages
-```
