@@ -10,6 +10,7 @@ Sitegeist:
               inline:
                 editorOptions:
                   placeholder: '<h2>Enter headline here...</h2>'
+                  hyphens: true
                   formatting:
                     h1: true
                     h2: true

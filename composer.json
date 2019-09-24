@@ -11,9 +11,6 @@
     "require": {
         "codeq/site": "@dev"
     },
-    "require-dev": {
-        "ttree/eelshell": "@dev"
-    },
     "repositories": {
         "distribution": {
             "type": "path",
