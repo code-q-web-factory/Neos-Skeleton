@@ -2,7 +2,6 @@ prototype(CodeQ.Site:Component.Navigation.LevelRenderer) < prototype(Neos.Fusion
     @context.nodeDepth = ${this.node.depth - startingPoint.depth}
     node = ${node}
     itemTitle = ${q(node).property('title')}
-    itemTitle.@process.replaceShy = Carbon.Hyphen:Shy.AlwaysReplace
     itemClass = Neos.Fusion:RawArray {
         base = 'navigation-item'
         level = ${'navigation-item--level-' + nodeDepth}

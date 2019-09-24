@@ -1,3 +1,4 @@
+
 'CodeQ.Site:Document.HomePage':
   superTypes:
     'CodeQ.Site:Document.AbstractPage': true
@@ -11,10 +12,11 @@
       type: string
       ui:
         inlineEditable: true
-        aloha:
-          placeholder: i18n
-          link:
-            a: true
+        inline:
+          editorOptions:
+            formatting:
+              a: true
+            placeholder: i18n
     footerItems:
       type: references
       ui:
@@ -23,4 +25,5 @@
         inspector:
           group: general
           editorOptions:
-            nodeTypes: ['Neos.Neos:Document']
+            nodeTypes:
+              - 'Neos.Neos:Document'
