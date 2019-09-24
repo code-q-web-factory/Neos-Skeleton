@@ -15,8 +15,7 @@
         "neos/seo": "^3.0",
         "doctrine/orm": "2.6.3",
 
-        "flownative/google-cloudstorage": "4.*",
-        "flownative/beach-flow-companion": "1.*",
+        "flownative/google-cloudstorage": "^5.1",
 
         "carbon/compression": "~2.0",
         "carbon/link": "~1.4",
