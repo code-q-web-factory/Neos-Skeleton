@@ -13,5 +13,6 @@
         inline:
           editorOptions:
             placeholder: '<p>Enter text here...</p>'
+            hyphens: true
       options:
         silhouette: text.free
