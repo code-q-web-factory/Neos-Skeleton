@@ -13,7 +13,6 @@
         "neos/redirecthandler-databasestorage": "^4.0",
         "neos/redirecthandler-ui": "^2.0",
         "neos/seo": "^3.0",
-        "doctrine/orm": "2.6.3",
 
         "carbon/compression": "~2.0",
         "carbon/link": "~1.4",
