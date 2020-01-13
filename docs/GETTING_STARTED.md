@@ -15,7 +15,7 @@ Your local development environment must provide [PHP 7.1+, composer and MySQL 5.
     find . -type f -name 'composer.json' | xargs sed -i='' "s/codeq\/site/${COMPOSER_PACKAGE_NAME}/g"
     ```
 3. Remove the Neos-Skeleton docs `rm -Rf docs`
-4. English is the default language, you can adapt it in [Settings.Language.yaml](DistributionPackages/CodeQ.Site/Configuration/Settings.Language.yaml)
+4. English is the default language, you can adapt it in [Settings.Language.yaml](/DistributionPackages/CodeQ.Site/Configuration/Settings.Language.yaml)
 5. Create a new git project on the server of your choice, in our example Github
 6. Change the `README.md` to describe your project.
 7. Start the new git project locally and push the initial state
