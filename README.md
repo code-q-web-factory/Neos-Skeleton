@@ -1,6 +1,6 @@
 # Code Q Neos-Skeleton
 
-The Neos-Skeleton provides an easy and powerful start for new projects - beginner-friendly and highly scalable. It implements all current [best practices](https://www.neos.io/blog/neos-best-practices-1-0.html) for Neos 4 and is frontend tooling agnostic.
+The Neos-Skeleton provides an easy and powerful start for new projects - beginner-friendly and highly scalable. It implements all current [best practices](https://www.neos.io/blog/neos-best-practices-1-0.html) for Neos 5 and is frontend agnostic.
 
 It combines contributions of some of the best Neos developers with experience from Code Q. It is inspired by [Flowpack Neos best practice examples (Dmitri Pisarev and Dominique Feyer)](https://github.com/Flowpack/fusion-bp), the [path repository setup (Christian Müller)](https://www.neos.io/blog/project-repository-best-practice.html) and [AFX (Martin Ficzel)](https://github.com/PackageFactory/atomic-fusion-afx).
 
@@ -23,8 +23,9 @@ On top, it adds well-tested community packages to provide everything you need fo
 
 #### Skeleton Variations
 
-- [Neos 4 with AFX rendering (recommended)](https://github.com/code-q-web-factory/Neos-Skeleton) 
-- [Neos 4 with AFX rendering + Flownative Beach deployment setup](https://github.com/code-q-web-factory/Neos-Skeleton/tree/flownative-beach)
+- [Neos 5 with AFX rendering (recommended)](https://github.com/code-q-web-factory/Neos-Skeleton) 
+- [Neos 5 with AFX rendering + Flownative Beach deployment setup](https://github.com/code-q-web-factory/Neos-Skeleton/tree/flownative-beach)
+- [Neos 4 with AFX rendering (legacy)](https://github.com/code-q-web-factory/Neos-Skeleton/releases/tag/v2.0.2) 
 - [Neos 3 with Fluid-based rendering (legacy)](https://github.com/code-q-web-factory/Neos-Skeleton/tree/neos-3-fluid)
 
 

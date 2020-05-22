@@ -18,3 +18,48 @@ Sitegeist:
                     h4: true
                     h5: true
                     a: true
+          plain:
+            type: string
+            defaultValue: ''
+            ui:
+              inlineEditable: true
+              inline:
+                editorOptions:
+                  placeholder: 'Enter headline here...'
+                  autoparagraph: false
+                  hyphens: true
+          free:
+            type: string
+            defaultValue: ''
+            ui:
+              inlineEditable: true
+              inline:
+                editorOptions:
+                  placeholder: '<p>Enter headline here...</p>'
+                  autoparagraph: true
+                  hyphens: true
+                  formatting:
+                    strong: true
+                    em: true
+                    sub: true
+                    sup: true
+                    p: true
+                    h1: true
+                    h2: true
+                    h3: true
+                    h4: false
+                    h5: false
+                    h6: false
+                    pre: false
+                    table: true
+                    ol: true
+                    ul: true
+                    a: true
+            link:
+              type: string
+              ui:
+                label: 'Link'
+                reloadPageIfChanged: false
+                inspector:
+                  group: 'general'
+                  editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
