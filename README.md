@@ -25,7 +25,7 @@ On top, it adds well-tested community packages to provide everything you need fo
 
 - [Neos 5 with AFX rendering (recommended)](https://github.com/code-q-web-factory/Neos-Skeleton) 
 - [Neos 5 with AFX rendering + Flownative Beach deployment setup](https://github.com/code-q-web-factory/Neos-Skeleton/tree/flownative-beach)
-- [Neos 4 with AFX rendering (legacy)](https://github.com/code-q-web-factory/Neos-Skeleton/releases/tag/v2.0.1) 
+- [Neos 4 with AFX rendering (legacy)](https://github.com/code-q-web-factory/Neos-Skeleton/releases/tag/v2.0.2) 
 - [Neos 3 with Fluid-based rendering (legacy)](https://github.com/code-q-web-factory/Neos-Skeleton/tree/neos-3-fluid)
 
 
