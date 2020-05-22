@@ -1,0 +1,16 @@
+
+Neos:
+  GoogleAnalytics:
+    enableTracking: true
+    authentication:
+      # Application name for the consent screen of OAuth 2.0
+      applicationName: 'Neos - Google Analytics'
+      clientId: '%env:GOOGLE_ANALYTICS_CLIENT_ID%'
+      clientSecret: '%env:GOOGLE_ANALYTICS_CLIENT_SECRET%'
+      # "API Key" of the Public API access credential "Key for server applications"
+      developerKey: '%env:GOOGLE_ANALYTICS_CLIENT_DEVELOPER_KEY%'
+    sites:
+      ## All site specific settings are indexed by site node name
+      site:
+        trackingId: '%env:GOOGLE_ANALYTICS_TRACKING_CODE%'
+        profileId: '%env:GOOGLE_ANALYTICS_PROFILE_ID%'

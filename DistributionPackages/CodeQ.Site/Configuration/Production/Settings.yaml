@@ -1,8 +1,0 @@
-
-Neos:
-  GoogleAnalytics:
-    enableTracking: true
-    sites:
-      ## All site specific settings are indexed by site node name
-      site:
-        trackingId: ''
