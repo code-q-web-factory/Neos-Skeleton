@@ -13,6 +13,14 @@ prototype(CodeQ.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
             `
         }
     }
+
+	prototype(Neos.Seo:StructuredData.Container) {
+        website.@if.enabled = true
+        socialProfile.@if.enabled = true
+
+        // configure structured data here
+    }
+
     body = CodeQ.Site:Component.DefaultLayout {
         content = ''
         @process.normalize = CodeQ.UnicodeNormalizer:Normalizer

@@ -1,0 +1,9 @@
+
+Neos:
+  Seo:
+    socialProfile:
+      # type: 'Organization'
+      # logo: 'resource://CodeQ.Site/Public/Frontend/XXX.png'
+      # profiles:
+      #   facebook: ''
+      #   instagram: ''
