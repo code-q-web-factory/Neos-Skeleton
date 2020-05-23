@@ -1,0 +1,4 @@
+
+GesagtGetan:
+  CookieDialogue:
+    findQuery: '[uriPathSegment=imprint][uriPathSegment=impressum]'
