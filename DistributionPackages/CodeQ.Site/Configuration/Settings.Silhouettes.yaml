@@ -63,3 +63,20 @@ Sitegeist:
                 inspector:
                   group: 'general'
                   editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
+        images:
+          asset:
+            type: Neos\Media\Domain\Model\ImageInterface
+            ui:
+              label: 'Bild'
+              reloadIfChanged: true
+              inspector:
+                group: 'general'
+                position: 50
+          alternativeText:
+            type: string
+            ui:
+              label: 'Alternativer Text für Bild'
+              reloadIfChanged: false
+              inspector:
+                group: 'general'
+                position: 100
