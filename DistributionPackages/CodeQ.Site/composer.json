@@ -20,7 +20,6 @@
         "codeq/unicodenormalizer": "~2.2",
         "flowpack/cachebuster": "~1.0",
         "flowpack/nodetemplates": "~1.2",
-        "moc/notfound": "~4.0",
         "shel/neos-hyphens": "~1.0",
         "sitegeist/silhouettes": "~1.1",
         "sitegeist/lazybones": "~2.1",
