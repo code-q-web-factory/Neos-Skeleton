@@ -6,7 +6,13 @@ prototype(CodeQ.Site:Component.Header) < prototype(Neos.Fusion:Component) {
     renderer = afx`
         <header class="main-header">
             <a class="logo" href={props.homeLink}>BRAND NAME</a>
-            <CodeQ.Site:Component.Navigation startingPoint={site} />
+            <Neos.Neos:Menu
+                startingPoint={site}
+                attributes.class="navigation"
+                normal.attributes.class="navigation-item"
+                active.attributes.class="navigation-item navigation-item--state-active"
+                current.attributes.class="navigation-item navigation-item--state-current"
+                />
         </header>
     `
 }

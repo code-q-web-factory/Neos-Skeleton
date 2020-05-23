@@ -36,26 +36,31 @@ body {
     display: inline-block;
 }
 
-.navigation-link {
+.navigation-item a {
     color: white;
     padding-left: 0.5rem;
     text-decoration: none;
 }
 
-.navigation-item--level-1 .navigation-level {
+.navigation-item ul {
     /* show level 2 on hover, don't got past level 2 */
     display: none;
 }
 
-.navigation-item--level-1:active .navigation-level--level-2,
-.navigation-item--level-1:hover .navigation-level--level-2,
-.navigation-item--level-1:focus .navigation-level--level-2 {
+.navigation-item:active ul,
+.navigation-item:hover ul,
+.navigation-item:focus ul {
     position: absolute;
     top: 100%;
     right: 0;
     display: block;
     padding: 0.5rem;
     background: #00ADEE;
+}
+
+.navigation-item--state-active,
+.navigation-item--state-current {
+    text-decoration: underline;
 }
 
 /*
@@ -67,8 +72,8 @@ body {
     padding: 0.5rem;
 }
 
-.main img {
-    max-width: 100%;
+.container-image {
+    width: 100%;
     height: auto;
 }
 

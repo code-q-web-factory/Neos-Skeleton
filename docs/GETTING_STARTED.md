@@ -1,7 +1,9 @@
 # Steps to get started
 
 Requirements:
-Your local development environment must provide [PHP 7.1+, composer and MySQL 5.7.x or MariaDB 10.2.x](https://www.neos.io/download-and-extend.html).
+Your local development environment must provide [PHP 7.4+, composer and MySQL 5.7.x or MariaDB 10.2.x](https://www.neos.io/download-and-extend.html).
+
+If you don't use PHP 7.4, please change the version in [composer.json](/composer.json#L8) under `config.platform.php`.
 
 #### Start a new git project
 
