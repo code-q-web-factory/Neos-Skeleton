@@ -3,31 +3,32 @@
     "description": "A Neos website",
     "type": "neos-site",
     "require": {
-        "neos/neos": "^5.0",
-        "neos/neos-ui": "^5.0",
+        "neos/neos": "^5.2",
+        "neos/neos-ui": "^5.2",
         "neos/neos-setup": "*",
         "neos/fusion-afx": "~1.2",
-        "neos/googleanalytics": "^3.1",
+        "neos/googleanalytics": "^3.2",
         "neos/redirecthandler": "^4.0",
         "neos/redirecthandler-neosadapter": "^4.0",
         "neos/redirecthandler-databasestorage": "^4.0",
-        "neos/redirecthandler-ui": "^2.0",
-        "neos/seo": "^3.0",
+        "neos/redirecthandler-ui": "^2.3",
+        "neos/seo": "^3.1",
 
         "flownative/google-cloudstorage": "^5.1",
+        "rokka/imagine-vips": "0.*",
 
         "aertmann/history": "~2.0",
         "codeq/logintheme": "~2.2",
 
         "carbon/compression": "~2.0",
         "carbon/link": "~1.4",
-        "carbon/includeassets": "~3.5",
+        "carbon/includeassets": "~3.6",
         "codeq/unicodenormalizer": "~2.2",
         "flowpack/cachebuster": "~1.0",
-        "flowpack/nodetemplates": "~1.1",
-        "moc/notfound": "~3.1",
+        "flowpack/nodetemplates": "~1.2",
+        "moc/notfound": "~4.0",
         "shel/neos-hyphens": "~1.0",
-        "sitegeist/silhouettes": "~1.0",
+        "sitegeist/silhouettes": "~1.1",
 
         "neos/nodetypes-contentreferences": "*"
     },
@@ -109,7 +110,9 @@
             "Neos.Fusion-20180211184832",
             "Neos.Flow-20180415105700",
             "Neos.Neos-20180907103800",
-            "Neos.Neos.Ui-20190319094900"
+            "Neos.Neos.Ui-20190319094900",
+            "Neos.Flow-20190425144900",
+            "Neos.Flow-20190515215000"
         ]
     }
 }

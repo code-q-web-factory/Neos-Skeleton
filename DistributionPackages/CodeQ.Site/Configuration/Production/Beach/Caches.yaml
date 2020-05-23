@@ -1,34 +1,15 @@
 ##
 #
-# Flownative Beach Cache Configuration
+# Flownative Beach Cache Configuration for Redis
 #
 ##
 
-#
-# persist everything in the database instead of the file system
-# 
-Flow_Security_Cryptography_HashService:
-  backend: Neos\Cache\Backend\PdoBackend
-  backendOptions:
-    dataSourceName: 'mysql:host=%env:BEACH_DATABASE_HOST%;dbname=%env:BEACH_DATABASE_NAME%'
-    username: '%env:BEACH_DATABASE_USERNAME%'
-    password: '%env:BEACH_DATABASE_PASSWORD%'
-    defaultLifetime: 0
-
-Neos_GoogleAnalytics_Tokens:
-  backend: Flownative\BeachFlowCompanion\Cache\PdoBackend
-
-
-#
-# Use Redis for caching
-#
 Flow_Mvc_Routing_Route:
-  Flow_Mvc_Routing_Route:
   backend: 'Neos\Cache\Backend\RedisBackend'
   backendOptions:
     hostname: '%env:BEACH_REDIS_HOST%'
     password: '%env:BEACH_REDIS_PASSWORD%'
-    port: 6379
+    port: '6379'
     # starting with database 2 here, since 0 and 1 are used and flushed by
     # the core unit tests and should not be used if possible.
     database: 2
@@ -39,7 +20,7 @@ Flow_Mvc_Routing_Resolve:
   backendOptions:
     hostname: '%env:BEACH_REDIS_HOST%'
     password: '%env:BEACH_REDIS_PASSWORD%'
-    port: 6379
+    port: '6379'
     database: 3
     defaultLifetime: 0
 
@@ -48,7 +29,7 @@ Neos_Fusion_Content:
   backendOptions:
     hostname: '%env:BEACH_REDIS_HOST%'
     password: '%env:BEACH_REDIS_PASSWORD%'
-    port: 6379
+    port: '6379'
     database: 4
     defaultLifetime: 0
 
@@ -57,7 +38,7 @@ Flow_Session_MetaData:
   backendOptions:
     hostname: '%env:BEACH_REDIS_HOST%'
     password: '%env:BEACH_REDIS_PASSWORD%'
-    port: 6379
+    port: '6379'
     database: 5
     defaultLifetime: 0
 
@@ -66,7 +47,7 @@ Flow_Session_Storage:
   backendOptions:
     hostname: '%env:BEACH_REDIS_HOST%'
     password: '%env:BEACH_REDIS_PASSWORD%'
-    port: 6379
+    port: '6379'
     database: 6
     defaultLifetime: 0
 
@@ -75,6 +56,9 @@ Neos_Media_ImageSize:
   backendOptions:
     hostname: '%env:BEACH_REDIS_HOST%'
     password: '%env:BEACH_REDIS_PASSWORD%'
-    port: 6379
+    port: '6379'
     database: 7
     defaultLifetime: 0
+
+Neos_GoogleAnalytics_Tokens:
+  backend: Flownative\BeachFlowCompanion\Cache\PdoBackend

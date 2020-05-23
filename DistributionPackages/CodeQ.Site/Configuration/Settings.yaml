@@ -20,7 +20,9 @@ Neos:
     userInterface:
       navigateComponent:
         nodeTree:
-          loadingDepth: 1
+          # number of levels inside the node tree which shall be loaded eagerly, at start.
+          # if you have lots of nodes you should maybe reduce this number of elements.
+          loadingDepth: 2
         structureTree:
           loadingDepth: 2
     fusion:
