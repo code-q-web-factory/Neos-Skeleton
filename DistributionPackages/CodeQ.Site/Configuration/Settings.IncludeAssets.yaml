@@ -1,6 +1,10 @@
 
 Carbon:
   IncludeAssets:
+    ResourceHints:
+      Preconnect:
+      # - TODO
+
     Packages:
       aa_Theme:
         Path:
@@ -13,7 +17,7 @@ Carbon:
         # Asset files who get's loaded in live and backend view
         General:
           Head:
-            - index.css
+            - index.css[inline]
           Body:
             - index.js
 
