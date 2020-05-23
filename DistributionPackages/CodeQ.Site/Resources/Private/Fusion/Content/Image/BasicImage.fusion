@@ -1,0 +1,29 @@
+/**
+ * This Basic example shows how you can render a image tag
+ * on your own. For production we recommend to use LazyBones,
+ * as shown in CodeQ.Site:Content.Image.
+ *
+ * This fusion prototype is currently not used and just an example.
+ */
+prototype(CodeQ.Site:Content.BasicImage) < prototype(Neos.Neos:ContentComponent) {
+    src = Neos.Fusion:Case {
+        image {
+            condition = ${q(node).property('image') ? true : false}
+            renderer = Neos.Neos:ImageUri {
+                asset = ${q(node).property('image')}
+                maximumWidth = 900
+            }
+        }
+        dummyImage {
+            condition = ${site.context.inBackend}
+            renderer = Neos.Fusion:ResourceUri {
+                path = 'resource://Neos.Neos/Public/Images/dummy-image.svg'
+            }
+        }
+    }
+    alternativeText = ${q(node).property('alternativeText')}
+
+    renderer = afx`
+       <img src={props.src} alt={props.alternativeText} />
+    `
+}

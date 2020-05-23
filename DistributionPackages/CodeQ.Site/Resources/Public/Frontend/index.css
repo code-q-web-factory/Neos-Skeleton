@@ -67,8 +67,8 @@ body {
     padding: 0.5rem;
 }
 
-.main img {
-    max-width: 100%;
+.container-image {
+    width: 100%;
     height: auto;
 }
 
