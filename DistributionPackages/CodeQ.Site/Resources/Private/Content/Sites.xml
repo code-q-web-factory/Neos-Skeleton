@@ -30,7 +30,7 @@
       <lastModificationDateTime __type="object" __classname="DateTime">2018-06-26T23:23:05+02:00</lastModificationDateTime>
       <lastPublicationDateTime __type="object" __classname="DateTime">2018-06-26T23:23:05+02:00</lastPublicationDateTime>
       <properties>
-       <uriPathSegment __type="string">404</uriPathSegment>
+       <uriPathSegment __type="string">notfound</uriPathSegment>
        <canonicalLink __type="string"></canonicalLink>
        <title __type="string">Page not found</title>
        <hideFromMainMenu __type="boolean">1</hideFromMainMenu>
