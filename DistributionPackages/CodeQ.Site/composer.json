@@ -5,7 +5,6 @@
     "require": {
         "neos/neos": "^5.2",
         "neos/neos-ui": "^5.2",
-        "neos/neos-setup": "*",
         "neos/fusion-afx": "~1.2",
         "neos/googleanalytics": "^3.2",
         "neos/redirecthandler": "^4.0",
