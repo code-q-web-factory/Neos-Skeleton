@@ -1,0 +1,13 @@
+
+Neos:
+  SwiftMailer:
+    transport:
+      type: Swift_SmtpTransport
+      options:
+        # Code Q Amazon SES Account - rs@codeq.at
+        host: 'email-smtp.eu-west-1.amazonaws.com'
+        port: '2587'
+        encryption: 'tls'
+        username: '%env:SWIFT_MAILER_USERNAME%'
+        password: '%env:SWIFT_MAILER_PASSWORD%'
+
