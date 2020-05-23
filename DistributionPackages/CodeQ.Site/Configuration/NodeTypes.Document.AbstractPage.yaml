@@ -12,11 +12,3 @@
     nodeTypes:
       'CodeQ.Site:Document.HomePage': false
       'CodeQ.Site:Constraint.Document.Restricted': false
-  properties:
-    hideFromMainMenu:
-      type: boolean
-      ui:
-        label: i18n
-        reloadPageIfChanged: true
-        inspector:
-          group: visibility
