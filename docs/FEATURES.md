@@ -21,7 +21,7 @@
  - [shel/neos-hyphens](https://github.com/Sebobo/Shel.Neos.Hyphens) allows editors to add shy characters
  - [codeq/unicodenormalizer](https://github.com/code-q-web-factory/neos-unicodenormalizer) handles broken German Umlaute
  - [flowpack/cachebuster](https://github.com/Flowpack/Flowpack.CacheBuster) adds automatic cache busting for assets in the frontend
- - [moc/notfound](https://github.com/mocdk/MOC.NotFound) loads a normal editable page for displaying a 404 error
+ - ~~[moc/notfound](https://github.com/mocdk/MOC.NotFound) loads a normal editable page for displaying a 404 error~~ 4xx error page based on Neos 4.3 error rendering instead
  - [neos/nodetypes-contentreferences](https://github.com/neos/nodetypes-contentreferences) provides a reference content node type
  
 #### Development features via required packages
