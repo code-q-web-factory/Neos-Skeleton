@@ -7,13 +7,6 @@ Neos:
           variables:
             # We prefer URLs without the ".html" suffix
             defaultUriSuffix: ''
-    error:
-      exceptionHandler:
-        renderingGroups:
-          notFoundExceptions:
-            options:
-              variables:
-                path: '404' # skip suffix in notfound as well
   Neos:
     eventLog:
       enabled: true
@@ -35,5 +28,8 @@ Neos:
     #       label: 'Content Blocks'
     Ui:
       frontendConfiguration:
-        defaultInlineEditor: 'ckeditor5'
         hotkeys: ~
+
+Carbon:
+  Link:
+    defaultPhoneCountryCode: '0049'
