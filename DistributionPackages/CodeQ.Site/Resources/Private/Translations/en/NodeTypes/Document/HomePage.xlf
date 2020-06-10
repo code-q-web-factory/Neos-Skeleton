@@ -5,7 +5,7 @@
             <trans-unit id="ui.label">
                 <source>Homepage</source>
             </trans-unit>
-            <trans-unit id="properties.footerInfo.aloha.placeholder">
+            <trans-unit id="properties.footerInfo.ui.inline.editorOptions.placeholder">
                 <source>Enter contact info here...</source>
             </trans-unit>
             <trans-unit id="properties.footerItems">

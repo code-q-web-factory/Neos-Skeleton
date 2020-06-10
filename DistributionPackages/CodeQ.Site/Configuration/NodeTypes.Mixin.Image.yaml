@@ -23,18 +23,14 @@
           icon: 'icon-image'
   properties:
     image:
-      type: Neos\Media\Domain\Model\ImageInterface
       ui:
-        label: 'Image'
-        reloadIfChanged: true
         inspector:
           group: 'image'
-          position: 50
+      options:
+        silhouette: codeq.image.asset
     alternativeText:
-      type: string
       ui:
-        label: 'Alternative Text'
-        reloadIfChanged: false
         inspector:
           group: 'image'
-          position: 100
+      options:
+        silhouette: codeq.image.alternativeText
