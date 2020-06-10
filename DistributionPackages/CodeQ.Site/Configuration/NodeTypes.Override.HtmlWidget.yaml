@@ -1,0 +1,10 @@
+
+# We do not need this for editors
+'CodeQ.HtmlWidget:Content.HtmlWidget':
+  abstract: true
+  ui:
+    group: plugins
+
+'CodeQ.HtmlWidget:Content.HtmlWidgetDefinition':
+  ui:
+    group: plugins

@@ -9,7 +9,7 @@ Sitegeist:
               inlineEditable: true
               inline:
                 editorOptions:
-                  placeholder: '<h2>Enter headline here...</h2>'
+                  placeholder: '<h2>Überschrift hier eingeben...</h2>'
                   hyphens: true
                   formatting:
                     h1: true
@@ -25,7 +25,7 @@ Sitegeist:
               inlineEditable: true
               inline:
                 editorOptions:
-                  placeholder: 'Enter headline here...'
+                  placeholder: 'Text hier eingeben...'
                   autoparagraph: false
                   hyphens: true
           free:
@@ -35,12 +35,11 @@ Sitegeist:
               inlineEditable: true
               inline:
                 editorOptions:
-                  placeholder: '<p>Enter headline here...</p>'
+                  placeholder: '<p>Text hier eingeben...</p>'
                   autoparagraph: true
                   hyphens: true
                   formatting:
                     strong: true
-                    em: true
                     sub: true
                     sup: true
                     p: true
@@ -72,6 +71,22 @@ Sitegeist:
               inspector:
                 group: 'general'
                 position: 50
+          squareAsset:
+            type: Neos\Media\Domain\Model\ImageInterface
+            ui:
+              label: 'Bild'
+              reloadIfChanged: true
+              inspector:
+                group: 'general'
+                position: 50
+                editorOptions:
+                  crop:
+                    aspectRatio:
+                      enableOriginal: false
+                      allowCustom: false
+                      locked:
+                        width: 1
+                        height: 1
           alternativeText:
             type: string
             ui:
