@@ -2,14 +2,14 @@
 ## Add your overrides to 3rd party fusion code here
 ###
 
-# Error matcher to render the 'notfound' child-document of the homepage
-# for exceptions with 4xx status code
+# Error matcher to render '/notfound' for exceptions with 4xx status code
 error {
-    @context.notfoundDocument = ${q(site).children('notfound').get(0)}
+    @context.notfoundDocument = ${q(site).children('[uriPathSegment="notfound"]').get(0)}
     4xx {
         @position = 'start'
         condition = ${statusCode >= 400 && statusCode < 500 && notfoundDocument}
         renderer = Neos.Fusion:Renderer {
+            @context.documentNode = ${notfoundDocument}
             @context.node = ${notfoundDocument}
             renderPath = '/root'
         }
