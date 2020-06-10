@@ -60,5 +60,10 @@ Neos_Media_ImageSize:
     database: 7
     defaultLifetime: 0
 
-Neos_GoogleAnalytics_Tokens:
-  backend: Flownative\BeachFlowCompanion\Cache\PdoBackend
+Neos_GoogleApiClient_Credentials:
+  backend: Neos\Cache\Backend\PdoBackend
+  backendOptions:
+    dataSourceName: 'mysql:host=%env:BEACH_DATABASE_HOST%;dbname=%env:BEACH_DATABASE_NAME%'
+    username: '%env:BEACH_DATABASE_USERNAME%'
+    password: '%env:BEACH_DATABASE_PASSWORD%'
+    defaultLifetime: 0
