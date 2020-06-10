@@ -55,14 +55,14 @@ Sitegeist:
                     ol: true
                     ul: true
                     a: true
-            link:
-              type: string
-              ui:
-                label: 'Link'
-                reloadPageIfChanged: false
-                inspector:
-                  group: 'general'
-                  editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
+          link:
+            type: string
+            ui:
+              label: 'Link'
+              reloadPageIfChanged: false
+              inspector:
+                group: 'general'
+                editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
         images:
           asset:
             type: Neos\Media\Domain\Model\ImageInterface
