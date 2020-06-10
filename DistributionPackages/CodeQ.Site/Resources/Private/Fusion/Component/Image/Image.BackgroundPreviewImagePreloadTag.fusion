@@ -1,0 +1,12 @@
+prototype(CodeQ.Site:Component.Image.BackgroundPreviewImagePreloadTag) < prototype(Neos.Fusion:Component) {
+	# api
+	asset = false
+
+	# rendering
+	@if.has=${this.asset}
+	renderer = afx`
+			<link rel="preload" as="image">
+				<CodeQ.Site:Component.Image.BackgroundPreviewImage @path="attributes.href" asset={props.asset}/>
+			</link>
+		`
+}

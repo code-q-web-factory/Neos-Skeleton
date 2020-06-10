@@ -1,0 +1,21 @@
+prototype(CodeQ.Site:Component.Image.AssetToSource) < prototype(Neos.Fusion:Case) {
+	/*
+	imageSource {
+		condition = ${Type.instance(value, 'Sitegeist.Kaleidoscope:AssetImageSource') ? true : false}
+		renderer = ${value}
+	}*/
+	image {
+		condition = ${value ? true : false}
+		renderer = Sitegeist.Kaleidoscope:AssetImageSource {
+			asset = ${value}
+		}
+	}
+	dummyImage {
+		condition = ${site.context.inBackend}
+		renderer = Sitegeist.Kaleidoscope:DummyImageSource
+	}
+	default {
+		condition = true
+		renderer = false
+	}
+}

@@ -5,3 +5,9 @@
     label: i18n
     icon: icon-file-o
     position: 100
+  properties:
+    heroImage:
+      inspector:
+        label: 'Kopfbild'
+      options:
+        silhouette: codeq.image.asset

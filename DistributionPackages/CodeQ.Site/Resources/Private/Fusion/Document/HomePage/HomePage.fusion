@@ -3,15 +3,28 @@ prototype(CodeQ.Site:Document.HomePage) < prototype(CodeQ.Site:Document.Abstract
     # so don't append it again
     head.titleTag.outputSuffixOnTitleOverride = false
 
+    // preload the hero image background
+	head.heroImagePreload = CodeQ.Site:Component.Image.BackgroundPreviewImagePreloadTag {
+        @position = 'after titleTag'
+        asset = ${q(node).property('poster')}
+    }
+
     body.content = Neos.Fusion:Component {
         main = Neos.Neos:ContentCollection {
+            attributes.class = 'main'
             nodePath = 'main'
+            tagName = 'main'
         }
 
         renderer = afx`
-            <main class="main">
-                {props.main}
-            </main>
+			<CodeQ.Site:Component.Hero.Video
+				poster={q(node).property('poster')}
+				video853={q(node).property('video853')}
+				video1024={q(node).property('video1024')}
+				video1280={q(node).property('video1280')}
+				video={q(node).property('video')}
+				title={props.heroVideoTitle} />
+            {props.main}
         `
     }
 }

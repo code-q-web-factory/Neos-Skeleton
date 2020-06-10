@@ -1,0 +1,45 @@
+##
+# This renders a picturee tag with webp support
+##
+prototype(CodeQ.Site:Component.Image.LazyPicture) < prototype(Sitegeist.Lazybones:Picture) {
+	# api
+	# imageSource is expected to be an image
+	imageSource = false
+	backgroundPreviewImage = false
+	# this is used for our IE polyfill, see https://github.com/constancecchen/object-fit-polyfill#readme
+	dataObjectFit = false
+
+	# api inherited from lazybones
+    class = null
+	lazy = true
+	alt = ''
+
+	# rendering
+	lazyWidth = 200
+	@context {
+		imageSource = ${this.imageSource}
+		srcset = ${this.srcset}
+		sizes = ${this.sizes}
+	}
+	sources = Neos.Fusion:RawArray {
+		webp = Neos.Fusion:RawArray {
+			imageSource = ${imageSource.setFormat('webp')}
+			srcset = ${srcset}
+			sizes = ${sizes}
+			type = 'image/webp'
+		}
+	}
+	imageSource.@process.convert = CodeQ.Site:Component.Image.AssetToSource
+	# srcset and sizes are implemented in sub components
+
+	renderer.lazy.renderer.attributes.data-object-fit = ${props.dataObjectFit}
+	renderer.default.renderer.renderer.attributes.data-object-fit = ${props.dataObjectFit}
+
+	@context.backgroundPreviewImage = ${this.backgroundPreviewImage}
+	backgroundPreviewImageStyle = CodeQ.Site:Component.Image.BackgroundPreviewImage {
+		asset = ${backgroundPreviewImage}
+		@process.toStyle = ${'background-position: center; background-size: cover; background-image: url(\'' + value + '\');'}
+	}
+	renderer.lazy.renderer.attributes.style.@process.addBackgroundImage = ${value + props.backgroundPreviewImageStyle}
+	renderer.default.renderer.renderer.attributes.style.@process.addBackgroundImage = ${value + props.backgroundPreviewImageStyle}
+}

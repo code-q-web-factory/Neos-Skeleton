@@ -3,6 +3,7 @@
   superTypes:
     'CodeQ.Site:Document.AbstractPage': true
     'CodeQ.Site:Constraint.Document.Restricted': true
+    'CodeQ.Site:Mixin.HeroVideo': true
     'CodeQ.Site:Mixin.InspectorGeneral': true
   ui:
     label: i18n

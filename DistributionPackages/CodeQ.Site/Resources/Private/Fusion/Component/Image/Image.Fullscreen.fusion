@@ -1,0 +1,5 @@
+prototype(CodeQ.Site:Component.Image.Fullscreen) < prototype(CodeQ.Site:Component.Image.LazyPicture) {
+	lazyWidth = 200
+	srcset = '320w, 400w, 480w, 600w, 640w, 720w, 768w, 800w, 960w, 1024px, 1280w, 1440w, 1600w, 1680w, 1920w,  2560w'
+	sizes = '100vw'
+}

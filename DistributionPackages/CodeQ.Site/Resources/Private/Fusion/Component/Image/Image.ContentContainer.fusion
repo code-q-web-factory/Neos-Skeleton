@@ -1,0 +1,4 @@
+prototype(CodeQ.Site:Component.Image.ContentContainer) < prototype(CodeQ.Site:Component.Image.LazyPicture) {
+	srcset = '320w, 400w, 480w, 600w, 640w, 720w, 768w, 800w, 960w, 1024px, 1280w, 1440w, 1600w, 1680w, 1920w,  2560w'
+	sizes = '(min-width: 1280px) calc(60vw - 50px), (min-width: 768px) 718px, calc(100vw - 50px)'
+}

@@ -1,0 +1,58 @@
+'CodeQ.Site:Mixin.HeroVideo':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        video:
+          label: 'Hero Video'
+          position: 10
+          icon: 'icon-video'
+  properties:
+    poster:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Vorschaubild'
+        reloadIfChanged: true
+        inspector:
+          group: 'video'
+          position: 50
+    video853:
+      type: 'Neos\Media\Domain\Model\Asset'
+      ui:
+        label: '853px Video'
+        reloadIfChanged: true
+        inspector:
+          group: 'video'
+          position: 100
+    video1024:
+      type: 'Neos\Media\Domain\Model\Asset'
+      ui:
+        label: '1024px Video'
+        reloadIfChanged: true
+        inspector:
+          group: 'video'
+          position: 150
+    video1280:
+      type: 'Neos\Media\Domain\Model\Asset'
+      ui:
+        label: '1280px Video'
+        reloadIfChanged: true
+        inspector:
+          group: 'video'
+          position: 200
+    video:
+      type: 'Neos\Media\Domain\Model\Asset'
+      ui:
+        label: '1920px Video (default)'
+        reloadIfChanged: true
+        inspector:
+          group: 'video'
+          position: 250
+    heroVideoTitle:
+      type: string
+      ui:
+        inline:
+          editorOptions:
+            placeholder: 'Enter title here...'
+      options:
+        silhouette: codeq.text.plain
