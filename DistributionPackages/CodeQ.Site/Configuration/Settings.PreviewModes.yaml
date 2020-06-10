@@ -19,14 +19,3 @@ Neos:
           title: 'Mobile'
           width: 360px
           height: 640px
-
-##
-# Alternatively use this to disable all other modes
-# and only offer in-place editing
-##
-# Neos:
-#   Neos:
-#     userInterface:
-#       editPreviewModes:
-#         rawContent: ~
-#         desktop: ~
