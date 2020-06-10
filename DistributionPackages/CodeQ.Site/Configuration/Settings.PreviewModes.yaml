@@ -3,8 +3,9 @@ Neos:
   Neos:
     userInterface:
       editPreviewModes:
+        # based on most used device 2020
+        # https://gs.statcounter.com/screen-resolution-stats/all/europe
         tablet:
-          # based on most used device 2017 - Samsung Galaxy S5
           isEditingMode: false
           isPreviewMode: true
           fusionRenderingPath: ''
@@ -12,10 +13,20 @@ Neos:
           width: 768px
           height: 1024px
         mobile:
-          # based on most used 2017 virtual screensize - https://deviceatlas.com/blog/mobile-viewport-size-statistics-2017
           isEditingMode: false
           isPreviewMode: true
           fusionRenderingPath: ''
           title: 'Mobile'
           width: 360px
           height: 640px
+
+##
+# Alternatively use this to disable all other modes
+# and only offer in-place editing
+##
+# Neos:
+#   Neos:
+#     userInterface:
+#       editPreviewModes:
+#         rawContent: ~
+#         desktop: ~

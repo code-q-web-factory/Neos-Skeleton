@@ -31,7 +31,7 @@ prototype(CodeQ.Site:Content.Image) < prototype(Neos.Neos:ContentComponent) {
             lazyWidth={200}
             imageSource={props.src}
             srcset="320w, 400w, 480w, 600w, 640w, 720w, 768w, 800w, 960w, 1024px, 1280w, 1440w, 1600w, 1680w, 1920w, 2560w"
-            sizes={props.imageSizes}
+            sizes={props.sizes}
             alt={props.alternativeText}
             />
 	`
