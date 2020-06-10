@@ -1,0 +1,23 @@
+prototype(CodeQ.Site:Component.Header.MenuItemsRenderer) < prototype(Neos.Fusion:Component) {
+    items = false
+
+    @if.has = ${this.items}
+    renderer = afx`
+        <ul class="navigation">
+            <Neos.Fusion:Loop items={props.items} itemName="menuItem" @children="itemRenderer">
+                <li class={'navigation-item ' + (menuItem.state ? 'navigation-item--state-' + menuItem.state : '') }>
+                    <Carbon.Link:Link
+                        node={menuItem.node}
+                        backendLink={true}
+                        renderDefaultTagIfNoLink={true}>
+                        { menuItem.label }
+                    </Carbon.Link:Link>
+
+                    <CodeQ.Site:Component.Header.MenuItemsRenderer
+                        items={menuItem.subItems}
+                        />
+                </li>
+            </Neos.Fusion:Loop>
+        </ul>
+    `
+}
