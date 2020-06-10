@@ -15,4 +15,14 @@ prototype(CodeQ.Site:Component.Header) < prototype(Neos.Fusion:Component) {
                 />
         </header>
     `
+
+	@cache {
+		mode = 'cached'
+		entryIdentifier {
+			documentNode = ${documentNode}
+		}
+		entryTags {
+			1 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', documentNode)}
+		}
+	}
 }

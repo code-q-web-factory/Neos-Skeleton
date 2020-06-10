@@ -20,4 +20,14 @@ prototype(CodeQ.Site:Component.Footer) < prototype(Neos.Neos:ContentComponent) {
             {props.footerItems}
         </footer>
     `
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            site = ${site}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(site)}
+        }
+    }
 }
