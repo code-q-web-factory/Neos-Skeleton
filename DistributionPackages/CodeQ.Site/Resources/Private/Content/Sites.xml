@@ -33,7 +33,7 @@
        <uriPathSegment __type="string">notfound</uriPathSegment>
        <canonicalLink __type="string"></canonicalLink>
        <title __type="string">Page not found</title>
-       <hideFromMainMenu __type="boolean">1</hideFromMainMenu>
+       <_hiddenInIndex __type="boolean">1</_hiddenInIndex>
        <metaRobotsNoindex __type="boolean">1</metaRobotsNoindex>
       </properties>
      </variant>
