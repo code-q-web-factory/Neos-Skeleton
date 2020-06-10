@@ -62,11 +62,11 @@ Sitegeist:
               inspector:
                 group: 'general'
                 editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
-        images:
+        image:
           asset:
             type: Neos\Media\Domain\Model\ImageInterface
             ui:
-              label: 'Bild'
+              label: 'Image'
               reloadIfChanged: true
               inspector:
                 group: 'general'
@@ -90,7 +90,7 @@ Sitegeist:
           alternativeText:
             type: string
             ui:
-              label: 'Alternativer Text für Bild'
+              label: 'Alternative image text'
               reloadIfChanged: false
               inspector:
                 group: 'general'

@@ -6,7 +6,7 @@
                 <source>Homepage</source>
                 <target xml:lang="de" state="translated">Homepage</target>
             </trans-unit>
-            <trans-unit id="properties.footerInfo.aloha.placeholder">
+            <trans-unit id="properties.footerInfo.ui.inline.editorOptions.placeholder">
                 <source>Enter contact info here...</source>
                 <target xml:lang="de" state="translated">Kontaktinfos hier eingeben...</target>
             </trans-unit>
