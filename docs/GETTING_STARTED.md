@@ -38,12 +38,12 @@ If you don't use PHP 7.4, please change the version in [composer.json](/composer
 
 #### Run the project locally
 
-8. Start your database server and create a new database with the encoding **utf8mb4** and the collation **utf8mb4_unicode_ci**. (Be careful: Don't confuse it with *utf8mb4_general_ci*, which is the default for some database management tools. This can lead to hard-to-debug issues later on.)
+8. Start your database server.
 9. Start the local server in the terminal:
     ```
     ./flow server:run
     ```
-10. Setup the database configuration at [http://127.0.0.1:8081/setup](http://127.0.0.1:8081/setup) and import the initial content from your package.
+10. Create or configure your database at [http://127.0.0.1:8081/setup](http://127.0.0.1:8081/setup) and import the initial content from your package.
 
 #### Configure your project
 
