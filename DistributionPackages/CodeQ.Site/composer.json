@@ -23,6 +23,7 @@
         "shel/neos-hyphens": "~1.0",
         "sitegeist/silhouettes": "~1.1",
         "sitegeist/lazybones": "~2.1",
+        "kaufmanndigital/gdpr-cookieconsent": "~2.1",
 
         "neos/nodetypes-contentreferences": "*"
     },
