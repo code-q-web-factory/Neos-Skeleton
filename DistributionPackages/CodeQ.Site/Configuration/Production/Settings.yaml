@@ -4,6 +4,6 @@ Neos:
       # All site specific settings are indexed by site node name
       site:
         analytics:
-          id: "UA-XXXXX-YY"
+          id: 'UA-XXXXX-YY'
         # tagManager:
         #   id: 'GTM-XXXXX'
