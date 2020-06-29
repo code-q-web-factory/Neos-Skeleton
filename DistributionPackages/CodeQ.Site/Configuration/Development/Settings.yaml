@@ -1,4 +1,1 @@
-
-Neos:
-  GoogleAnalytics:
-    enableTracking: false
+# Configuration for the development context.
