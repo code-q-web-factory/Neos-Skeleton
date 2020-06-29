@@ -13,6 +13,7 @@ insert_final_newline = true
 trim_trailing-whitespace = true
 indent_style = space
 indent_size = 4
+quote_type = single
 
 # 2-space files
 [{*.{yaml,yml,sh,jscsrc},package.json,.*rc}]
