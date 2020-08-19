@@ -8,9 +8,9 @@ On top, it adds well-tested community packages to provide everything you need fo
 
 #### Features
 
- - A powerful best practice layout rendering mechanism
- - Best practice folder and naming structure
- - A well-rounded set of packages to build typical websites
+ - A powerful best practice layout rendering mechanism.
+ - Best practice folder and naming structure.
+ - A well-rounded set of packages to build typical websites.
 
 
 #### Learn more
@@ -31,18 +31,18 @@ On top, it adds well-tested community packages to provide everything you need fo
 
 ### WE NEED HELP
 
-We aim to stay up with best practises and innovating concepts. 
+We aim to stay up with best practices and innovating concepts. 
 
-- Did you find a concept or pattern which works great? Please share it with us by opening a issue or pull request
-- Improving the documentation
+- Did you find a concept or pattern which works great? Please share it with us by opening an issue or pull request.
+- Help us improve the documentation.
 - Great questions! If you are a beginner, please share your beginner questions so we can make the start easier! __Beginner questions are highly welcome!__
 
 
 ### Do you need help?
 
-For questions about the boilerplate feel free to write in the Slack channel #general and tag me with @rolandschuetz
+For questions about the boilerplate feel free to write in the Slack channel `#general` and tag me with `@rolandschuetz`.
 
-The development of this boilerplate is sponsored by [Code Q](https://codeq.at/de/kontakt). We can consult your company on Neos setups and build processes. Get in contact: rs@codeq.at
+The development of this boilerplate is sponsored by [Code Q](https://codeq.at/de/kontakt). We can consult your company on Neos setups and build processes. Get in contact: [rs@codeq.at](mailto:rs@codeq.at)
 
 
 ### License

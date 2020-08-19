@@ -29,6 +29,12 @@ Neos:
     Ui:
       frontendConfiguration:
         hotkeys: ~
+      initialState:
+        ui:
+          leftSideBar:
+            contentTree:
+              # by default in the Neos UI open the content tree
+              isHidden: false
 
 Carbon:
   Link:
