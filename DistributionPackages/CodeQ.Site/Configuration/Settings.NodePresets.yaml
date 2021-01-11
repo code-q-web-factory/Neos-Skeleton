@@ -13,7 +13,7 @@ Neos:
                     placeholder: 'Enter headline here...'
                     hyphens: true
                     formatting:
-                      h1: true
+                      h1: false
                       h2: true
                       h3: true
                       h4: true
@@ -45,11 +45,11 @@ Neos:
                       sub: true
                       sup: true
                       p: true
-                      h1: true
+                      h1: false
                       h2: true
                       h3: true
-                      h4: false
-                      h5: false
+                      h4: true
+                      h5: true
                       h6: false
                       pre: false
                       table: true
@@ -73,11 +73,58 @@ Neos:
                 inspector:
                   group: 'general'
                   position: 50
+            'assets':
+              type: array<Neos\Media\Domain\Model\Asset>
+              ui:
+                label: 'Images'
+                editor: Neos.Neos/Inspector/Editors/AssetEditor
+                editorOptions:
+                  multiple: true
+                  features:
+                    upload: true
+                    mediaBrowser: true
+                reloadIfChanged: true
+                inspector:
+                  group: 'general'
+                  position: 50
+            'squareAsset':
+              type: Neos\Media\Domain\Model\ImageInterface
+              ui:
+                label: 'Image'
+                reloadIfChanged: true
+                inspector:
+                  group: 'general'
+                  position: 50
+                  editorOptions:
+                    crop:
+                      aspectRatio:
+                        enableOriginal: false
+                        allowCustom: false
+                        locked:
+                          width: 1
+                          height: 1
             'alternativeText':
               type: string
               ui:
                 label: 'Alternative image text'
+                help:
+                  message: 'This text is used for accessibility and for search engine optimization.'
                 reloadIfChanged: false
                 inspector:
                   group: 'general'
                   position: 100
+          'date':
+            createdAt:
+              type: DateTime
+              defaultValue: now
+              ui:
+                label: 'Publication date'
+                reloadIfChanged: true
+                inspector:
+                  group: 'document'
+                  position: 'after uriPathSegment'
+                  editorOptions:
+                    format: 'd.m.Y'
+              validation:
+                Neos.Neos/Validation/NotEmptyValidator: {  }
+                Neos.Neos/Validation/DateTimeValidator: {  }
