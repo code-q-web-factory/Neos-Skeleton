@@ -29,7 +29,7 @@
         "gesagtgetan/cookiedialogue": "~4.0",
         "sitegeist/lazybones": "^3.0",
 
-        "codeq/htmlwidget": "~1.2",
+        "codeq/htmlwidget": "^1.5",
         "neos/nodetypes-contentreferences": "*"
     },
     "autoload": {
