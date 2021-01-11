@@ -2,6 +2,17 @@
 ## Add your overrides to 3rd party fusion code here
 ###
 
+root {
+    backendOnly {
+        @position = 'before format'
+        condition = ${!documentNode.context.inBackend && q(documentNode).is('[instanceof CodeQ.Site:Constraint.Document.BackendOnly]')}
+        renderer = Neos.Fusion:Http.Message {
+            httpResponseHead.statusCode = 404
+            content = 'Diese Seite existiert leider nicht.'
+        }
+    }
+}
+
 # Error matcher to render '/notfound' for exceptions with 4xx status code
 error {
     @context.notfoundDocument = ${q(site).children('[uriPathSegment="notfound"]').get(0)}
