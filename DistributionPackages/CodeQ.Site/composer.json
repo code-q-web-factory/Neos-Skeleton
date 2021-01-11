@@ -12,6 +12,7 @@
         "neos/redirecthandler-databasestorage": "^5.0",
         "neos/redirecthandler-ui": "^2.4",
         "neos/seo": "^3.2",
+
         "carbon/compression": "^3.0",
         "carbon/link": "^1.7",
         "carbon/includeassets": "^5.1",
@@ -21,6 +22,7 @@
         "shel/neos-hyphens": "^1.0",
         "sitegeist/silhouettes": "^2.0",
         "sitegeist/lazybones": "^3.0",
+
         "neos/nodetypes-contentreferences": "*"
     },
     "extra": {
