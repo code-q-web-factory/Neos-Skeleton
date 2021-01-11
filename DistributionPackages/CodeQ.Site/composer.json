@@ -99,7 +99,8 @@
             "Neos.Neos.Ui-20190319094900",
             "Neos.Flow-20190425144900",
             "Neos.Flow-20190515215000",
-            "Neos.SwiftMailer-20161130105617"
+            "Neos.SwiftMailer-20161130105617",
+            "Neos.Flow-20200813181400"
         ]
     }
 }
