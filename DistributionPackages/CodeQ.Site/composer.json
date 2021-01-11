@@ -20,7 +20,6 @@
         "flowpack/cachebuster": "^1.1",
         "flowpack/nodetemplates": "^1.3",
         "shel/neos-hyphens": "^1.0",
-        "sitegeist/silhouettes": "^2.0",
         "sitegeist/lazybones": "^3.0",
 
         "neos/nodetypes-contentreferences": "*"
