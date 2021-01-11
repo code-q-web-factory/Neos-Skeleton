@@ -15,7 +15,7 @@ error {
             @context.documentNode = ${site}
             @context.node = ${site}
             prototype(Neos.Seo:TitleTag) {
-                title = 'Seite nicht gefunden'
+                title = ${I18n.translate('CodeQ.Site:Main:4xx.errorMessage')}
             }
             body.content = Neos.Fusion:Component {
                 renderer = afx`
