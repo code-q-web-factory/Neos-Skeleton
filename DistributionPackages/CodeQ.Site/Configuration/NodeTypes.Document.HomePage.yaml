@@ -27,6 +27,3 @@
           editorOptions:
             nodeTypes:
               - 'Neos.Neos:Document'
-  childNodes:
-    notfound:
-      type: 'CodeQ.Site:Document.Page'

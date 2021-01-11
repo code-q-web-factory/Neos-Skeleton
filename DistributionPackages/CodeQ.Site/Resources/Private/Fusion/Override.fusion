@@ -2,16 +2,30 @@
 ## Add your overrides to 3rd party fusion code here
 ###
 
-# Error matcher to render '/notfound' for exceptions with 4xx status code
+
+
+##
+# Error matcher to render 4xx status code
+#
 error {
-    @context.notfoundDocument = ${q(site).children('[uriPathSegment="notfound"]').get(0)}
     4xx {
-        @position = 'start'
-        condition = ${statusCode >= 400 && statusCode < 500 && notfoundDocument}
-        renderer = Neos.Fusion:Renderer {
-            @context.documentNode = ${notfoundDocument}
-            @context.node = ${notfoundDocument}
-            renderPath = '/root'
+		@position = 'start'
+        condition = ${statusCode >= 400 && statusCode < 500}
+        renderer = CodeQ.Site:Document.AbstractPage {
+            @context.documentNode = ${site}
+            @context.node = ${site}
+            prototype(Neos.Seo:TitleTag) {
+                title = ${I18n.translate('CodeQ.Site:Main:4xx.errorMessage')}
+            }
+            body.content = Neos.Fusion:Component {
+                renderer = afx`
+                    <main class="main">
+                        <h1>{I18n.translate('CodeQ.Site:Main:4xx.errorMessage')}</h1>
+                        <a href="/">{I18n.translate('CodeQ.Site:Main:4xx.backHome')}</a>
+                        <br /><br /><br /><br />
+                    </main>
+                `
+            }
         }
     }
 }

@@ -9,10 +9,5 @@
     inlineEditable: true
   properties:
     text:
-      ui:
-        inline:
-          editorOptions:
-            placeholder: '<p>Enter text here...</p>'
-            hyphens: true
       options:
-        silhouette: codeq.text.free
+        preset: 'text.free'

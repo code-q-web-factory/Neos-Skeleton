@@ -9,4 +9,4 @@
   properties:
     title:
       options:
-        silhouette: 'codeq.text.title'
+        preset: 'text.title'
