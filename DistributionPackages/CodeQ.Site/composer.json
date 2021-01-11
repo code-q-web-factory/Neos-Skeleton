@@ -12,7 +12,6 @@
         "neos/redirecthandler-databasestorage": "^5.0",
         "neos/redirecthandler-ui": "^2.4",
         "neos/seo": "^3.2",
-
         "carbon/compression": "^3.0",
         "carbon/link": "^1.7",
         "carbon/includeassets": "^5.1",
@@ -22,7 +21,6 @@
         "shel/neos-hyphens": "^1.0",
         "sitegeist/silhouettes": "^2.0",
         "sitegeist/lazybones": "^3.0",
-
         "neos/nodetypes-contentreferences": "*"
     },
     "extra": {
@@ -100,7 +98,8 @@
             "Neos.Neos-20180907103800",
             "Neos.Neos.Ui-20190319094900",
             "Neos.Flow-20190425144900",
-            "Neos.Flow-20190515215000"
+            "Neos.Flow-20190515215000",
+            "Neos.SwiftMailer-20161130105617"
         ]
     }
 }
