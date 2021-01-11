@@ -27,5 +27,4 @@
 
  - [sitegeist/lazybones](https://github.com/sitegeist/Sitegeist.Lazybones) makes it easy to create responsive lazy-loaded images.
  - [carbon/link](https://github.com/jonnitto/Carbon.Link) provides powerful link helpers.
- - [sitegeist/silhouettes](https://github.com/sitegeist/Sitegeist.Silhouettes) lets you preconfigure property-silhouettes that can be applied to various properties of multiple NodeTypes in a better way then mixins.
  - [carbon/includeassets](https://github.com/CarbonPackages/Carbon.IncludeAssets) provides an easy way to include your assets (css, js).

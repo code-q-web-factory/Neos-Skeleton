@@ -61,7 +61,7 @@ Neos_Media_ImageSize:
     defaultLifetime: 0
 
 Neos_GoogleApiClient_Credentials:
-  backend: Neos\Cache\Backend\PdoBackend
+  backend: 'Neos\Cache\Backend\PdoBackend'
   backendOptions:
     dataSourceName: 'mysql:host=%env:BEACH_DATABASE_HOST%;dbname=%env:BEACH_DATABASE_NAME%'
     username: '%env:BEACH_DATABASE_USERNAME%'

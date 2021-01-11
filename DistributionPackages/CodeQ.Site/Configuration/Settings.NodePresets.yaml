@@ -1,0 +1,98 @@
+Neos:
+  Neos:
+    nodeTypes:
+      presets:
+        properties:
+          'text':
+            'title':
+              type: string
+              ui:
+                inlineEditable: true
+                inline:
+                  editorOptions:
+                    placeholder: 'Überschrift hier eingeben...'
+                    hyphens: true
+                    formatting:
+                      h1: true
+                      h2: true
+                      h3: true
+                      h4: true
+                      h5: true
+                      a: true
+            'plain':
+              type: string
+              defaultValue: ''
+              ui:
+                inlineEditable: true
+                inline:
+                  editorOptions:
+                    placeholder: 'Überschrift hier eingeben...'
+                    autoparagraph: false
+                    hyphens: true
+            'free':
+              type: string
+              defaultValue: ''
+              ui:
+                inlineEditable: true
+                inline:
+                  editorOptions:
+                    placeholder: 'Text hier eingeben...'
+                    autoparagraph: true
+                    hyphens: true
+                    formatting:
+                      strong: true
+                      sub: true
+                      sup: true
+                      p: true
+                      h1: true
+                      h2: true
+                      h3: true
+                      h4: false
+                      h5: false
+                      h6: false
+                      pre: false
+                      table: true
+                      ol: true
+                      ul: true
+                      a: true
+            'link':
+              type: string
+              ui:
+                label: 'Link'
+                reloadPageIfChanged: false
+                inspector:
+                  group: 'general'
+                  editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
+          'image':
+            asset:
+              type: Neos\Media\Domain\Model\ImageInterface
+              ui:
+                label: 'Bild'
+                reloadIfChanged: true
+                inspector:
+                  group: 'general'
+                  position: 50
+            squareAsset:
+              type: Neos\Media\Domain\Model\ImageInterface
+              ui:
+                label: 'Bild'
+                reloadIfChanged: true
+                inspector:
+                  group: 'general'
+                  position: 50
+                  editorOptions:
+                    crop:
+                      aspectRatio:
+                        enableOriginal: false
+                        allowCustom: false
+                        locked:
+                          width: 1
+                          height: 1
+            'alternativeText':
+              type: string
+              ui:
+                label: 'Alternative image text'
+                reloadIfChanged: false
+                inspector:
+                  group: 'general'
+                  position: 100
