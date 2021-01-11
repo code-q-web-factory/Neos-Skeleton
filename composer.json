@@ -9,6 +9,8 @@
         }
     },
     "require": {
+        "php": "~7.4",
+        "ext-vips": "*",
         "codeq/site": "@dev"
     },
     "repositories": {
