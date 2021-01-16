@@ -1,0 +1,14 @@
+
+// better Neos empty view
+.neos-backend .main-contentcollection:empty {
+  background: grey;
+
+  &:before {
+    display: block;
+    content: 'Inhalt hier hinzufügen';
+    font-size: 2rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    text-align: center;
+  }
+}

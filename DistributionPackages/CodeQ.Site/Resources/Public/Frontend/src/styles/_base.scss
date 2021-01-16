@@ -1,0 +1,12 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img {
+  user-select: none;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
