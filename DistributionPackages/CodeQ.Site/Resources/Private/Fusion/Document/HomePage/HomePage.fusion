@@ -1,13 +1,7 @@
-prototype(CodeQ.Site:Document.HomePage) < prototype(CodeQ.Site:Document.AbstractPage) {
+prototype(CodeQ.Site:Document.HomePage) < prototype(CodeQ.Site:Document.AbstractPage.WithHeroImageConfigs) {
     # On the Homepage you typically want to use the brand name as the start,
     # so don't append it again
     head.titleTag.outputSuffixOnTitleOverride = false
-
-    // preload the hero image background
-	head.heroImagePreload = CodeQ.Site:Component.Image.BackgroundPreviewImagePreloadTag {
-        @position = 'after titleTag'
-        asset = ${q(node).property('poster')}
-    }
 
     body.content = Neos.Fusion:Component {
         main = Neos.Neos:ContentCollection {
