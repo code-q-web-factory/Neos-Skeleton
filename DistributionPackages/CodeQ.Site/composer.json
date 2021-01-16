@@ -5,7 +5,6 @@
     "require": {
         "neos/neos": "^7.0",
         "neos/neos-ui": "^7.0",
-        "neos/googleanalytics": "^3.3",
         "neos/redirecthandler": "^5.0",
         "neos/redirecthandler-neosadapter": "^4.3",
         "neos/redirecthandler-databasestorage": "^5.0",
@@ -26,7 +25,6 @@
         "flowpack/listable": "^3.5",
         "flowpack/nodetemplates": "^1.3",
         "shel/neos-hyphens": "^1.0",
-        "gesagtgetan/cookiedialogue": "~4.0",
         "sitegeist/lazybones": "^3.0",
 
         "codeq/htmlwidget": "^1.5",
