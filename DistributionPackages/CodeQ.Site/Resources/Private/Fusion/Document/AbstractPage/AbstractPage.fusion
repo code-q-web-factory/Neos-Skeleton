@@ -1,3 +1,10 @@
+
+##
+# This prototypes object are sequenctially rendered as strings
+# and output to form the the html response.
+#
+# For all the base data, see Neos.Neos:Page
+##
 prototype(CodeQ.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
     head {
         headTags = Neos.Fusion:Component {
