@@ -6,6 +6,9 @@
 # For all the base data, see Neos.Neos:Page
 ##
 prototype(CodeQ.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
+    // see https://cleanuptheweb.org/
+    httpResponseHead.headers.Permissions-Policy = 'interest-cohort=()'
+
     head {
         headTags = Neos.Fusion:Component {
             renderer = afx`
