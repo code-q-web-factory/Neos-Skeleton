@@ -2,7 +2,7 @@ prototype(CodeQ.Site:Document.AbstractPage.WithHeroImageConfigs) < prototype(Cod
     // preload the hero image background
 	head.heroImagePreload = CodeQ.Site:Component.Image.BackgroundPreviewImagePreloadTag {
         @position = 'after titleTag'
-        asset = ${q(node).property('poster')}
+        asset = ${q(node).property('heroImage')}
     }
 
     // Social media fallback image is the header image
