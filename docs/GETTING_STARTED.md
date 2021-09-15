@@ -8,7 +8,7 @@ If you don't use PHP 7.4, please change the version in [composer.json](/composer
 #### Start a new Git project
 
 1. Clone this repository `git clone git@github.com:code-q-web-factory/Neos-Skeleton.git PROJECT_NAME` and go into the folder `cd PROJECT_NAME`.
-2. Replace the package name "CodeQ.Site" with your own company name. We recommend keeping ".Site" for all projects to easily copy the code from one project to another.
+2. Replace the package name "CodeQ.Site" with your own company name in UpperCamelCase.WithDots.ButNoHyphens. We recommend keeping ".Site" for all projects to easily copy the code from one project to another.
     ```
     export NEOS_PACKAGE_NAME="YourCompany.Site"
     export COMPOSER_PACKAGE_NAME="yourcompany\/site"
