@@ -18,8 +18,8 @@ If you don't use PHP 7.4, please change the version in [composer.json](/composer
     find . -type f -name 'composer.json' | xargs sed -i '' "s/codeq\/site/${COMPOSER_PACKAGE_NAME}/g"
     find ./DistributionPackages/${NEOS_PACKAGE_NAME} -type f | xargs sed -i '' "s/CodeQ\.Site/${NEOS_PACKAGE_NAME}/g"
     # Linux / GNU:
-    find . -type f -name 'composer.json' | xargs sed -i='' "s/codeq\/site/${COMPOSER_PACKAGE_NAME}/g"
-    find ./DistributionPackages/${NEOS_PACKAGE_NAME} -type f | xargs sed -i='' "s/CodeQ\.Site/${NEOS_PACKAGE_NAME}/g"
+    find . -type f -name 'composer.json' | xargs sed -i "s/codeq\/site/${COMPOSER_PACKAGE_NAME}/g"
+    find ./DistributionPackages/${NEOS_PACKAGE_NAME} -type f | xargs sed -i "s/CodeQ\.Site/${NEOS_PACKAGE_NAME}/g"
     ```
 3. Remove the Neos-Skeleton docs `rm -Rf docs`.
 4. English is the default language, you can adapt it in [Settings.Language.yaml](/DistributionPackages/CodeQ.Site/Configuration/Settings.Language.yaml).
