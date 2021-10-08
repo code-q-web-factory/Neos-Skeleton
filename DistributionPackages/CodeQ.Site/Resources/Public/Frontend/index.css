@@ -1,0 +1,113 @@
+/**
+ * This styles provide a very basic layout.
+ * It's recommended to replace this with your own frontend tooling.
+ */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * Header Layout
+ */
+.main-header {
+    padding: 1rem 1.2rem;
+    background: #00ADEE;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navigation {
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.navigation-item {
+    position: relative;
+    display: inline-block;
+}
+
+.navigation-item a {
+    color: white;
+    padding-left: 0.5rem;
+    text-decoration: none;
+}
+
+.navigation-item ul {
+    /* show level 2 on hover, don't got past level 2 */
+    display: none;
+}
+
+.navigation-item:active ul,
+.navigation-item:hover ul,
+.navigation-item:focus ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: block;
+    padding: 0.5rem;
+    background: #00ADEE;
+}
+
+.navigation-item--state-active,
+.navigation-item--state-current {
+    text-decoration: underline;
+}
+
+/*
+ * Main Content Layout
+ */
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0.5rem;
+}
+
+.container-image {
+    width: 100%;
+    height: auto;
+}
+
+
+/**
+ * Footer Layout
+ */
+.main-footer {
+    padding: 1rem 1.2rem;
+    background: #00ADEE;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-footer > * {
+    min-width: 3rem;
+}
+
+.main-footer__menu {
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.main-footer__menu-item {
+    padding-left: 0.5rem;
+}
+
+.main-footer__menu-link {
+    color: black;
+}
+
+.main-footer .neos-inline-editable.placeholder {
+    color: black;
+    font-style: italic;
+}

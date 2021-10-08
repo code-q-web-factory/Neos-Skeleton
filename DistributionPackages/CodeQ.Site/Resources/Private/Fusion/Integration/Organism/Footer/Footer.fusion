@@ -1,0 +1,25 @@
+prototype(CodeQ.Site:Integration.Organism.Footer) < prototype(Neos.Neos:ContentComponent) {
+    @context.node = ${site}
+    year = ${Date.format(Date.now(), 'Y')}
+    footerInfo = Neos.Neos:Editable {
+        node = ${site}
+        property = 'footerInfo'
+    }
+    footerItems = CodeQ.Link:NodeReferences {
+        nodes = ${q(site).property('footerItems')}
+    }
+
+    renderer = CodeQ.Site:Presentation.Organism.Footer {
+        @apply.props = ${props}
+    }
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            site = ${site}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(site)}
+        }
+    }
+}

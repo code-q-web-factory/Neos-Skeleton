@@ -1,0 +1,39 @@
+
+Sitegeist:
+  Monocle:
+    preview:
+      fusionRootPath: '/<CodeQ.Site:Document.AbstractPage.Monocle>'
+      defaultPrototypeName: 'CodeQ.Site:Presentation.Template.Styleguide'
+
+    hiddenPrototypeNamePatterns:
+      - 'Sitegeist.Kaleidoscope:*'
+      - 'Sitegeist.Lazybones:*'
+
+    # ui:
+    #   structure:
+    #     base:
+    #       position: 100
+    #       match: Components?\.Base
+    #       label: Base
+    #       icon: minus
+    #       color: '#AAA'
+
+    packages:
+      'CodeQ.Site':
+        ui:
+          viewportPresets:
+            xs: ~
+            md: ~
+            l: ~
+            mobile:
+              label: 'Mobile'
+              width: 375
+              height: 647
+            tablet:
+              label: 'Tablet'
+              width: 768
+              height: 1024
+            desktop:
+              label: 'Desktop'
+              width: 1440
+              height: 900

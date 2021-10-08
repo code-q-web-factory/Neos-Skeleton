@@ -1,3 +1,25 @@
+prototype(CodeQ.Site:Document.AbstractPage.HeadTags) < prototype(Neos.Fusion:Component) {
+    renderer = afx`
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+        <style>{String.replace(StaticResource.content('CodeQ.Site', 'Public/Frontend/build/styles/app.css'), '=app.css.map', '=/_Resources/Static/Packages/CodeQ.Site/Frontend/build/styles/app.css.map')}</style>
+    `
+}
+
+prototype(CodeQ.Site:Document.AbstractPage.ScriptTags) < prototype(Neos.Fusion:Component) {
+    renderer = afx`
+        <script src={StaticResource.uri('CodeQ.Site', 'Public/Frontend/build/index.js')}></script>
+
+        <!--
+        Sitegeist.Lazybones required lazysizes, we recommend to include
+        lazysizes javascript from https://github.com/aFarkas/lazysizes 
+        into your own fe-build and remove this section
+        -->
+        <script src={StaticResource.uri('Sitegeist.Lazybones', 'Public/JavaScript/lazysizes.min.js')}></script>
+    `
+}
 
 ##
 # This prototypes object are sequenctially rendered as strings
@@ -6,33 +28,67 @@
 # For all the base data, see Neos.Neos:Page
 ##
 prototype(CodeQ.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
-    // see https://cleanuptheweb.org/
-    httpResponseHead.headers.Permissions-Policy = 'interest-cohort=()'
+    httpResponseHead {
+        headers {
+            // avoid click-jacking attacks
+            // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
+            'X-Frame-Options' = 'sameorigin'
+            'X-XSS-Protection' = '1; mode=block'
 
-    head {
-        # prevent google & co from indexing dev and preview domains
-        metaRobotsTag.attributes.content {
-            # Flownative Beach uses a Subcontext like "Production/Beach/Instance"
-            @process.hideDevContext = ${String.substr(Configuration.setting('Neos.Flow.core.context'), 0, 10) == 'Production' ? value : 'noindex,nofollow'}
-        }
+            // configure from where things can be loaded
+            // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
+            // 'Content-Security-Policy' = "default-src 'self' * 'unsafe-inline' 'unsafe-eval' data: https: blob:; report-uri /csp-violation-report/"
 
-        headTags = Neos.Fusion:Component {
-            renderer = afx`
-                <meta http-equiv="x-ua-compatible" content="ie=edge" />
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            `
+            // declared header content-type should be used, instead of sniffing a matching mime type
+            // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options
+            'X-Content-Type-Options' = 'nosniff'
+
+            // tell browsers that it should only be accessed using HTTPS, instead of using HTTP
+            // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
+            // 'Strict-Transport-Security' = 'max-age=63072000; includeSubDomains; preload'
+
+            // Prevent Chrome from tracking users, see https://cleanuptheweb.org/
+            Permissions-Policy = 'interest-cohort=()'
         }
     }
 
-	prototype(Neos.Seo:StructuredData.Container) {
+    // prevent google & co from indexing dev and preview domains
+    // Flownative Beach uses a Subcontext like "Production/Beach/Instance"
+    head.metaRobotsTag.attributes.content {
+        @process.hideDevContext = ${String.substr(Configuration.setting('Neos.Flow.core.context'), 0, 10) == 'Production' ? value : 'noindex,nofollow'}
+    }
+
+    prototype(Neos.Seo:StructuredData.Container) {
         website.@if.enabled = true
         socialProfile.@if.enabled = true
 
         // configure structured data here
     }
 
-    body = CodeQ.Site:Component.DefaultLayout {
+    headTags = CodeQ.Site:Document.AbstractPage.HeadTags {
+        @position = 'before closingHeadTag'
+    }
+
+    body = CodeQ.Site:Integration.Layout.Default {
         content = ''
         @process.normalize = CodeQ.UnicodeNormalizer:Normalizer
+    }
+
+    scriptTags = CodeQ.Site:Document.AbstractPage.ScriptTags {
+        @position = 'before closingBodyTag'
+    }
+
+    lastVisitedNodeScript = false
+}
+
+##
+# We use Monocle to create a living styleguide for our frontend
+##
+prototype(CodeQ.Site:Document.AbstractPage.Monocle) < prototype(Sitegeist.Monocle:Preview.Page) {
+    headTags = CodeQ.Site:Document.AbstractPage.HeadTags {
+        @position = 'before closingHeadTag'
+    }
+    scriptTags = CodeQ.Site:Document.AbstractPage.ScriptTags {
+        @position = 'before closingBodyTag'
     }
 }
