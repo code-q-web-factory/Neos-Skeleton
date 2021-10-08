@@ -85,7 +85,7 @@ Neos:
                 label: 'Link'
                 reloadPageIfChanged: false
                 inspector:
-                  group: 'general'
+                  group: general
                   editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
           'image':
             asset:
@@ -94,7 +94,7 @@ Neos:
                 label: 'Image'
                 reloadIfChanged: true
                 inspector:
-                  group: 'general'
+                  group: general
                   position: 50
             'assets':
               type: array<Neos\Media\Domain\Model\Asset>
@@ -108,7 +108,7 @@ Neos:
                     mediaBrowser: true
                 reloadIfChanged: true
                 inspector:
-                  group: 'general'
+                  group: general
                   position: 50
             'squareAsset':
               type: Neos\Media\Domain\Model\ImageInterface
@@ -116,7 +116,7 @@ Neos:
                 label: 'Image'
                 reloadIfChanged: true
                 inspector:
-                  group: 'general'
+                  group: general
                   position: 50
                   editorOptions:
                     crop:
@@ -134,7 +134,7 @@ Neos:
                   message: 'This text is used for accessibility and for search engine optimization.'
                 reloadIfChanged: false
                 inspector:
-                  group: 'general'
+                  group: general
                   position: 100
           'date':
             createdAt:
@@ -144,7 +144,7 @@ Neos:
                 label: 'Publication date'
                 reloadIfChanged: true
                 inspector:
-                  group: 'document'
+                  group: document
                   position: 'after uriPathSegment'
                   editorOptions:
                     format: 'd.m.Y'
