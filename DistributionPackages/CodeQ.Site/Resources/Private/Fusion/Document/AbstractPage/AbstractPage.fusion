@@ -77,6 +77,44 @@ prototype(CodeQ.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
         // configure structured data here
     }
 
+    // Social media fallbacks
+    prototype(Neos.Seo:OpenGraphMetaTags) {
+        // if not explizit set, fallback to document node images, or the site node
+        image {
+            heroImage {
+                condition = ${Type.instance(q(node).property('heroImage'), 'Neos\Media\Domain\Model\ImageInterface')}
+                renderer = ${q(node).property('heroImage')}
+            }
+            image {
+                condition = ${Type.instance(q(node).property('image'), 'Neos\Media\Domain\Model\ImageInterface')}
+                renderer = ${q(node).property('image')}
+            }
+            siteImage {
+                condition = ${Type.instance(q(site).property('openGraphImage'), 'Neos\Media\Domain\Model\ImageInterface')}
+                renderer = ${q(site).property('openGraphImage')}
+            }
+        }
+    }
+    prototype(Neos.Seo:TwitterCard) {
+        // same of open graph data above
+        image {
+            asset {
+                heroImage {
+                    condition = ${Type.instance(q(node).property('heroImage'), 'Neos\Media\Domain\Model\ImageInterface')}
+                    renderer = ${q(node).property('heroImage')}
+                }
+                image {
+                    condition = ${Type.instance(q(node).property('image'), 'Neos\Media\Domain\Model\ImageInterface')}
+                    renderer = ${q(node).property('image')}
+                }
+                siteImage {
+                    condition = ${Type.instance(q(site).property('openGraphImage'), 'Neos\Media\Domain\Model\ImageInterface')}
+                    renderer = ${q(site).property('openGraphImage')}
+                }
+            }
+        }
+    }
+
     headTags = CodeQ.Site:Document.AbstractPage.HeadTags {
         @position = 'before closingHeadTag'
     }
