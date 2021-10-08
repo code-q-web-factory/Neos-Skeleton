@@ -92,7 +92,18 @@ body {
     min-width: 3rem;
 }
 
-.main-footer a {
+.main-footer__menu {
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.main-footer__menu-item {
+    padding-left: 0.5rem;
+}
+
+.main-footer__menu-link {
     color: black;
 }
 

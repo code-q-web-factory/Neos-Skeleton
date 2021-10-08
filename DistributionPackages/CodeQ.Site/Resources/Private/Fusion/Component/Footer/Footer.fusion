@@ -5,19 +5,19 @@ prototype(CodeQ.Site:Component.Footer) < prototype(Neos.Neos:ContentComponent) {
         node = ${site}
         property = 'footerInfo'
     }
-    footerItems = Neos.Fusion:Collection {
-        collection = ${q(site).property('footerItems')}
-        itemName = 'node'
-        itemRenderer = Carbon.Link:Link {
-            node = ${node}
-        }
-    }
+    footerItems = ${q(site).property('footerItems')}
 
     renderer = afx`
         <footer class="main-footer">
             <div>{props.footerInfo}</div>
             <div>&copy; {props.year}</div>
-            {props.footerItems}
+            <ul class="main-footer__menu">
+                <Neos.Fusion:Loop items={props.footerItems} itemName="menuItem">
+                    <li class="main-footer__menu-item">
+                        <Carbon.Link:Link node={menuItem} additionalClass="main-footer__menu-link" />
+                    </li>
+                </Neos.Fusion:Loop>
+            </ul>
         </footer>
     `
 
