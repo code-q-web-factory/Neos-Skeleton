@@ -17,7 +17,6 @@
  - [neos/seo](https://github.com/neos/neos-seo) allows you to configure SEO and social media settings.
  - [neos/redirecthandler-neosadapter](https://github.com/neos/redirecthandler-neosadapter) automatically creates a redirect when you change/move a page and [neos/redirecthandler-ui](https://github.com/neos/redirecthandler-ui) for manual management.
  - [neos/neos-googleanalytics](https://github.com/neos/neos-googleanalytics) adds your Google Analytics tracking code and Google Tag Manager.
- - [carbon/compression](https://github.com/CarbonPackages/Carbon.Compression) compresses the HTML output.
  - [shel/neos-hyphens](https://github.com/Sebobo/Shel.Neos.Hyphens) allows editors to add shy characters.
  - [codeq/unicodenormalizer](https://github.com/code-q-web-factory/neos-unicodenormalizer) handles broken German umlauts.
  - [flowpack/cachebuster](https://github.com/Flowpack/Flowpack.CacheBuster) adds automatic cache busting for assets in the frontend.

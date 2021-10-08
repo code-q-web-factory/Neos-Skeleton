@@ -17,7 +17,6 @@
         "rokka/imagine-vips": "0.*",
         "sandstorm/optimizedrediscachebackend": "^1.1",
 
-        "carbon/compression": "^3.0",
         "carbon/link": "^1.7",
         "carbon/includeassets": "^5.1",
         "codeq/unicodenormalizer": "^2.3",

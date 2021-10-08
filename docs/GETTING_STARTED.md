@@ -8,7 +8,7 @@ If you don't use PHP 7.4, please change the version in [composer.json](/composer
 #### Start a new Git project
 
 1. Clone this repository `git clone git@github.com:code-q-web-factory/Neos-Skeleton.git PROJECT_NAME` and go into the folder `cd PROJECT_NAME`.
-2. Replace the package name "CodeQ.Site" with your own company name. We recommend keeping ".Site" for all projects to easily copy the code from one project to another.
+2. Replace the package name "CodeQ.Site" with your own company name in UpperCamelCase.WithDots.ButNoHyphens. We recommend keeping ".Site" for all projects to easily copy the code from one project to another.
     ```
     export NEOS_PACKAGE_NAME="YourCompany.Site"
     export COMPOSER_PACKAGE_NAME="yourcompany\/site"
@@ -18,8 +18,8 @@ If you don't use PHP 7.4, please change the version in [composer.json](/composer
     find . -type f -name 'composer.json' | xargs sed -i '' "s/codeq\/site/${COMPOSER_PACKAGE_NAME}/g"
     find ./DistributionPackages/${NEOS_PACKAGE_NAME} -type f | xargs sed -i '' "s/CodeQ\.Site/${NEOS_PACKAGE_NAME}/g"
     # Linux / GNU:
-    find . -type f -name 'composer.json' | xargs sed -i='' "s/codeq\/site/${COMPOSER_PACKAGE_NAME}/g"
-    find ./DistributionPackages/${NEOS_PACKAGE_NAME} -type f | xargs sed -i='' "s/CodeQ\.Site/${NEOS_PACKAGE_NAME}/g"
+    find . -type f -name 'composer.json' | xargs sed -i "s/codeq\/site/${COMPOSER_PACKAGE_NAME}/g"
+    find ./DistributionPackages/${NEOS_PACKAGE_NAME} -type f | xargs sed -i "s/CodeQ\.Site/${NEOS_PACKAGE_NAME}/g"
     ```
 3. Remove the Neos-Skeleton docs `rm -Rf docs`.
 4. English is the default language, you can adapt it in [Settings.Language.yaml](/DistributionPackages/CodeQ.Site/Configuration/Settings.Language.yaml).
