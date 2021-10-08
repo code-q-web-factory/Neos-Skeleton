@@ -6,3 +6,4 @@
         general:
           label: i18n
           icon: cogs
+          position: 100
