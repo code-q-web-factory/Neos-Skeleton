@@ -24,5 +24,6 @@
  
 #### Development features via required packages
 
+ - [sitegeist/monocle](https://github.com/sitegeist/Sitegeist.Monocle) make developing big projects easier, by separating presentation and integration code.
  - [sitegeist/lazybones](https://github.com/sitegeist/Sitegeist.Lazybones) makes it easy to create responsive lazy-loaded images.
- - [carbon/link](https://github.com/jonnitto/Carbon.Link) provides powerful link helpers.
+ - [codeq/link](https://github.com/code-q-web-factory/neos-link) provides powerful link helpers with Monocle in mind.

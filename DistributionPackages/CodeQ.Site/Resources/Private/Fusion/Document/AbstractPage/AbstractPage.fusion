@@ -1,3 +1,25 @@
+prototype(CodeQ.Site:Document.AbstractPage.HeadTags) < prototype(Neos.Fusion:Component) {
+    renderer = afx`
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- link your own css files here -->
+        <link rel="stylesheet" href={StaticResource.uri('CodeQ.Site', 'Public/Frontend/index.css')} />
+    `
+}
+
+prototype(CodeQ.Site:Document.AbstractPage.ScriptTags) < prototype(Neos.Fusion:Component) {
+    renderer = afx`
+        <script src={StaticResource.uri('CodeQ.Site', 'Public/Frontend/index.js')}></script>
+
+        <!--
+        Sitegeist.Lazybones required lazysizes, we recommend to include
+        lazysizes javascript from https://github.com/aFarkas/lazysizes 
+        into your own fe-build and remove this section
+        -->
+        <script src={StaticResource.uri('Sitegeist.Lazybones', 'Public/JavaScript/lazysizes.min.js')}></script>
+    `
+}
 
 ##
 # This prototypes object are sequenctially rendered as strings
@@ -12,16 +34,8 @@ prototype(CodeQ.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
     head {
     }
 
-    headTags = Neos.Fusion:Component {
+    headTags = CodeQ.Site:Document.AbstractPage.HeadTags {
         @position = 'before closingHeadTag'
-
-        renderer = afx`
-            <meta http-equiv="x-ua-compatible" content="ie=edge" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-            <!-- link your own css files here -->
-            <link rel="stylesheet" href={StaticResource.uri('CodeQ.Site', 'Public/Frontend/index.css')} />
-        `
     }
 
     body = CodeQ.Site:Component.Layout.Default {
@@ -29,20 +43,19 @@ prototype(CodeQ.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
         @process.normalize = CodeQ.UnicodeNormalizer:Normalizer
     }
 
-    scriptTags = Neos.Fusion:Component {
+    scriptTags = CodeQ.Site:Document.AbstractPage.ScriptTags {
         @position = 'before closingBodyTag'
-
-        renderer = afx`
-            <script src={StaticResource.uri('CodeQ.Site', 'Public/Frontend/index.js')}></script>
-
-            <!--
-            Sitegeist.Lazybones required lazysizes, we recommend to include
-            lazysizes javascript from https://github.com/aFarkas/lazysizes 
-            into your own fe-build and remove this section
-            -->
-            <script src={StaticResource.uri('Sitegeist.Lazybones', 'Public/JavaScript/lazysizes.min.js')}></script>
-        `
     }
+}
 
-    lastVisitedNodeScript = false
+##
+# We use Monocle to create a living styleguide for our frontend
+##
+prototype(CodeQ.Site:Document.AbstractPage.Monocle) < prototype(Sitegeist.Monocle:Preview.Page) {
+    headTags = CodeQ.Site:Document.AbstractPage.HeadTags {
+        @position = 'before closingHeadTag'
+    }
+    scriptTags = CodeQ.Site:Document.AbstractPage.ScriptTags {
+        @position = 'before closingBodyTag'
+    }
 }

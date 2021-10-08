@@ -1,0 +1,44 @@
+prototype(CodeQ.Site:Presentation.Organism.Header) < prototype(Neos.Fusion:Component) {
+    @styleguide {
+        title = 'Header'
+        props {
+            homeLink = '/'
+            menuItems = Neos.Fusion:DataStructure {
+                0 = CodeQ.Link:MenuItem {
+                    link = '#'
+                    label = 'About us'
+                    state = 'normal'
+                }
+                1 = CodeQ.Link:MenuItem {
+                    link = '#'
+                    label = 'Product'
+                    state = 'active'
+                    subItems = Neos.Fusion:DataStructure {
+                        0 = CodeQ.Link:MenuItem {
+                            link = '#'
+                            label = 'Product 1'
+                            state = 'active'
+                        }
+                        1 = CodeQ.Link:MenuItem {
+                            link = '#'
+                            label = 'Product 2'
+                            state = 'normal'
+                        }
+                    }
+                }
+                2 = CodeQ.Link:MenuItem {
+                    link = '#'
+                    label = 'Contact'
+                    state = 'normal'
+                }
+            }
+        }
+    }
+
+    renderer = afx`
+        <header class="main-header">
+            <a class="logo" href={props.homeLink}>BRAND NAME</a>
+            <CodeQ.Site:Presentation.Organism.Header.MenuItemsRenderer items={props.menuItems} />
+        </header>
+    `
+}

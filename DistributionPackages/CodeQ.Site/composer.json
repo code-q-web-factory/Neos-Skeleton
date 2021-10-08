@@ -13,12 +13,14 @@
         "neos/redirecthandler-ui": "^2.4",
         "neos/seo": "^3.2",
 
-        "carbon/link": "^1.7",
+        "codeq/link": "^2.1",
         "codeq/unicodenormalizer": "^2.3",
         "flowpack/cachebuster": "^1.1",
         "flowpack/nodetemplates": "^1.3",
+        "packagefactory/atomicfusion-proptypes": "^2.0",
         "shel/neos-hyphens": "^1.0",
         "sitegeist/lazybones": "^3.0",
+        "sitegeist/monocle": "^7.5",
 
         "neos/nodetypes-contentreferences": "*"
     },

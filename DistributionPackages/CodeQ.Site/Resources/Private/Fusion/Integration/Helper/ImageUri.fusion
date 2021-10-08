@@ -1,4 +1,4 @@
-prototype(CodeQ.Site:Component.ImageUri) < prototype(Neos.Fusion:Value) {
+prototype(CodeQ.Site:Integration.Helper.ImageUri) < prototype(Neos.Fusion:Value) {
     # api
     asset = null
     width = null
