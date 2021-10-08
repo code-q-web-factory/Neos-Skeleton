@@ -6,12 +6,14 @@ Neos:
           'text':
             'title':
               type: string
+              defaultValue: ''
               ui:
                 inlineEditable: true
                 inline:
                   editorOptions:
                     placeholder: 'Enter headline here...'
                     hyphens: true
+                    nbsp: true
                     formatting:
                       h1: false
                       h2: true
@@ -19,6 +21,8 @@ Neos:
                       h4: true
                       h5: true
                       a: true
+                      sub: true
+                      sup: true
             'plain':
               type: string
               defaultValue: ''
@@ -29,6 +33,25 @@ Neos:
                     placeholder: 'Enter headline here...'
                     autoparagraph: false
                     hyphens: true
+                    nbsp: true
+                    formatting:
+                      sub: true
+                      sup: true
+            'plainWithStrong':
+              type: string
+              defaultValue: ''
+              ui:
+                inlineEditable: true
+                inline:
+                  editorOptions:
+                    placeholder: 'Enter headline here...'
+                    autoparagraph: false
+                    hyphens: true
+                    nbsp: true
+                    formatting:
+                      strong: true
+                      sub: true
+                      sup: true
             'free':
               type: string
               defaultValue: ''
@@ -39,9 +62,9 @@ Neos:
                     placeholder: 'Enter text here...'
                     autoparagraph: true
                     hyphens: true
+                    nbsp: true
                     formatting:
                       strong: true
-                      em: true
                       sub: true
                       sup: true
                       p: true
