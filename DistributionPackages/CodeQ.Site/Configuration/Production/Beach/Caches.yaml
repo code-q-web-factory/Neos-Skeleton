@@ -2,10 +2,16 @@
 #
 # Flownative Beach Cache Configuration for Redis
 #
+# We are using a optimized cache backend here, because our content is too big,
+# that we often ran into cache issues.
+#
+# See also https://support.flownative.com/#ticket/zoom/5321
+# and https://github.com/neos/flow-development-collection/issues/2483
+#
 ##
 
 Flow_Mvc_Routing_Route:
-  backend: 'Neos\Cache\Backend\RedisBackend'
+  backend: 'Sandstorm\OptimizedRedisCacheBackend\OptimizedRedisCacheBackend'
   backendOptions:
     hostname: '%env:BEACH_REDIS_HOST%'
     password: '%env:BEACH_REDIS_PASSWORD%'
@@ -16,7 +22,7 @@ Flow_Mvc_Routing_Route:
     defaultLifetime: 0
 
 Flow_Mvc_Routing_Resolve:
-  backend: 'Neos\Cache\Backend\RedisBackend'
+  backend: 'Sandstorm\OptimizedRedisCacheBackend\OptimizedRedisCacheBackend'
   backendOptions:
     hostname: '%env:BEACH_REDIS_HOST%'
     password: '%env:BEACH_REDIS_PASSWORD%'
@@ -25,7 +31,7 @@ Flow_Mvc_Routing_Resolve:
     defaultLifetime: 0
 
 Neos_Fusion_Content:
-  backend: 'Neos\Cache\Backend\RedisBackend'
+  backend: 'Sandstorm\OptimizedRedisCacheBackend\OptimizedRedisCacheBackend'
   backendOptions:
     hostname: '%env:BEACH_REDIS_HOST%'
     password: '%env:BEACH_REDIS_PASSWORD%'
@@ -33,26 +39,8 @@ Neos_Fusion_Content:
     database: 4
     defaultLifetime: 0
 
-Flow_Session_MetaData:
-  backend: 'Neos\Cache\Backend\RedisBackend'
-  backendOptions:
-    hostname: '%env:BEACH_REDIS_HOST%'
-    password: '%env:BEACH_REDIS_PASSWORD%'
-    port: '6379'
-    database: 5
-    defaultLifetime: 0
-
-Flow_Session_Storage:
-  backend: 'Neos\Cache\Backend\RedisBackend'
-  backendOptions:
-    hostname: '%env:BEACH_REDIS_HOST%'
-    password: '%env:BEACH_REDIS_PASSWORD%'
-    port: '6379'
-    database: 6
-    defaultLifetime: 0
-
 Neos_Media_ImageSize:
-  backend: 'Neos\Cache\Backend\RedisBackend'
+  backend: 'Sandstorm\OptimizedRedisCacheBackend\OptimizedRedisCacheBackend'
   backendOptions:
     hostname: '%env:BEACH_REDIS_HOST%'
     password: '%env:BEACH_REDIS_PASSWORD%'
@@ -60,10 +48,20 @@ Neos_Media_ImageSize:
     database: 7
     defaultLifetime: 0
 
-Neos_GoogleApiClient_Credentials:
+##
+#
+# In Flownative Beach we have two replicas
+#
+##
+Flow_Session_MetaData: &pdoBackend
   backend: 'Neos\Cache\Backend\PdoBackend'
   backendOptions:
     dataSourceName: 'mysql:host=%env:BEACH_DATABASE_HOST%;dbname=%env:BEACH_DATABASE_NAME%'
     username: '%env:BEACH_DATABASE_USERNAME%'
     password: '%env:BEACH_DATABASE_PASSWORD%'
     defaultLifetime: 0
+
+Flow_Session_Storage: *pdoBackend
+Flow_Security_Cryptography_RSAWallet: *pdoBackend
+Flow_Security_Cryptography_HashService: *pdoBackend
+Neos_GoogleApiClient_Credentials: *pdoBackend
