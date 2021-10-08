@@ -48,7 +48,7 @@ Neos:
                 inlineEditable: true
                 inline:
                   editorOptions:
-                    placeholder: 'Enter headline here...'
+                    placeholder: 'Überschrift hier eingeben...'
                     autoparagraph: false
                     hyphens: true
                     nbsp: true
