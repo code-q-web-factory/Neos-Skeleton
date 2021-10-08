@@ -15,6 +15,7 @@
 
         "flownative/google-cloudstorage": "^5.2",
         "rokka/imagine-vips": "0.*",
+        "sandstorm/optimizedrediscachebackend": "^1.1",
 
         "carbon/compression": "^3.0",
         "carbon/link": "^1.7",
