@@ -6,10 +6,28 @@
 # For all the base data, see Neos.Neos:Page
 ##
 prototype(CodeQ.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
-    // see https://cleanuptheweb.org/
-    httpResponseHead.headers.Permissions-Policy = 'interest-cohort=()'
+    httpResponseHead {
+        headers {
+            // avoid click-jacking attacks
+            // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
+            'X-Frame-Options' = 'sameorigin'
+            'X-XSS-Protection' = '1; mode=block'
 
-    head {
+            // configure from where things can be loaded
+            // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
+            // 'Content-Security-Policy' = "default-src 'self' * 'unsafe-inline' 'unsafe-eval' data: https: blob:; report-uri /csp-violation-report/"
+
+            // declared header content-type should be used, instead of sniffing a matching mime type
+            // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options
+            'X-Content-Type-Options' = 'nosniff'
+
+            // tell browsers that it should only be accessed using HTTPS, instead of using HTTP
+            // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
+            // 'Strict-Transport-Security' = 'max-age=63072000; includeSubDomains; preload'
+
+            // Prevent Chrome from tracking users, see https://cleanuptheweb.org/
+            Permissions-Policy = 'interest-cohort=()'
+        }
     }
 
     headTags = Neos.Fusion:Component {
