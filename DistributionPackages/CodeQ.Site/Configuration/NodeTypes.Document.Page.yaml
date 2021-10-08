@@ -3,7 +3,7 @@
     'CodeQ.Site:Document.AbstractPage': true
   ui:
     label: i18n
-    icon: icon-file-o
+    icon: file-o
     position: 100
   properties:
     heroImage:

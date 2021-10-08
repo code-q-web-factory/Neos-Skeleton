@@ -10,5 +10,4 @@
           'CodeQ.Site:Constraint.Content.Restricted': false
   constraints:
     nodeTypes:
-      'CodeQ.Site:Document.HomePage': false
       'CodeQ.Site:Constraint.Document.Restricted': false

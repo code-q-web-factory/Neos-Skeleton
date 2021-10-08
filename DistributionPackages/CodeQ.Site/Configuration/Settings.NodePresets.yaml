@@ -6,12 +6,14 @@ Neos:
           'text':
             'title':
               type: string
+              defaultValue: ''
               ui:
                 inlineEditable: true
                 inline:
                   editorOptions:
                     placeholder: 'Überschrift hier eingeben...'
                     hyphens: true
+                    nbsp: true
                     formatting:
                       h1: false
                       h2: true
@@ -19,6 +21,8 @@ Neos:
                       h4: true
                       h5: true
                       a: true
+                      sub: true
+                      sup: true
             'plain':
               type: string
               defaultValue: ''
@@ -29,6 +33,25 @@ Neos:
                     placeholder: 'Überschrift hier eingeben...'
                     autoparagraph: false
                     hyphens: true
+                    nbsp: true
+                    formatting:
+                      sub: true
+                      sup: true
+            'plainWithStrong':
+              type: string
+              defaultValue: ''
+              ui:
+                inlineEditable: true
+                inline:
+                  editorOptions:
+                    placeholder: 'Enter headline here...'
+                    autoparagraph: false
+                    hyphens: true
+                    nbsp: true
+                    formatting:
+                      strong: true
+                      sub: true
+                      sup: true
             'free':
               type: string
               defaultValue: ''
@@ -39,6 +62,7 @@ Neos:
                     placeholder: 'Text hier eingeben...'
                     autoparagraph: true
                     hyphens: true
+                    nbsp: true
                     formatting:
                       strong: true
                       sub: true
@@ -61,7 +85,7 @@ Neos:
                 label: 'Link'
                 reloadPageIfChanged: false
                 inspector:
-                  group: 'general'
+                  group: general
                   editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
           'image':
             asset:
@@ -70,7 +94,7 @@ Neos:
                 label: 'Bild'
                 reloadIfChanged: true
                 inspector:
-                  group: 'general'
+                  group: general
                   position: 50
             'assets':
               type: array<Neos\Media\Domain\Model\Asset>
@@ -84,7 +108,7 @@ Neos:
                     mediaBrowser: true
                 reloadIfChanged: true
                 inspector:
-                  group: 'general'
+                  group: general
                   position: 50
             'squareAsset':
               type: Neos\Media\Domain\Model\ImageInterface
@@ -92,7 +116,7 @@ Neos:
                 label: 'Bild'
                 reloadIfChanged: true
                 inspector:
-                  group: 'general'
+                  group: general
                   position: 50
                   editorOptions:
                     crop:
@@ -110,7 +134,7 @@ Neos:
                   message: 'Dieser Text wird für die Barrierefreiheit und zur Suchmaschinenoptimierung genutzt.'
                 reloadIfChanged: false
                 inspector:
-                  group: 'general'
+                  group: general
                   position: 100
           'date':
             createdAt:
@@ -120,7 +144,7 @@ Neos:
                 label: 'Veröffentlichungsdatum'
                 reloadIfChanged: true
                 inspector:
-                  group: 'document'
+                  group: document
                   position: 'after uriPathSegment'
                   editorOptions:
                     format: 'd.m.Y'

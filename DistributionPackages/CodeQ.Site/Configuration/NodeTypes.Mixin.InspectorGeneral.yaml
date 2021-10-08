@@ -5,4 +5,5 @@
       groups:
         general:
           label: i18n
-          icon: icon-cogs
+          icon: cogs
+          position: 100
