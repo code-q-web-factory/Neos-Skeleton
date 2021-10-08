@@ -3,6 +3,17 @@ prototype(CodeQ.Site:Document.AbstractPage.HeadTags) < prototype(Neos.Fusion:Com
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <!-- favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!--
+        <link rel="prefetch" href="/_Resources/Static/Packages/CodeQ.Site/Frontend/build/fonts/AvenirRoman.woff2" as="font" type="font/woff2" crossorigin />
+        -->
 
         <style>{String.replace(StaticResource.content('CodeQ.Site', 'Public/Frontend/build/styles/app.css'), '=app.css.map', '=/_Resources/Static/Packages/CodeQ.Site/Frontend/build/styles/app.css.map')}</style>
     `
@@ -37,7 +48,8 @@ prototype(CodeQ.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
 
             // configure from where things can be loaded
             // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
-            // 'Content-Security-Policy' = "default-src 'self' * 'unsafe-inline' 'unsafe-eval' data: https: blob:; report-uri /csp-violation-report/"
+            // unsafe eval is needed by lottie-player.js
+            'Content-Security-Policy' = "default-src 'self' * 'unsafe-inline' 'unsafe-eval' data: https: blob:; report-uri /csp-violation-report/"
 
             // declared header content-type should be used, instead of sniffing a matching mime type
             // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options
@@ -45,7 +57,7 @@ prototype(CodeQ.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
 
             // tell browsers that it should only be accessed using HTTPS, instead of using HTTP
             // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
-            // 'Strict-Transport-Security' = 'max-age=63072000; includeSubDomains; preload'
+            'Strict-Transport-Security' = 'max-age=63072000; includeSubDomains; preload'
 
             // Prevent Chrome from tracking users, see https://cleanuptheweb.org/
             Permissions-Policy = 'interest-cohort=()'
