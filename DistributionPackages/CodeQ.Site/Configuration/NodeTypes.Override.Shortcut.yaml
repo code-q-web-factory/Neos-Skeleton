@@ -2,5 +2,4 @@
 'Neos.Neos:Shortcut':
   constraints:
     nodeTypes:
-      'CodeQ.Site:Document.HomePage': false
       'CodeQ.Site:Constraint.Document.Restricted': false

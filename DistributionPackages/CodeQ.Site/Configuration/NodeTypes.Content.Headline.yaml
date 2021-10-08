@@ -3,7 +3,7 @@
     'Neos.Neos:Content': true
   ui:
     label: Headline
-    icon: icon-header
+    icon: header
     position: 200
     inlineEditable: true
   properties:

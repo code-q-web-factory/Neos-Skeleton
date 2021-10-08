@@ -6,7 +6,7 @@
     'CodeQ.Site:Mixin.InspectorGeneral': true
   ui:
     label: i18n
-    icon: icon-globe
+    icon: globe
   properties:
     footerInfo:
       type: string

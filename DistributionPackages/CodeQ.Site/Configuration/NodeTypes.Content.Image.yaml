@@ -4,5 +4,5 @@
     'CodeQ.Site:Mixin.Image': true
   ui:
     label: Image
-    icon: icon-picture
+    icon: picture
     position: 300
