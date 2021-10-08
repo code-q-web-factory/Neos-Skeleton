@@ -1,0 +1,7 @@
+Neos:
+  Flow:
+    # protect sessions from man-in-the-middle and eavesdropping attacks
+    session:
+      cookie:
+        secure: true
+        samesite: 'strict'

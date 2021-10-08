@@ -1,0 +1,5 @@
+Neos:
+  Flow:
+    http:
+      # Do not transmit the used software via HTTP Response "X-Flow-Powered" header
+      applicationToken: 'Off'
