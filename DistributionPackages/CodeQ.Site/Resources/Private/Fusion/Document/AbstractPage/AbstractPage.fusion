@@ -24,7 +24,7 @@ prototype(CodeQ.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
         `
     }
 
-    body = CodeQ.Site:Component.DefaultLayout {
+    body = CodeQ.Site:Component.Layout.Default {
         content = ''
         @process.normalize = CodeQ.UnicodeNormalizer:Normalizer
     }
