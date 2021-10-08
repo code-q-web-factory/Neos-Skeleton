@@ -10,15 +10,39 @@ prototype(CodeQ.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
     httpResponseHead.headers.Permissions-Policy = 'interest-cohort=()'
 
     head {
-        headTags = Neos.Fusion:Component {
-            renderer = afx`
-                <meta http-equiv="x-ua-compatible" content="ie=edge" />
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            `
-        }
     }
+
+    headTags = Neos.Fusion:Component {
+        @position = 'before closingHeadTag'
+
+        renderer = afx`
+            <meta http-equiv="x-ua-compatible" content="ie=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+            <!-- link your own css files here -->
+            <link rel="stylesheet" href={StaticResource.uri('CodeQ.Site', 'Public/Frontend/index.css')} />
+        `
+    }
+
     body = CodeQ.Site:Component.DefaultLayout {
         content = ''
         @process.normalize = CodeQ.UnicodeNormalizer:Normalizer
     }
+
+    scriptTags = Neos.Fusion:Component {
+        @position = 'before closingBodyTag'
+
+        renderer = afx`
+            <script src={StaticResource.uri('CodeQ.Site', 'Public/Frontend/index.js')}></script>
+
+            <!--
+            Sitegeist.Lazybones required lazysizes, we recommend to include
+            lazysizes javascript from https://github.com/aFarkas/lazysizes 
+            into your own fe-build and remove this section
+            -->
+            <script src={StaticResource.uri('Sitegeist.Lazybones', 'Public/JavaScript/lazysizes.min.js')}></script>
+        `
+    }
+
+    lastVisitedNodeScript = false
 }

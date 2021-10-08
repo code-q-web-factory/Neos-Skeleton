@@ -26,4 +26,3 @@
 
  - [sitegeist/lazybones](https://github.com/sitegeist/Sitegeist.Lazybones) makes it easy to create responsive lazy-loaded images.
  - [carbon/link](https://github.com/jonnitto/Carbon.Link) provides powerful link helpers.
- - [carbon/includeassets](https://github.com/CarbonPackages/Carbon.IncludeAssets) provides an easy way to include your assets (css, js).

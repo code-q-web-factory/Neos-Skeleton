@@ -14,7 +14,6 @@
         "neos/seo": "^3.2",
 
         "carbon/link": "^1.7",
-        "carbon/includeassets": "^5.1",
         "codeq/unicodenormalizer": "^2.3",
         "flowpack/cachebuster": "^1.1",
         "flowpack/nodetemplates": "^1.3",
