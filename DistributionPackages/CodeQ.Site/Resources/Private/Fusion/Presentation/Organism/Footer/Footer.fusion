@@ -1,0 +1,33 @@
+prototype(CodeQ.Site:Presentation.Organism.Footer) < prototype(Neos.Neos:ContentComponent) {
+    @styleguide {
+        title = 'Footer'
+        props {
+            year = '2021'
+            footerInfo = 'Free to use'
+            footerItems = Neos.Fusion:DataStructure {
+                0 = CodeQ.Link:MenuItem {
+                    link = '#'
+                    label = 'Contact'
+                }
+                2 = CodeQ.Link:MenuItem {
+                    link = '#'
+                    label = 'Impressum'
+                }
+            }
+        }
+    }
+
+    renderer = afx`
+        <footer class="main-footer">
+            <div>{props.footerInfo}</div>
+            <div>&copy; {props.year}</div>
+            <ul class="main-footer__menu">
+                <Neos.Fusion:Loop items={props.footerItems} itemName="menuItem">
+                    <li class="main-footer__menu-item">
+                        <CodeQ.Link:Tag linkSource={menuItem} class="main-footer__menu-link" />
+                    </li>
+                </Neos.Fusion:Loop>
+            </ul>
+        </footer>
+    `
+}

@@ -1,4 +1,4 @@
-prototype(CodeQ.Site:Component.Header.MenuItemsRenderer) < prototype(Neos.Fusion:Component) {
+prototype(CodeQ.Site:Presentation.Organism.Header.MenuItemsRenderer) < prototype(Neos.Fusion:Component) {
     items = false
 
     @if.has = ${this.items}
@@ -6,14 +6,8 @@ prototype(CodeQ.Site:Component.Header.MenuItemsRenderer) < prototype(Neos.Fusion
         <ul class="navigation">
             <Neos.Fusion:Loop items={props.items} itemName="menuItem" @children="itemRenderer">
                 <li class={'navigation-item ' + (menuItem.state ? 'navigation-item--state-' + menuItem.state : '') }>
-                    <Carbon.Link:Link
-                        node={menuItem.node}
-                        backendLink={true}
-                        renderDefaultTagIfNoLink={true}>
-                        { menuItem.label }
-                    </Carbon.Link:Link>
-
-                    <CodeQ.Site:Component.Header.MenuItemsRenderer
+                    <CodeQ.Link:Tag linkSource={menuItem} />
+                    <CodeQ.Site:Presentation.Organism.Header.MenuItemsRenderer
                         items={menuItem.subItems}
                         />
                 </li>

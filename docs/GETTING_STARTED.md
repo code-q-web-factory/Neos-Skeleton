@@ -52,6 +52,6 @@ If you don't use PHP 7.4, please change the version in [composer.json](/composer
 
 #### Start developing
 
-13. Copy your preferred frontend tooling into [Resources/Public/Frontend](/DistributionPackages/CodeQ.Site/Resources/Public/Frontend) and adopt the `IncludeAssets` paths in [Settings.IncludeAssets.yaml](/DistributionPackages/CodeQ.Site/Configuration/Settings.IncludeAssets.yaml).
+13. Copy your preferred frontend tooling into [Resources/Public/Frontend](/DistributionPackages/CodeQ.Site/Resources/Public/Frontend) and adopt the [CodeQ.Site:Document.AbstractPage](/DistributionPackages/CodeQ.Site/Resources/Private/Fusion/Document/AbstractPage/AbstractPage.fusion) html tags.
 14. Create your own document and content node types and add the styles to your CSS.
 
