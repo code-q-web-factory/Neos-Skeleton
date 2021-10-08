@@ -1,6 +1,10 @@
 # Neos CMS
 /Build/
-/Configuration/
+/Configuration/**/*.example
+/Configuration/Development/
+/Configuration/Testing/
+/Configuration/Settings.yaml
+/Configuration/README
 /Data/
 /Packages/*
 /Web/_Resources

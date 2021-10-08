@@ -1,4 +1,7 @@
-
+##
+# For Beach override, see also
+# Configuration/Production/Beach/Instance/Settings.yaml
+##
 Neos:
   Imagine:
     driver: 'Vips'

@@ -1,0 +1,9 @@
+##
+# We need to override the Beach defaults here
+# See also:
+# https://support.flownative.com/#ticket/zoom/5206
+##
+
+Neos:
+  Imagine:
+    driver: 'Vips'
