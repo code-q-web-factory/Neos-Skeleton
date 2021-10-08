@@ -18,6 +18,7 @@
 
         "aertmann/history": "~2.0",
         "codeq/link": "^2.1",
+        "carbon/notification": "^2.1",
         "codeq/logintheme": "^2.3",
         "codeq/unicodenormalizer": "^2.3",
         "flowpack/cachebuster": "^1.1",
@@ -27,6 +28,7 @@
         "shel/neos-hyphens": "^1.0",
         "sitegeist/lazybones": "^3.0",
         "sitegeist/monocle": "^7.5",
+        "sitegeist/stagefog": "^1.1",
 
         "codeq/htmlwidget": "^1.5",
         "neos/nodetypes-contentreferences": "*"
