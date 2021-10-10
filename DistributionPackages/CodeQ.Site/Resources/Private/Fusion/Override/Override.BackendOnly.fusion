@@ -2,7 +2,7 @@
 # Implemented the CodeQ.Site:Constraint.Document.BackendOnly constraint
 ##
 root {
-    backendOnly {
+    backendOnlyInFrontend {
         @position = 'before format'
         condition = ${!documentNode.context.inBackend && q(documentNode).is('[instanceof CodeQ.Site:Constraint.Document.BackendOnly]')}
         renderer = Neos.Fusion:Http.Message {
