@@ -1,0 +1,18 @@
+prototype(CodeQ.Site:Document.NotFoundPage) < prototype(CodeQ.Site:Document.AbstractPage) {
+    @context.documentNode = ${site}
+    @context.node = ${site}
+
+    prototype(Neos.Seo:TitleTag) {
+        title = ${I18n.translate('CodeQ.Site:NodeTypes.Document.NotFoundPage:errorMessage')}
+    }
+
+    body.content = Neos.Fusion:Component {
+        renderer = afx`
+            <main class="main">
+                <h1>{I18n.translate('CodeQ.Site:NodeTypes.Document.NotFoundPage:errorMessage')}</h1>
+                <a href="/">{I18n.translate('CodeQ.Site:NodeTypes.Document.NotFoundPage:backHome')}</a>
+                <br /><br /><br /><br />
+            </main>
+        `
+    }
+}
