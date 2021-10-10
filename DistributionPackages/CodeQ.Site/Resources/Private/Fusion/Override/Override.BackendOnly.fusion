@@ -1,0 +1,22 @@
+##
+# Implemented the CodeQ.Site:Constraint.Document.BackendOnly constraint
+##
+root {
+    backendOnly {
+        @position = 'before format'
+        condition = ${!documentNode.context.inBackend && q(documentNode).is('[instanceof CodeQ.Site:Constraint.Document.BackendOnly]')}
+        renderer = Neos.Fusion:Http.Message {
+            httpResponseHead.statusCode = 404
+            content = 'Diese Seite existiert leider nicht.'
+        }
+    }
+
+    backendOnlyDocumentTypeWithoutRenderer {
+        @position = 'after documentType'
+        condition = ${documentNode.context.inBackend && q(documentNode).is('[instanceof CodeQ.Site:Constraint.Document.BackendOnly]')}
+        renderer = Neos.Fusion:Http.Message {
+            httpResponseHead.statusCode = 404
+            content = ${'<body style="margin: 0; padding: 0; display: flex; height: 100vh; align-items: center; justify-content: center; background: #222222;"><h1 style="font-size: 1rem; font-weight: 400; font-family: \'Noto Sans\', sans-serif; color: white;">' + q(documentNode).property('title') + '</h1></body>'}
+        }
+    }
+}
