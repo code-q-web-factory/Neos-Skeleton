@@ -1,0 +1,20 @@
+##
+# This extends the Neos.Neos:Editable to provide
+# a fallback option.
+#
+# Example usage:
+# ```
+# buttonText = CodeQ.Site:Editable {
+#     property = 'buttonText'
+#     fallback = 'Read more'
+# }
+# ```
+##
+prototype(CodeQ.Site:Editable) < prototype(Neos.Neos:Editable) {
+    fallback = ''
+
+    // fallback implementation
+    contentWithFallback = ${q(this.node).property(this.property) || this.fallback}
+    renderer.editable.renderer.content = ${props.contentWithFallback}
+    renderer.notEditable.renderer = ${props.contentWithFallback}
+}
