@@ -2,10 +2,10 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
     <file original="" source-language="en" datatype="plaintext">
         <body>
-            <trans-unit id="4xx.errorMessage">
+            <trans-unit id="errorMessage">
                 <source>This page could not be found.</source>
             </trans-unit>
-            <trans-unit id="4xx.backHome">
+            <trans-unit id="backHome">
                 <source>Back to homepage</source>
             </trans-unit>
         </body>
