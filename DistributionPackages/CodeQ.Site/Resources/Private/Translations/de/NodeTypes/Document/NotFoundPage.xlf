@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" source-language="en" datatype="plaintext" target-language="de">
+        <body>
+            <trans-unit id="errorMessage">
+                <source>This page could not be found.</source>
+                <target xml:lang="de" state="translated">Diese Seite konnte leider nicht gefunden werden.</target>
+            </trans-unit>
+            <trans-unit id="backHome">
+                <source>Back to homepage</source>
+                <target xml:lang="de" state="translated">Zurück zur Startseite</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
