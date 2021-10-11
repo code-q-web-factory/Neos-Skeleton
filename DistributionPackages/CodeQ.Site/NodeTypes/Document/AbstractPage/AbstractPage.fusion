@@ -14,14 +14,15 @@ prototype(CodeQ.Site:Document.AbstractPage.HeadTags) < prototype(Neos.Fusion:Com
         <!--
         <link rel="prefetch" href="/_Resources/Static/Packages/CodeQ.Site/Frontend/build/fonts/AvenirRoman.woff2" as="font" type="font/woff2" crossorigin />
         -->
+        <CodeQ.Site:Component.Image.BackgroundPreviewImagePreloadTag asset={q(node).property('heroImage')} />
 
-        <style>{String.replace(StaticResource.content('CodeQ.Site', 'Public/Frontend/build/styles/app.css'), '=app.css.map', '=/_Resources/Static/Packages/CodeQ.Site/Frontend/build/styles/app.css.map')}</style>
+        <style>{String.replace(StaticResource.content('CodeQ.Site', 'Public/Frontend/build/styles/index.css'), '=app.css.map', '=/_Resources/Static/Packages/CodeQ.Site/Frontend/build/styles/index.css.map')}</style>
     `
 }
 
 prototype(CodeQ.Site:Document.AbstractPage.ScriptTags) < prototype(Neos.Fusion:Component) {
     renderer = afx`
-        <script src={StaticResource.uri('CodeQ.Site', 'Public/Frontend/build/index.js')}></script>
+        <script src={StaticResource.uri('CodeQ.Site', 'Public/Frontend/build/scripts/index.js')}></script>
 
         <!--
         Sitegeist.Lazybones required lazysizes, we recommend to include

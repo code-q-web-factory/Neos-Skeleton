@@ -35,7 +35,7 @@ module.exports = (env, argv) => {
 	return {
 		context: paths.src,
 		entry: {
-			app: `./scripts/index.js`,
+			index: `./scripts/index.js`,
 		},
 		output: {
 			filename: `scripts/[name].js`,
