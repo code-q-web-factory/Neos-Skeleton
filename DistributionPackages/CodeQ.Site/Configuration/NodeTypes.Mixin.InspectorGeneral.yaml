@@ -1,9 +1,0 @@
-'CodeQ.Site:Mixin.InspectorGeneral':
-  abstract: true
-  ui:
-    inspector:
-      groups:
-        general:
-          label: i18n
-          icon: cogs
-          position: 100

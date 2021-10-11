@@ -29,5 +29,4 @@ Neos:
       translation:
         autoInclude:
           CodeQ.Site:
-            - Main
             - 'NodeTypes/*'
