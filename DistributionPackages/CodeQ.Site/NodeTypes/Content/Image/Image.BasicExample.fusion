@@ -5,7 +5,7 @@
  *
  * This fusion prototype is currently not used and just an example.
  */
-prototype(CodeQ.Site:Content.BasicImage) < prototype(Neos.Neos:ContentComponent) {
+prototype(CodeQ.Site:Content.BasicImage.BasicExample) < prototype(Neos.Neos:ContentComponent) {
     src = Neos.Fusion:Case {
         image {
             condition = ${q(node).property('image') ? true : false}
