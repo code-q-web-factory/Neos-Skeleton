@@ -1,0 +1,24 @@
+prototype(CodeQ.Site:Presentation.Organism.HeroImage) < prototype(Neos.Fusion:Component) {
+    @styleguide {
+        title = 'Header'
+        props {
+            imageSource = Sitegeist.Kaleidoscope:DummyImageSource
+        }
+    }
+
+    @propTypes {
+        imageSource = ${PropTypes.instanceOf('\\Sitegeist\\Kaleidoscope\\EelHelpers\\ImageSourceHelperInterface')}
+    }
+	imageSource = false
+
+    renderer = afx`
+        <section class="hero-image" @if.hasImage={props.imageSource}>
+            <CodeQ.Site:Component.Image.Fullscreen
+                class="hero-image__image"
+                lazy={false}
+                imageSource={props.imageSource}
+                alt=""
+            />
+        </section>
+    `
+}

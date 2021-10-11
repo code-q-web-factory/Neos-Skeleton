@@ -18,13 +18,7 @@ prototype(CodeQ.Site:Document.HomePage) < prototype(CodeQ.Site:Document.Abstract
         }
 
         renderer = afx`
-			<CodeQ.Site:Component.Hero.Video
-				poster={q(node).property('poster')}
-				video853={q(node).property('video853')}
-				video1024={q(node).property('video1024')}
-				video1280={q(node).property('video1280')}
-				video={q(node).property('video')}
-				title={props.heroVideoTitle} />
+			<CodeQ.Site:Mixin.HeroImage />
             {props.main}
         `
     }

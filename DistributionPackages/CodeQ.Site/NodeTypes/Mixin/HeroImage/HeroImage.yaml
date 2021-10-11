@@ -1,0 +1,19 @@
+'CodeQ.Site:Mixin.HeroImage':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        heroImage:
+          label: Kopfbild
+          icon: picture
+          position: 100
+  properties:
+    heroImage:
+      ui:
+        label: ''
+        reloadIfChanged: true
+        inspector:
+          group: heroImage
+          position: 100
+      options:
+        preset: 'image.asset'
