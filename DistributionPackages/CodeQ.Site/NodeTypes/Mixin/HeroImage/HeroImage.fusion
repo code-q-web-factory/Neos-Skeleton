@@ -5,6 +5,7 @@ prototype(CodeQ.Site:Mixin.HeroImage) < prototype(Neos.Fusion:Component) {
 
 	# rendering
     renderer = CodeQ.Site:Presentation.Organism.HeroImage {
+        @if.has = ${props.imageSource}
         @apply.props = ${props}
     }
 }

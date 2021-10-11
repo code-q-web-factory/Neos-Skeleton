@@ -11,6 +11,7 @@ prototype(CodeQ.Site:Content.Image) < prototype(Neos.Neos:ContentComponent) {
 
     renderer = afx`
         <CodeQ.Site:Presentation.Atom.Image.Auto
+            @if.has={props.imageSource}
             class="container-image"
             imageSource={props.imageSource}
             alt={props.alternativeText}
