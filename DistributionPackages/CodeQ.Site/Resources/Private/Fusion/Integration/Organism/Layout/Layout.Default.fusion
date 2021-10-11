@@ -1,4 +1,4 @@
-prototype(CodeQ.Site:Component.Layout.Default) < prototype(Neos.Fusion:Component) {
+prototype(CodeQ.Site:Integration.Layout.Default) < prototype(Neos.Fusion:Component) {
     content = ''
 
     renderer = afx`
