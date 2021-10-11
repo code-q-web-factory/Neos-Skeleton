@@ -1,0 +1,15 @@
+'CodeQ.Site:Content.Section.Column':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Neos.Neos:ContentCollection': true
+    'CodeQ.Site:Constraint.Content.Restricted': true
+  ui:
+    label: Spalte
+    icon: square-o
+    group: structure
+    position: 100
+    inlineEditable: true
+  constraints:
+    nodeTypes:
+      '*': ~
+      'CodeQ.Site:Constraint.Content.Section.Column.Allowed': true

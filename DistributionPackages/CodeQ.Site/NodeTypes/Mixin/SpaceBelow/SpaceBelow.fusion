@@ -1,0 +1,9 @@
+prototype(CodeQ.Site:Mixin.SpaceBelow) < prototype(Neos.Fusion:Value) {
+    value = Neos.Fusion:Match {
+        @subject = ${q(node).property('spaceBelow') || 'normal'}
+        none = 'mb-0'
+        half = 'mb-32'
+        normal = 'mb-64'
+        double = 'mb-120'
+    }
+}

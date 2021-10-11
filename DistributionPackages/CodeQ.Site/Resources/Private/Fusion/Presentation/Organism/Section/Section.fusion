@@ -1,0 +1,32 @@
+prototype(CodeQ.Site:Presentation.Organism.Section) < prototype(Neos.Fusion:Component) {
+    @styleguide {
+        title = 'Section'
+        props {
+            title = '<h4>Beispiel Section</h4>'
+        }
+    }
+
+    @propTypes {
+        id = ${PropTypes.string}
+        class = ${PropTypes.string}
+        background = ${PropTypes.oneOf(['white'])}
+    }
+
+    id = null
+    class = null
+    background = 'white'
+    title = null
+    layout = CodeQ.Site:Presentation.Organism.Section.Layout
+    content = null
+    footer = null
+
+    renderer = afx`
+        <section id={props.id} class={String.trim('section background--' + props.background + ' ' + props.class)}>
+            {props.title}
+            <div class={'container' + (props.layout.isFluid ? ' container--fluid' : '')	+ (props.layout.default ? ' container--' + props.layout.default : '')	+ (props.layout.lg ? ' container--lg-' + props.layout.lg : '')	+ (props.layout.md ? ' container--md-' + props.layout.md : '')	+ (props.layout.sm ? ' container--sm-' + props.layout.sm : '')}>
+                {props.content}
+            </div>
+            {props.footer}
+        </section>
+    `
+}

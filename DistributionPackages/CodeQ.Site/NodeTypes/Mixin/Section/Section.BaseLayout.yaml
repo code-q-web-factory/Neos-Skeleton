@@ -1,0 +1,24 @@
+'CodeQ.Site:Mixin.Section.BaseLayout':
+  abstract: true
+  superTypes:
+    'CodeQ.Site:Mixin.SpaceBelow': true
+  properties:
+    size:
+      type: string
+      defaultValue: 'large'
+      ui:
+        label: 'Breite des Layouts'
+        reloadIfChanged: true
+        inspector:
+          group: layout
+          position: 100
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: false
+            values:
+              large:
+                label: 'Groß'
+              medium:
+                label: 'Mittel'
+              small:
+                label: 'Klein'

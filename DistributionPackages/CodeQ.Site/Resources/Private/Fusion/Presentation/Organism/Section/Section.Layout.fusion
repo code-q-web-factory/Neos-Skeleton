@@ -1,0 +1,28 @@
+##
+# This is just a data structure with default properties
+##
+prototype(CodeQ.Site:Presentation.Organism.Section.Layout) < prototype(Neos.Fusion:DataStructure) {
+    @styleguide {
+        title = 'Section Layout'
+    }
+
+    @propTypes {
+        default = ${PropTypes.string.isRequired}
+        lg = ${PropTypes.string}
+        md = ${PropTypes.string}
+        sm = ${PropTypes.string}
+        isFluid = ${PropTypes.boolean}
+    }
+
+    # Define a columns layout like '1-1' or '2-1'
+    # or 'reverse-1-1' to make it reverse and 100% width,
+    # another example layout.default = 'reverse-2-1' will be same layout as '1-2' but with reversed html structure ...
+    default = ''
+    # breakpoints override the default, e.g.
+    # layout.lg = '4-3', layout.md = '2-1', layout.sm = '1-1',
+    lg = null
+    md = null
+    sm = '1'
+    # True to stretch container to full width
+    isFluid = false
+}

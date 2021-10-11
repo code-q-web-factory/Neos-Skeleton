@@ -1,0 +1,3 @@
+prototype(CodeQ.Site:Integration.Helper.HeadlineFallback) < prototype(Neos.Fusion:Value) {
+    value = ${(!node.context.inBackend && String.length(String.trim(value))>0 && String.pregMatch(value, '/<h.>/') == null) ? ('<h4>' + value + '</h4>') : value}
+}

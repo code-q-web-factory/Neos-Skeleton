@@ -1,0 +1,45 @@
+'CodeQ.Site:Content.Section':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Neos.Neos:ContentCollection': true
+    'CodeQ.Site:Mixin.Section.BaseLayout': true
+    'CodeQ.Site:Mixin.Section.ColumnCount': true
+    'CodeQ.Site:Mixin.Section.Title': true
+  ui:
+    label: Spalten-Layout
+    icon: columns
+    group: structure
+    position: 100
+    inlineEditable: true
+    creationDialog:
+      elements:
+        numberOfColumns:
+          type: string
+          defaultValue: 2
+          ui:
+            label: 'Anzahl der Spalten'
+            editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+            editorOptions:
+              allowEmpty: false
+              values:
+                1:
+                  label: '1 Spalte'
+                2:
+                  label: '2 Spalten'
+                3:
+                  label: '3 Spalten'
+                4:
+                  label: '4 Spalten'
+          validation:
+            'Neos.Neos/Validation/NotEmptyValidator': [ ]
+  options:
+    template:
+      childNodes:
+        columns:
+          name: '${"column" + item}'
+          type: 'CodeQ.Site:Content.Section.Column'
+          withItems: '${Array.range(1, data.numberOfColumns)}'
+  constraints:
+    nodeTypes:
+      '*': ~
+      'CodeQ.Site:Content.Section.Column': true

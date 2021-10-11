@@ -1,0 +1,10 @@
+'CodeQ.Site:Mixin.Section.Title':
+  abstract: true
+  properties:
+    title:
+      ui:
+        inline:
+          editorOptions:
+            placeholder: 'Optionale Überschrift hier eingeben...'
+      options:
+        preset: 'text.title'

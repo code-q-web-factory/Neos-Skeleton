@@ -1,0 +1,57 @@
+prototype(CodeQ.Site:Mixin.Section) < prototype(Neos.Fusion:Component) {
+    # api
+    // by default consider the children as columns
+    childrenCount = ${q(node).children().count() || 0}
+    emptyMessage = 'Bitte füge Inhalte hier ein'
+    // this one is used, if the property columnCount is not set (automatic)
+    defaultColumnsCount = false
+
+    # default integration
+    columnCount = ${q(node).property('columnCount')}
+    childrenCount.@process.toInteger = ${String.toInteger(value)}
+    class = CodeQ.Site:Mixin.SpaceBelow
+    title = Neos.Neos:Editable {
+        property = 'title'
+        @process.addFallbackHeadline = CodeQ.Site:Integration.Helper.HeadlineFallback
+    }
+    background = 'white'
+
+    renderer = Neos.Fusion:Component {
+        @apply.props = ${props}
+
+        columnsDefault = Neos.Fusion:Case {
+            configured {
+                condition = ${props.columnCount && props.columnCount > 0}
+                renderer = ${props.columnCount}
+            }
+            definedDefault {
+                condition = ${props.defaultColumnsCount}
+                renderer = ${props.defaultColumnsCount}
+            }
+            automatic {
+                condition = true
+                renderer = ${props.childrenCount < 4 ? props.childrenCount : (props.childrenCount % 4 == 0 ? 4 : (props.childrenCount % 2 == 0 && props.childrenCount % 3 != 0) ? 2 : 3)}
+            }
+        }
+
+        renderer = Neos.Fusion:Component {
+            @apply.props = ${props}
+
+            layout = CodeQ.Site:Presentation.Organism.Section.Layout {
+                default = ${Array.reduce(Array.range(1, props.columnsDefault, 1), (accumulator, currentValue) => accumulator + '-1')}
+                lg = null
+                md = null
+                sm = '1'
+                # True to stretch container to full width
+                isFluid = false
+            }
+
+            renderer = afx`
+                <Carbon.Notification:Backend type="warning" @if.hasNo={props.childrenCount == 0}>
+                    {props.emptyMessage}
+                </Carbon.Notification:Backend>
+                <CodeQ.Site:Presentation.Organism.Section @if.has={props.childrenCount > 0} {...props} />
+            `
+        }
+    }
+}

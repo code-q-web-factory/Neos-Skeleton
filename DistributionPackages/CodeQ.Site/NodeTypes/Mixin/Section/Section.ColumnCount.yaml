@@ -1,0 +1,27 @@
+'CodeQ.Site:Mixin.Section.ColumnCount':
+  abstract: true
+  properties:
+    columnCount:
+      type: integer
+      ui:
+        label: 'Elemente pro Reihe am Desktop'
+        reloadIfChanged: true
+        inspector:
+          group: layout
+          position: 200
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            placeholder: 'automatisch'
+            values:
+              2:
+                label: '2 Elemente'
+              3:
+                label: '3 Elemente'
+              4:
+                label: '4 Elemente'
+              5:
+                label: '5 Elemente (oft zu klein)'
+              6:
+                label: '6 Elemente (oft zu klein)'
+

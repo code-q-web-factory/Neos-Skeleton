@@ -1,0 +1,31 @@
+'CodeQ.Site:Mixin.SpaceBelow':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        layout:
+          label: Layout
+          icon: icon-ruler-horizontal
+          position: 100
+  properties:
+    spaceBelow:
+      type: string
+      defaultValue: 'normal'
+      ui:
+        label: 'Abstand darunter'
+        reloadIfChanged: true
+        inspector:
+          group: layout
+          position: 400
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: false
+            values:
+              none:
+                label: 'Kein Abstand'
+              half:
+                label: 'Halber Abstand'
+              normal:
+                label: 'Normaler Abstand'
+              double:
+                label: 'Doppelter Abstand'

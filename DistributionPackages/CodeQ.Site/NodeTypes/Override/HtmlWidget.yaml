@@ -6,5 +6,7 @@
     group: plugins
 
 'CodeQ.HtmlWidget:Content.HtmlWidgetDefinition':
+  superTypes:
+    'CodeQ.Site:Constraint.Content.Section.Column.Allowed': true
   ui:
     group: plugins

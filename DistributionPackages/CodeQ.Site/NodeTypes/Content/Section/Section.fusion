@@ -1,0 +1,17 @@
+prototype(CodeQ.Site:Content.Section) < prototype(Neos.Neos:ContentComponent) {
+    content = Neos.Fusion:Loop {
+        items = ${q(node).children().get()}
+        itemName = 'node'
+        itemRenderer = Neos.Neos:ContentCollection {
+            attributes.class = 'content'
+            path = ${node.name}
+        }
+    }
+
+    renderer = afx`
+        <CodeQ.Site:Mixin.Section
+            emptyMessage="Bitte füge mindestens eine Spalte hinzu"
+            content={props.content}
+        />
+    `
+}
