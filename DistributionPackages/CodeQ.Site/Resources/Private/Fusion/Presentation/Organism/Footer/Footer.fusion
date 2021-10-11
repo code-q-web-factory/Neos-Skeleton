@@ -11,7 +11,7 @@ prototype(CodeQ.Site:Presentation.Organism.Footer) < prototype(Neos.Neos:Content
                 }
                 2 = CodeQ.Link:MenuItem {
                     link = '#'
-                    label = 'Impressum'
+                    label = 'Imprint'
                 }
             }
         }
