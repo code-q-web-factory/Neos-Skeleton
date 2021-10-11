@@ -56,7 +56,7 @@ prototype(CodeQ.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
         @position = 'before closingHeadTag'
     }
 
-    body = CodeQ.Site:Component.Layout.Default {
+    body = CodeQ.Site:Integration.Layout.Default {
         content = ''
         @process.normalize = CodeQ.UnicodeNormalizer:Normalizer
     }
