@@ -1,0 +1,16 @@
+##
+# Use this to preload a background preview image, see also LazyPicture::useBackgroundPreviewImage
+# `<CodeQ.Site:Presentation.Atom.Image.BackgroundPreviewPrefetch imageSource={props.prefetchImageSource}/>`
+##
+prototype(CodeQ.Site:Presentation.Atom.Image.BackgroundPreviewPrefetch) < prototype(Neos.Fusion:Component) {
+    @propTypes {
+        imageSource = ${PropTypes.instanceOf('\\Sitegeist\\Kaleidoscope\\EelHelpers\\ImageSourceHelperInterface')}
+    }
+	imageSource = false
+
+    # rendering
+    @if.has = ${this.imageSource}
+    renderer = afx`
+        <link rel="prefetch" href={props.imageSource.setWidth(40, true).src()} as="image"/>
+    `
+}

@@ -1,4 +1,6 @@
 prototype(CodeQ.Site:Document.AbstractPage.HeadTags) < prototype(Neos.Fusion:Component) {
+    prefetchImageSource = false
+
     renderer = afx`
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +16,7 @@ prototype(CodeQ.Site:Document.AbstractPage.HeadTags) < prototype(Neos.Fusion:Com
         <!--
         <link rel="prefetch" href="/_Resources/Static/Packages/CodeQ.Site/Frontend/build/fonts/AvenirRoman.woff2" as="font" type="font/woff2" crossorigin />
         -->
-        <CodeQ.Site:Component.Image.BackgroundPreviewImagePreloadTag asset={q(node).property('heroImage')} />
+        <CodeQ.Site:Presentation.Atom.Image.BackgroundPreviewPrefetch @if.has={props.prefetchImageSource} imageSource={props.prefetchImageSource}/>
 
         <style>{String.replace(StaticResource.content('CodeQ.Site', 'Public/Frontend/build/styles/index.css'), '=app.css.map', '=/_Resources/Static/Packages/CodeQ.Site/Frontend/build/styles/index.css.map')}</style>
     `
@@ -111,6 +113,7 @@ prototype(CodeQ.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
 
     headTags = CodeQ.Site:Document.AbstractPage.HeadTags {
         @position = 'before closingHeadTag'
+        prefetchImageSource = CodeQ.Site:Mixin.HeroImage.PrefetchImageSource
     }
 
     body = CodeQ.Site:Integration.Layout.Default {

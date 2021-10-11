@@ -5,35 +5,15 @@
  * which renders our images as an img tag.
  */
 prototype(CodeQ.Site:Content.Image) < prototype(Neos.Neos:ContentComponent) {
-
-    # if the current node has previous siblings it is not the
-	# first content and should be loaded lazy otherwise not
-	lazy = ${q(node).prev().is()}
-
-    src = Neos.Fusion:Case {
-        image {
-            condition = ${q(node).property('image') ? true : false}
-            renderer = Sitegeist.Kaleidoscope:AssetImageSource {
-                asset = ${q(node).property('image')}
-            }
-        }
-        dummyImage {
-            condition = ${site.context.inBackend}
-            renderer = Sitegeist.Kaleidoscope:DummyImageSource
-        }
-    }
+    imageSource = ${q(node).property('image')}
+    imageSource.@process.convert = CodeQ.Site:Integration.Helper.ImageAssetToSource
     alternativeText = ${q(node).property('alternativeText')}
 
     renderer = afx`
-        <Sitegeist.Lazybones:Image
+        <CodeQ.Site:Presentation.Atom.Image.Auto
             class="container-image"
-            lazy={true}
-            lazyWidth={200}
-            imageSource={props.src}
-            srcset="320w, 400w, 480w, 600w, 640w, 720w, 768w, 800w, 960w, 1024px, 1280w, 1440w, 1600w, 1680w, 1920w, 2560w"
-            sizes={props.sizes}
+            imageSource={props.imageSource}
             alt={props.alternativeText}
             />
 	`
-
 }

@@ -1,0 +1,8 @@
+##
+# Use this to preload a hero image background image, on an AbstractPage
+# `headTags.prefetchImageSource = CodeQ.Site:Integration.Mixin.HeroImage.PrefetchImageSource`
+##
+prototype(CodeQ.Site:Mixin.HeroImage.PrefetchImageSource) < prototype(Neos.Fusion:Value) {
+    value = ${q(node).property('heroImage')}
+    value.@process.convert = CodeQ.Site:Integration.Helper.ImageAssetToSource
+}

@@ -13,10 +13,11 @@ prototype(CodeQ.Site:Presentation.Organism.HeroImage) < prototype(Neos.Fusion:Co
 
     renderer = afx`
         <section class="hero-image" @if.hasImage={props.imageSource}>
-            <CodeQ.Site:Component.Image.Fullscreen
+            <CodeQ.Site:Presentation.Atom.Image.Fullscreen
                 class="hero-image__image"
                 lazy={false}
                 imageSource={props.imageSource}
+                useBackgroundPreviewImage={true}
                 alt=""
             />
         </section>

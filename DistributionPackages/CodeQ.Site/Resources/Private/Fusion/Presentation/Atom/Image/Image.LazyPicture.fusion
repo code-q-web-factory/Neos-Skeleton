@@ -1,0 +1,42 @@
+##
+# This renders a picture tag, with webp support
+##
+prototype(CodeQ.Site:Presentation.Atom.Image.LazyPicture) < prototype(Sitegeist.Lazybones:Picture) {
+    @propTypes {
+        imageSource = ${PropTypes.instanceOf('\\Sitegeist\\Kaleidoscope\\EelHelpers\\ImageSourceHelperInterface')}
+        useBackgroundPreviewImage = ${PropTypes.boolean}
+        maxWidth = ${PropTypes.integer}
+    }
+
+	# api
+	imageSource = false
+	useBackgroundPreviewImage = false
+    maxWidth = 1920
+
+	# api inherited from lazybones
+    class = null
+	lazy = true
+	alt = ''
+
+	# rendering
+	lazyWidth = 200
+    imageSource.@process.applyMaxWidth = ${value ? value.setWidth(this.maxWidth, true) : value}
+	@context.imageSource = ${this.imageSource}
+	sources = Neos.Fusion:RawArray {
+		webp = Neos.Fusion:RawArray {
+			imageSource = ${imageSource.setFormat('webp')}
+			type = 'image/webp'
+		}
+	}
+
+	# srcset and sizes are implemented in lazy bones
+
+    # background iamge rendering
+	@context.useBackgroundPreviewImage = ${this.useBackgroundPreviewImage}
+    prototype(Sitegeist.Kaleidoscope:Picture) {
+        @process.addBackground = Neos.Fusion:Augmenter {
+            @if.enabled = ${useBackgroundPreviewImage}
+            style = ${'background-position: center; background-size: cover; background-image: url(\'' + imageSource.setWidth(40, true).src() + '\');'}
+        }
+    }
+}
