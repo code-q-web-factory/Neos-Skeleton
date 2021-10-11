@@ -1,0 +1,4 @@
+
+'Neos.Neos:Content':
+  superTypes:
+    'CodeQ.Site:Mixin.InspectorGeneral': true
