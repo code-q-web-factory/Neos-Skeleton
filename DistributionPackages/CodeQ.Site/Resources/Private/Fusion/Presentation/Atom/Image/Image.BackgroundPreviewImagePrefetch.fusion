@@ -6,7 +6,7 @@ prototype(CodeQ.Site:Presentation.Atom.Image.BackgroundPreviewPrefetch) < protot
     @propTypes {
         imageSource = ${PropTypes.instanceOf('\\Sitegeist\\Kaleidoscope\\EelHelpers\\ImageSourceHelperInterface')}
     }
-	imageSource = false
+	imageSource = null
 
     # rendering
     @if.has = ${this.imageSource}

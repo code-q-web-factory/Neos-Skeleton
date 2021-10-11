@@ -1,5 +1,5 @@
 prototype(CodeQ.Site:Document.AbstractPage.HeadTags) < prototype(Neos.Fusion:Component) {
-    prefetchImageSource = false
+    prefetchImageSource = null
 
     renderer = afx`
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
