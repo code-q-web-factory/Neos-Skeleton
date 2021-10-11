@@ -96,7 +96,7 @@ Neos:
                   group: general
                   editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
           'image':
-            asset:
+            'asset':
               type: Neos\Media\Domain\Model\ImageInterface
               ui:
                 label: 'Image'
@@ -145,7 +145,7 @@ Neos:
                   group: general
                   position: 100
           'date':
-            createdAt:
+            'createdAt':
               type: DateTime
               defaultValue: now
               ui:
