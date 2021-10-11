@@ -9,6 +9,7 @@
     icon: picture
     group: general
     position: 300
+    inlineEditable: true
   properties:
     image:
       options:
