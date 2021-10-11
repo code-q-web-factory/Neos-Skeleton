@@ -4,6 +4,7 @@
   ui:
     label: Headline
     icon: header
+    group: general
     position: 200
     inlineEditable: true
   properties:
