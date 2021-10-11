@@ -71,13 +71,6 @@ prototype(CodeQ.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
         @process.hideDevContext = ${String.substr(Configuration.setting('Neos.Flow.core.context'), 0, 10) == 'Production' ? value : 'noindex,nofollow'}
     }
 
-    prototype(Neos.Seo:StructuredData.Container) {
-        website.@if.enabled = true
-        socialProfile.@if.enabled = true
-
-        // configure structured data here
-    }
-
     // Social media fallbacks
     prototype(Neos.Seo:OpenGraphMetaTags) {
         // if not explizit set, fallback to document node images, or the site node
