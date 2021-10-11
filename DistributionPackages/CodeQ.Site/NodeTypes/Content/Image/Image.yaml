@@ -1,8 +1,14 @@
 'CodeQ.Site:Content.Image':
   superTypes:
     'Neos.Neos:Content': true
-    'CodeQ.Site:Mixin.Image': true
   ui:
     label: Image
     icon: picture
     position: 300
+  properties:
+    image:
+      options:
+        preset: 'image.asset'
+    alternativeText:
+      options:
+        preset: 'image.alternativeText'
