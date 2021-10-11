@@ -1,9 +1,0 @@
-prototype(CodeQ.Site:Content.Headline) < prototype(Neos.Neos:ContentComponent) {
-    title = Neos.Neos:Editable {
-        property = 'title'
-    }
-
-    renderer = afx`
-        <div class="headline">{props.title}</div>
-    `
-}

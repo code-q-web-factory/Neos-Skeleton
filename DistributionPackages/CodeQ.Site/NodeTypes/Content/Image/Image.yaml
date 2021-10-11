@@ -1,8 +1,11 @@
 'CodeQ.Site:Content.Image':
   superTypes:
     'Neos.Neos:Content': true
+    'CodeQ.Site:Constraint.Content.Section.Column.Allowed': true
+    'CodeQ.Site:Constraint.Content.Restricted': true
+    'CodeQ.Site:Mixin.SpaceBelow': true
   ui:
-    label: Image
+    label: Bild
     icon: picture
     group: general
     position: 300
@@ -13,3 +16,14 @@
     alternativeText:
       options:
         preset: 'image.alternativeText'
+    hiddenOnMobile:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: 'Mobil verstecken'
+        help:
+          message: 'Dieses Element wird auf Tabletts und Laptops angezeigt, aber am Smartphone versteckt.'
+        reloadIfChanged: true
+        inspector:
+          group: general
+          position: 900

@@ -9,7 +9,7 @@ prototype(CodeQ.Site:Mixin.Section) < prototype(Neos.Fusion:Component) {
     # default integration
     columnCount = ${q(node).property('columnCount')}
     childrenCount.@process.toInteger = ${String.toInteger(value)}
-    class = CodeQ.Site:Mixin.SpaceBelow
+    spaceBelowClass = CodeQ.Site:Mixin.SpaceBelow
     title = Neos.Neos:Editable {
         property = 'title'
         @process.addFallbackHeadline = CodeQ.Site:Integration.Helper.HeadlineFallback
@@ -19,6 +19,7 @@ prototype(CodeQ.Site:Mixin.Section) < prototype(Neos.Fusion:Component) {
     renderer = Neos.Fusion:Component {
         @apply.props = ${props}
 
+        class = ${String.trim(props.class + ' ' + props.spaceBelowClass)}
         columnsDefault = Neos.Fusion:Case {
             configured {
                 condition = ${props.columnCount && props.columnCount > 0}

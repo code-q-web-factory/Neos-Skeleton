@@ -1,0 +1,14 @@
+prototype(CodeQ.Site:Content.Image.Section) < prototype(Neos.Neos:ContentComponent) {
+    hiddenOnMobile = ${q(node).property('hiddenOnMobile')}
+    content = CodeQ.Site:Content.Image {
+        @process.contentElementWrapping = ${value}
+    }
+
+    renderer = afx`
+        <CodeQ.Site:Mixin.Section
+            @if.has={q(node).property('image') || node.context.inBackend}
+            childrenCount="1"
+            {...props}
+        />
+    `
+}

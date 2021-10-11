@@ -10,7 +10,7 @@
   properties:
     spaceBelow:
       type: string
-      defaultValue: 'normal'
+      defaultValue: 'none'
       ui:
         label: 'Abstand darunter'
         reloadIfChanged: true

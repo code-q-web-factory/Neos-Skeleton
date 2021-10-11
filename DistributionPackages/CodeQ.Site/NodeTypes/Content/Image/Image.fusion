@@ -2,13 +2,10 @@ prototype(CodeQ.Site:Content.Image) < prototype(Neos.Neos:ContentComponent) {
     imageSource = ${q(node).property('image')}
     imageSource.@process.convert = CodeQ.Site:Integration.Helper.ImageAssetToSource
     alternativeText = ${q(node).property('alternativeText')}
+    hiddenOnMobile = ${q(node).property('hiddenOnMobile')}
+    spaceBelow = CodeQ.Site:Mixin.SpaceBelow
 
-    renderer = afx`
-        <CodeQ.Site:Presentation.Atom.Image.Auto
-            @if.has={props.imageSource}
-            class="container-image"
-            imageSource={props.imageSource}
-            alt={props.alternativeText}
-            />
-	`
+    renderer = CodeQ.Site:Presentation.Molecule.Image {
+        @apply.props = ${props}
+    }
 }

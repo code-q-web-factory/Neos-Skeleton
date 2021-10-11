@@ -1,0 +1,14 @@
+prototype(CodeQ.Site:Content.Text.Section) < prototype(Neos.Neos:ContentComponent) {
+    content = Neos.Neos:Editable {
+        property = 'text'
+    }
+    class = CodeQ.Site:Mixin.SpaceBelow
+
+    renderer = afx`
+        <CodeQ.Site:Mixin.Section childrenCount="1">
+            <div @if.has={String.trim(props.text) || node.context.inBackend}>
+                <CodeQ.Site:Presentation.Atom.RichText {...props} />
+            </div>
+        </CodeQ.Site:Mixin.Section>
+    `
+}

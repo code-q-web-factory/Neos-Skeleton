@@ -1,0 +1,10 @@
+prototype(CodeQ.Site:Presentation.Atom.RichText) < prototype(Neos.Fusion:Component) {
+    class = null
+    content = null
+
+    renderer = afx`
+        <div class={String.trim('rich-text ' + props.class)}>
+            {props.content}
+        </div>
+    `
+}

@@ -1,0 +1,15 @@
+# Convenience prototype for Section + 1 Column + 1 Text
+'CodeQ.Site:Content.Text.Section':
+  superTypes:
+    'Neos.Neos:Content': true
+    'CodeQ.Site:Mixin.Section.BaseLayout': true
+  ui:
+    label: Text
+    icon: align-left
+    group: general
+    position: 150
+    inlineEditable: true
+  properties:
+    text:
+      options:
+        preset: 'text.free'

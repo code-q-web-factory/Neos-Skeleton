@@ -22,3 +22,5 @@
                 label: 'Mittel'
               small:
                 label: 'Klein'
+    spaceBelow:
+      defaultValue: 'normal'

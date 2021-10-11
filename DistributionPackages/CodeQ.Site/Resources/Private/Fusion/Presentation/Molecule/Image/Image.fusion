@@ -1,0 +1,31 @@
+prototype(CodeQ.Site:Presentation.Molecule.Image) < prototype(Neos.Fusion:Component) {
+    @styleguide {
+        title = 'Content Image'
+        props {
+            imageSource = Sitegeist.Kaleidoscope:DummyImageSource
+            alternativeText = 'Alternative text'
+            hiddenOnMobile = true
+        }
+    }
+
+    @propTypes {
+        imageSource = ${PropTypes.instanceOf('\\Sitegeist\\Kaleidoscope\\EelHelpers\\ImageSourceHelperInterface')}
+        alternativeText = ${PropTypes.string}
+        hiddenOnMobile = ${PropTypes.boolean}
+        spaceBelow = ${PropTypes.string}
+    }
+
+    imageSource = null
+    alternativeText = null
+    hiddenOnMobile = false
+    spaceBelow = null
+
+    renderer = afx`
+        <CodeQ.Site:Presentation.Atom.Image.Auto
+            @if.has={props.imageSource}
+            class={'content-image ' + props.spaceBelow + (props.hiddenOnMobile ? ' content-image--hidden-on-mobile' : '')}
+            imageSource={props.imageSource}
+            alt={props.alternativeText}
+        />
+    `
+}

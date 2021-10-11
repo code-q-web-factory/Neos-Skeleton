@@ -12,6 +12,7 @@ prototype(CodeQ.Site:Presentation.Organism.Section.Layout) < prototype(Neos.Fusi
         md = ${PropTypes.string}
         sm = ${PropTypes.string}
         isFluid = ${PropTypes.boolean}
+        hiddenOnMobile = ${PropTypes.boolean}
     }
 
     # Define a columns layout like '1-1' or '2-1'
@@ -25,4 +26,5 @@ prototype(CodeQ.Site:Presentation.Organism.Section.Layout) < prototype(Neos.Fusi
     sm = '1'
     # True to stretch container to full width
     isFluid = false
+    hiddenOnMobile = false
 }

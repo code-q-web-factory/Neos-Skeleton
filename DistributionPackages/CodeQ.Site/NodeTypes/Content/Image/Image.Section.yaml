@@ -1,0 +1,7 @@
+# Convenience prototype for Section + 1 Column + 1 Image
+'CodeQ.Site:Content.Image.Section':
+  superTypes:
+    'CodeQ.Site:Content.Image': true
+    'CodeQ.Site:Constraint.Content.Section.Column.Allowed': false
+    'CodeQ.Site:Constraint.Content.Restricted': false
+    'CodeQ.Site:Mixin.Section.BaseLayout': true

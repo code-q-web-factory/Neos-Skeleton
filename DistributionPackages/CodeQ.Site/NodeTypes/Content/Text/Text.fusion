@@ -1,9 +1,10 @@
 prototype(CodeQ.Site:Content.Text) < prototype(Neos.Neos:ContentComponent) {
-    text = Neos.Neos:Editable {
+    content = Neos.Neos:Editable {
         property = 'text'
     }
+    class = CodeQ.Site:Mixin.SpaceBelow
 
-    renderer = afx`
-        <div class="text">{props.text}</div>
-    `
+    renderer = CodeQ.Site:Presentation.Atom.RichText {
+        @apply.props = ${props}
+    }
 }

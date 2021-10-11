@@ -21,7 +21,7 @@ prototype(CodeQ.Site:Presentation.Organism.Section) < prototype(Neos.Fusion:Comp
     footer = null
 
     renderer = afx`
-        <section id={props.id} class={String.trim('section background--' + props.background + ' ' + props.class)}>
+        <section id={props.id} class={String.trim('section background--' + props.background + (props.hiddenOnMobile ? ' section--hidden-on-mobile' : '') + ' ' + props.class)}>
             {props.title}
             <div class={'container' + (props.layout.isFluid ? ' container--fluid' : '')	+ (props.layout.default ? ' container--' + props.layout.default : '')	+ (props.layout.lg ? ' container--lg-' + props.layout.lg : '')	+ (props.layout.md ? ' container--md-' + props.layout.md : '')	+ (props.layout.sm ? ' container--sm-' + props.layout.sm : '')}>
                 {props.content}
