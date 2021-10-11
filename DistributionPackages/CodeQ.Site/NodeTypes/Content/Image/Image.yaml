@@ -4,6 +4,7 @@
   ui:
     label: Image
     icon: picture
+    group: general
     position: 300
   properties:
     image:
