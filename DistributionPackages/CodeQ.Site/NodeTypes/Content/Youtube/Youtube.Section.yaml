@@ -1,0 +1,11 @@
+'CodeQ.Site:Content.Youtube.Section':
+  superTypes:
+    'Neos.Neos:Content': true
+    'CodeQ.Site:Mixin.Section.BaseLayout': true
+    'CodeQ.Site:Mixin.YoutubePlayer': true
+  ui:
+    label: YouTube
+    icon: 'fab fa-youtube'
+    group: general
+    position: 600
+    inlineEditable: true

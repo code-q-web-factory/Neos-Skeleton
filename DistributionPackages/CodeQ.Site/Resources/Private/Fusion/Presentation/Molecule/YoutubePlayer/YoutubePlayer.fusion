@@ -1,0 +1,40 @@
+prototype(CodeQ.Site:Presentation.Molecule.YoutubePlayer) < prototype(Neos.Fusion:Component) {
+    @styleguide {
+        title = 'Youtube Player'
+        props {
+            id = 'bu0aLzj9HQg'
+            language = 'de'
+            editable = false
+            disableOrigin = true
+        }
+    }
+
+    @propTypes {
+        id = ${PropTypes.string}
+        posterUri = ${PropTypes.string}
+        posterUriPreview = ${PropTypes.string}
+        language = ${PropTypes.string}
+        editable = ${PropTypes.boolean}
+        disableOrigin = ${PropTypes.boolean}
+        isFluid = ${PropTypes.boolean}
+    }
+
+    id = null
+    posterUri = null
+    posterUriPreview = null
+    language = ${String.replace(documentNode.context.dimensions.language[0], '_', '-')}
+    editable = true
+    disableOrigin = false
+    isFluid = false
+
+    # rendering
+    origin = ${disableOrigin ? '' : ('origin=' + request.httpRequest.uri.scheme + '://' + request.httpRequest.uri.host + '&amp;')}
+    srcUri = ${'https://www.youtube-nocookie.com/embed/' + this.id + '?' + this.origin + 'hl=' + this.language + '&amp;iv_load_policy=3&amp;modestbranding=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1&amp;playsinline=1&amp;autohide=1&amp;controls=0'}
+    renderer = afx`
+        <div class={'youtube-player' + (props.isFluid ? ' youtube-player--layout-fluid' : '')} style={props.posterUriPreview ? 'background-image: url("' + props.posterUriPreview + '");' : ''}>
+            <div class="plyr__video-embed">
+                <iframe allowfullscreen allowtransparency allow="autoplay" src={props.srcUri} data-poster={props.posterUri}></iframe>
+            </div>
+        </div>
+    `
+}

@@ -1,0 +1,19 @@
+prototype(CodeQ.Site:Mixin.YoutubePlayer) < prototype(Neos.Fusion:Component) {
+    // taken from Jonnitto.Plyr:ParseID
+    rawId = ${String.trim(q(node).property('youtubePlayerId'))}
+    idMatch = ${String.pregMatch(this.rawId, '/(?<=(?:v|i)=)[a-zA-Z0-9-]+(?=&)|(?<=(?:v|i)\/)[^&\n]+|(?<=embed\/)[^"&\n]+|(?<=(?:v|i)=)[^&\n]+|(?<=youtu.be\/)[^&\n]+/')}
+    id = ${Type.isArray(this.idMatch) ? this.idMatch[0]: this.rawId}
+
+    posterUri = Neos.Neos:ImageUri {
+        asset = ${q(node).property('youtubePlayerImage')}
+    }
+    posterUriPreview = Neos.Neos:ImageUri {
+        asset = ${q(node).property('youtubePlayerImage')}
+        maximumWidth = 100
+    }
+    isFluid = false
+
+    renderer = afx`
+        <CodeQ.Site:Presentation.Molecule.YoutubePlayer {...props} />
+    `
+}

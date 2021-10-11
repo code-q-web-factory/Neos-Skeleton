@@ -1,0 +1,9 @@
+prototype(CodeQ.Site:Content.Youtube.Section) < prototype(Neos.Neos:ContentComponent) {
+    renderer = afx`
+        <CodeQ.Site:Mixin.Section childrenCount="1">
+            <div>
+                <CodeQ.Site:Mixin.YoutubePlayer />
+            </div>
+        </CodeQ.Site:Mixin.Section>
+    `
+}

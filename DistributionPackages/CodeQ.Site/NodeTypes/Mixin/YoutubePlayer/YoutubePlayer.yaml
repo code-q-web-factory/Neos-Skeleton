@@ -1,0 +1,37 @@
+'CodeQ.Site:Mixin.YoutubePlayer':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        general:
+          label: Video-Einstellung
+          icon: youtube
+          position: 10
+  properties:
+    youtubePlayerId:
+      type: string
+      ui:
+        label: Youtube ID oder URL
+        showInCreationDialog: true
+        reloadPageIfChanged: true
+        inlineEditable: false
+        inspector:
+          editor: Neos.Neos/Inspector/Editors/TextAreaEditor
+          group: general
+          position: 100
+    youtubePlayerImage:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Vorschaubild'
+        reloadIfChanged: true
+        inspector:
+          group: general
+          position: 200
+          editorOptions:
+            crop:
+              aspectRatio:
+                enableOriginal: false
+                allowCustom: false
+                locked:
+                  width: 16
+                  height: 9

@@ -1,0 +1,16 @@
+'CodeQ.Site:Content.Youtube':
+  superTypes:
+    'Neos.Neos:Content': true
+    'CodeQ.Site:Constraint.Content.Section.Column.Allowed': true
+    'CodeQ.Site:Constraint.Content.Restricted': true
+    'CodeQ.Site:Mixin.SpaceBelow': true
+    'CodeQ.Site:Mixin.YoutubePlayer': true
+  ui:
+    label: YouTube
+    icon: 'fab fa-youtube'
+    group: general
+    position: 600
+    inlineEditable: true
+  properties:
+    spaceBelow:
+      defaultValue: 'none'

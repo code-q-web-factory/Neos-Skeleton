@@ -1,0 +1,9 @@
+prototype(CodeQ.Site:Content.Youtube) < prototype(Neos.Neos:ContentComponent) {
+    class = CodeQ.Site:Mixin.SpaceBelow
+
+    renderer = afx`
+        <div class={props.class}>
+            <CodeQ.Site:Mixin.YoutubePlayer />
+        </div>
+    `
+}
