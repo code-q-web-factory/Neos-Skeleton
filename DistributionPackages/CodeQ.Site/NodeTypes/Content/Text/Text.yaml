@@ -4,7 +4,8 @@
     'Neos.Neos:Content': true
   ui:
     label: Text
-    icon: file-text
+    icon: align-left
+    group: general
     position: 200
     inlineEditable: true
   properties:
