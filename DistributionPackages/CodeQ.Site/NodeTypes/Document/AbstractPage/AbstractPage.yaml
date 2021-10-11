@@ -2,6 +2,7 @@
   abstract: true
   superTypes:
     'Neos.Neos:Document': true
+    'CodeQ.Site:Mixin.InspectorGeneral': true
   childNodes:
     main:
       type: 'Neos.Neos:ContentCollection'

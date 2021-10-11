@@ -1,0 +1,15 @@
+##
+# This mixin adds a inspector group for your default settings.
+#
+# We often use this group in the Node Presets. It's added to
+# `CodeQ.Site:Document.AbstractPage` and `Neos.Neos:Content`
+##
+'CodeQ.Site:Mixin.InspectorGeneral':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        general:
+          label: i18n
+          icon: cogs
+          position: 100

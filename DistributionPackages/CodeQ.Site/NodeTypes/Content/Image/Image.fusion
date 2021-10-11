@@ -1,7 +1,7 @@
 /**
  * This code is feasable for production, and renders an image with LazyBones.
  *
- * To better learn Neos take a look at CodeQ.Site:Content.BasicImage,
+ * To better learn Neos take a look at CodeQ.Site:Content.Image.BasicExample,
  * which renders our images as an img tag.
  */
 prototype(CodeQ.Site:Content.Image) < prototype(Neos.Neos:ContentComponent) {
