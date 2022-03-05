@@ -22,4 +22,8 @@ prototype(CodeQ.Site:Document.HomePage) < prototype(CodeQ.Site:Document.Abstract
             {props.main}
         `
     }
+
+    @cache {
+        mode = 'uncached'
+    }
 }
