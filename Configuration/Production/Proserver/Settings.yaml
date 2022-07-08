@@ -1,0 +1,26 @@
+Neos:
+  Flow:
+    persistence:
+      backendOptions:
+        driver: '%env:DB_DRIVER%'
+        charset: '%env:DB_CHARSET%'
+        dbname: '%env:DB_NAME%'
+        host: '%env:DB_HOST%'
+        user: '%env:DB_USER%'
+        password: '%env:DB_PASS%'
+
+# Uncomment the block below if the project should use ElasticSearch
+
+#Flowpack:
+#  ElasticSearch:
+#    clients:
+#      default:
+#        -
+#          host: localhost
+#          scheme: http
+#          port: 9200
+#          username: ''
+#          password: ''
+#    ContentRepositoryAdaptor:
+#      driver:
+#        version: 7.x

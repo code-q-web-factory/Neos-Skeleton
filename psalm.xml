@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<psalm
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        errorLevel="3"
+        resolveFromConfigFile="true"
+        xmlns="https://getpsalm.org/schema/config"
+        xsi:schemaLocation="https://getpsalm.org/schema/config Packages/Libraries/vimeo/psalm/config.xsd"
+>
+    <projectFiles>
+        <directory name="DistributionPackages" useStrictTypes="true"/>
+    </projectFiles>
+</psalm>

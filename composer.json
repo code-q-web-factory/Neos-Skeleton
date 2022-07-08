@@ -13,6 +13,10 @@
         "ext-vips": "*",
         "codeq/site": "@dev"
     },
+    "require-dev":{
+        "deployer/deployer": "^6.8",
+        "vimeo/psalm": "^4"
+    },
     "repositories": {
         "distribution": {
             "type": "path",
@@ -24,5 +28,10 @@
         "post-install-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
         "post-package-update": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
         "post-package-install": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall"
+    },
+    "extra": {
+      "helhum/dotenv-connector": {
+        "env-file": "../../.env"
+      }
     }
 }
