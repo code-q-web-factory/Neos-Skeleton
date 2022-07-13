@@ -14,7 +14,6 @@
         "codeq/site": "@dev"
     },
     "require-dev":{
-        "deployer/deployer": "^6.8",
         "vimeo/psalm": "^4"
     },
     "repositories": {
