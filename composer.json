@@ -6,6 +6,9 @@
         "bin-dir": "bin",
         "platform": {
             "php": "7.4"
+        },
+        "allow-plugins": {
+            "neos/composer-plugin": true
         }
     },
     "require": {

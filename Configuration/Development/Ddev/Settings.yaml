@@ -1,0 +1,40 @@
+Neos:
+  Imagine:
+    driver: Gd
+  Flow:
+    persistence:
+      backendOptions:
+        driver: pdo_mysql
+        dbname: db
+        user: db
+        password: db
+        host: db
+
+    # The following is necessary to allow ddev to act as a proxy on your local machine
+    http:
+      trustedProxies:
+        proxies: "*"
+
+  SwiftMailer:
+    transport:
+      type: Swift_SmtpTransport
+      options:
+        host: localhost
+        port: 1025
+        encryption: null
+        username: null
+        password: null
+
+Flowpack:
+  ElasticSearch:
+    clients:
+      default:
+        -
+          host: elasticsearch
+          scheme: http
+          port: 9200
+          username: ''
+          password: ''
+    ContentRepositoryAdaptor:
+      driver:
+        version: 7.x
