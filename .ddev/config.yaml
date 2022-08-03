@@ -1,0 +1,30 @@
+name: NeosWebsite
+type: php
+docroot: Web
+php_version: "7.4"
+webserver_type: nginx-fpm
+router_http_port: "80"
+router_https_port: "443"
+xdebug_enabled: false
+additional_hostnames: []
+additional_fqdns: []
+mariadb_version: "10.3"
+mysql_version: ""
+nfs_mount_enabled: true
+mutagen_enabled: true
+use_dns_when_possible: true
+composer_version: "2"
+omit_containers: [dba]
+webimage_extra_packages: [php7.4-vips]
+web_environment:
+  - FLOW_CONTEXT=Development/Ddev
+  - FLOW_PATH_TEMPORARY_BASE=/tmp/Flow
+  - FLOW_REWRITEURLS=1
+hooks:
+  post-start:
+    - exec: composer install
+    - exec: ./flow flow:package:rescan
+    - exec: ./flow database:setcharset
+    - exec: ./flow doctrine:migrate
+    - exec: ./flow flow:cache:flush
+    - exec: ./flow cache:warmup
