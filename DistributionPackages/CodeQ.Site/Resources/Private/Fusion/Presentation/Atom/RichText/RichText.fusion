@@ -7,13 +7,15 @@ prototype(CodeQ.Site:Presentation.Atom.RichText) < prototype(Neos.Fusion:Compone
 
     @propTypes {
         @strict = true
+        class = ${PropTypes.string}
         content = ${PropTypes.string}
     }
 
+    class = null
     content = null
 
     renderer = afx`
-        <div class="prose">
+        <div class={String.trim('prose ' + props.class)}>
             {props.content}
         </div>
     `
