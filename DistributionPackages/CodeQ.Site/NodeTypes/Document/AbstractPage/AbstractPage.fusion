@@ -18,13 +18,14 @@ prototype(CodeQ.Site:Document.AbstractPage.HeadTags) < prototype(Neos.Fusion:Com
         -->
         <CodeQ.Site:Presentation.Atom.Image.BackgroundPreviewPrefetch @if.has={props.prefetchImageSource} imageSource={props.prefetchImageSource}/>
 
-        <style>{String.replace(StaticResource.content('CodeQ.Site', 'Public/Frontend/build/styles/index.css'), '=app.css.map', '=/_Resources/Static/Packages/CodeQ.Site/Frontend/build/styles/index.css.map')}</style>
+        <link href={StaticResource.uri('CodeQ.Site', 'Public/index.css')} rel="stylesheet" />
+        <!--<style>{String.replace(StaticResource.content('CodeQ.Site', 'Public/Frontend/build/styles/index.css'), '=app.css.map', '=/_Resources/Static/Packages/CodeQ.Site/Frontend/build/styles/index.css.map')}</style>-->
     `
 }
 
 prototype(CodeQ.Site:Document.AbstractPage.ScriptTags) < prototype(Neos.Fusion:Component) {
     renderer = afx`
-        <script src={StaticResource.uri('CodeQ.Site', 'Public/Frontend/build/scripts/index.js')}></script>
+        <!--<script src={StaticResource.uri('CodeQ.Site', 'Public/Frontend/build/scripts/index.js')}></script>-->
 
         <!--
         Sitegeist.Lazybones required lazysizes, we recommend to include
