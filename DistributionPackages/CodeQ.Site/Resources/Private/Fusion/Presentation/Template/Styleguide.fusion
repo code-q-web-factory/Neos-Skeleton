@@ -7,6 +7,7 @@ prototype(CodeQ.Site:Presentation.Template.Styleguide) < prototype(Neos.Fusion:C
         <Sitegeist.Monocle:Preview.Prototype prototypeName="CodeQ.Site:Presentation.Organism.Header"/>
         <main>
             <Sitegeist.Monocle:Preview.Prototype prototypeName="CodeQ.Site:Presentation.Atom.RichText"/>
+            <Sitegeist.Monocle:Preview.Prototype prototypeName="CodeQ.Site:Presentation.Molecule.ImageFigure"/>
         </main>
         <Sitegeist.Monocle:Preview.Prototype prototypeName="CodeQ.Site:Presentation.Organism.Footer"/>
     `

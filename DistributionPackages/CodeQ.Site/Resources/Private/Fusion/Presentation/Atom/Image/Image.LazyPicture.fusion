@@ -6,12 +6,14 @@ prototype(CodeQ.Site:Presentation.Atom.Image.LazyPicture) < prototype(Sitegeist.
         imageSource = ${PropTypes.instanceOf('\\Sitegeist\\Kaleidoscope\\EelHelpers\\ImageSourceHelperInterface')}
         useBackgroundPreviewImage = ${PropTypes.boolean}
         maxWidth = ${PropTypes.integer}
+        objectFit = ${PropTypes.oneOf(['none', 'contain', 'cover'])}
     }
 
 	# api
 	imageSource = false
 	useBackgroundPreviewImage = false
     maxWidth = 1920
+    objectFit = 'none'
 
 	# api inherited from lazybones
     class = null
@@ -19,6 +21,7 @@ prototype(CodeQ.Site:Presentation.Atom.Image.LazyPicture) < prototype(Sitegeist.
 	alt = ''
 
 	# rendering
+    class.@process.makeInlineBlock = ${String.trim('inline-block w-full ' + value)}
 	lazyWidth = 200
     imageSource.@process.applyMaxWidth = ${value ? value.setWidth(this.maxWidth, true) : value}
 	@context.imageSource = ${this.imageSource}
@@ -37,6 +40,24 @@ prototype(CodeQ.Site:Presentation.Atom.Image.LazyPicture) < prototype(Sitegeist.
         @process.addBackground = Neos.Fusion:Augmenter {
             @if.enabled = ${useBackgroundPreviewImage}
             style = ${'background-position: center; background-size: cover; background-image: url(\'' + imageSource.setWidth(40, true).src() + '\');'}
+        }
+    }
+
+    @context.objectFit = ${this.objectFit}
+    prototype(Sitegeist.Kaleidoscope:Image) {
+        attributes.class = Neos.Fusion:Match {
+            @subject = ${objectFit}
+            'none' = 'w-full'
+            'contain' = 'w-full h-full object-contain'
+            'cover' = 'w-full h-full object-cover'
+        }
+    }
+    prototype(Sitegeist.Lazybones:Image) {
+        class = Neos.Fusion:Match {
+            @subject = ${objectFit}
+            'none' = 'w-full'
+            'contain' = 'w-full h-full object-contain'
+            'cover' = 'w-full h-full object-cover'
         }
     }
 }
