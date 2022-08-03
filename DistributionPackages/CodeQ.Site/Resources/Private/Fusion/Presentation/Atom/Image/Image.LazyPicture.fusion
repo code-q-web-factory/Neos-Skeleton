@@ -9,7 +9,7 @@ prototype(CodeQ.Site:Presentation.Atom.Image.LazyPicture) < prototype(Sitegeist.
     }
 
 	# api
-	imageSource = false
+	imageSource = null
 	useBackgroundPreviewImage = false
     maxWidth = 1920
 

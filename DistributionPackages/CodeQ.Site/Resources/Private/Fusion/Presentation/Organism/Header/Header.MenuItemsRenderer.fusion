@@ -1,5 +1,5 @@
 prototype(CodeQ.Site:Presentation.Organism.Header.MenuItemsRenderer) < prototype(Neos.Fusion:Component) {
-    items = false
+    items = null
 
     @if.has = ${this.items}
     renderer = afx`

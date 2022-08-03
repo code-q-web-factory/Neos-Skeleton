@@ -11,6 +11,6 @@ prototype(CodeQ.Site:Integration.Helper.ImageAssetToSource) < prototype(Neos.Fus
 	}
 	default {
 		condition = true
-		renderer = false
+        renderer = ${null}
 	}
 }

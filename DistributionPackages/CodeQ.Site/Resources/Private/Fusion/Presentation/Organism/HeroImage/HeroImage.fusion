@@ -9,7 +9,7 @@ prototype(CodeQ.Site:Presentation.Organism.HeroImage) < prototype(Neos.Fusion:Co
     @propTypes {
         imageSource = ${PropTypes.instanceOf('\\Sitegeist\\Kaleidoscope\\EelHelpers\\ImageSourceHelperInterface')}
     }
-	imageSource = false
+	imageSource = null
 
     renderer = afx`
         <section class="hero-image" @if.hasImage={props.imageSource}>
