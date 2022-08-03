@@ -1,0 +1,20 @@
+prototype(CodeQ.Site:Presentation.Atom.RichText) < prototype(Neos.Fusion:Component) {
+    @styleguide {
+        props {
+            content = CodeQ.Site:Presentation.Atom.RichText.ContentFixture
+        }
+    }
+
+    @propTypes {
+        @strict = true
+        content = ${PropTypes.string}
+    }
+
+    content = null
+
+    renderer = afx`
+        <div class="prose">
+            {props.content}
+        </div>
+    `
+}
