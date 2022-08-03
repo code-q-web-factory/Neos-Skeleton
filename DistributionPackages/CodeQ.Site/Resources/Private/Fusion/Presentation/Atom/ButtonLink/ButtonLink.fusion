@@ -4,6 +4,7 @@ prototype(CodeQ.Site:Presentation.Atom.ButtonLink) < prototype(Neos.Fusion:Compo
             linkSource = CodeQ.Link:DummyLink
         }
     }
+
     @propTypes {
         @strict = true
         class = ${PropTypes.string}

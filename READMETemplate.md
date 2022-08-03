@@ -6,8 +6,7 @@ This Neos 7.x website is based on the [Code Q Neos-Skeleton](https://github.com/
 
 We use Tailwind CSS, to start the build process run:
 ```
-npm install -D tailwindcss
-npm install -D @tailwindcss/typography
+npm install -D tailwindcss @tailwindcss/typography postcss-import
 cd DistributionPackages/CodeQ.Site/Resources/Private/Fusion
 npx tailwindcss -i ./index.css -o ../../Public/index.css --watch
 ```

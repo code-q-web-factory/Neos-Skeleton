@@ -1,0 +1,3 @@
+.button-group > * {
+    @apply mr-2 mb-2;
+}

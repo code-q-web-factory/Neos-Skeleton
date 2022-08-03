@@ -1,0 +1,33 @@
+prototype(CodeQ.Site:Presentation.Molecule.ButtonGroup) < prototype(Neos.Fusion:Component) {
+    @styleguide {
+        props {
+            content = Neos.Fusion:Join {
+                @context.example = Sitegeist.Monocle:Preview.Prototype {
+                    prototypeName = 'CodeQ.Site:Presentation.Atom.ButtonLink'
+                }
+                1 = ${example}
+                2 = ${example}
+                3 = ${example}
+                4 = Sitegeist.Monocle:Preview.Prototype {
+                    prototypeName = 'CodeQ.Site:Presentation.Atom.ButtonLink'
+                    props.type = 'secondary'
+                }
+            }
+        }
+    }
+
+    @propTypes {
+        desktopAlign = ${PropTypes.oneOf(['start', 'center', 'end'])}
+    }
+
+    class = null
+    content = null
+    desktopAlign = 'start'
+
+    // lg:justify-start lg:justify-center lg:justify-end
+    renderer = afx`
+        <div class={String.trim('button-group flex flex-wrap flex-col sm:flex-row items-stretch -mr-2 -mb-2 lg:justify-' + props.desktopAlign + ' ' + props.class)}>
+            {props.content}
+        </div>
+    `
+}
