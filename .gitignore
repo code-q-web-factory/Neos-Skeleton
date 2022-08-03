@@ -19,8 +19,7 @@
 .eel_history
 
 # Frontend template
-/Source/CodeQ.Site/Resources/Public/Frontend/node_modules/
-/Source/CodeQ.Site/Resources/Public/Frontend/bower_components/
+/DistributionPackages/CodeQ.Site/Resources/Public/index.css
 
 # Server, we use nginx
 .htaccess
