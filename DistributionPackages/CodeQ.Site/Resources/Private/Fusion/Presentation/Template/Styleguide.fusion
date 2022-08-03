@@ -6,6 +6,8 @@ prototype(CodeQ.Site:Presentation.Template.Styleguide) < prototype(Neos.Fusion:C
     renderer = afx`
         <Sitegeist.Monocle:Preview.Prototype prototypeName="CodeQ.Site:Presentation.Organism.Header"/>
         <main>
+            <Sitegeist.Monocle:Preview.Prototype prototypeName="CodeQ.Site:Presentation.Atom.ButtonLink"/>
+            <Sitegeist.Monocle:Preview.Prototype prototypeName="CodeQ.Site:Presentation.Atom.ButtonLink" props.type="secondary"/>
             <Sitegeist.Monocle:Preview.Prototype prototypeName="CodeQ.Site:Presentation.Atom.RichText"/>
             <Sitegeist.Monocle:Preview.Prototype prototypeName="CodeQ.Site:Presentation.Molecule.ImageFigure"/>
         </main>

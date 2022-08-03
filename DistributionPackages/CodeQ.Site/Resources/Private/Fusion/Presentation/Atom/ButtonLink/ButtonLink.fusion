@@ -1,0 +1,38 @@
+prototype(CodeQ.Site:Presentation.Atom.ButtonLink) < prototype(Neos.Fusion:Component) {
+    @styleguide {
+        props {
+            linkSource = CodeQ.Link:DummyLink
+        }
+    }
+    @propTypes {
+        @strict = true
+        class = ${PropTypes.string}
+        content = ${PropTypes.string}
+        linkSource = ${PropTypes.any}
+        renderDefaultTagIfNoLink = ${PropTypes.boolean}
+        type = ${PropTypes.oneOf(['primary', 'secondary'])}
+    }
+
+    class = null
+    content = ${this.linkSource.label}
+    linkSource = CodeQ.Link:Link
+    renderDefaultTagIfNoLink = false
+    type = 'primary'
+
+    renderer = Neos.Fusion:Component {
+        @apply.props = ${props}
+        typeClass = Neos.Fusion:Match {
+            @subject = ${props.type}
+            'primary' = 'bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white dark:bg-sky-500 dark:highlight-white/20 dark:hover:bg-sky-400'
+            'secondary' = 'bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 text-white dark:bg-slate-700 dark:hover:bg-slate-600'
+        }
+
+        renderer = afx`
+            <CodeQ.Link:Tag
+                class={String.trim('inline-block font-semibold px-3 py-2 rounded-lg ' + props.typeClass + ' ' + props.class)}
+                linkSource={props.linkSource}
+                renderDefaultTagIfNoLink={props.renderDefaultTagIfNoLink}
+                content={props.content}/>
+        `
+    }
+}
