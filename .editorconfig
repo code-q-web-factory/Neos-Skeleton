@@ -18,6 +18,7 @@ ij_visual_guides = none
 ij_wrap_on_typing = false
 
 [*.scss]
+ij_continuation_indent_size = 4
 ij_scss_align_closing_brace_with_properties = false
 ij_scss_blank_lines_around_nested_selector = 1
 ij_scss_blank_lines_between_blocks = 1
