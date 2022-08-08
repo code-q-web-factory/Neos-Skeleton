@@ -11,7 +11,7 @@ On top, it adds well-tested community packages to provide everything you need fo
  - A powerful best practice layout rendering mechanism.
  - Best practice folder and naming structure.
  - A well-rounded set of packages to build typical websites.
-
+ - A ready-to-use Ddev configuration for local development
 
 #### Learn more
 
@@ -23,13 +23,13 @@ On top, it adds well-tested community packages to provide everything you need fo
 
 #### Skeleton Variations
 
-- [Default - Recommended for beginners and small projects (Neos 7, AFX)](https://github.com/code-q-web-factory/Neos-Skeleton) 
+- [Default - Recommended for beginners and small projects (Neos 7, AFX)](https://github.com/code-q-web-factory/Neos-Skeleton)
 - [Monocle - Recommended for bigger teams (Neos 7, AFX, Monocle)](https://github.com/code-q-web-factory/Neos-Skeleton/tree/monocle)
 - [Flownative Beach - Monocle with a Beach deployment setup](https://github.com/code-q-web-factory/Neos-Skeleton/tree/flownative-beach)
 
 ### WE NEED HELP
 
-We aim to stay up with best practices and innovating concepts. 
+We aim to stay up with best practices and innovating concepts.
 
 - Did you find a concept or pattern which works great? Please share it with us by opening an issue or pull request.
 - Help us improve the documentation.

@@ -1,7 +1,7 @@
 # Steps to get started
 
 Requirements:
-Your local development environment must provide [PHP 7.4+, composer and MySQL 5.7.x or MariaDB 10.2.x](https://www.neos.io/download-and-extend.html).
+Your local development environment must provide [PHP 7.4+, composer and MySQL 5.7.x or MariaDB 10.2.x and DDEV](https://www.neos.io/download-and-extend.html).
 
 If you don't use PHP 7.4, please change the version in [composer.json](/composer.json#L8) under `config.platform.php`.
 
@@ -13,7 +13,7 @@ If you don't use PHP 7.4, please change the version in [composer.json](/composer
     export NEOS_PACKAGE_NAME="YourCompany.Site"
     export COMPOSER_PACKAGE_NAME="yourcompany\/site"
     mv DistributionPackages/CodeQ.Site DistributionPackages/${NEOS_PACKAGE_NAME}
-    
+
     # OS X / BSD:
     find . -type f -name 'composer.json' | xargs sed -i '' "s/codeq\/site/${COMPOSER_PACKAGE_NAME}/g"
     find ./DistributionPackages/${NEOS_PACKAGE_NAME} -type f | xargs sed -i '' "s/CodeQ\.Site/${NEOS_PACKAGE_NAME}/g"
@@ -35,15 +35,15 @@ If you don't use PHP 7.4, please change the version in [composer.json](/composer
     git commit -m "TASK: Copy from Neos-Skeleton"
     git push -u origin master
     ```
+8. Configure DDEV in [config.yaml](/.ddev/config.yaml). Set `name` to your project name `${PROJECT_NAME}` and adjust the PHP version accordingly.
 
 #### Run the project locally
 
-8. Start your database server.
-9. Start the local server in the terminal:
+9. Start DDEV
     ```
-    ./flow server:run
+    ddev start
     ```
-10. Create or configure your database at [http://127.0.0.1:8081/setup](http://127.0.0.1:8081/setup) and import the initial content from your package.
+10. Create or configure your database at [http://${PROJECT_NAME}/setup](http://127.0.0.1:8081/setup) and import the initial content from your package.
 
 #### Configure your project
 
@@ -54,4 +54,7 @@ If you don't use PHP 7.4, please change the version in [composer.json](/composer
 
 13. Copy your preferred frontend tooling into [Resources/Public/Frontend](/DistributionPackages/CodeQ.Site/Resources/Public/Frontend) and adopt the [CodeQ.Site:Document.AbstractPage](/DistributionPackages/CodeQ.Site/Resources/Private/Fusion/Document/AbstractPage/AbstractPage.fusion) html tags.
 14. Create your own document and content node types and add the styles to your CSS.
-
+15. If you are sending e-mails you can use Mailhog. This tool creates a local virtual mailbox to catch all outgoing mail when developing. It is preconfigured in this branch and can be launched with:
+    ```
+    ddev launch -m
+    ```
