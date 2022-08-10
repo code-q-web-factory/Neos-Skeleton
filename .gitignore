@@ -1,7 +1,11 @@
+# Frontend template
+/DistributionPackages/CodeQ.Site/Resources/Public/index.css
+
 # Neos CMS
+/bin/
 /Build/
 /Configuration/**/*.example
-/Configuration/Development/
+/Configuration/Development/Settings.yaml
 /Configuration/Testing/
 /Configuration/Settings.yaml
 /Configuration/README
@@ -9,27 +13,19 @@
 /Packages/*
 /Web/_Resources
 /Web/index.php
-/bin/
-/Readme.txt
-/Upgrading.txt
-/Upgrading.rst
 /Readme.rst
+/Readme.txt
+/Upgrading.rst
+/Upgrading.txt
 /flow
 /flow.bat
 .eel_history
-
-# Frontend template
-/DistributionPackages/CodeQ.Site/Resources/Public/index.css
+.localbeach.*
 
 # Server, we use nginx
 .htaccess
 
 # Various temporary and editor files
-.fuse_hidden
-.sass-cache
-bower_components
 node_modules
 *.DS_Store
-/.idea
-.remote-sync.json
-DistributionPackages/CodeQ.Site/.idea
+.idea
