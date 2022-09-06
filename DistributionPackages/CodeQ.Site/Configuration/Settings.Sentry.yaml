@@ -1,0 +1,6 @@
+# Exclude controller not found exceptions
+Flownative:
+  Sentry:
+    capture:
+      excludeExceptionTypes:
+        - 'Neos\Flow\Mvc\Controller\Exception\InvalidControllerException'
