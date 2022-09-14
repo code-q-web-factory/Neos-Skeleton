@@ -10,44 +10,34 @@ root = true
 charset = utf-8
 end_of_line = lf
 insert_final_newline = true
-trim_trailing-whitespace = true
-indent_style = space
-indent_size = 4
-quote_type = single
-
-# 2-space files
-[{*.{yaml,yml,sh,jscsrc},package.json,.*rc}]
+trim_trailing_whitespace = true
 indent_style = space
 indent_size = 2
+quote_type = single
 
 # PHP should follow the PSR-2 standard
-[*.{json,php}]
-indent_style = space
+[*.php]
 indent_size = 4
 
-# Fusion uses 4 spaces
-[*.fusion]
-indent_style = space
-indent_size = 4
-
-# JS should use tabs, to reduce conflicts
-[*.js]
+# JS, SASS, HTML should use tabs, to reduce conflicts
+[*.{js,scss,html}]
 indent_style = tab
 
+# Markdown et al. use trailing whitespace for line breaks
+[*.{note,md,edit,read}]
+trim_trailing_whitespace = false
+
 # JSON can have longer lines
-[*.{json}]
+[*.json]
 max_line_length = 1000
+
+# Composer uses 4 spaces itself
+[composer.json]
+indent_size = 4
 
 [Sites.xml]
 indent_size = 1
 max_line_length = 1000
 
-[*.{note,md,edit,read}]
-indent_size = 2
-trim_trailing-whitespace = false
-
 [Makefile]
 indent_style = tab
-
-[*.css.d.ts]
-indent_size = 2
