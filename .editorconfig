@@ -35,7 +35,7 @@ indent_size = 4
 indent_style = tab
 
 # JSON can have longer lines
-[*.{json}]
+[*.json]
 max_line_length = 1000
 
 [Sites.xml]
