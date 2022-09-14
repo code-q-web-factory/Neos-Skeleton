@@ -16,7 +16,7 @@ indent_size = 4
 quote_type = single
 
 # 2-space files
-[{*.yaml,*.yml,*.sh,*.jscsrc,package.json,.*rc}]
+[{*.yaml,*.yml,*.sh,*.jscsrc,.*rc}]
 indent_style = space
 indent_size = 2
 
@@ -24,6 +24,14 @@ indent_size = 2
 [{*.json,*.php}]
 indent_style = space
 indent_size = 4
+
+# JSON can have longer lines
+[*.json]
+max_line_length = 1000
+
+[package.json]
+indent_style = space
+indent_size = 2
 
 # Fusion uses 4 spaces
 [*.fusion]
@@ -33,10 +41,6 @@ indent_size = 4
 # JS should use tabs, to reduce conflicts
 [*.js]
 indent_style = tab
-
-# JSON can have longer lines
-[*.json]
-max_line_length = 1000
 
 [Sites.xml]
 indent_size = 1
