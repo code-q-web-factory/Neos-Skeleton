@@ -16,12 +16,12 @@ indent_size = 4
 quote_type = single
 
 # 2-space files
-[{*.{yaml,yml,sh,jscsrc},package.json,.*rc}]
+[{*.yaml,*.yml,*.sh,*.jscsrc,package.json,.*rc}]
 indent_style = space
 indent_size = 2
 
 # PHP should follow the PSR-2 standard
-[*.{json,php}]
+[{*.json,*.php}]
 indent_style = space
 indent_size = 4
 
@@ -42,7 +42,7 @@ max_line_length = 1000
 indent_size = 1
 max_line_length = 1000
 
-[*.{note,md,edit,read}]
+[{*.note,*.md,*.edit,*.read}]
 indent_size = 2
 trim_trailing_whitespace = false
 
