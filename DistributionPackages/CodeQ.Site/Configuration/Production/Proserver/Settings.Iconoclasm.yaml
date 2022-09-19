@@ -1,0 +1,17 @@
+Sitegeist:
+  Iconoclasm:
+    command: '/var/www/bin/imagemin {input} > {output}'
+    mediaTypes:
+      'image/jpeg':
+        enabled: true
+        command: '/var/www/bin/imagemin {input} --plugin=mozjpeg > {output}'
+      'image/png':
+        enabled: true
+        command: '/var/www/bin/imagemin {input} --plugin=pngquant > {output}'
+      'image/webp':
+        enabled: true
+        command: '/var/www/bin/imagemin {input} --plugin=webp > {output}'
+      'image/gif':
+        enabled: false
+      'image/svg':
+        enabled: false
