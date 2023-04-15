@@ -1,5 +1,4 @@
-prototype(CodeQ.Site:Component.Footer) < prototype(Neos.Neos:ContentComponent) {
-    @context.node = ${site}
+prototype(CodeQ.Site:Component.Footer) < prototype(Neos.Fusion:Component) {
     year = ${Date.format(Date.now(), 'Y')}
     footerInfo = Neos.Neos:Editable {
         node = ${site}
@@ -29,5 +28,13 @@ prototype(CodeQ.Site:Component.Footer) < prototype(Neos.Neos:ContentComponent) {
         entryTags {
             1 = ${Neos.Caching.nodeTag(site)}
         }
+    }
+
+    // The footer should only be inline editable on the home page,
+    // otherwise the Neos UI will show a weird behavior
+    @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+        @if.isOnSiteNode = ${site == documentNode}
+        node = ${site}
+        @position = 'end'
     }
 }
