@@ -6,6 +6,5 @@ builder:
       script:
         - apt-get update
         - apt-get install -y --no-install-recommends --no-install-suggests build-essential git libjpeg-dev libpng-dev
-        - cd ${BEACH_BUILD_WORKSPACE_PATH}/DistributionPackages/CodeQ.Site/Resources/Public/Frontend
-        - npm install
-        - npm run build
+        - cd ${BEACH_BUILD_WORKSPACE_PATH}/DistributionPackages/CodeQ.Site/Resources/Private/Fusion
+        - npx tailwindcss -i ./index.css -o ../../Public/index.css
