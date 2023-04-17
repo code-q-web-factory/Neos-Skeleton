@@ -48,10 +48,9 @@ If you don't use PHP 7.4, please change the version in [composer.json](/composer
 #### Configure your project
 
 11. Configure the Google Analytics tracking code in [Production/Settings.yaml](/DistributionPackages/CodeQ.Site/Configuration/Production/Settings.yaml) in the format `UA-XXXXXXXX-X`.
-12. In the Neos administration, you can find a page "Page not found", which is shown every time a page couldn't be found. Feel free to add content here.
 
 #### Start developing
 
-13. Copy your preferred frontend tooling into [Resources/Public/Frontend](/DistributionPackages/CodeQ.Site/Resources/Public/Frontend) and adopt the [CodeQ.Site:Document.AbstractPage](/DistributionPackages/CodeQ.Site/Resources/Private/Fusion/Document/AbstractPage/AbstractPage.fusion) html tags.
-14. Create your own document and content node types and add the styles to your CSS.
+12. Copy your preferred frontend tooling into [Resources/Public/Frontend](/DistributionPackages/CodeQ.Site/Resources/Public/Frontend) and adopt the [CodeQ.Site:Document.AbstractPage](/DistributionPackages/CodeQ.Site/Resources/Private/Fusion/Document/AbstractPage/AbstractPage.fusion) html tags.
+13. Create your own document and content node types and add the styles to your CSS.
 
