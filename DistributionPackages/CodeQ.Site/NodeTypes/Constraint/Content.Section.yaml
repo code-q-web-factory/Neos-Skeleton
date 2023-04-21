@@ -1,0 +1,12 @@
+##
+# Add this to all content node types,
+# which take up the full page width and have control their own layout, max-width and spacing.
+#
+# Default usage inside wrapping content node types:
+#   constraints:
+#     nodeTypes:
+#       '*': ~
+#       'CodeQ.Site:Constraint.Content.Section': true
+##
+'CodeQ.Site:Constraint.Content.Section':
+  abstract: true

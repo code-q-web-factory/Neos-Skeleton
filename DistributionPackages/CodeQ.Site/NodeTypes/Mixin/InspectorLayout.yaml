@@ -1,0 +1,15 @@
+##
+# This mixin adds a inspector group for your layout settings.
+#
+# We often use this group in the Node Presets. It's added to
+# `CodeQ.Site:Document.AbstractPage` and `Neos.Neos:Content`
+##
+'CodeQ.Site:Mixin.InspectorLayout':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        general:
+          label: Layout
+          icon: ruler
+          position: 200

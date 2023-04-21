@@ -2,3 +2,4 @@
 'Neos.Neos:Content':
   superTypes:
     'CodeQ.Site:Mixin.InspectorGeneral': true
+    'CodeQ.Site:Mixin.InspectorLayout': true

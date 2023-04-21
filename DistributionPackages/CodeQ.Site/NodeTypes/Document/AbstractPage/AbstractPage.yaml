@@ -3,12 +3,14 @@
   superTypes:
     'Neos.Neos:Document': true
     'CodeQ.Site:Mixin.InspectorGeneral': true
+    'CodeQ.Site:Mixin.InspectorLayout': true
   childNodes:
     main:
       type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          'CodeQ.Site:Constraint.Content.Restricted': false
+          '*': ~
+          'CodeQ.Site:Constraint.Content.Section': true
   constraints:
     nodeTypes:
       'CodeQ.Site:Constraint.Document.Restricted': false

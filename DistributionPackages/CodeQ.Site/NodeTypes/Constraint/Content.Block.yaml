@@ -1,0 +1,12 @@
+##
+# Add this to all content node types,
+# which can be added in a block inline without a layout.
+#
+# Default usage inside wrapping content node types:
+#   constraints:
+#     nodeTypes:
+#       '*': ~
+#       'CodeQ.Site:Constraint.Content.Block': true
+##
+'CodeQ.Site:Constraint.Content.Block':
+  abstract: true
