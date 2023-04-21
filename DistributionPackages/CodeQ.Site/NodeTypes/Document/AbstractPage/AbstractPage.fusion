@@ -126,6 +126,11 @@ prototype(CodeQ.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
         @position = 'before closingBodyTag'
     }
 
+    ##
+    # the last visited node is an unwanted side effect
+    # it is disabled as only editors would benefit but
+    # all user would see the additional request
+    ##
     lastVisitedNodeScript = false
 }
 
