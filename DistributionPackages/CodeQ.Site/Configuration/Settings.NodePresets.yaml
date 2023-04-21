@@ -24,7 +24,7 @@ Neos:
                       sub: true
                       sup: true
               search:
-                fulltextExtractor: '${node.visible ? Indexing.extractHtmlTags(value) : []}'
+                fulltextExtractor: '${Indexing.extractHtmlTags(value)}'
             'plain':
               type: string
               defaultValue: ''
@@ -40,7 +40,7 @@ Neos:
                       sub: true
                       sup: true
               search:
-                fulltextExtractor: '${node.visible ? Indexing.extractInto("h2", value) : []}'
+                fulltextExtractor: '${Indexing.extractInto("h2", value)}'
             'plainWithStrong':
               type: string
               defaultValue: ''
@@ -57,7 +57,7 @@ Neos:
                       sub: true
                       sup: true
               search:
-                fulltextExtractor: '${node.visible ? Indexing.extractInto("h2", value) : []}'
+                fulltextExtractor: '${Indexing.extractInto("h2", value)}'
             'free':
               type: string
               defaultValue: ''
@@ -86,7 +86,7 @@ Neos:
                       ul: true
                       a: true
               search:
-                fulltextExtractor: '${node.visible ? Indexing.extractHtmlTags(value) : []}'
+                fulltextExtractor: '${Indexing.extractHtmlTags(value)}'
             'link':
               type: string
               ui:
@@ -127,10 +127,13 @@ Neos:
                   group: general
                   position: 50
                   editorOptions:
+                    features:
+                      crop: true
                     crop:
                       aspectRatio:
-                        enableOriginal: false
                         allowCustom: false
+                        enableOriginal: false
+                        forceCrop: true
                         locked:
                           width: 1
                           height: 1
@@ -142,6 +145,7 @@ Neos:
                   message: 'Dieser Text wird für die Barrierefreiheit und zur Suchmaschinenoptimierung genutzt.'
                 reloadIfChanged: false
                 inspector:
+                  hidden: 'ClientEval:node.properties.image ? false : true'
                   group: general
                   position: 100
           'date':
@@ -159,3 +163,23 @@ Neos:
               validation:
                 Neos.Neos/Validation/NotEmptyValidator: {  }
                 Neos.Neos/Validation/DateTimeValidator: {  }
+          'layout':
+            'imageFit':
+              type: string
+              defaultValue: 'cover'
+              ui:
+                label: 'Bild-Beschnitt'
+                reloadIfChanged: true
+                inspector:
+                  group: general
+                  position: 800
+                  editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+                  editorOptions:
+                    allowEmpty: false
+                    values:
+                      cover:
+                        icon: expand-arrows-alt
+                        label: 'Platz ausfüllen'
+                      contain:
+                        icon: object-group
+                        label: 'Ganzes Bild anzeigen'

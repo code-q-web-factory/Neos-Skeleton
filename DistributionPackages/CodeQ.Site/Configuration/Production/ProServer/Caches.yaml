@@ -1,6 +1,6 @@
 ##
 #
-# Use a Redis Cache, which works on Flownative Beach
+# Use a Redis Cache, which works on infrastructure.d
 #
 ##
 
@@ -62,7 +62,7 @@ Neos_Media_ImageSize:
 
 ##
 #
-# In Flownative Beach if you have multiple replicas,
+# If you have multiple replicas,
 # you need to save state to the database.
 #
 ##

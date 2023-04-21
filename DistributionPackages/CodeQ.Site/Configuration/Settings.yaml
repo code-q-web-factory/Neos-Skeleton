@@ -11,7 +11,7 @@ Neos:
     eventLog:
       enabled: true
     headerComment: |
-      <!-- Entwickelt von Code Q, https://codeq.at/ -->
+      <!-- NEOSidekick Template -->
     userInterface:
       navigateComponent:
         nodeTree:
@@ -37,7 +37,3 @@ Neos:
             contentTree:
               # by default in the Neos UI open the content tree
               isHidden: false
-
-Carbon:
-  Link:
-    defaultPhoneCountryCode: '0043'

@@ -1,4 +1,7 @@
 ##
+# Vips is generally the best image compression library,
+# this works well on  and infratructure.d
+#
 # For Beach override, see also
 # Configuration/Production/Beach/Instance/Settings.yaml
 ##
@@ -14,3 +17,8 @@ Neos:
       defaultOptions:
         # The Vips driver does not support interlace
         interlace: ~
+
+Sitegeist:
+  Kaleidoscope:
+    dummyImage:
+      overrideImagineDriver: 'Imagick'
