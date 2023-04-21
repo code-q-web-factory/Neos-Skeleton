@@ -7,5 +7,7 @@ module.exports = {
     plugins: [
         require('postcss-import'),
         require('@tailwindcss/typography'),
+        require('autoprefixer'),
+        require('postcss-discard-duplicates'),
     ],
 }
