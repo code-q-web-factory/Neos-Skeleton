@@ -74,6 +74,7 @@ Neos:
                       sub: true
                       sup: true
                       p: true
+                      # There should be only one h1 per page, hard-code it inside the document NodeType
                       h1: false
                       h2: true
                       h3: true

@@ -1,18 +1,15 @@
 'CodeQ.Site:Constraint.Document.BackendOnly':
   abstract: true
+  superTypes:
+    'Neos.Seo:NoindexMixin': true
   search:
     fulltext:
       enable: false
-  superTypes:
-    'CodeQ.Site:Mixin.HideSeo': true
-    # 'Neos.GoogleAnalytics:StatsTabMixin': false
-    'Neos.Seo:NoindexMixin': true
   properties:
     titleOverride: ~
     _hiddenInIndex:
       defaultValue: true
       ui:
         inspector:
-          group: null
-    metaRobotsNoindex:
-      defaultValue: true
+          editorOptions:
+            disabled: true
