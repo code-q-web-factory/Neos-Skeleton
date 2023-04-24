@@ -5,6 +5,7 @@ prototype(CodeQ.Site:Mixin.Section) < prototype(Neos.Fusion:Component) {
 
     # default integration
     id = CodeQ.JumpMarkers:NodeAnchorId
+    backgroundColor = ${q(node).property('sectionBackgroundColor') || 'white'}
     spaceBelow = ${q(node).property('spaceBelow') || 'none'}
 
     renderer = afx`

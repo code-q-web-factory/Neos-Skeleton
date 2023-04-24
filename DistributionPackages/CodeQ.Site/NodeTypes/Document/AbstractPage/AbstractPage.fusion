@@ -25,6 +25,7 @@ prototype(CodeQ.Site:Document.AbstractPage.HeadTags) < prototype(Neos.Fusion:Com
 
 prototype(CodeQ.Site:Document.AbstractPage.ScriptTags) < prototype(Neos.Fusion:Component) {
     renderer = afx`
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
         <!--<script src={StaticResource.uri('CodeQ.Site', 'Public/Frontend/build/scripts/index.js')}></script>-->
 
         <!--

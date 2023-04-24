@@ -1,0 +1,26 @@
+prototype(CodeQ.Site:Presentation.Molecule.Accordion) < prototype(Neos.Fusion:Component) {
+    @styleguide {
+        props {
+            title = 'Unser Team'
+            content = Neos.Fusion:Join {
+                0 = Sitegeist.Monocle:Preview.Prototype {
+                    prototypeName = 'CodeQ.Site:Presentation.Molecule.Accordion.Item'
+                }
+                1 = Sitegeist.Monocle:Preview.Prototype {
+                    prototypeName = 'CodeQ.Site:Presentation.Molecule.Accordion.Item'
+                    useCase = 'item2'
+                }
+            }
+        }
+    }
+
+    title = null
+    content = null
+
+    renderer = afx`
+        <div>
+            <h2 class="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl pb-4 border-b-2 border-gray-200">{props.title}</h2>
+            {props.content}
+        </div>
+    `
+}

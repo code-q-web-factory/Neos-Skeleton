@@ -1,0 +1,13 @@
+prototype(CodeQ.Site:Content.Accordion.Item) < prototype(Neos.Neos:ContentComponent) {
+    id = ${'accordion-item-' + node.identifier}
+    title = Neos.Neos:Editable {
+        block = false
+        property = 'title'
+    }
+    content = Neos.Neos:ContentCollection
+    alwaysOpen = ${node.context.inBackend}
+
+    renderer = afx`
+        <CodeQ.Site:Presentation.Molecule.Accordion.Item @if={props.title} {...props}/>
+    `
+}

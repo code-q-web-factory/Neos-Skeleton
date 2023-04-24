@@ -1,0 +1,23 @@
+'CodeQ.Site:Content.Accordion.Item':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Neos.Neos:ContentCollection': true
+  ui:
+    label: Akkordeon-Eintrag
+    icon: circle
+    group: general
+    position: 100
+    inlineEditable: true
+  constraints:
+    nodeTypes:
+      '*': ~
+      'CodeQ.Site:Constraint.Content.Block': true
+  options:
+    template:
+      childNodes:
+        text:
+          type: 'CodeQ.Site:Content.Text.Block'
+  properties:
+    title:
+      options:
+        preset: 'text.plain'

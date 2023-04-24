@@ -1,0 +1,41 @@
+'CodeQ.Site:Content.Accordion.Section':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Neos.Neos:ContentCollection': true
+    'CodeQ.Site:Constraint.Content.Section': true
+    'CodeQ.Site:Mixin.Section': true
+    'CodeQ.Site:Mixin.Section.BackgroundColor': true
+    'CodeQ.Site:Mixin.Container': true
+  ui:
+    label: Akkordeon
+    icon: layer-group
+    group: structure
+    position: 500
+    inlineEditable: true
+    creationDialog:
+      elements:
+        numberOfItems:
+          type: integer
+          defaultValue: 3
+          ui:
+            label: 'Anzahl der Elemente'
+          validation:
+            'Neos.Neos/Validation/NotEmptyValidator': [ ]
+  constraints:
+    nodeTypes:
+      '*': ~
+      'CodeQ.Site:Content.Accordion.Item': true
+  options:
+    template:
+      childNodes:
+        columns:
+          name: '${"item" + item}'
+          type: 'CodeQ.Site:Content.Accordion.Item'
+          withItems: '${Array.range(1, data.numberOfItems)}'
+          childNodes:
+            text:
+              type: 'CodeQ.Site:Content.Text.Block'
+  properties:
+    title:
+      options:
+        preset: 'text.plain'

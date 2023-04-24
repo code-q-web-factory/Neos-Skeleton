@@ -1,0 +1,20 @@
+'CodeQ.Site:Mixin.Section.BackgroundColor':
+  abstract: true
+  properties:
+    sectionBackgroundColor:
+      type: string
+      defaultValue: 'white'
+      ui:
+        label: 'Background Color'
+        reloadIfChanged: true
+        inspector:
+          group: layout
+          position: 500
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: false
+            values:
+              white:
+                label: 'White'
+              light-gray:
+                label: 'Light Gray'
