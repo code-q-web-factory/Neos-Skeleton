@@ -1,0 +1,27 @@
+prototype(CodeQ.Site:Integration.Helper.AssetImageSource) < prototype(Neos.Fusion:Component) {
+    image = ${q(node).property('image')}
+    alternativeText = ${q(node).property('alternativeText')}
+    // 'original' or format like 'jpg'
+    format = 'original'
+
+    renderer = Neos.Fusion:Case {
+        image {
+            condition = ${Type.instance(props.image, 'Neos\Media\Domain\Model\ImageInterface')}
+            renderer = Sitegeist.Kaleidoscope:AssetImageSource {
+                asset = ${props.image}
+                alt = ${props.alternativeText || props.image.title || String.replace(String.replace(props.image.resource.filename, '_', ' '), '.' + props.image.resource.fileextension, '')}
+                @process.convertToJpeg = ${props.format == 'original' || !value ? value : value.setFormat(props.format)}
+            }
+        }
+        dummyImage {
+            condition = ${site.context.inBackend}
+            renderer = Sitegeist.Kaleidoscope:DummyImageSource {
+                text = ${I18n.translate('CodeQ.Site:Integration:dummyImageText')}
+            }
+        }
+        default {
+            condition = true
+            renderer = false
+        }
+    }
+}

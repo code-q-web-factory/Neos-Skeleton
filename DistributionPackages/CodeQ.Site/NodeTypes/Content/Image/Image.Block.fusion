@@ -1,8 +1,6 @@
 prototype(CodeQ.Site:Content.Image.Block) < prototype(Neos.Neos:ContentComponent) {
     class = CodeQ.Site:Mixin.SpaceBelow
-    imageSource = ${q(node).property('image')}
-    imageSource.@process.convert = CodeQ.Site:Integration.Helper.ImageAssetToSource
-    alternativeText = ${q(node).property('alternativeText')}
+    imageSource = CodeQ.Site:Integration.Helper.AssetImageSource
 
     renderer = afx`
         <CodeQ.Site:Presentation.Atom.Image.Auto @if.has={props.imageSource} {...props}/>

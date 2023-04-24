@@ -1,7 +1,8 @@
 prototype(CodeQ.Site:Mixin.HeroImage) < prototype(Neos.Fusion:Component) {
 	# api
-	imageSource = ${q(node).property('heroImage')}
-    imageSource.@process.convert = CodeQ.Site:Integration.Helper.ImageAssetToSource
+    imageSource = CodeQ.Site:Integration.Helper.AssetImageSource {
+        image = ${q(node).property('heroImage')}
+    }
 
 	# rendering
     renderer = CodeQ.Site:Presentation.Organism.HeroImage {
