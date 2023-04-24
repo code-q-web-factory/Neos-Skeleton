@@ -1,0 +1,6 @@
+'Neos.NodeTypes.ContentReferences:ContentReferences':
+  superTypes:
+    'CodeQ.Site:Constraint.Content.Block': true
+    'CodeQ.Site:Constraint.Content.Section': true
+  ui:
+    group: plugins
