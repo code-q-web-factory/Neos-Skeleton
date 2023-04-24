@@ -36,6 +36,7 @@
             text:
               type: 'CodeQ.Site:Content.Text.Block'
   properties:
-    title:
+    intro:
+      defaultValue: '<h2>Akkordeon</h2>'
       options:
-        preset: 'text.plain'
+        preset: 'text.free'

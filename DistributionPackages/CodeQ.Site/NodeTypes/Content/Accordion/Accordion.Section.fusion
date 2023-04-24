@@ -1,13 +1,13 @@
 prototype(CodeQ.Site:Content.Accordion.Section) < prototype(Neos.Neos:ContentComponent) {
-    title = Neos.Neos:Editable {
-        block = false
-        property = 'title'
+    intro = CodeQ.Site:Editable {
+        property = 'intro'
     }
-    content = Neos.Neos:ContentCollection
+    content = Neos.Neos:ContentCollectionRenderer
 
     renderer = afx`
         <CodeQ.Site:Mixin.Section paddingY="medium">
             <CodeQ.Site:Mixin.Container>
+                <CodeQ.Site:Presentation.Atom.RichText class="mb-4" content={props.intro}/>
                 <CodeQ.Site:Presentation.Molecule.Accordion {...props}/>
             </CodeQ.Site:Mixin.Container>
         </CodeQ.Site:Mixin.Section>

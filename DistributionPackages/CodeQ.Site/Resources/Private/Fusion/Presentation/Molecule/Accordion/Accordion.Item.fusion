@@ -1,20 +1,18 @@
 prototype(CodeQ.Site:Presentation.Molecule.Accordion.Item) < prototype(Neos.Fusion:Component) {
     @styleguide {
         props {
-            id = 'accordion1-europa'
-            title = 'Europa'
-            content = '
-                <div class="prose">
-                    <h3>Hello in my accordion item</h3>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                </div>'
+            id = 'accordion-item-1'
+            title = 'I am a title with a lot of content'
+            content = Sitegeist.Monocle:Preview.Prototype {
+                prototypeName = 'CodeQ.Site:Presentation.Atom.RichText'
+            }
         }
         useCases {
             item2 {
                 props {
-                    id = 'accordion1-nordamerika'
-                    title = 'Nordamerika'
-                    content = 'I feel empty inside.'
+                    id = 'accordion-item-2'
+                    title = 'I feel empty inside'
+                    content = ' '
                 }
             }
         }
@@ -27,43 +25,64 @@ prototype(CodeQ.Site:Presentation.Molecule.Accordion.Item) < prototype(Neos.Fusi
         @strict = true
         id = ${PropTypes.string.isRequired}
         title = ${PropTypes.string.isRequired}
+        titleTagName = ${PropTypes.oneOf(['h3', 'h4', 'h5', 'h6'])}
         content = ${PropTypes.string.isRequired}
         alwaysOpen = ${PropTypes.boolean}
     }
 
     id = null
     title = null
+    titleTagName = 'h3'
     content = null
     alwaysOpen = false
 
-    renderer = afx`
-        <dl class="mt-6 space-y-6 divide-y divide-gray-200" id={props.id}>
-            <div x-data={props.alwaysOpen ? '{expanded:true}' : '{expanded:false}'} class="pt-6">
-                <dt class="text-lg">
-                    <!-- Expand/collapse question button -->
-                    <button x-on:click={props.alwaysOpen ? null : 'expanded=!expanded'} type="button"
-                            class="text-left w-full flex justify-between items-start text-gray-400"
-                            aria-controls={props.id + '-content'} :aria-expanded="expanded">
-                        <span class="font-medium text-gray-900"> {props.title} </span>
-                        <span class="ml-6 h-7 flex items-center">
-                            <svg class=" h-6 w-6 transform" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                 viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                 x-bind:class="{'-rotate-180': expanded}" x-transition>
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
-                             </svg>
-                        </span>
-                    </button>
-                </dt>
-                <dd
-                    x-show="expanded"
-                    :hidden="!expanded"
-                    "x-transition:enter.duration.500ms"
-                    "x-transition:leave.duration.400ms"
-                    class="my-10 pr-12"
-                    id={props.id + '-content'}>
-                    {props.content}
-                </dd>
-            </div>
-        </dl>
-    `
+    renderer = Neos.Fusion:Component {
+        @apply.props = ${props}
+        alpineOpenCondition = ${props.alwaysOpen ? 'true' : 'activeItemId === "' + props.id + '"'}
+
+        renderer = afx`
+            <dl id={props.id}
+                class="item space-y-6 w-full border-b-4 border-transparent xl:hover:border-b-4 xl:hover:border-b-secondary xl:hover:rounded-b-sm -mb-1 rounded high-contrast:border-none"
+                x-bind:class={props.alpineOpenCondition + ' ? "border-b-4 border-b-secondary rounded-b-sm -mb-1" : ""'}>
+                <div class={String.trim('rounded high-contrast:border-2 high-contrast:border-black')}>
+                    <dt>
+                        <button x-on:click={'activeItemId = (activeItemId === "' + props.id + '" ? null : "' + props.id + '")'}
+                                type="button"
+                                class="w-full flex justify-between items-center group py-2 md:py-4"
+                                aria-controls={props.id + '-content'}
+                                x-bind:aria-expanded={'activeItemId === "' + props.id + '"'}
+                        >
+                            <div class="flex flex-col md:flex-row items-start md:items-center">
+                                <Neos.Fusion:Tag tagName={props.titleTagName} attributes.class={props.titleTagName + ' m-0 pr-4 text-left text-black high-contrast:text-black'}>
+                                    {props.title}
+                                </Neos.Fusion:Tag>
+                            </div>
+                            <div class="md:mt-0" aria-hidden="true">
+                                <svg
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        class="w-4 md:w-6 h-4 md:h-6 text-black high-contrast:text-black xl:group-hover:text-primary transition-all duration-300 w-4 h-4"
+                                        x-bind:class={props.alwaysOpen ? null : ('activeItemId === "' + props.id + '" ? "" : "xl:group-hover:rotate-90"')}>
+                                    <path d="M0,9H24v6H0Z" fill="currentColor"/>
+                                    <path d="M9,24V0h6V24Z" fill="currentColor" x-show={'!(' + props.alpineOpenCondition + ')'}/>
+                                </svg>
+                            </div>
+                        </button>
+                    </dt>
+                    <dd class={'flex justify-start text-base text-black md:pt-0 md:pr-20 overflow-hidden transition-all duration-1000 ' + (props.alwaysOpen ? '' : ' max-h-0')}
+                        x-ref={props.id + '-content'}
+                        x-bind:style={props.alwaysOpen ? null : ('activeItemId === "' + props.id + '" ? "max-height: " + $refs["' + props.id + '-content"].scrollHeight + "px" : ""')}
+                        id={props.id + '-content'}
+                        x-bind:aria-hidden={'!(' + props.alpineOpenCondition + ')'}>
+                        <div class="w-full"><!-- needed for correct scroll height calculation -->
+                            <div class="w-full pb-2 md:pb-8 md:mt-4">
+                                {props.content}
+                            </div>
+                        </div>
+                    </dd>
+                </div>
+            </dl>
+        `
+    }
 }
