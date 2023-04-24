@@ -1,4 +1,4 @@
-'CodeQ.Site:Content.Image':
+'CodeQ.Site:Content.Image.Block':
   superTypes:
     'Neos.Neos:Content': true
     'CodeQ.Site:Constraint.Content.Block': true
@@ -9,6 +9,8 @@
     group: general
     position: 300
   properties:
+    spaceBelow:
+      defaultValue: 'none'
     image:
       options:
         preset: 'image.asset'

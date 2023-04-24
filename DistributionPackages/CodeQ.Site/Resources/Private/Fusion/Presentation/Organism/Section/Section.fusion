@@ -13,6 +13,7 @@ prototype(CodeQ.Site:Presentation.Organism.Section) < prototype(Neos.Fusion:Comp
         class = ${PropTypes.string}
         content = ${PropTypes.string}
         backgroundColor = ${PropTypes.oneOf(['white', 'light-gray'])}
+        paddingY = ${PropTypes.oneOf(['none', 'medium'])}
         spaceBelow = ${PropTypes.oneOf(['none', 'small', 'medium', 'big'])}
     }
 
@@ -20,20 +21,31 @@ prototype(CodeQ.Site:Presentation.Organism.Section) < prototype(Neos.Fusion:Comp
     class = null
     content = null
     backgroundColor = 'white'
+    paddingY = 'medium'
     spaceBelow = 'medium'
 
     renderer = Neos.Fusion:Component {
         @apply.props = ${props}
-        backgroundColorClass = Neos.Fusion:Match {
-            @subject = ${props.backgroundColor}
-            'white' = 'bg-white'
-            'light-gray' = 'bg-gray-50'
-        }
-        spaceBelowClass = CodeQ.Site:Presentation.Helper.SpaceBelow {
-            @subject = ${props.spaceBelow}
+        customClasses = Neos.Fusion:Join {
+            base = '_section w-full relative'
+            custom = ${props.class}
+            paddingY = Neos.Fusion:Match {
+                @subject = ${props.paddingY}
+                'none' = ''
+                'medium' = 'py-8 md:py-16'
+            }
+            backgroundColorClass = Neos.Fusion:Match {
+                @subject = ${props.backgroundColor}
+                'white' = 'bg-white'
+                'light-gray' = 'bg-gray-50'
+            }
+            spaceBelowClass = CodeQ.Site:Presentation.Helper.SpaceBelow {
+                @subject = ${props.spaceBelow}
+            }
+            @glue = ' '
         }
         renderer = afx`
-            <section id={props.id} class={String.trim('w-full relative ' + props.backgroundColorClass + ' ' + props.spaceBelowClass +  ' ' + props.class)}>
+            <section id={props.id} class={props.customClasses}>
                 {props.content}
             </section>
         `

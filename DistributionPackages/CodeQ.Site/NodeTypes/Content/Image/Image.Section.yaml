@@ -1,0 +1,20 @@
+'CodeQ.Site:Content.Image.Section':
+  superTypes:
+    'Neos.Neos:Content': true
+    'CodeQ.Site:Constraint.Content.Section': true
+    'CodeQ.Site:Mixin.Section': true
+    'CodeQ.Site:Mixin.Container': true
+  ui:
+    label: Image
+    icon: picture
+    group: general
+    position: 300
+  properties:
+    spaceBelow:
+      defaultValue: 'none'
+    image:
+      options:
+        preset: 'image.asset'
+    alternativeText:
+      options:
+        preset: 'image.alternativeText'

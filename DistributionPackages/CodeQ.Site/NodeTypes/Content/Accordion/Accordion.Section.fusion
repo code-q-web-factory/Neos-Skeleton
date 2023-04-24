@@ -6,7 +6,7 @@ prototype(CodeQ.Site:Content.Accordion.Section) < prototype(Neos.Neos:ContentCom
     content = Neos.Neos:ContentCollection
 
     renderer = afx`
-        <CodeQ.Site:Mixin.Section class="py-8 md:py-16">
+        <CodeQ.Site:Mixin.Section paddingY="medium">
             <CodeQ.Site:Mixin.Container>
                 <CodeQ.Site:Presentation.Molecule.Accordion {...props}/>
             </CodeQ.Site:Mixin.Container>

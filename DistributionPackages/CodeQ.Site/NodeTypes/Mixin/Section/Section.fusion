@@ -1,6 +1,7 @@
 prototype(CodeQ.Site:Mixin.Section) < prototype(Neos.Fusion:Component) {
     # api
     class = null
+    paddingY = 'medium'
     content = null
 
     # default integration

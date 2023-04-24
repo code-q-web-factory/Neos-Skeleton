@@ -10,6 +10,6 @@
     inspector:
       groups:
         layout:
-          label: Layout
+          label: i18n
           icon: ruler
           position: 200

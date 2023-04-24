@@ -1,0 +1,13 @@
+prototype(CodeQ.Site:Content.Image.Section) < prototype(Neos.Neos:ContentComponent) {
+    imageSource = ${q(node).property('image')}
+    imageSource.@process.convert = CodeQ.Site:Integration.Helper.ImageAssetToSource
+    alternativeText = ${q(node).property('alternativeText')}
+
+    renderer = afx`
+        <CodeQ.Site:Mixin.Section @if.has={props.imageSource}>
+            <CodeQ.Site:Mixin.Container>
+                <CodeQ.Site:Presentation.Atom.Image.Auto {...props}/>
+            </CodeQ.Site:Mixin.Container>
+        </CodeQ.Site:Mixin.Section>
+    `
+}

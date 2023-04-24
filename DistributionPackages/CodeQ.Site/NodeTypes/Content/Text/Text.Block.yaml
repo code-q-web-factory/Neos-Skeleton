@@ -9,6 +9,8 @@
     group: general
     position: 100
   properties:
+    spaceBelow:
+      defaultValue: 'none'
     text:
       options:
         preset: 'text.free'
