@@ -1,0 +1,8 @@
+prototype(CodeQ.Site:Mixin.Container) < prototype(Neos.Fusion:Component) {
+    content = null
+    width = ${q(node).property('containerWidth') || 'medium'}
+
+    renderer = afx`
+        <CodeQ.Site:Presentation.Organism.Container {...props}/>
+    `
+}

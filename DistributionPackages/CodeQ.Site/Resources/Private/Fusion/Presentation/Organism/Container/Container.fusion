@@ -1,0 +1,26 @@
+prototype(CodeQ.Site:Presentation.Organism.Container) < prototype(Neos.Fusion:Component) {
+    @styleguide {
+        props {
+            content = Sitegeist.Monocle:Preview.Prototype {
+                prototypeName = 'CodeQ.Site:Presentation.Atom.RichText'
+            }
+        }
+    }
+
+    @propTypes {
+        @strict = true
+        class = ${PropTypes.string}
+        content = ${PropTypes.string}
+        width = ${PropTypes.oneOf(['medium', 'small'])}
+    }
+
+    class = null
+    content = null
+    width = 'medium'
+
+    renderer = afx`
+        <div class={String.trim('_container w-full mx-auto px-4 ' + (props.width == 'medium' ? 'max-w-5xl' : 'max-w-3xl') + ' ' + props.class)}>
+            {props.content}
+        </div>
+    `
+}

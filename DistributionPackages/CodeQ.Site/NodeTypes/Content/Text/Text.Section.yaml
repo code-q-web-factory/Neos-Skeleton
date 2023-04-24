@@ -1,0 +1,15 @@
+'CodeQ.Site:Content.Text.Section':
+  superTypes:
+    'Neos.Neos:Content': true
+    'CodeQ.Site:Constraint.Content.Section': true
+    'CodeQ.Site:Mixin.Section': true
+    'CodeQ.Site:Mixin.Container': true
+  ui:
+    label: Text
+    icon: align-left
+    group: general
+    position: 100
+  properties:
+    text:
+      options:
+        preset: 'text.free'

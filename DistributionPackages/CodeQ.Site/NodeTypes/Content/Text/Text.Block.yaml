@@ -1,13 +1,13 @@
-
-'CodeQ.Site:Content.Text':
+'CodeQ.Site:Content.Text.Block':
   superTypes:
     'Neos.Neos:Content': true
+    'CodeQ.Site:Constraint.Content.Block': true
+    'CodeQ.Site:Mixin.SpaceBelow': true
   ui:
     label: Text
     icon: align-left
     group: general
-    position: 200
-    inlineEditable: true
+    position: 100
   properties:
     text:
       options:

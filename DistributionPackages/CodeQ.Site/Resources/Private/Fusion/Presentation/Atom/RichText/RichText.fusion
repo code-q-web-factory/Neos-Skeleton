@@ -15,7 +15,7 @@ prototype(CodeQ.Site:Presentation.Atom.RichText) < prototype(Neos.Fusion:Compone
     content = null
 
     renderer = afx`
-        <div class={String.trim('prose ' + props.class)}>
+        <div class={String.trim('_rich-text prose max-w-full ' + props.class)}>
             {props.content}
         </div>
     `

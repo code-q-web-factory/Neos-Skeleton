@@ -9,7 +9,7 @@
   ui:
     inspector:
       groups:
-        general:
+        layout:
           label: Layout
           icon: ruler
           position: 200

@@ -17,6 +17,7 @@
 
         "aertmann/history": "~2.0",
         "codeq/link": "^2.1",
+        "codeq/jumpmarkers": "~2.0",
         "carbon/notification": "^2.1",
         "codeq/logintheme": "^2.3",
         "codeq/unicodenormalizer": "^2.3",

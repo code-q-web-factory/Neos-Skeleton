@@ -1,0 +1,13 @@
+prototype(CodeQ.Site:Mixin.Section) < prototype(Neos.Fusion:Component) {
+    # api
+    class = null
+    content = null
+
+    # default integration
+    id = CodeQ.JumpMarkers:NodeAnchorId
+    spaceBelow = ${q(node).property('spaceBelow') || 'none'}
+
+    renderer = afx`
+        <CodeQ.Site:Presentation.Organism.Section {...props}/>
+    `
+}

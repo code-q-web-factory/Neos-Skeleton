@@ -1,9 +1,0 @@
-prototype(CodeQ.Site:Content.Text) < prototype(Neos.Neos:ContentComponent) {
-    text = Neos.Neos:Editable {
-        property = 'text'
-    }
-
-    renderer = afx`
-        <div class="text">{props.text}</div>
-    `
-}

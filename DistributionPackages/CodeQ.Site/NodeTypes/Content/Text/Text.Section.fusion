@@ -1,0 +1,13 @@
+prototype(CodeQ.Site:Content.Text.Section) < prototype(Neos.Neos:ContentComponent) {
+    text = Neos.Neos:Editable {
+        property = 'text'
+    }
+
+    renderer = afx`
+        <CodeQ.Site:Mixin.Section>
+            <CodeQ.Site:Mixin.Container>
+                <CodeQ.Site:Presentation.Atom.RichText content={props.text}/>
+            </CodeQ.Site:Mixin.Container>
+        </CodeQ.Site:Mixin.Section>
+    `
+}

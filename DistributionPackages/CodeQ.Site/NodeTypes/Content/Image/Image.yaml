@@ -1,6 +1,8 @@
 'CodeQ.Site:Content.Image':
   superTypes:
     'Neos.Neos:Content': true
+    'CodeQ.Site:Constraint.Content.Block': true
+    'CodeQ.Site:Mixin.SpaceBelow': true
   ui:
     label: Image
     icon: picture

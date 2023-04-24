@@ -1,0 +1,34 @@
+prototype(CodeQ.Site:Presentation.Organism.Section) < prototype(Neos.Fusion:Component) {
+    @styleguide {
+        props {
+            content = Sitegeist.Monocle:Preview.Prototype {
+                prototypeName = 'CodeQ.Site:Presentation.Atom.RichText'
+            }
+        }
+    }
+
+    @propTypes {
+        @strict = true
+        id = ${PropTypes.string}
+        class = ${PropTypes.string}
+        content = ${PropTypes.string}
+        spaceBelow = ${PropTypes.oneOf(['none', 'small', 'medium', 'big'])}
+    }
+
+    id = null
+    class = null
+    content = null
+    spaceBelow = 'medium'
+
+    renderer = Neos.Fusion:Component {
+        @apply.props = ${props}
+        spaceBelowClass = CodeQ.Site:Presentation.Helper.SpaceBelow {
+            @subject = ${props.spaceBelow}
+        }
+        renderer = afx`
+            <section id={props.id} class={String.trim('w-full relative ' + props.spaceBelowClass +  ' ' + props.class)}>
+                {props.content}
+            </section>
+        `
+    }
+}

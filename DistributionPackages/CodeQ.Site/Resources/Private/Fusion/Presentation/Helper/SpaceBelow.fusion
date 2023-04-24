@@ -1,0 +1,8 @@
+prototype(CodeQ.Site:Presentation.Helper.SpaceBelow) < prototype(Neos.Fusion:Match) {
+    @subject = null
+
+    none = ''
+    small = 'mb-8 xl:mb-12'
+    medium = 'mb-8 xl:mb-24'
+    big = 'mb-12 xl:mb-32'
+}

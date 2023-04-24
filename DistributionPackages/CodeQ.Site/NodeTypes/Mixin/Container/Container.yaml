@@ -1,0 +1,22 @@
+'CodeQ.Site:Mixin.Container':
+  abstract: true
+  properties:
+    containerWidth:
+      type: string
+      defaultValue: 'medium'
+      ui:
+        label: 'Container Width'
+        reloadIfChanged: true
+        inspector:
+          group: layout
+          position: 100
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: false
+            values:
+              medium:
+                icon: text-width
+                label: 'Medium'
+              small:
+                icon: text-width
+                label: 'Small'

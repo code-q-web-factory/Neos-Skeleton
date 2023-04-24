@@ -1,0 +1,28 @@
+'CodeQ.Site:Mixin.SpaceBelow':
+  abstract: true
+  properties:
+    spaceBelow:
+      type: string
+      defaultValue: 'medium'
+      ui:
+        label: 'Space Below'
+        reloadIfChanged: true
+        inspector:
+          group: layout
+          position: 900
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: false
+            values:
+              none:
+                icon: long-arrow-alt-down
+                label: 'No space'
+              small:
+                icon: long-arrow-alt-down
+                label: 'Small space'
+              medium:
+                icon: long-arrow-alt-down
+                label: 'Medium space'
+              big:
+                icon: long-arrow-alt-down
+                label: 'Big space'

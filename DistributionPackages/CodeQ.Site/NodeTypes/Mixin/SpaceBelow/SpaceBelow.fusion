@@ -1,0 +1,3 @@
+prototype(CodeQ.Site:Mixin.SpaceBelow) < prototype(CodeQ.Site:Presentation.Helper.SpaceBelow) {
+    @subject = ${q(node).property('spaceBelow') || 'none'}
+}

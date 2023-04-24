@@ -1,0 +1,10 @@
+'CodeQ.Site:Mixin.Section':
+  abstract: true
+  superTypes:
+    'CodeQ.JumpMarkers:Mixin.SectionConfiguration': true
+    'CodeQ.Site:Mixin.SpaceBelow': true
+  properties:
+    jumpMarkerTitle:
+      ui:
+        inspector:
+          group: ~
