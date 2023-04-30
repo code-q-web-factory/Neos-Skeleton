@@ -10,7 +10,7 @@
     inlineEditable: true
   constraints:
     nodeTypes:
-      '*': ~
+      '*': false
       'CodeQ.Site:Constraint.Content.Block': true
   options:
     template:

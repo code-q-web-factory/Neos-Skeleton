@@ -23,7 +23,7 @@
             'Neos.Neos/Validation/NotEmptyValidator': [ ]
   constraints:
     nodeTypes:
-      '*': ~
+      '*': false
       'CodeQ.Site:Content.Accordion.Item': true
   options:
     template:

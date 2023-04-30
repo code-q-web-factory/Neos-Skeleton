@@ -9,7 +9,7 @@
       type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          '*': ~
+          '*': false
           'CodeQ.Site:Constraint.Content.Section': true
   constraints:
     nodeTypes:
