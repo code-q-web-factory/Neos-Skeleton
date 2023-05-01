@@ -42,8 +42,8 @@ prototype(CodeQ.Site:Presentation.Molecule.Accordion.Item) < prototype(Neos.Fusi
 
         renderer = afx`
             <dl id={props.id}
-                class="item space-y-6 w-full border-b-4 border-transparent xl:hover:border-b-4 xl:hover:border-b-secondary xl:hover:rounded-b-sm -mb-1 rounded high-contrast:border-none"
-                x-bind:class={props.alpineOpenCondition + ' ? "border-b-4 border-b-secondary rounded-b-sm -mb-1" : ""'}>
+                class="item space-y-6 w-full border-b-4 border-transparent xl:hover:border-b-4 xl:hover:border-b-primary xl:hover:rounded-b-sm -mb-1 rounded high-contrast:border-none"
+                x-bind:class={props.alpineOpenCondition + ' ? "border-b-4 border-b-primary rounded-b-sm -mb-1" : ""'}>
                 <div class={String.trim('rounded high-contrast:border-2 high-contrast:border-black')}>
                     <dt>
                         <button x-on:click={'activeItemId = (activeItemId === "' + props.id + '" ? null : "' + props.id + '")'}
@@ -70,15 +70,14 @@ prototype(CodeQ.Site:Presentation.Molecule.Accordion.Item) < prototype(Neos.Fusi
                             </div>
                         </button>
                     </dt>
-                    <dd class={'flex justify-start text-base text-black md:pt-0 md:pr-20 overflow-hidden transition-all duration-1000 ' + (props.alwaysOpen ? '' : ' max-h-0')}
+                    <dd class="flex justify-start text-base text-black md:pt-0 md:pr-20"
                         x-ref={props.id + '-content'}
-                        x-bind:style={props.alwaysOpen ? null : ('activeItemId === "' + props.id + '" ? "max-height: " + $refs["' + props.id + '-content"].scrollHeight + "px" : ""')}
+                        x-show={props.alpineOpenCondition}
+                        "x-collapse.duration.1000ms"={!props.alwaysOpen}
                         id={props.id + '-content'}
                         x-bind:aria-hidden={'!(' + props.alpineOpenCondition + ')'}>
-                        <div class="w-full"><!-- needed for correct scroll height calculation -->
-                            <div class="w-full pb-2 md:pb-8 md:mt-4">
-                                {props.content}
-                            </div>
+                        <div class="w-full pb-2 md:pb-8 md:mt-4">
+                            {props.content}
                         </div>
                     </dd>
                 </div>

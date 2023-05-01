@@ -1,6 +1,6 @@
 # Frontend template
-/DistributionPackages/CodeQ.Site/Resources/Public/index.css
-
+/DistributionPackages/CodeQ.Site/Resources/Public/Scripts
+/DistributionPackages/CodeQ.Site/Resources/Public/Styles
 # Neos CMS
 /bin/
 /Build/
@@ -29,3 +29,5 @@
 node_modules
 *.DS_Store
 .idea
+.sass-cache
+.vscode

@@ -1,0 +1,19 @@
+@layer base {
+    /* Neos FlowPack Navigation */
+    .Pagination {
+        @apply flex gap-1 xl:gap-3 flex-wrap justify-center items-center
+    }
+
+    .Pagination .Pagination-item a {
+        @apply block w-8 h-8 rounded-2xl text-center hover:text-primary hover:outline hover:outline-2
+    }
+
+    .Pagination .isCurrent a {
+        @apply text-primary no-underline outline outline-2
+    }
+
+    .Pagination .previous,
+    .Pagination .next {
+        @apply hover:text-primary hover:underline
+    }
+}

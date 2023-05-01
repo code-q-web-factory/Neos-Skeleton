@@ -1,0 +1,38 @@
+/* better Neos empty view */
+.neos-backend .neos-contentcollection:empty,
+.neos-backend .neos-contentcollection div[class^="style__addEmptyContentCollectionOverlay"] {
+    background: grey;
+    height: auto;
+}
+
+.neos-backend .neos-contentcollection:empty:before,
+.neos-backend .neos-contentcollection div[class^="style__addEmptyContentCollectionOverlay"]:before {
+    display: block;
+    content: 'Inhalt hier hinzuf\00FCgen';
+    font-size: 2rem;
+    padding: 8rem 2rem;
+    text-align: center;
+}
+
+.neos-backend .neos-contentcollection.neos-contentcollection--without-add-content-prompt:empty,
+.neos-backend .neos-contentcollection.neos-contentcollection--without-add-content-prompt div[class^="style__addEmptyContentCollectionOverlay"] {
+    background: transparent;
+    outline: none;
+}
+
+.neos-backend .neos-contentcollection.neos-contentcollection--without-add-content-prompt:empty:before,
+.neos-backend .neos-contentcollection.neos-contentcollection--without-add-content-prompt div[class^="style__addEmptyContentCollectionOverlay"]:before {
+    content: none;
+}
+
+.neos-message-wrapper {
+    word-wrap: break-word;
+}
+
+.neos-message-stacktrace code {
+    display: block;
+    border: 1px solid #000033;
+    background-color: #EEE;
+    padding: 10px;
+    word-break: break-all;
+}

@@ -1,0 +1,114 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "./Presentation/**/*.pcss";
+@import "tailwindcss/utilities";
+
+@layer base {
+    :root {
+        --color-body-text: 0 0 0 ;
+        --color-primary: 14 165 233;
+        --color-secondary: 15 203 213;
+    }
+
+    /* font-face definitions would go here, and could be applied to html
+    @font-face {
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+        src: url("../Fonts/WorkSans.woff2") format("woff2");
+    }
+     */
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    body {
+        color: var(--color-body-text);
+        background-color: theme(colors.white);
+        display: flex;
+        flex-direction: column;
+        min-height: calc(100vh - 1px);
+        hyphens: auto;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    [x-cloak] {
+        /* see https://alpinejs.dev/directives/cloak */
+        pointer-events: none !important;
+        visibility: hidden !important;
+    }
+
+    * {
+        outline-color: theme(colors.light);
+    }
+
+    @media print {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            break-after: avoid-page;
+        }
+
+        figure,
+        p {
+            break-inside: avoid-page;
+        }
+    }
+
+
+    /**
+     * Typography
+     *
+     * We style the default content tags here. Sicne tailwind/typography sets a lot os unnecessary styles,
+     * we go for this way more condense version which makes applying your own typography here a lot easier.
+     */
+    /* font-face definitions would go here, and could be applied to html
+    @font-face {
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+        src: url("../Fonts/WorkSans.woff2") format("woff2");
+    }
+     */
+
+    p, .p, .rich-text p,
+    .ul, .rich-text ul,
+    .table, .rich-text table {
+        @apply text-base mb-4 mt-0 font-normal
+    }
+
+    h1, .h1, .rich-text h1 {
+        @apply text-3xl md:text-5xl xl:text-6xl uppercase mb-4 mt-16 font-bold
+    }
+
+    h2, .h2, .rich-text h2 {
+        @apply text-lg md:text-4xl xl:text-5xl uppercase mb-4 mt-16 font-bold
+    }
+
+    h3, .h3, .rich-text h3 {
+        @apply text-lg md:text-3xl xl:text-4xl normal-case mb-4 mt-12 font-bold
+    }
+
+    h4, .h4, .rich-text h4 {
+        @apply text-base md:text-xl normal-case mb-4 mt-8 font-bold
+    }
+
+    h5, .h5, .rich-text h5 {
+        @apply text-base normal-case mb-2 mt-4 font-bold
+    }
+
+    h6, .h6, .rich-text h6 {
+        @apply text-base normal-case mb-2 mt-4 font-bold
+    }
+}
