@@ -1,0 +1,7 @@
+#!/bin/bash
+
+## Description: Run flow inside the web container
+## Usage: flow [command] [args]
+## Example: "ddev flow help" for overview
+
+php -d memory_limit=-1 ./flow "$@"

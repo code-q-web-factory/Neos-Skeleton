@@ -5,15 +5,16 @@
         "vendor-dir": "Packages/Libraries",
         "bin-dir": "bin",
         "platform": {
-            "php": "7.4"
+            "php": "8.1"
         },
         "allow-plugins": {
             "neos/composer-plugin": true
         }
     },
     "require": {
-        "php": "~7.4",
+        "php": "~8.1",
         "ext-vips": "*",
+        "rokka/imagine-vips": "0.*",
         "codeq/site": "@dev"
     },
     "require-dev":{
@@ -29,7 +30,13 @@
         "post-update-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
         "post-install-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
         "post-package-update": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
-        "post-package-install": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall"
+        "post-package-install": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
+        "flush": [
+            "./flow flow:cache:flush --force",
+            "./flow flow:package:rescan",
+            "./flow doctrine:migrate",
+            "./flow resource:publish"
+        ]
     },
     "extra": {
       "helhum/dotenv-connector": {
