@@ -1,0 +1,40 @@
+prototype(CodeQ.Site:Mixin.ButtonLink.LinkSource) < prototype(Neos.Fusion:Component) {
+    node = ${node}
+    fallback = null
+
+    renderer = CodeQ.Link:StringLink {
+        backendLink = false
+        link = ${q(props.node).property('buttonLink')}
+        @context.link = ${this.link}
+        @context.buttonLinkNode = ${props.node}
+        label = CodeQ.Site:Editable {
+            block = false
+            property = 'buttonLabel'
+            fallback = Neos.Fusion:Case {
+                hasFallbackDefined {
+                    condition = ${props.fallback}
+                    renderer = ${props.fallback}
+                }
+                isNode {
+                    condition = ${String.startsWith(link, 'node://')}
+                    renderer = ${q(Neos.Link.convertUriToObject(link, buttonLinkNode)).property('title')}
+                }
+                isAsset {
+                    condition = ${String.startsWith(link, 'asset://')}
+                    renderer = Neos.Fusion:Case {
+                        @context.asset = ${Neos.Link.convertUriToObject(link, buttonLinkNode)}
+                        hasTitle {
+                            condition = ${asset.title ? true : false}
+                            renderer = ${asset.title}
+                        }
+                        hasAsset {
+                            condition = ${asset ? true : false}
+                            renderer = ${String.replace(String.replace(asset.resource.filename, '_', ' '), '.' + asset.resource.fileextension, '')}
+                        }
+                    }
+                }
+                @process.toFallback = ${value || 'Mehr Infos'}
+            }
+        }
+    }
+}

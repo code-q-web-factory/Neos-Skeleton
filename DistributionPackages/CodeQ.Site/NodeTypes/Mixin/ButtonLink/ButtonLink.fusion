@@ -1,0 +1,8 @@
+prototype(CodeQ.Site:Mixin.ButtonLink) < prototype(Neos.Fusion:Component) {
+    linkSource = CodeQ.Site:Mixin.ButtonLink.LinkSource
+    type = CodeQ.Site:Mixin.ButtonLink.Type
+
+    renderer = CodeQ.Site:Presentation.Atom.ButtonLink {
+        @apply.props = ${props}
+    }
+}

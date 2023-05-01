@@ -1,0 +1,12 @@
+'CodeQ.Site:Content.ButtonGroup.Button':
+  label: "${String.cropAtWord(String.trim(String.stripTags(String.pregReplace(q(node).property('buttonLabel') || (String.startsWith(q(node).property('buttonLink'), 'http') ? String.pregReplace(String.pregReplace(q(node).property('buttonLink'), '/https?:\\/\\/(www\\.)?/i', ''), '/\\/$/', '') : false) || node.nodeType.label, '/<br\\W*?\\/?>|\\x{00a0}|[^[:print:]]|\\s+/u', ' '))), 100, '...')}"
+  superTypes:
+    'Neos.Neos:Content': true
+    'CodeQ.Site:Mixin.ButtonLink': true
+    'CodeQ.Site:Mixin.ButtonLink.Type': true
+  ui:
+    label: Button
+    icon: external-link
+    position: 100
+    inlineEditable: true
+

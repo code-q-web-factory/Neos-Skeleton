@@ -1,0 +1,7 @@
+'CodeQ.Site:Mixin.SpaceBelow.DefaultNone':
+  abstract: true
+  superTypes:
+    'CodeQ.Site:Mixin.SpaceBelow': true
+  properties:
+    spaceBelow:
+      defaultValue: 'none'

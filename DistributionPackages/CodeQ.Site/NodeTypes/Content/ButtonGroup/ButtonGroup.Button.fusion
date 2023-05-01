@@ -1,0 +1,5 @@
+prototype(CodeQ.Site:Content.ButtonGroup.Button) < prototype(Neos.Neos:ContentComponent) {
+    renderer = CodeQ.Site:Mixin.ButtonLink {
+        renderDefaultTagIfNoLink = ${node.context.inBackend}
+    }
+}

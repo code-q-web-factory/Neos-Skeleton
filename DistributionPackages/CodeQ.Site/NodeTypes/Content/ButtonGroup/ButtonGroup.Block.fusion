@@ -1,0 +1,11 @@
+prototype(CodeQ.Site:Content.ButtonGroup.Block) < prototype(Neos.Neos:ContentComponent) {
+    class = CodeQ.Site:Mixin.SpaceBelow
+
+    renderer = afx`
+        <Neos.Neos:ContentCollection
+            attributes.class={String.trim('button-group ' + props.class)}
+            path="."
+            @process.contentElementWrapping={value}
+        />
+    `
+}

@@ -1,0 +1,3 @@
+prototype(CodeQ.Site:Mixin.ButtonLink.Type) < prototype(Neos.Fusion:Value) {
+    value = ${q(node).property('buttonType') || 'primary'}
+}

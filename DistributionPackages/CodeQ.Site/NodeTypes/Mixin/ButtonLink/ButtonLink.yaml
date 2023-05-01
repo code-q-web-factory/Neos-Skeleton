@@ -1,0 +1,18 @@
+'CodeQ.Site:Mixin.ButtonLink':
+  abstract: true
+  superTypes:
+    'CodeQ.Site:Mixin.InspectorGeneral': true
+  properties:
+    buttonLabel:
+      ui:
+        inline:
+          editorOptions:
+            placeholder: 'Button-Text hier eingeben...'
+      options:
+        preset: 'text.plain'
+    buttonLink:
+      ui:
+        label: 'Button-Link'
+        reloadIfChanged: true
+      options:
+        preset: 'text.link'

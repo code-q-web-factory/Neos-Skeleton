@@ -1,0 +1,4 @@
+prototype(CodeQ.Site:Mixin.ButtonLink.Properties) < prototype(Neos.Fusion:DataStructure) {
+    linkSource = CodeQ.Site:Mixin.ButtonLink.LinkSource
+    type = CodeQ.Site:Mixin.ButtonLink.Type
+}

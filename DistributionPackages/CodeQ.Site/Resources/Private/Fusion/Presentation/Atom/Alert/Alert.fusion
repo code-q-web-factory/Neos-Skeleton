@@ -1,0 +1,14 @@
+prototype(CodeQ.Site:Presentation.Atom.Alert) < prototype(Neos.Fusion:Component) {
+    @styleguide.props.content = 'This is an alert!'
+
+    content = null
+    class = null
+
+    @if.hasContent = ${this.content}
+
+    renderer = afx`
+        <p class={[props.class, "flex items-center justify-center p-8 bg-orange-400 text-white text-xl"]}>
+            {props.content}
+        </p>
+    `
+}

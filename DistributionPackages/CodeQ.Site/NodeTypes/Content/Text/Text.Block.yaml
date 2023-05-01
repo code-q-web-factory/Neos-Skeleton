@@ -2,15 +2,13 @@
   superTypes:
     'Neos.Neos:Content': true
     'CodeQ.Site:Constraint.Content.Block': true
-    'CodeQ.Site:Mixin.SpaceBelow': true
+    'CodeQ.Site:Mixin.SpaceBelow.DefaultNone': true
   ui:
     label: Text
     icon: align-left
     group: general
     position: 100
   properties:
-    spaceBelow:
-      defaultValue: 'none'
     text:
       options:
         preset: 'text.free'

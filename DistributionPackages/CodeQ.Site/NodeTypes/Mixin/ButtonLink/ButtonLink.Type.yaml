@@ -1,0 +1,23 @@
+'CodeQ.Site:Mixin.ButtonLink.Type':
+  abstract: true
+  superTypes:
+    'CodeQ.Site:Mixin.InspectorGeneral': true
+  properties:
+    buttonType:
+      type: string
+      defaultValue: 'primary'
+      ui:
+        label: 'Button-Typ'
+        reloadIfChanged: true
+        inspector:
+          hidden: 'ClientEval:node.properties.buttonLink ? false : true'
+          group: general
+          position: 200
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: false
+            values:
+              primary:
+                label: 'Primäre Farbe'
+              secondary:
+                label: 'Sekundäre Farbe'

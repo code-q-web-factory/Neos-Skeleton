@@ -1,0 +1,35 @@
+'CodeQ.Site:Content.ButtonGroup.Block':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Neos.Neos:ContentCollection': true
+    'CodeQ.Site:Constraint.Content.Block': true
+    'CodeQ.Site:Mixin.SpaceBelow': true
+  ui:
+    label: Buttons
+    icon: external-link
+    group: general
+    position: 500
+    inlineEditable: true
+    creationDialog:
+      elements:
+        numberOfItems:
+          type: integer
+          defaultValue: 3
+          ui:
+            label: 'Anzahl der Elemente'
+          validation:
+            'Neos.Neos/Validation/NotEmptyValidator': [ ]
+  options:
+    template:
+      childNodes:
+        columns:
+          name: '${"column" + item}'
+          type: 'CodeQ.Site:Content.ButtonGroup.Button'
+          withItems: '${Array.range(1, data.numberOfItems)}'
+  constraints:
+    nodeTypes:
+      '*': ~
+      'CodeQ.Site:Content.ButtonGroup.Button': true
+  properties:
+    spaceBelow:
+      defaultValue: 'small'
