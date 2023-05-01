@@ -5,7 +5,7 @@
 
 @layer base {
     :root {
-        --color-body-text: 0 0 0 ;
+        --color-body-text: 0 0 0;
         --color-primary: 14 165 233;
         --color-secondary: 15 203 213;
     }
@@ -19,7 +19,6 @@
         src: url("../Fonts/WorkSans.woff2") format("woff2");
     }
      */
-
     html,
     body {
         overflow-x: hidden;
@@ -65,7 +64,6 @@
         }
     }
 
-
     /**
      * Typography
      *
@@ -84,24 +82,25 @@
 
     p, .p, .rich-text p,
     .ul, .rich-text ul,
+    .ol, .rich-text ol,
     .table, .rich-text table {
         @apply text-base mb-4 mt-0 font-normal
     }
 
     h1, .h1, .rich-text h1 {
-        @apply text-3xl md:text-5xl xl:text-6xl uppercase mb-4 mt-16 font-bold
+        @apply text-3xl md:text-5xl xl:text-6xl uppercase mb-0 mt-16 font-bold
     }
 
     h2, .h2, .rich-text h2 {
-        @apply text-lg md:text-4xl xl:text-5xl uppercase mb-4 mt-16 font-bold
+        @apply text-lg md:text-4xl xl:text-5xl uppercase mb-0 mt-16 font-bold
     }
 
     h3, .h3, .rich-text h3 {
-        @apply text-lg md:text-3xl xl:text-4xl normal-case mb-4 mt-12 font-bold
+        @apply text-lg md:text-3xl xl:text-4xl normal-case mb-0 mt-12 font-bold
     }
 
     h4, .h4, .rich-text h4 {
-        @apply text-base md:text-xl normal-case mb-4 mt-8 font-bold
+        @apply text-base md:text-xl normal-case mb-2 mt-8 font-bold
     }
 
     h5, .h5, .rich-text h5 {

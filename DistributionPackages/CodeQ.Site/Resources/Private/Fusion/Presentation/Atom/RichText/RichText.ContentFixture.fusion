@@ -20,6 +20,11 @@ prototype(CodeQ.Site:Presentation.Atom.RichText.ContentFixture) < prototype(Neos
             <li>Lorem Ipsum</li>
             <li>Lorem Ipsum</li>
         </ul>
+        <ol>
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+        </ol>
         <table>
             <thead>
                 <tr>

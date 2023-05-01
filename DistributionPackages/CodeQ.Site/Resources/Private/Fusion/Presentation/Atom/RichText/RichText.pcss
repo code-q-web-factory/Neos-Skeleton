@@ -1,41 +1,64 @@
-.rich-text > *:first-child,
-.rich-text .neos-inline-editable > *:first-child {
-    margin-top: 0 !important;
-}
+.rich-text {
+    > *:first-child,
+    .neos-inline-editable > *:first-child {
+        margin-top: 0 !important;
+    }
 
-.rich-text > *:last-child,
-.rich-text .neos-inline-editable > *:last-child {
-    margin-bottom: 0 !important
-}
+    > *:last-child,
+    .neos-inline-editable > *:last-child {
+        margin-bottom: 0 !important
+    }
 
-.rich-text a {
-    text-decoration: underline;
-}
+    h1 + h2,
+    h1 + h3,
+    h1 + h4,
+    h1 + h5,
+    h1 + h6,
+    h2 + h3,
+    h2 + h4,
+    h2 + h5,
+    h2 + h6,
+    h3 + h4,
+    h3 + h5,
+    h3 + h6,
+    h4 + h5,
+    h4 + h6,
+    h5 + h6 {
+        @apply mt-0 !important;
+    }
 
-.rich-text a:active,
-.rich-text a:hover,
-.rich-text a:focus { /* otherwise a link is not recognizable as link in grey text color */
-    @apply text-primary;
-}
+    strong {
+        color: inherit;
+    }
 
-.rich-text strong {
-    color: inherit;
-}
+    a {
+        text-decoration: underline;
 
-.rich-text h1 + h2,
-.rich-text h1 + h3,
-.rich-text h1 + h4,
-.rich-text h1 + h5,
-.rich-text h1 + h6,
-.rich-text h2 + h3,
-.rich-text h2 + h4,
-.rich-text h2 + h5,
-.rich-text h2 + h6,
-.rich-text h3 + h4,
-.rich-text h3 + h5,
-.rich-text h3 + h6,
-.rich-text h4 + h5,
-.rich-text h4 + h6,
-.rich-text h5 + h6 {
-    @apply mt-0 !important;
+        &:active,
+        &:hover,
+        &:focus {
+            @apply text-primary;
+        }
+    }
+
+    ol {
+        @apply list-decimal pl-6;
+    }
+
+    ul {
+        @apply list-disc pl-6;
+    }
+
+    table {
+        @apply table-auto mt-2 mb-2;
+
+        th {
+            @apply font-bold;
+        }
+
+        th,
+        td {
+            @apply border-b-2 px-4 pb-2 text-left;
+        }
+    }
 }
