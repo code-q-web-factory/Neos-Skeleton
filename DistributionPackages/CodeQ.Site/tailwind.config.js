@@ -47,7 +47,7 @@ module.exports = {
         require('@tailwindcss/forms')({
             strategy: 'class',
         }),
-        plugin(({ addVariant, addUtilities }) => {
+        plugin(({addVariant, addUtilities}) => {
             // Add not empty variants
             addVariant('not-empty', ['&:not(:empty)']);
             addVariant('group-not-empty', ['.group:not(:empty) ~ &']);

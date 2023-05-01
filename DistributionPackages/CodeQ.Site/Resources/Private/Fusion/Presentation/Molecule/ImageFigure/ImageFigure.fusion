@@ -14,7 +14,7 @@ prototype(CodeQ.Site:Presentation.Molecule.ImageFigure) < prototype(Neos.Fusion:
 
     renderer = afx`
         <figure class={props.class}>
-            <CodeQ.Site:Presentation.Atom.Image.Auto class="rounded-lg overflow-hidden" imageSource={props.imageSource} />
+            <CodeQ.Site:Presentation.Atom.Image.Auto class="rounded-lg overflow-hidden" imageSource={props.imageSource}/>
             <footer @if={props.copyright}><small class="text-sm italic">{props.copyright}</small></footer>
             <figcaption class="mt-2" @if={props.caption}>
                 <CodeQ.Site:Presentation.Atom.RichText content={props.caption}/>

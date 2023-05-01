@@ -4,5 +4,5 @@ prototype(CodeQ.Site:Content.Image.Block) < prototype(Neos.Neos:ContentComponent
 
     renderer = afx`
         <CodeQ.Site:Presentation.Atom.Image.Auto @if.has={props.imageSource} {...props}/>
-	`
+    `
 }

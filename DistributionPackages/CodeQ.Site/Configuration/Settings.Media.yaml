@@ -1,7 +1,6 @@
-
 Neos:
   Media:
     thumbnailGenerators:
       Neos\Media\Domain\Model\ThumbnailGenerator\DocumentThumbnailGenerator:
         # disable rendering of pdf, eps and ai previews
-        supportedExtensions: {}
+        supportedExtensions: { }

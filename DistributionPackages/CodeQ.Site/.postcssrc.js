@@ -9,7 +9,7 @@ module.exports = (ctx) => ({
         'postcss-sort-media-queries': true,
         autoprefixer: true,
         cssnano: {
-            preset: ['default', { discardComments: { removeAll: true } }],
+            preset: ['default', {discardComments: {removeAll: true}}],
         },
         'postcss-reporter': {
             clearReportedMessages: true,

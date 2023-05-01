@@ -6,10 +6,10 @@ prototype(CodeQ.Site:Presentation.Organism.Header.MenuItemsRenderer) < prototype
         <ul class="navigation">
             <Neos.Fusion:Loop items={props.items} itemName="menuItem" @children="itemRenderer">
                 <li class={'navigation-item ' + (menuItem.state ? 'navigation-item--state-' + menuItem.state : '') }>
-                    <CodeQ.Link:Tag linkSource={menuItem} />
+                    <CodeQ.Link:Tag linkSource={menuItem}/>
                     <CodeQ.Site:Presentation.Organism.Header.MenuItemsRenderer
-                        items={menuItem.subItems}
-                        />
+                            items={menuItem.subItems}
+                    />
                 </li>
             </Neos.Fusion:Loop>
         </ul>

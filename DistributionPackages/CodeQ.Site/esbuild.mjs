@@ -10,9 +10,9 @@ const watch = argv('watch') === true;
 process.env.NODE_ENV = argv('production') === true ? 'production' : 'development';
 
 const files = glob
-    .sync(`${entryFolder}/*.{${fileExtensions}}`)
-    .map((entry) => path.basename(entry))
-    .filter((name) => !name.startsWith('_'));
+        .sync(`${entryFolder}/*.{${fileExtensions}}`)
+        .map((entry) => path.basename(entry))
+        .filter((name) => !name.startsWith('_'));
 
 files.forEach((file) => {
     ESBUILD.build({

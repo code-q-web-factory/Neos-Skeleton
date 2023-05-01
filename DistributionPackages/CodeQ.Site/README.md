@@ -27,7 +27,8 @@ Make sure that [Node.js] and [Yarn] are installed. It is recommended to use [NVM
 
 ### Package management
 
-The dependencies are stored in the [`package.json`] file, so if you edit any config, or need new packages, you have to add them to this file. You can read more about this [here](https://nodejs.dev/the-package-json-guide).
+The dependencies are stored in the [`package.json`] file, so if you edit any config, or need new packages, you have to add them to this file. You can read more about
+this [here](https://nodejs.dev/the-package-json-guide).
 
 ### Explanation of the config files
 

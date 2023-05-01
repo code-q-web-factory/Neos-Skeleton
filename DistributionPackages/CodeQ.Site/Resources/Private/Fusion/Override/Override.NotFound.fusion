@@ -3,7 +3,7 @@
 ##
 error {
     4xx {
-		@position = 'start'
+        @position = 'start'
         condition = ${statusCode >= 400 && statusCode < 500}
         renderer = CodeQ.Site:Document.NotFoundPage
     }

@@ -11,13 +11,13 @@ prototype(CodeQ.Site:Integration.Organism.Header) < prototype(Neos.Fusion:Compon
         @apply.props = ${props}
     }
 
-	@cache {
-		mode = 'cached'
-		entryIdentifier {
-			documentNode = ${documentNode}
-		}
-		entryTags {
-			1 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', documentNode)}
-		}
-	}
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            documentNode = ${documentNode}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', documentNode)}
+        }
+    }
 }

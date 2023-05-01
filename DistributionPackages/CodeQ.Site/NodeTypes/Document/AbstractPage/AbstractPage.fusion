@@ -2,24 +2,25 @@ prototype(CodeQ.Site:Document.AbstractPage.HeadTags) < prototype(Neos.Fusion:Com
     prefetchImageSource = false
 
     renderer = afx`
-        <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
         <!-- favicons -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="msapplication-TileColor" content="#000000" />
-        <meta name="theme-color" content="#ffffff" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+        <link rel="manifest" href="/site.webmanifest"/>
+        <meta name="msapplication-TileColor" content="#000000"/>
+        <meta name="theme-color" content="#ffffff"/>
 
         <!--
-        <link rel="prefetch" href="/_Resources/Static/Packages/CodeQ.Site/Frontend/build/fonts/AvenirRoman.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="prefetch" href="/_Resources/Static/Packages/CodeQ.Site/Frontend/build/fonts/AvenirRoman.woff2" as="font" type="font/woff2" crossorigin/>
         -->
         <CodeQ.Site:Presentation.Atom.Image.BackgroundPreviewPrefetch @if.has={props.prefetchImageSource} imageSource={props.prefetchImageSource}/>
 
-        <link href={StaticResource.uri('CodeQ.Site', 'Public/Styles/Main.css')} rel="stylesheet" />
-        <!--<style>{String.replace(StaticResource.content('CodeQ.Site', 'Public/Styles/Main.css'), '=app.css.map', '=/_Resources/Static/Packages/CodeQ.Site/Styles/Main.css.map')}</style>-->
+        <link href={StaticResource.uri('CodeQ.Site', 'Public/Styles/Main.css')} rel="stylesheet"/>
+        <!--
+        <style>{String.replace(StaticResource.content('CodeQ.Site', 'Public/Styles/Main.css'), '=app.css.map', '=/_Resources/Static/Packages/CodeQ.Site/Styles/Main.css.map')}</style>-->
     `
 }
 

@@ -38,7 +38,7 @@ prototype(CodeQ.Site:Presentation.Organism.Header) < prototype(Neos.Fusion:Compo
     renderer = afx`
         <header class="main-header">
             <a class="logo" href={props.homeLink}>BRAND NAME</a>
-            <CodeQ.Site:Presentation.Organism.Header.MenuItemsRenderer items={props.menuItems} />
+            <CodeQ.Site:Presentation.Organism.Header.MenuItemsRenderer items={props.menuItems}/>
         </header>
     `
 }

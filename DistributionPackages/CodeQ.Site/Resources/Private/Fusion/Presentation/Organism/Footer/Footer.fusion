@@ -24,7 +24,7 @@ prototype(CodeQ.Site:Presentation.Organism.Footer) < prototype(Neos.Neos:Content
             <ul class="main-footer__menu">
                 <Neos.Fusion:Loop items={props.footerItems} itemName="menuItem">
                     <li class="main-footer__menu-item">
-                        <CodeQ.Link:Tag linkSource={menuItem} class="main-footer__menu-link" />
+                        <CodeQ.Link:Tag linkSource={menuItem} class="main-footer__menu-link"/>
                     </li>
                 </Neos.Fusion:Loop>
             </ul>

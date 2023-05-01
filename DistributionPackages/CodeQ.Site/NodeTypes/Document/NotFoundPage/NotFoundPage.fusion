@@ -11,7 +11,7 @@ prototype(CodeQ.Site:Document.NotFoundPage) < prototype(CodeQ.Site:Document.Abst
             <main class="main">
                 <h1>{I18n.translate('CodeQ.Site:NodeTypes.Document.NotFoundPage:errorMessage')}</h1>
                 <a href="/">{I18n.translate('CodeQ.Site:NodeTypes.Document.NotFoundPage:backHome')}</a>
-                <br /><br /><br /><br />
+                <br/><br/><br/><br/>
             </main>
         `
     }

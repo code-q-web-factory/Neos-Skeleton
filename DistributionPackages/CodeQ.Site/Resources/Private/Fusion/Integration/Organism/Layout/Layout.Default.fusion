@@ -2,8 +2,8 @@ prototype(CodeQ.Site:Integration.Layout.Default) < prototype(Neos.Fusion:Compone
     content = ''
 
     renderer = afx`
-        <CodeQ.Site:Integration.Organism.Header />
+        <CodeQ.Site:Integration.Organism.Header/>
         {props.content}
-        <CodeQ.Site:Integration.Organism.Footer />
+        <CodeQ.Site:Integration.Organism.Footer/>
     `
 }

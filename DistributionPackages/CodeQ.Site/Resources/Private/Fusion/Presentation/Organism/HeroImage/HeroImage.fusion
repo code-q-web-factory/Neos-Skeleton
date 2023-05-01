@@ -9,16 +9,16 @@ prototype(CodeQ.Site:Presentation.Organism.HeroImage) < prototype(Neos.Fusion:Co
     @propTypes {
         imageSource = ${PropTypes.instanceOf('\\Sitegeist\\Kaleidoscope\\EelHelpers\\ImageSourceHelperInterface')}
     }
-	imageSource = false
+    imageSource = false
 
     renderer = afx`
         <section class="hero-image" @if.hasImage={props.imageSource}>
             <CodeQ.Site:Presentation.Atom.Image.Fullscreen
-                class="hero-image__image"
-                lazy={false}
-                imageSource={props.imageSource}
-                useBackgroundPreviewImage={true}
-                alt=""
+                    class="hero-image__image"
+                    lazy={false}
+                    imageSource={props.imageSource}
+                    useBackgroundPreviewImage={true}
+                    alt=""
             />
         </section>
     `

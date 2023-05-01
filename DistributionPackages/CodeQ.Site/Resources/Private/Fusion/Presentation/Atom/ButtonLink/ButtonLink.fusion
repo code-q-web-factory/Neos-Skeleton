@@ -30,10 +30,10 @@ prototype(CodeQ.Site:Presentation.Atom.ButtonLink) < prototype(Neos.Fusion:Compo
 
         renderer = afx`
             <CodeQ.Link:Tag
-                class={String.trim('inline-block font-semibold px-3 py-2 rounded-lg ' + props.typeClass + ' ' + props.class)}
-                linkSource={props.linkSource}
-                renderDefaultTagIfNoLink={props.renderDefaultTagIfNoLink}
-                content={props.content}/>
+                    class={String.trim('inline-block font-semibold px-3 py-2 rounded-lg ' + props.typeClass + ' ' + props.class)}
+                    linkSource={props.linkSource}
+                    renderDefaultTagIfNoLink={props.renderDefaultTagIfNoLink}
+                    content={props.content}/>
         `
     }
 }

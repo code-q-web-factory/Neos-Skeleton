@@ -1,4 +1,3 @@
-
 'CodeQ.Site:Document.HomePage':
   superTypes:
     'CodeQ.Site:Document.AbstractPage': true

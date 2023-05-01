@@ -162,8 +162,8 @@ Neos:
                   editorOptions:
                     format: 'd.m.Y'
               validation:
-                Neos.Neos/Validation/NotEmptyValidator: {  }
-                Neos.Neos/Validation/DateTimeValidator: {  }
+                Neos.Neos/Validation/NotEmptyValidator: { }
+                Neos.Neos/Validation/DateTimeValidator: { }
           'layout':
             'imageFit':
               type: string

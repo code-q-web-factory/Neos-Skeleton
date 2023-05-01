@@ -3,9 +3,9 @@ prototype(CodeQ.Site:Content.ButtonGroup.Block) < prototype(Neos.Neos:ContentCom
 
     renderer = afx`
         <Neos.Neos:ContentCollection
-            attributes.class={String.trim('button-group ' + props.class)}
-            path="."
-            @process.contentElementWrapping={value}
+                attributes.class={String.trim('button-group ' + props.class)}
+                path="."
+                @process.contentElementWrapping={value}
         />
     `
 }

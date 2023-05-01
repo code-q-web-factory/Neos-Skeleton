@@ -1,10 +1,10 @@
 prototype(CodeQ.Site:Mixin.HeroImage) < prototype(Neos.Fusion:Component) {
-	# api
+    # api
     imageSource = CodeQ.Site:Integration.Helper.AssetImageSource {
         image = ${q(node).property('heroImage')}
     }
 
-	# rendering
+    # rendering
     renderer = CodeQ.Site:Presentation.Organism.HeroImage {
         @if.has = ${props.imageSource}
         @apply.props = ${props}

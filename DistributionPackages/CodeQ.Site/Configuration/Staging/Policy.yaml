@@ -1,9 +1,7 @@
 roles:
   'Neos.Flow:Everybody':
     privileges:
-      -
-        privilegeTarget: 'Sitegeist.Monocle:Styleguide.Api'
+      - privilegeTarget: 'Sitegeist.Monocle:Styleguide.Api'
         permission: GRANT
-      -
-        privilegeTarget: 'Sitegeist.Monocle:Styleguide.Preview'
+      - privilegeTarget: 'Sitegeist.Monocle:Styleguide.Preview'
         permission: GRANT

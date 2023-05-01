@@ -9,33 +9,33 @@ prototype(CodeQ.Site:Presentation.Atom.Image.LazyPicture) < prototype(Sitegeist.
         objectFit = ${PropTypes.oneOf(['none', 'contain', 'cover'])}
     }
 
-	# api
-	imageSource = false
-	useBackgroundPreviewImage = false
+    # api
+    imageSource = false
+    useBackgroundPreviewImage = false
     maxWidth = 1920
     objectFit = 'none'
 
-	# api inherited from lazybones
+    # api inherited from lazybones
     class = null
-	lazy = true
-	alt = ''
+    lazy = true
+    alt = ''
 
-	# rendering
+    # rendering
     class.@process.makeInlineBlock = ${String.trim('inline-block w-full ' + value)}
-	lazyWidth = 200
+    lazyWidth = 200
     imageSource.@process.applyMaxWidth = ${value ? value.setWidth(this.maxWidth, true) : value}
-	@context.imageSource = ${this.imageSource}
-	sources = Neos.Fusion:RawArray {
-		webp = Neos.Fusion:RawArray {
-			imageSource = ${imageSource.setFormat('webp')}
-			type = 'image/webp'
-		}
-	}
+    @context.imageSource = ${this.imageSource}
+    sources = Neos.Fusion:RawArray {
+        webp = Neos.Fusion:RawArray {
+            imageSource = ${imageSource.setFormat('webp')}
+            type = 'image/webp'
+        }
+    }
 
-	# srcset and sizes are implemented in lazy bones
+    # srcset and sizes are implemented in lazy bones
 
     # background iamge rendering
-	@context.useBackgroundPreviewImage = ${this.useBackgroundPreviewImage}
+    @context.useBackgroundPreviewImage = ${this.useBackgroundPreviewImage}
     prototype(Sitegeist.Kaleidoscope:Picture) {
         @process.addBackground = Neos.Fusion:Augmenter {
             @if.enabled = ${useBackgroundPreviewImage}
