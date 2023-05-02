@@ -1,17 +1,15 @@
 prototype(CodeQ.Site:Presentation.Template.Styleguide) < prototype(Neos.Fusion:Component) {
-    @styleguide {
-        title = 'Styleguide'
-    }
+    @styleguide.title = 'Styleguide'
 
     renderer = afx`
         <Sitegeist.Monocle:Preview.Prototype prototypeName="CodeQ.Site:Presentation.Organism.Header"/>
         <main>
-            <CodeQ.Site:Presentation.Atom.Logo class="w-24"/>
-            <Sitegeist.Monocle:Preview.Prototype prototypeName="CodeQ.Site:Presentation.Atom.ButtonLink"/>
-            <Sitegeist.Monocle:Preview.Prototype prototypeName="CodeQ.Site:Presentation.Atom.ButtonLink" props.type="secondary"/>
-            <Sitegeist.Monocle:Preview.Prototype prototypeName="CodeQ.Site:Presentation.Molecule.ButtonGroup"/>
-            <Sitegeist.Monocle:Preview.Prototype prototypeName="CodeQ.Site:Presentation.Atom.RichText"/>
-            <Sitegeist.Monocle:Preview.Prototype prototypeName="CodeQ.Site:Presentation.Molecule.ImageFigure"/>
+            <CodeQ.Site:Presentation.Organism.Container>
+                <CodeQ.Site:Presentation.Atom.Logo class="w-24"/>
+                <Sitegeist.Monocle:Preview.Prototype prototypeName="CodeQ.Site:Presentation.Molecule.ButtonGroup" props.class="mb-4 xl:mb-8"/>
+                <Sitegeist.Monocle:Preview.Prototype prototypeName="CodeQ.Site:Presentation.Atom.RichText" props.class="mb-4 xl:mb-8"/>
+                <Sitegeist.Monocle:Preview.Prototype prototypeName="CodeQ.Site:Presentation.Molecule.ImageFigure" props.class="mb-4 xl:mb-8"/>
+            </CodeQ.Site:Presentation.Organism.Container>
         </main>
         <Sitegeist.Monocle:Preview.Prototype prototypeName="CodeQ.Site:Presentation.Organism.Footer"/>
     `

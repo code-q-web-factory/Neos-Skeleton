@@ -2,7 +2,7 @@ prototype(CodeQ.Site:Presentation.Helper.SpaceBelow) < prototype(Neos.Fusion:Mat
     @subject = null
 
     none = ''
-    small = 'mb-8 xl:mb-12'
-    medium = 'mb-8 xl:mb-24'
-    big = 'mb-12 xl:mb-32'
+    small = 'mb-4 xl:mb-8'
+    medium = 'mb-8 xl:mb-12'
+    big = 'mb-12 xl:mb-24'
 }
