@@ -1,3 +1,9 @@
+#  This is no longer maintained, and does not reflect the latest best practises. The Neos team currently focuses more on other topics.
+
+## Check out [Mastering NodeTypes](https://youtu.be/tM5JEcWx-Do?t=1627) on some hints how to setup Neos projects.
+
+---
+
 # Code Q Neos-Skeleton
 
 The Neos-Skeleton provides an easy and powerful start for new projects - beginner-friendly and highly scalable. It implements all current [best practices](https://www.neos.io/blog/neos-best-practices-1-0.html) for Neos 7 and is frontend agnostic.
