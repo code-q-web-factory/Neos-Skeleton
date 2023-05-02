@@ -22,7 +22,7 @@
         "sitegeist/monocle": "^7.10",
         "sitegeist/stagefog": "^1.1",
 
-        "codeq/htmlwidget": "^1.5",
+        "codeq/htmlcontent": "^1.0",
         "neos/nodetypes-contentreferences": "*"
     },
     "autoload": {
